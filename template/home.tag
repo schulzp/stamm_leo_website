@@ -7,7 +7,7 @@
 ; die der Parser beim Generieren der Seiten ersetzen soll.
 ;
 ; Comments can be added in a line of their own, biginning with a semicolon ";"
-; Kommentare sind mÃ¶glich, jedoch nur als eigene Zeile, beginnend mit einem Semikolon ";"
+; Kommentare sind möglich, jedoch nur als eigene Zeile, beginnend mit einem Semikolon ";"
 ;
 ; Usage:
 ;token to change        :=  result
@@ -16,61 +16,61 @@
 ;zu ersetzender Bgriff  :=  Ergebnis
 
 ; HTML entities (decimal values used because of highest compatibility)
-; HTML-Entities (Sonderzeichen usw.) (Dezimal-Ã„quivalent, zu bevorzugen wegen der hÃ¶chsten KompatibiltÃ¤t)
+; HTML-Entities (Sonderzeichen usw.) (Dezimal-Äquivalent, zu bevorzugen wegen der höchsten Kompatibiltät)
 ; German special characters / deutsche Sonderzeichen
-ÃŸ         := &#223;
-Ã„         := &#196;
-Ã–         := &#214;
-Ãœ         := &#220;
-Ã¤         := &#228;
-Ã¶         := &#246;
-Ã¼         := &#252;
-; French special characters / franzÃ¶sische Sonderzeichen
-Ã€         := &#192;
-Ã          := &#224;
-Ã‚         := &#194;
-Ã¢         := &#226;
-Ãˆ         := &#200;
-Ã¨         := &#232;
-ÃŠ         := &#202;
-Ãª         := &#234;
-Ã‰         := &#201;
-Ã©         := &#233;
-Ã‹         := &#203;
-Ã«         := &#235;
-Ã         := &#206;
-Ã®         := &#238;
-Ã         := &#207;
-Ã¯         := &#239;
-Ã”         := &#212;
-Ã´         := &#244;
-Ã™         := &#217;
-Ã¹         := &#249;
-Ã›         := &#219;
-Ã»         := &#251;
-Ã‡         := &#199;
-Ã§         := &#231;
-Ã¦         := &#230;
+ß         := &#223;
+Ä         := &#196;
+Ö         := &#214;
+Ü         := &#220;
+ä         := &#228;
+ö         := &#246;
+ü         := &#252;
+; French special characters / französische Sonderzeichen
+À         := &#192;
+à         := &#224;
+Â         := &#194;
+â         := &#226;
+È         := &#200;
+è         := &#232;
+Ê         := &#202;
+ê         := &#234;
+É         := &#201;
+é         := &#233;
+Ë         := &#203;
+ë         := &#235;
+Î         := &#206;
+î         := &#238;
+Ï         := &#207;
+ï         := &#239;
+Ô         := &#212;
+ô         := &#244;
+Ù         := &#217;
+ù         := &#249;
+Û         := &#219;
+û         := &#251;
+Ç         := &#199;
+ç         := &#231;
+æ         := &#230;
 ; other special characters / sonstige Sonderzeichen
-Â€         := &#8364;
-Â©         := &#169;
-Â®         := &#174;
-Â²         := &#178;
-Â³         := &#179;
-Â™         := &#8482;
-Â§         := &#167;
+€         := &#8364;
+©         := &#169;
+®         := &#174;
+²         := &#178;
+³         := &#179;
+™         := &#8482;
+§         := &#167;
 ...       := &#8230;
 ;'s       := &#8217;s
 
 ; alternatively you may use entity names:
-; alternativ kÃ¶nnen Entity-namen benutzt werden:
-;ÃŸ         := &szlig;
-;Ã„         := &Auml;
-;Ã–         := &Ouml;
-;Ãœ         := &Uuml;
-;Ã¤         := &auml;
-;Ã¶         := &ouml;
-;Ã¼         := &uuml;
+; alternativ können Entity-namen benutzt werden:
+;ß         := &szlig;
+;Ä         := &Auml;
+;Ö         := &Ouml;
+;Ü         := &Uuml;
+;ä         := &auml;
+;ö         := &ouml;
+;ü         := &uuml;
 
 [PIC "$url,$alt"]:=<img src="$url" alt="$alt" />
 
@@ -108,19 +108,19 @@
                          Ihr Suchbegriff sollte wenigstens <strong>drei Zeichen</strong> lang sein.</p>
 
 <SEARCH_TERM_NONO>    := <p>&nbsp;</p><p>For <em style="color:#DC143C;font-weight:bold">this</em> you will have to look somewhere else!</p>
-                         <p><em style="color:#DC143C;font-weight:bold">Danach</em> werden Sie wohl woanders suchen mÃ¼ssen!</p>
+                         <p><em style="color:#DC143C;font-weight:bold">Danach</em> werden Sie wohl woanders suchen müssen!</p>
 
 <TERM_EXCLUDED_PRE>   := <p>&nbsp;</p><p>The word / Der Begriff <span style="color:darkorange;font-weight:bold"><blockquote>
 
 <TERM_EXCLUDED_PAST>  := </blockquote></span> was <span style="color:darkorange;font-weight:bold">not considered</span>, as it appears too often.<br />
-                         </span> wurde <span style="color:darkorange;font-weight:bold">nicht berÃ¼cksichtigt</span>, da er zu hÃ¤ufig vorkommt.</p>
+                         </span> wurde <span style="color:darkorange;font-weight:bold">nicht berücksichtigt</span>, da er zu häufig vorkommt.</p>
 
 <NO_SEARCH_RESULT>    := <p>&nbsp;</p><p><span style="color:black;font-weight:bold">No results found for you seach.</span><br />
                          Please try another search term.</p>
                          <p><span style="color:black;font-weight:bold">Suchbegriff nicht gefunden.</span><br />
-                         Bitte Ã¼berprÃ¼fen Sie Ihren Suchbegriff und starten Sie eine neue Suche.</p>
+                         Bitte überprüfen Sie Ihren Suchbegriff und starten Sie eine neue Suche.</p>
 
-<SEARCH_PREV>         := &laquo; Go back / ZurÃ¼ck
+<SEARCH_PREV>         := &laquo; Go back / Zurück
 <SEARCH_MIDDLE>       := &nbsp;&nbsp;|&nbsp;&nbsp;
 <SEARCH_NEXT>         := Next / Weiter &raquo;
 
