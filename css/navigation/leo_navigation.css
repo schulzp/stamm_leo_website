@@ -1,0 +1,114 @@
+@media all
+{
+  .hlist {
+    /* (en) containing floats in IE */
+    /* (de) Einfassen der Floats im IE */
+    width: 100%;
+    overflow: hidden;
+    /* (en) containing floats in all other browsers */
+    /* (de) Einfassen der Floats in allen anderen Browsern */
+    float: left;
+    display: inline;
+    /* (en|de) Bugfix: IE - collapsing horizontal margins */
+    position:relative;
+    /* (en) Repeat the main color from the image */
+    /* (de) Wiederholung der Hauptfarbe aus der Bilddatei */
+    background: #c0c0c0 url("../images/bar.gif") repeat-x top right;
+    border-top: 1px #000 solid;
+    border-bottom: 1px #606e8d solid;
+    line-height: 0;
+  }
+
+  .hlist ul {
+    /* (en|de) Bugfix: IE - Doubled Float Margin Bug */
+    display: inline;
+    float: left; /* LTR */
+    /* (en) Left margin of the first button  */
+    /* (de) Abstand des ersten Buttons vom linken Rand  */
+    margin: 0 0 0 50px; /* LTR */
+    padding: 0;
+    border-left: 1px #4e5a73 solid;
+    border-right: 1px #606e8d solid;
+  }
+
+  .hlist ul li {
+    border-left: 1px #606e8d solid;
+    border-right: 1px #4e5a73 solid;
+    /* (en|de) Bugfix: IE - Doubled Float Margin Bug */
+    display: inline;
+    float: left; /* LTR */
+    font-size: 1.0em;
+    line-height: 1.3em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hlist ul li a,
+  .hlist ul li strong {
+    background: transparent;
+    color: #fff;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5em 0.8em 0.5em 0.8em;
+    text-decoration: none;
+    width: auto;
+  }
+
+  .hlist ul li a:focus,
+  .hlist ul li a:hover,
+  .hlist ul li a:active  { 
+    background: #eee url("../images/bar_yellow.gif") repeat-x top right; 
+    color: #333; 
+    text-decoration: none; }
+
+  .hlist ul li.active {
+    /* (en) Repeat the main color from the image */
+    /* (de) Wiederholung der Hauptfarbe aus der Bilddatei */
+    background: #272727 url("../images/bar_bright.gif") repeat-x top right;
+    border-left: 1px #4e5a73 solid;
+    border-right: 1px #4e5a73 solid;
+  }
+
+  .hlist ul li.active strong,
+  .hlist ul li.active a:focus,
+  .hlist ul li.active a:hover,
+  .hlist ul li.active a:active { background: transparent; color: #fff; text-decoration: none; }
+
+
+  /*-------------------------------------------------------------------------*/
+
+  #subnav .hlist {
+    background-image: none;
+    background-color: #657494;
+    border: none;
+  }
+
+  #subnav .hlist ul {
+    margin-left: 21px;
+    border: none;
+  }
+
+  #subnav .hlist ul li {
+    border: none;
+    margin: 0px 1px;
+  }
+
+  #subnav .hlist ul li.active {
+    background: #657494 url("../images/subnav_bullet.gif") no-repeat bottom center;
+  }
+
+  #subnav .hlist ul li a,
+  #subnav .hlist ul li strong {
+    color: #ccc;
+  }
+
+  #subnav .hlist ul li a:focus,
+  #subnav .hlist ul li a:hover,
+  #subnav .hlist ul li a:active  { 
+    background: none; 
+    color: #fff; 
+  }
+}

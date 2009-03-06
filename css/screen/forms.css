@@ -1,0 +1,15 @@
+@media all {
+  .col3 form.yform {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .col3 form.yform fieldset {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0.2em 0;
+  }
+}

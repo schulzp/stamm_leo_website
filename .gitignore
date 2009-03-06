@@ -6,5 +6,6 @@ yaml/debug/*
 yaml/*.*
 yaml/print/print_*_draft.css
 !yaml/print/print_103_draft.css
+index.html
 *.swp
 Thumbs.db

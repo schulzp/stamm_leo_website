@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS framework
+ * (en) stylesheet for screen layout
+ * (de) Stylesheet für das Bildschirm-Layout
+ *
+ * @creator       YAML Builder V1.2b (http://builder.yaml.de)
+ * @file          basemod.css
+ * @-yaml-minver  3.1
+ */
+
+@media screen, projection
+{
+  /*-------------------------------------------------------------------------*/
+
+  /* (en) Marginal areas & page background */
+  /* (de) Randbereiche & Seitenhintergrund */
+  body { background: #000 url("../images/gradient_bg.gif") repeat-x top left fixed; padding: 0px; }
+
+  /* Layout Alignment | Layout-Ausrichtung */
+  .page_margins { margin: 0 auto; }
+
+  /* Layout Properties | Layout-Eigenschaften */
+  .page_margins { width: 700px; background: transparent; }
+  .page { padding: 0px; background: #657494; }
+  #header { 
+    /*padding: 45px 2em 1em 20px;*/
+    color: #000; 
+    background: #fff url("../images/banner.jpg") no-repeat top left;
+    height: 120px;
+    /*border-top: 1px solid #111;*/
+  }
+  #header #topnav { 
+    color: #666;
+    text-align: left;
+    background: transparent; 
+    padding: 3px 15px;
+    position: static;
+    display: none;
+  }
+
+  #topnav a {
+    color: #888;
+  }
+
+  #nav, #subnav { overflow:hidden; }
+
+  div.hlist {  }
+
+  #main { margin: 0; background: #fff; }
+
+  #footer { 
+    padding: 5px 20px; 
+    color:#666; 
+    background: #f9f9f9 url("../images/bar_dark.gif") repeat-x top left; 
+    border-top: 1px #111 solid;
+    text-align: right;
+  }
+
+  #footer a {
+    color: #888;
+  }
+
+  #footer .quickinfo {
+      float: left;
+      text-align: left;
+  }
+
+  /* (en) navigation: horizontal adjustment | (de) horizontale Ausrichtung  */
+  #nav ul { margin-left: 20px; }
+
+  /*-------------------------------------------------------------------------*/
+
+  /**
+   * (en) Formatting content container
+   * (de) Formatierung der Inhalts-Container
+   *
+   */
+
+  #col1 { float: left; width: 60% }
+  #col2 { display:none}
+  #col3 { width: auto; margin: 0 0 0 60% }
+  #col1_content { padding: 0 10px 0 20px }
+  #col3_content { padding: 2.5em 20px 0 10px }
+
+  #subnav .col1 { width: 60% }
+  #subnav .col3 { margin: 0 0 0 60%; padding: 0 20px 0 10px }
+	
+  /*-------------------------------------------------------------------------*/
+
+  #main div.col_header {
+    padding: 0.5em 0 0 0;
+    line-height: 2em;
+  }
+
+  /*-------------------------------------------------------------------------*/
+
+  /**
+   * (en) Formatting sidebar boxes
+   *
+   */
+
+  #col3 div.col_box {
+    border: 1px solid #657494;
+    background: #eee;
+    padding: 0;
+    margin: 0 0 10px 0;
+  }
+
+  #col3 div.col_box h1 {
+    font-size: 1.5em;
+    color: #fff;
+    background: #657494;
+    padding: 5px 10px;
+  }
+
+  #col3 div.col_box_content {
+    padding: 10px;
+  }
+}
