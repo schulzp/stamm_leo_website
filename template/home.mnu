@@ -1,11 +1,10 @@
 MENU: MAIN
 CLASS;      MNAME;         LINK;                  TEXT
-00.01;      Start page;    $home/cont/index.htm;       Startseite
+00.01;      Startseite;    $home/cont/index.htm;       Startseite
 00.02;      Unser Stamm;   $home/cont/stamm.htm;      Unser Stamm
 00.03;      Termine;       $home/cont/termine.htm;    Termine
 00.04;      Herunterladen; $home/cont/download.htm;    Herunterladen
 00.05;      Kontakt;       $home/cont/index.htm;      Kontakt
-
 
 MENU: SUB1
 CLASS;      MNAME;                LINK;                      TEXT
