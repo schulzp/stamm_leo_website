@@ -1,0 +1,10 @@
+yaml/add-ons/*
+yaml/navigation/*
+yaml/patches/*
+yaml/screen/*
+yaml/debug/*
+yaml/*.*
+yaml/print/print_*_draft.css
+!yaml/print/print_103_draft.css
+*.swp
+Thumbs.db

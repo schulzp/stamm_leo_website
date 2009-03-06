@@ -1,0 +1,90 @@
+; Main Menu
+
+{MAIN.PRE}
+<ul>
+{MAIN.NORMAL}
+                <li><a href="{LINK}" title="{TEXT}">{MNAME}</a></li>
+{MAIN.ACTIVE}
+                <li class="active"><a href="{LINK}" title="{TEXT}">{MNAME}</a></li>
+{MAIN.BETWEEN}
+{MAIN.PAST}
+</ul>
+
+{SUB1.PRE}
+<ul>
+{SUB1.NORMAL}
+                <li><a href="{LINK}" title="{TEXT}">{MNAME}</a></li>
+{SUB1.ACTIVE}
+                <li class="active"><a href="{LINK}" title="{TEXT}">{MNAME}</a></li>
+{SUB1.PAST}
+</ul>
+
+; Line menu
+
+{LINE.PRE}
+        <!----- phpCMS LINE MENU START ----->
+{LINE.NORMAL}
+
+{LINE.ACTIVE}
+        <a href="{LINK}" title="{TEXT}">{MNAME}</a>
+{LINE.BETWEEN}
+        &nbsp;&gt;&nbsp;
+{LINE.PAST}
+        <!----- phpCMS LINE MENU END ----->
+
+; Sitemap definition
+
+{TOC.MAIN.PRE}
+<!----- phpCMS TOC START ----->
+<ul>
+
+{TOC.MAIN.NORMAL}
+   <li>
+      <p><a style="color: blue; text-decoration: underline;" href="{LINK}">{MNAME}</a> - {TEXT}</p>
+   </li>
+
+{TOC.SUB1.NORMAL}
+   <ul>
+      <li>
+         <a style="color: blue; text-decoration: underline;" href="{LINK}">{MNAME}</a> - {TEXT}<br />
+      </li>
+   </ul>
+
+{TOC.SUB2.NORMAL}
+   <ul>
+      <ul>
+         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -
+            <a style="color: blue; text-decoration: underline;" href="{LINK}">{MNAME}</a> - {TEXT}<br />
+         </li>
+      </ul>
+   </ul>
+
+{TOC.MAIN.PAST}
+</ul></p>
+<!----- phpCMS TOC END ----->
+
+; Search definition - English
+
+{SEARCH.SEARCH.PRE}
+<!----- phpCMS SEARCH RESULT STATISTIC START ----->
+<span><font face="Arial" size="2">Expression(s) searched for: <font color="darkorange"><b><QUERY_TERM></b></font></font><br />
+      <font face="Arial" size="1">Search time: <SEARCH_TIME> sec.
+                                  &nbsp;&nbsp;|&nbsp;&nbsp;Number of matches: <WORD_COUNT>
+                                  &nbsp;&nbsp;|&nbsp;&nbsp;Number of pages found: <PAGE_COUNT>
+      </font>
+</span>
+<!----- phpCMS SEARCH RESULT STATISTIC END ----->
+<hr align="left" width="100%" />
+<!----- phpCMS SEARCH RESULTS START ----->
+<TERM_EXCLUDED_PRE><SEARCH_TERM_EXCLUDED><TERM_EXCLUDED_PAST>
+
+{SEARCH.SEARCH.NORMAL}
+<span><font face="Arial" size="2"><b>{NUMBER}. - <a href="{URL}">{TITLE}</a></b></font><br />
+<font face="Arial" size="1">Ranking: {RANKING}</font><br />
+<font face="Arial" size="2">{TEXT}</font><br />
+<font face="Arial" size="1">Matches: {FWORDS}</font></span>
+<hr align="left" width="100%" />
+
+{SEARCH.SEARCH.PAST}
+<!----- phpCMS SEARCH RESULTS END ----->
+
