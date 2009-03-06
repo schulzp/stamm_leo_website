@@ -1,0 +1,75 @@
+{PROJECT}		../../template/doc.en.ini
+{GRAFIK_LINKS}	$home/gifs/li_phpcms.gif
+{LOGO_1}		$home/gifs/cmslogo1.gif
+{LOGO_2}		$home/gifs/cmslogo2.gif
+{MENU}			00.08.10.04
+{TITEL}			Content files
+
+{CONTENT}
+<ul>
+<li><a href="$self#was">What are content files?</a></li>
+<li><a href="$self#felder">Special, reserved fields</a></li>
+<li><a href="$self#beispiel">An example</a></li>
+</ul>
+<p><hr /></p>
+<US><a name="was"><a href="$self#top">What are content files?</a></a></US>
+<p>
+Content files contain the information, which do you want to publish. For formatting,
+it's best to use TAGS. These Tags have to be defined in a TAG file You can read more about this
+on the Page about TAG files.
+</p>
+<p>
+Content files should always begin with content fields. You can chose the name of
+a field, but it must be the same name as in the template. The information from the
+content file will be inserted in the template at the given place.
+</p>
+<p>
+A content field with the name "CONTENT" looks for example in such a way:
+</p>
+<BLOCKQUOTE>&#123;CONTENT&#125;</BLOCKQUOTE>
+<p>
+<WICHTIG>Note:</WICHTIG> phpCMS is casesensitiv. That means that upper and lower case are
+different for the parser.
+</p>
+<p>
+A content field is terminated automatically by the start of the next field. A tag to
+close such a field as it is usual in HTML is not necessary.
+</p>
+<p><hr /></p>
+<US><a name="felder"><a href="$self#top">Special, reserved fields</a></a></US>
+<p>
+phpCMS knows three special fields in content fields at the moment: These are the Fields "PROJECT" and "MENU".
+</p>
+<p>
+In the field "PROJECT" you have to tell the parser the path to your project file.
+You can give this path absolutly to the document root or relative to the content file.
+<WICHTIG>The variable "&#36;home" can't be used!</WICHTIG>
+The field "MENU" defines what a level in the menu this content file has. You can read
+more about this on the page about menus. At least there is a field, that can be
+used to call a php script on a page. For this function create a field that begins
+with "&#123;SCRIPT". You can find more information to scripts in the Area about scripts.
+</p>
+<p><hr /></p>
+<US><a name="beispiel"><a href="$self#top">An example</a></a></US>
+<p>
+Because it is easier to learn, I'll give you an example for a content file:
+</p>
+<SEITE><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3><Z><S>
+<B>&#123;TITEL&#125;</B><br />
+An Example<P>
+
+<B>&#123;CONTENT&#125;</B><br />
+This is some unnecessary text.&lt;BR&gt;
+<br />You can use nearly all HTML tags for formatting. However, a more intelligent way is 
+to use your own TAGS for formatting.
+<P>
+
+<B>&#123;PROJECT&#125;</B><br />
+/homepage/template/test.ini<P>
+
+<B>&#123;MENU&#125;</B><br />
+00.01.01<P>
+</S></Z></TABLE></SEITE>
+<p>
+This is just the content. How this looks to a user will be defined in the <a href="templates/_parseext_">template</a>.
+</p>

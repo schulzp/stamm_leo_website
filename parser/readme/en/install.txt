@@ -1,0 +1,187 @@
+***************************************************************
+*                                Installation
+*                                    of
+*                            phpCMS 1.2.x with PAX
+*
+****************************************************************
+*                       11 steps to use it successfully
+****************************************************************
+
+
+IMPORTANT:
+phpCMS 1.2.x or higher no more supports PHP 3.
+PHP 4 or higher will be required.
+
+****************************************************************
+1 UNZIP
+****************************************************************
+
+Unzip and upload the archive into the DOCUMENT ROOT of your webserver.
+
+AGAIN - THIS IS IMPORTANT: 
+When doing a first time install put the contents of the archive into your
+document root. (You may move the parser later - but it's a lot less messy
+doing that after you know how things work.)
+
+After upload this your directory structure should look like this:
+
+/demo-de
+/demo-de/form
+/demo-de/form/forms
+/demo-de/gif
+/demo-de/suche
+/demo-de/template
+/demo-en
+/demo-en/form
+/demo-en/form/forms
+/demo-en/gif
+/demo-en/search
+/demo-en/template
+/parser
+/parser/cache
+/parser/doc
+/parser/doc/doc_de
+/parser/doc/doc_de/gifs
+/parser/doc/doc_en
+/parser/doc/doc_en/gifs
+/parser/gif
+/parser/gif/filemanager
+/parser/gif/filemanager/filetypes
+/parser/gif/indexer
+/parser/gif/nav
+/parser/help
+/parser/include
+/parser/include/filemanager
+/parser/plugs
+/parser/readme
+/parser/readme/de
+/parser/readme/en
+/parser/session
+/parser/stat
+/parser/stat/backup
+/parser/stat/current
+/parser/temp
+/parser/template
+
+****************************************************************
+2 SET PERMISSIONS
+****************************************************************
+
+Under Unix or Linux the webserver needs to have the following permissions:
+    read permission: (directories need additional execution rights)
+        "/parser", and all subdirectories and files within.
+
+    additionally write permissions:
+        "/parser"
+        "/parser/cache"
+        "/parser/include"
+        "/parser/include/default.php"
+
+Additionally for using the demo:
+    read permission:
+        "/demo", and all subdirectories and files within.
+
+Additionally for using stats:
+    write permission:
+        "/parser/stat"
+        "/parser/stat/backup"
+        "/parser/stat/current"
+        "/parser/stat/current/stat.txt"
+
+Additionally for using the HTTP-Indexer:
+    write permission:
+        "/parser/temp"
+
+In order to use the sessions plug-in the webserver needs to have read/write
+permission for "/parser/session".
+
+****************************************************************
+3 SERVER CONFIGURATION
+****************************************************************
+
+To make the installation process as smooth as possible you will find a
+".htaccess" file for demonstration in the archive.
+In order to make use of this, "AllowOverride All" needs to be enabled in the 
+webserver's configuration.
+
+If you have direct access to your server's httpd.conf you may put the directives
+that are contained in the .htaccess files directly into the httpd.conf.
+This is advisable to increase performance of your server.
+
+Should PHP on your server require a different file extension than ".php" you
+will need to adjust this in your .htaccess or httpd.conf.
+
+If you get this to work you may later turn on "stealth-mode" in the GUI
+(control panel), if not, you cannot use stealth-mode.
+
+****************************************************************
+4 PHP and SLASHES
+****************************************************************
+
+It is advisable to replace all "\" with "/" within your php.ini.
+This may help avoid certain problems.
+Usually, however, phpCMS will work regardless of this.
+
+****************************************************************
+5 FILE NAMES
+****************************************************************
+
+Should PHP files end with e.g. ".php4" on your server, open the "/parser"
+directory, and rename all the three files to "*.php4".
+
+ATTENTION!!
+In the above case you also need to modify the contents of your .htaccess or
+httpd.conf file(s).
+
+****************************************************************
+6 CHANGE THE PASSWORD!
+****************************************************************
+
+The passwort for the access to the phpCMS administration area must be set in
+the file "parser/include/default.php".
+Open this file with a text editor as e.g. the "notepad" editor from windows and
+go to the line
+    $this->PASS = 'YourPasswordHere';
+change the string "YourPasswordHere" into whatever you want to be the password
+to log into the phpCMS administration area.
+
+For security reasons you won't be able to log into the phpCMS adminstration area
+as long as you haven't changed this password.
+
+****************************************************************
+7 GETTING STARTED
+****************************************************************
+
+If you made any changes to your httpd.conf, restart your web server!
+
+Open the directory:
+    http://servername/parser/parser.php
+or, as in the above example:
+    http://servername/parser/parser.php4
+
+****************************************************************
+8 READ THE MANUAL
+****************************************************************
+
+When parser.php is finally running you should read the documentation which is
+available from within phpCMS.
+
+****************************************************************
+9 BUILD YOUR OWN PAGES
+****************************************************************
+
+It's usually a good idea to start out by looking at how the pages in the "/demo"
+directory are set up, and then changing them to look more to your liking.
+
+****************************************************************
+10 TUNING
+****************************************************************
+
+Under optimal circumstances (server supports .htaccess, PHP with zlib,
+correct permissions) you should activate G-ZIP Compression, Server Cache and
+Stealth-Mode as well as Secure Stealth-Mode.
+
+****************************************************************
+11 Have fun with phpCMS!
+****************************************************************
+;-)

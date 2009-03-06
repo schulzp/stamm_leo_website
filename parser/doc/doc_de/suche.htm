@@ -1,0 +1,549 @@
+{PROJECT}		../../template/doc.de.ini
+{ROBOTS}INDEX, FOLLOW
+{DESCRIPTION}phpCMS bietet eine echte Volltextsuche für Webseiten auf Flat-File-Basis. Ihr benötigt keine Datenbank um diese Volltextsuche zu nutzen!
+{MENU}			00.06.11
+{TITEL}			Volltextsuche in phpCMS
+{CONTENT}
+<B_BOX_START "Übersicht">
+<li><a href="$self#einfuerung">Wie funktioniert die Volltextsuche in phpCMS?</a></li>
+<li><a href="$self#indizieren">Erstellen des Volltextindexes mit lokaler Indizierung.</a></li>
+<li><a href="$self#profil">Definition von Suchprofilen für HTTP-Indizierung.</a></li>
+<li><a href="$self#browser">Erstellen eines Volltextindexes mit HTTP-Indizierung und Browserinterface</a></li>
+<li><a href="$self#shell">Erstellen eines Volltextindexes mit HTTP-Indizierung und Shell-Skript</a></li>
+<li><a href="$self#test">Test der erstellten Volltextsuche</a></li>
+<li><a href="$self#analyse">Durchführen einer Wortanalyse</a></li>
+<li><a href="$self#template">Aufbau eines Templates für die Anzeige der Suchergebnisse.</a></li>
+<li><a href="$self#menu">Ergänzung des Menütemplates.</a></li>
+<li><a href="$self#project">Erstellen der Projektdatei.</a></li>
+<li><a href="$self#ergebnis">Anlegen einer Ergebnisseite.</a></li>
+<li><a href="$self#formular">Aufbau eines Suchformulars.</a></li>
+<B_BOX_STOP>
+<a name="einfuerung"></a>
+<B_BOX_START "Wie funktioniert die Volltextsuche in phpCMS?">
+<p>
+Der Aufbau einer Volltextsuche für Eure eigene Homepage erfordert mehrere 
+Schritte. Zuerst wird der Volltext-Index erstellt. Zur Erstellung stehen mehrere 
+Varianten zur Verfügung:
+<ul>
+<li>Bei der lokalen Indizierung werden direkt die phpCMS- und HTML-Dateien auf 
+dem Server gelesen und indiziert.</li>
+<li>Bei der HTTP-Indizierung via Browserinterface wird eine HTTP-Verbindung zur 
+Startadresse aufgebaut, so als ob ein Surfer die Datei abruft. Die Seite wird 
+zum Indexer übertragen und gespeichert. Dabei werden alle Links aus dieser Seite 
+extrahiert und abhängig von den Einstellungen des Indexers werden die Seiten auf 
+die diese Links zeigen ebenfalls zur Indizierung geholt. Diesen Vorgang nennen 
+wir spidern, weil sich der Indexer wie eine "Spinne" durch die Zielseiten bewegt. 
+Nachdem alle gewünschten Dateien "gespidert" sind, wird der eigentliche Index 
+erstellt. Der Vorteil dieser Variante ist, dass auch Seiten von anderen Servern,
+bzw. Seiten mit dynamischen Inhalten indiziert werden. Der Nachteil ist, dass 
+der Vorgang länger dauert als die lokale Indizierung.</li>
+<li>Bei der HTTP-Indizierung mittels Shell-Skript wird im wesentlichen genau so 
+wie bei der normalen HTTP-Indizierung verfahren. Der Unterschied besteht darin, 
+dass die Indizierung nicht durch das Browser-Interface gestartet wird, sondern 
+mittels eines php-Skriptes das über die Kommandozeile ausgeführt wird. Diese 
+Methode empfiehlt sich vor allem für große Sites, da hier wesentlich schneller
+indiziert wird als bei der Browservariante. Die einzige Einschränkung dabei ist,
+dass man entweder einen Provider nutzen muß, der Shell-Zugang gewährt (z.B. mit Telnet)
+oder aber man hat selbst eine kleine Installation lokal und indiziert von Daheim. 
+Einem späteren Übertragen der Indizies steht in diesem Falle nichts im Wege.</li>
+</ul>
+Danach legt Ihr ein eigenes Template für die Suchergebnisse an. Eine eigene 
+Projektdatei für die Ergebnisseite ist ebenfalls erforderlich. Dann werden im 
+Menütemplate einige Einstellungen vorgenommen. Danach erstellt Ihr eine Seite, 
+in der die Suchergebnisse angezeigt werden sollen. Ist diese Seite fertig, 
+bindet Ihr die Suchabfrage, das Formular, in eine oder mehrere Seiten ein.
+</p>
+<B_BOX_STOP>
+
+<a name="indizieren"></a>
+<B_BOX_START "Erstellen des Volltextindexes mit lokaler Indizierung.">
+<p>
+Überlegt Euch zuerst, ab welchem Verzeichnis Eurer Website indiziert werden 
+soll. Ihr habt in dieser ersten Version der Volltextsuche von phpCMS die 
+Möglichkeit, innerhalb des zu indizierenden Verzeichnisses bis zu acht 
+Verzeichnisse anzugeben, die ignoriert werden sollen. Es ist eine kluge Idee, 
+für große Seitenteile Eurer Homepage einen eigenen Index zu erstellen. Mit 
+phpCMS könnt Ihr beliebig viele Indizies erstellen und somit beliebig viele 
+Suchen ermöglichen. Derzeit ist die Nachindizierung von Seiten noch nicht 
+möglich, es muß also immer bei groben Änderungen ein kompletter Index erstellt 
+werden.
+</p>
+<p>
+Ein Index-Vorgang kann unterschiedlich lange dauern. Das hängt sehr vom Umfang 
+der indizierten Daten ab. Meine Website hier umfasst ca. 300 Seiten. Die 
+Erstellung eines Indexes dieser ganzen Seite dauert mit der lokalen Indizierung 
+von phpCMS ca. 2-3 Minuten. Dabei werden temporär zusätzlich, zum bereits 
+verbrauchten Webspace ca. 0,5 MB belegt. Ihr solltet also bevor Ihr zu 
+indizieren beginnt checken, ob Ihr noch genug Webspace zur Verfügung habt.
+Nach der erfolgten Indizierung reduziert sich der Verbrauch ungefähr auf 1/5 
+der temporären Größe.
+</p>
+<p>
+Jetzt überlegt Ihr Euch, wohin der Index installiert werden soll, wenn er 
+erstellt ist. Am besten macht Ihr Euch eine Liste mit diese Überlegungen (es 
+kommen noch ein paar dazu). phpCMS bietet die Option, den Index als normale 
+Dateien zu speichern, oder mit gzip zu komprimieren. Um die komprimierte Version 
+zu nutzen, muß bei Eurem Provider aber das zlib-Library installiert sein 
+(phpinfo() is your friend). Der komprimierte Index belegt wesentlich weniger 
+Speicherplatz (nur ca. 1/3 des Unkomprimierten), verlangsamt aber den 
+Suchvorgang, da der Index erst im Speicher dekomprimiert werden muß,
+bevor die Suche durchgeführt werden kann. Also: Nächste Entscheidung auf der 
+Liste = gzip oder nicht gzip.
+</p>
+<p>
+Jetzt müßt Ihr entscheiden, wieviele Zeichen bei der Anzeige des Suchergebnisses 
+ausgegeben werden sollen. Ein guter Wert liegt bei ca. 300 Zeichen. Wählt Ihr zu 
+wenige Zeichen, kann sich der User unter dem Ergebniss nichts vorstellen, zu viele
+Zeichen verlangsamen die Anzeige des Suchergebnisses. 
+</p>
+<p>
+Eine Stopwortdatei enthält jene Wörter, die nicht in den Index aufgenommen 
+werden sollen. Ihr erstellt eine solche Datei einfach mit einem Texteditor und 
+speichert sie am Webserver in einem Verzeichnis Eurer Wahl. Eine Stopwortdatei 
+enthält die Wörter, getrennt durch einen Zeilenumbruch:
+<ul>
+<li>und</li>
+<li>ihr</li>
+<li>seine</li>
+<li>eure</li>
+</ul>
+Alle Stopwörter werden klein geschrieben. Ein Beispiel einer solchen 
+Stopwortdatei findet Ihr im Verzeichnis "/parser/include". Diese Datei heißt 
+"stop.db" und enthält Stopwörter in Deutsch und Englisch. Ihr könnt für jeden 
+Index eine eigene Stopwortdatei erstellen, oder Ihr benutzt für alle Indizies 
+die selbe Datei. Vor der Erstellung des Indexes muß man das in den Optionen 
+angeben.
+Also auf die Liste damit!
+</p>
+<p>
+Bei der Entwicklung der Volltextsuche und des Indexers bin ich auf das Problem 
+gestoßen, dass einige Provider timeouts für PHP-Skripte gesetzt haben. Bei 
+längeren Laufzeiten von Skripten, werden diese dann einfach abgebrochen. Dabei 
+wird der Index natürlich zerstört. Um das zu umgehen, wird in mehreren Schritten 
+indiziert. Je größer diese Schritte sind, um so schneller geht
+der Vorgang der Indizierung. Ihr könnt diese Schrittgröße ebenfalls in den 
+Optionen einstellen und zwar unter dem Namen "Blockgröße". Der Vorgabewert sind 
+200.000 Byte, für einige Provider sicher bereits zu groß. Ihr tastet Euch am 
+besten schrittweise an das Limit Eures Providers heran, um die optimale 
+Einstellung herauszufinden. Habt Ihr optimale Blockgröße gefunden, könnt Ihr 
+diese in der Datei "default.php" die Ihr im Verzeichnis "/parser/include" 
+findet eintragen.
+</p>
+<p>
+Jetzt überlegt Euch, wie lange die kürzesten Wörter sein dürfen, die noch 
+indiziert werden. In den Optionen stellt Ihr die minimale Wortlänge ein. 
+<b>Achtung:</b> Wörter die kleiner als zwei Buchstaben sind akzeptiert das 
+Suchskript nicht. Je länger die kürzesten Wörter sind, die indiziert werden, 
+um so schneller funktioniert die Suche. Das System funktioniert hervorragend mit
+der Einstellung einer Wortlänge von drei Buchstaben.
+</p>
+<p>
+Nun sind wir endlich so weit, den Index-Vorgang zu starten. Ruft einfach die 
+Datei "parser.php" ohne Optionen auf. Nach Eingabe des Paßwortes (dass Ihr 
+hoffentlich längst geändert habt), klickt links auf den Menüpunkt 
+"Volltextsuche" und gebt die Optionen auf Eurer Liste ein. Was Ihr habt keine 
+Liste? Dann passiert den Start, kassiert keine 200. :-)
+</p>
+<p>
+Nach einem Klick, auf den Button "Indizieren starten" beginnt die Indizierung. 
+Zuerst wird eine Liste mit allen Wörtern gebildet. phpCMS zeigt Euch als Status, 
+welche Dateien gerade indiziert wurde und wie lange das gedauert hat, sowie 
+wieviele Dateien noch zu indizieren sind. Die erste Statusinfo kann ein paar 
+Sekunden dauern, nicht ungeduldig werden. Nachdem die Wortliste gebildet
+ist, startet der Merger automatisch. Der Merger scheidet doppelte Wörter aus 
+und erfasst die Häuffigkeit von vorkommenden Wörtern in einzelnen Seiten. Auch 
+der Merger liefert Status-Informationen. Am Ende des Mergers erhaltet Ihr eine 
+Anzeige, wie lange der gesamte Vorgang gedauert hat. Auch der Merger 
+funktioniert mehrstufig, also erst wieder klicken, wenn Ihr die Meldung
+habt, dass der Indiziervorgang abgeschlossen ist. Ihr zerstört sonst den Index.
+</p>
+<p>
+Das wars, der Index ist erstellt.
+</p>
+<B_BOX_STOP>
+
+<a name="profil"></a>
+<B_BOX_START "Definition von Suchprofilen für HTTP-Indizierung.">
+<p>
+Der neuere HTTP-Indexer bietet eine besonders komfortable Möglichkeit, 
+Suchprofile zu erstellen und zu speichern. Der Vorteil dabei ist, dass die 
+Angaben für die Indizierung nur einmal ausgefüllt werden müssen und der
+Indiziervorgang selbst dann beliebig oft, eventuell sogar zeitgesteuert, 
+ausgeführt werden kann.
+</p>
+<p>
+Um ein neues Suchprofil anzulegen, ruft ihr in der GUI den Punkt "HTTP-Indexer" 
+auf. Danach seht Ihr ein Menü mit vier Menüpunkten, der Erste davon 
+ist [Profil-Wizard]. Wählt diesen Menüpunkt einfach mal an.
+</p>
+<p>
+Im ersten Schritt werdet Ihr nach der Startadresse gefragt. Das ist jene 
+Adresse, an der der Spidervorgang beginnt. Das System übernimmt dabei 
+automatisch den Server der Startadresse in die Serverliste. Am besten gebt Ihr 
+hier die Startseite Eures Webauftrittes an. Ich habe hier z.B. die Adresse 
+"http://www.phpcms.de/homepage/index.htm" angegeben. 
+</p>
+<p>
+Am zweiten Schirm, auf den Ihr durch betätigen der Schaltfläche "hinzufügen" 
+gelangt, werdet Ihr zur Eingabe weiterer Server aufgefordert. Dass ist dann 
+wichtig, wenn z.B. Euer Webauftritt auf mehrere Server verteilt ist. 
+<b>Achtung:</b> Das https-Protokoll wird derzeit vom HTTP-Indexer nicht 
+unterstützt. Seiten die mit https:// beginnen werden ignoriert. Ihr könnt 
+beliebig viele Server hinzufügen, indem Ihr die Adresse in das Eingabefeld 
+schreibt und die Schaltfläche "hinzufügen" betätigt. Ihr müßt aber keinen Server 
+angeben, wenn Euer gesamter Webauftritt am Server der Startadresse liegt. Ist 
+hier kein fremder Server angegeben, werden lediglich Links indiziert, die am 
+Server der Startadresse liegen. Durch betätigen der Schaltfläche "weiter" kommt 
+Ihr auf die nächste Eingabemaske.
+</p>
+<p>
+Hier gebt Ihr an, wie mit der Datei "robots.txt" verfahren wird, wenn eine auf 
+dem zu indizierenden Server gefunden wird. Wenn Ihr hier entscheidet, die Datei 
+zu berücksichtigen, wird bei jedem Indiziervorgang diese Datei von den 
+Zielservern geholt und nachgesehen, welche Verzeichnisse für die Indizierung 
+freigegeben sind. Wählt Ihr hingegen die Einstellung "nicht berücksichtigen" 
+werden die Angaben der "robots.txt" ignoriert. "robot-META-TAGS" entscheidet, 
+wie mit der META-Angabe "robots" im Header von HTML-Dateien verfahren wird. 
+Eine solche Angabe sieht in der HTML-Datei so aus:
+<ul>
+<li>&lt;META NAME ="robots" CONTENT="INDEX,FOLLOW"&gt;</li>
+</ul>
+Mögliche Werte bei CONTENT sind: "INDEX,FOLLOW,NOFOLLOW,NOINDEX". "INDEX" 
+bedeutet, dass der Inhalt der Seite indiziert werden darf. "FOLLOW" heißt, dass 
+Links innerhalb der Seite gefolgt werden soll. "NOINDEX" und "NOFOLLOW" bedeuten 
+jeweils das Gegenteil. Wenn Ihr in Euren Content-Dateien ein Feld für diese 
+Metaangabe einrichtet, könnt Ihr auf Dateiebene steuern, welche Seiten indiziert 
+und welche nicht indiziert werden sollen. Um die Metaangaben in HTML-Dateien zu 
+berücksichtigen wählt Ihr beim Punkt "robot-META-TAGS" die Option "berücksichtigen" 
+aus. Es gibt zusätzlich die Möglichkeit, unterschiedliche META-Angaben für fremde
+Indexer und für den phpCMS-Indexer zu benutzen. Damit bestimmte Angaben nur vom
+phpCMS-Indexer genutzt werden, notiert Ihr <b>zusätzlich</b> zur Angabe:
+<ul>
+<li>&lt;META NAME ="robots" CONTENT="INDEX,FOLLOW"&gt;</li>
+</ul>
+für "fremde" Indexer wie den Google-Bot, die META-Angabe:
+<ul>
+<li>&lt;META NAME ="phpCMS.robots" CONTENT="INDEX,FOLLOW"&gt;</li>
+</ul>
+für den phpCMS-Indexer. Die zweite Angabe wird dann nur vom phpCMS-Indexer 
+genutzt. Die dritte Einstellung "description-META-TAGS" regelt den Umgang mit 
+dem Beschreibungstext in den Metaangaben von HTML-Dateien.
+In einer solchen HTML-Datei sieht das Tag z.B. so aus:
+<ul>
+<li>&lt;META NAME ="description" CONTENT="Diese Seite beschreibt den Umgang mit der Volltextsuche von phpCMS"&gt;</li>
+</ul>
+Wie bei den robots-META-Angaben ist auch hier möglich, eine spezielle Beschreibung
+für phpCMS einzufügen. In diesem Fall notiert Ihr zusätzlich:
+<ul>
+<li>&lt;META NAME ="phpCMS.description" CONTENT="Diese Seite beschreibt den Umgang mit der Volltextsuche von phpCMS und wird nur vom phpCMS-Indexer gelesen"&gt;</li>
+</ul>
+Wenn Ihr bei dieser Option den Punkt "berücksichtigen" auswählt, wird der Text 
+in diesem Tag als Beschreibung der Seite bei der Ergebnisanzeige der 
+Volltextsuche benutzt. In phpCMS kann man das wieder ganz leicht auf Dateiebene 
+steuern, indem Ihr in Eure Content-Datei ein zusätzliches Feld 
+(z.B. &#123;DESCRIPTION&#125;) aufnehmt und im Template dann den Platzhalter
+in das META-TAG einfügt (z.B. &lt;META NAME ="description" CONTENT="&#123;DESCRIPTION&#125;"&gt; ).
+Solltet Ihr Euch diese Arbeit nicht antun wollen, empfiehlt es sich im Template 
+von phpCMS vor das Feld in dem der eigentliche
+Content folgt den HTML-Kommentar <b>"&lt;!-- PHPCMS CONTENT START --&gt;"</b> 
+einzusetzen. Der Indexer beginnt dann erst an dieser Position mit der Suche 
+nach Text für die Anzeige in der Seitenbeschreibung. Sind weder META-Angaben 
+noch dieses spezielle Kommentar-TAG vorhanden, beginnt die Suche nach dem 
+Beschreibungstext unmittelbar nach dem HTML-BODY-TAG. Alle diese Einstellungen 
+sind nur für das gesamte Profil, nicht aber für einen einzelnen Server möglich. 
+Ihr könnt aber in unterschiedlichen Profilen unterschiedliche Angaben machen.
+Mit betätigen der Schaltfläche "weiter" kommt Ihr auf die nächste Seite.
+</p>
+<p>
+Auf dieser Seite könnt Ihr jetzt Adressen mit bestimmten Inhalten ausschließen. 
+Wenn Ihr z.B. ein Forum betreibt, und alle Dateien dieses Forums in einem 
+Unterverzeichnis "/homepage/forum" liegen, dann gebt Ihr hier z.B. "/forum" an. 
+Daraufhin wird der Indexer um alle Adresse die den String "/forum" enthalten 
+einen großen Bogen machen. <b>Achtung:</b> Wenn Ihr neben dem Verzeichnis
+"/homepage/forum" vielleicht noch ein Verzeichnis "/roemer/forumromanum" habt, 
+wird dieses auch nicht indiziert, da auch dieses Verzeichnis den String "/forum" 
+enthält. Kniffelig nicht? :-)<br />
+Ihr könnt beliebig viele Ausschlüsse durch betätigen der Schaltfläche 
+"hinzufügen" hinzufügen. Mit "weiter" kommt Ihr zur nächsten Seite.
+</p>
+<p>
+Hier erfolgt das genaue Gegenteil von der vorhergegangenen Funktion. Wenn Ihr 
+hier eine Adresse angebt, werden ausschließlich Dateien indiziert, die 
+Unterhalb dieser Adresse liegen. Der Indiziervorgang wird keinesfalls in ein
+anderes Verzeichnis wechseln. Wenn Ihr z.B. nur die Dateien im Verzeichnis 
+"Dokumentation" Eures Webservers indizieren wollt, gebt Ihr hier z.B. 
+"http://www.phpcms.de/homepage/Dokumentation" an. Durch "hinzufügen" ... eh 
+schon wissen ... und mit der Schaltfläche "weiter" geht es auf die nächste Seite.
+</p>
+<p>
+Das hier angegebene "Datenverzeichnis" ist jenes Verzeichnis, in dem die 
+Indexdaten für die eben definierte Suche nach der erfolgreichen Indizierung 
+abgelegt werden. <b>Achtung:</b> phpCMS muß Schreibrechte auf dieses 
+Verzeichnis haben. Sollte es Probleme mit den Rechten geben, weist Euch der 
+Wizard bei der Erstellung dieses Profils ohnehin darauf hin.
+Die "Nicht zu indizierenden Extensionen" sind eigentlich selbsterklärend. 
+Dateien mit Endungen, die hier angeführt sind, werden bei der Indizierung 
+übergangen. Einzelne Endungen sind immer durch ein Semikolon (;) zu trennen. 
+Die Angabe der Extensionen erfolgt immer mit Punkt also z.B. ".gif" und nicht 
+"gif"! GZIP verhält sich wie bei der lokalen Indizierung. Pro Suchprofil kann 
+eine eigene Stopwortdatei angegeben werden. Beim Feststellen geeigneter Wörter 
+hilft die Wortanalyse. Wörter die in der Stopwortdatei vorhanden sind werden 
+bei der indizierung ignoriert. (Umstandswörter etc...). Wortlänge, Puffergröße 
+und Beschreibungstext verhalten sich wie bei der lokalen Indizierung.
+Mit der Schaltfläche "weiter" gehts auf die nächste Seite.
+</p>
+<p>
+Hier werden jetzt nochmals die gewählten Einstellungen angezeigt und Ihr werdet 
+zur Eingabe eines Namens für dieses Suchprofil aufgefordert. Ich empfehle hier 
+einen einfachen sprechenden Namen zu vergeben, das erleichtert den Aufruf des 
+Shell-Skriptes wesentlich. Durch betätigend er Schaltfläche "speichern" sichert 
+Ihr das eben erstellte Suchprofil.
+</p>
+<B_BOX_STOP>
+
+<a name="browser"></a>
+<B_BOX_START "Erstellen eines Volltextindexes mit HTTP-Indizierung und Browserinterface">
+<p>
+Wenn Ihr gerade das Suchprofil erstellt habt, landet ihr automatisch auf der 
+Liste der verfügbaren Profile für die Indizierung. Andernfalls ruft im Browser 
+wieder die Datei "phpcms_indexer.php" auf. Wählt im Menü links den Menüpunkt 
+[Indizieren] aus. Ihr seht eine Liste aller verfügbaren Suchprofile. Wenn Ihr 
+nun rechts neben dem Profil Eurer Wahl auf das Icon mit der Lupe klickt, 
+wechselt Ihr zum Startschirm des Indexers. Es werden Euch die Detaildaten des 
+ausgewählten Profils angezeigt, im Hintergrund wird das temporäre Verzeichnis, 
+das zur Indizierung benutzt wird gelöscht und alle Varaiblen werden auf die
+Startwerte zurückgesetzt. Das ist dann wichtig, wenn mehrere Personen mit Eurem 
+System arbeiten. Indiziert ein Kollege gerade seine Dateien und Ihr wechselt in 
+ein Profil, kann es vorkommen, dass sein Indiziervorgang der gerade durchgeführt
+wird zerstört wird. Durch betätigend er Schaltfläche "weiter" startet Ihr den 
+Indiziervorgang.
+</p>
+<p>
+Im ersten Schritt werden die Zielseiten gespidert. Ihr seht dabei eine 
+Statusanzeige, die angibt wieviel Prozent des Spidervorgangs bereits erledigt 
+ist. Diese Anzeige ist nur ein Richtwert, da der Indexer am Anfang ja noch 
+nicht weiß, wieviele Dateien bei der Indizierung berücksichtigt werden. 
+In etwa ab der Hälfte des Vorgangs ist die Anzeige aber korrekt.
+</p>
+<p>
+Ist der Spidervorgang abgeschlossen, werdet Ihr zum Start des zweiten Schrittes 
+aufgefordert. Wurden bei der Indizierung Fehler gefunden (Dateien die nicht 
+abgerufen werden konnten), werden die Fehlerseiten mit den Seiten, die einen 
+Link auf diese Seiten beinhalten auf dieser Seite ausgegeben. Ein kleiner 
+Linkchecker also. Im zweiten Schritt werden alle einzelnen Wörter aus den 
+gespiderten Seiten extrahiert. Durch das Spidern wurde im wesentlichen eine 
+lokale Kopie der Zielseiten angelegt. Wenn Ihr phpCMS beim Provider installiert 
+habt, dann wurde soeben eine exakte 1:1 Kopie Eurer HTML-Dateien auf Eurem
+Webspace abgelegt (also dieser fast verdoppelt). Die Erstellung des Wortindexes 
+erhöht diesen temporären Platzverbrauch weiter. Wenn Ihr also 
+Speicherplatzlimitierung bei Eurem Provider habt, empfiehlt sich eher eine 
+zusätzliche lokale Installation von phpCMS Daheim, die Indexdaten könnt Ihr 
+dann später mit FTP hochladen. Mit betätigend er Schaltfläche "weiter" startet 
+Ihr die Erstellung des Wortindexes.
+</p>
+<p>
+Auch hier steht wieder einen Statusanzeige zur Verfügung. Im Gegensatz zur 
+ersten Statusanzeige ist diese nun präziese, weil die zu verarbeitenten Dateien 
+bereits feststehen. Mit "weiter" gehts zum nächsten Schritt.
+</p>
+<p>
+Nun werden die Wörter nach Wortlänge sortiert. Bei kleinen Seiten bekommt Ihr 
+das gar nicht mit, bei größeren Auftritten seht Ihr hier wieder einen 
+Statusanzeige. Mit "weiter" veranlasst Ihr die eigentliche Erstellung der 
+Indexdaten.
+Auch hier wieder die Statusanzeige, die den Fortschritt angibt. Im letzten 
+Schritt, den Ihr mit der Schaltfläche "Fertigstellen" einleitet, werden die 
+eben erstellten Indexdaten in das Zielverzeichnis kopiert und die temporären 
+Dateien gelöscht.
+</p>
+<B_BOX_STOP>
+
+<a name="shell"></a>
+<B_BOX_START "Erstellen eines Volltextindexes mit HTTP-Indizierung und Shell-Skript">
+<p>
+Dies ist die einfachste und schnellste Methode einen Index zu erstellen. Leider 
+werden nicht überall die notwendigen Voraussetzung gegeben sein um diese Methode 
+einzusetzen. Ihr benötigt entweder beim Provider:
+<ul>
+<li>Shell-Zugang</li>
+<li>Ausführrechte für php-Skripte an der Shell</li>
+<li>Schreibrechte auf das Zielverzeichnis sowie das temporäre Indexerverzeichnis</li>
+</ul>
+oder Ihr installiert php lokal zu Hause. Dann benötigt Ihr aber während des 
+Indiziervorganges permanenten Internetzugang.
+</p>
+<p>
+Projekte bis zu 1.000 Seiten können beruhigt mit dem Browser-Interface arbeiten, 
+ab dieser Größe empfiehlt sich aber der Einsatz des Shell-Skriptes. Vor Einsatz 
+des Shell-Skriptes muß ein Suchprofil erstellt werden, wie bei "HTTP-Indizierung 
+und Browserinterface" beschrieben. Merkt Euch den Namen des gewünschten 
+Suchprofiles!
+</p>
+<p>
+Wechselt in das Verzeichnis, in dem der Parser installiert ist, bei der 
+Originalinstallation "/parser". Ruft nun an der Kommandozeile das Skript auf:
+<ul>
+<li>php shell_indexer.php NameEuresSuchprofiles</li>
+</ul>
+Das Shell-Skript startet automatisch und führt die Indizierung einschließlich 
+Distribution der Datendateien durch. Besonders nützlich ist, wenn man das 
+Shell-Skript zu einem Cron-Job unter Unix oder einem AT-Job unter Windows
+hinzufügen kann, weil der Indexer dann regelmäßig läuft und man sich nicht um 
+die Aktualisierung kümmern muß. Eventuelle Fehler vom Spider werden in die 
+Datei "error.txt" geschrieben, die dann auch im Zielverzeichnis abgelegt wird.
+</p>
+<B_BOX_STOP>
+
+<a name="test"></a>
+<B_BOX_START "Test der erstellten Volltextsuche">
+<p>
+Einer der Menüpunkte des Browser-Interfaces des neuen HTTP-Indexers ist 
+[Suche testen]. Hier habt Ihr die Möglichkeit, wie in phpCMS einen Suchbegriff 
+einzugeben. Zusätzlich habt Ihr oberhalb des Feldes mit dem Suchbegriff, ein 
+Feld in dem Ihr aus den verfügbaren, bereits erstellten Indizies den gewünschten 
+Index auswählt.
+</p>
+<B_BOX_STOP>
+
+<a name="analyse"></a>
+<B_BOX_START "Durchführen einer Wortanalyse">
+Die Wortanalyse ist ein wunderbares Werkzeug, um sinnvolle Wörter für Eure 
+Stopwortdatei festzustellen. Außerdem wird man so schnell auf kleinere Fehler 
+in der Definition der Suchprofile aufmerksam. Wählt einfach den Menüpunkt 
+[Wortanalyse] im Browserinterface des neuen HTTP-Indexers und sucht Euch den 
+gewünschten, bereits erstellten Index aus. Wählt dann noch die Anzahl der 
+auszugebenden Wörter aus. Es werden dann die am häufigsten auftretenden Wörter 
+in diesem Index ausgegeben.
+<B_BOX_STOP>
+
+<a name="template"></a>
+<B_BOX_START "Aufbau eines Templates für die Anzeige der Suchergebnisse">
+<p>
+Dieses Template ist im Prinzip ein ganz normales Template von phpCMS.
+Den einzigen Unterschied zu normalen Templates bildet ein Feld,
+statt dem dann die Suchergebnisse angezeigt werden. Ihr tragt dieses Feld
+wie folgt ein:
+<BLOCKQUOTE>
+&#123;SEARCHRESULT SEARCHTEMP="SUCHE"&#125;
+</BLOCKQUOTE>
+Das Schlüsselwort "SEARCHRESULT" bezeichnet, dass an dieser Stelle im Template die
+Suchergebnisse angezeigt werden. Der Parameter "SUCHE" im obigen Beispiel
+besagt, dass aus dem Menütemplate die Werte mit den Namen "SUCHE" ausgelesen
+werden sollen. Diese Werte tragen wir bei der Erstellung
+des Menütemplates ein.
+</p>
+<B_BOX_STOP>
+
+<a name="project"></a>
+<B_BOX_START "Erstellen der Projektdatei">
+<p>
+phpCMS-Profis wissen jetzt sicher schon was kommt: Im wesentlichen handelt es 
+sich um eine ganz normale Projektdatei, die lediglich, statt auf das normale 
+Template, auf jenes Template zeigt, daß wir gerade für die Suche erstellt haben.
+</p>
+<B_BOX_STOP>
+
+<a name="menu"></a>
+<B_BOX_START "Ergänzung des Menütemplates">
+<p>
+Im Menütemplate stellt phpCMS einige Felder und TAGS zur Verfügung, mit deren
+Hilfe das Aussehen der Ausgabe beeinflusst werden kann. Die Felder sind:</p>
+<ul>
+	<li><b>&#123;NUMBER&#125;</b> - die Position im Ergebnis</li>
+	<li><b>&#123;TITLE&#125;</b> - der Titel der gefundenen Seite</li>
+	<li><b>&#123;RANKING&#125;</b> - die Wertung nach der Gewichtung der gefundenen Wörter. Angezeigt wird der Inhalt der TAGS <b>&lt;RANK_5&gt;</b> bis <b>&lt;RANK_1&gt;</b></li>
+	<li><b>&#123;URL&#125;</b> - die komplette URL der gefundenen Seite</li>
+	<li><b>&#123;FWORDS&#125;</b> - die Such-Begriffe, die in dieser Seite gefunden wurden</li>
+	<li><b>&#123;TEXT&#125;</b> - die ersten Zeichen im Content der gefundenen Seite (wieviele habt Ihr zuvor bei der Indizierung eingestellt)</li>
+</ul>
+Die TAGS, die Ihr zur Anzeige benutzen könnt sind:
+<ul>
+	<li><b>&lt;SEARCH_TIME&gt;</b> - wie lange der Suchvorgang gedauert hat</li>
+	<li><b>&lt;WORD_COUNT&gt;</b> - die Anzahl der insgesamt gefundenen Suchbegriffe, wenn mehrere Begriffe angegeben wurden</li>
+	<li><b>&lt;PAGE_COUNT&gt;</b> - die Anzahl der gefundenen Seiten, die Suchbegriffe enthalten</li>
+</ul>
+Über diese "eingebauten" TAGS hinaus, könnt Ihr in der TAG-Datei folgende TAGS definieren:
+<ul>
+	<li><b>&lt;RANK_5&gt;</b> - Das höchstrangige Ergebnis bei der Suche. Hier könnt Ihr einen Text oder eine Grafik einsetzen.</li>
+	<li><b>&lt;RANK_4&gt;</b> - Das nächst-niedrigere Ergebnis bei der Suche.</li>
+	<li><b>&lt;RANK_3&gt;</b> - Das nächst-niedrigere Ergebnis bei der Suche.</li>
+	<li><b>&lt;RANK_2&gt;</b> - Das nächst-niedrigere Ergebnis bei der Suche.</li>
+	<li><b>&lt;RANK_1&gt;</b> - Das niedrigste Ergebnis bei der Suche.</li>
+	<li><b>&lt;NO_DATA_DIR&gt;</b> - Die Fehlermeldung, wenn kein Daten-Verzeichnis gefunden wurde.</li>
+	<li><b>&lt;NO_SEARCH_TERM&gt;</b> - Die Fehlermeldung, wenn kein, oder ein fehlerhafter Suchbegriff angegeben wurde.</li>
+	<li><b>&lt;NO_SEARCH_RESULT&gt;</b> - Die Fehlermeldung, wenn kein Ergebnis gefunden wurde.</li>
+	<li><b>&lt;SEARCH_PREV&gt;</b> - Der Text oder die Grafik, die angezeigt werden soll um nach vorne zu blättern.</li>
+	<li><b>&lt;SEARCH_MIDDLE&gt;</b> - Der Text oder die Grafik, die zwischen "vorne" und "zurück" angezeigt werden soll.</li>
+	<li><b>&lt;SEARCH_NEXT&gt;</b> - Der Text oder die Grafik, die angezeigt werden soll um nach hinten zu blättern.</li>
+	<li><b>&lt;QUERY_TERM&gt;</b> - Der gesuchte, oder die gesuchten Begriff(e).</li>
+</ul>
+Diese TAGS dürfen nirgends sonst in phpCMS oder Euren eigenen Seiten benutzt 
+werden, sonst kommt es zu falschen Ausgaben durch den Parser.
+Das Menütemplate der Demo enthält also z.B. folgende Einträge:
+<BLOCKQUOTE>
+<b>&#123;SEARCH.SUCHE.PRE&#125;</b><br />
+&lt;h3 style="margin-top: 12px;"&gt;&lt;b&gt;Ergebnis der Suche:&lt;/b&gt;&lt;/h3&gt;<br />
+&lt;p style="font-size: 11px;">Suchzeit: &lt;SEARCH_TIME&gt; s<br />
+Anzahl der gefundenen Begriffe: &lt;WORD_COUNT&gt;<br />
+&lt;TERM_EXCLUDED_PRE&gt;&lt;SEARCH_TERM_EXCLUDED&gt;&lt;TERM_EXCLUDED_PAST&gt;<br />
+Anzahl der gefundenen Seiten: &lt;PAGE_COUNT&gt;<br />
+Suchwort(e): &lt;QUERY_TERM&gt;&lt;/p&gt;<br />
+&lt;table cellpadding="3" cellspacing="0" border="0" width="100%"&gt;
+<br />
+<b>&#123;SEARCH.SUCHE.NORMAL&#125;</b><br />
+&lt;tr&gt;&lt;td bgcolor="#EBEBEB"&gt;&lt;b&gt;&#123;NUMBER&#125;. &lt;a href="&#123;URL&#125;"&gt;&#123;TITLE&#125;&lt;/a&gt;&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;Ranking: &#123;RANKING&#125;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;&#123;TEXT&#125; ...&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;Gefundene Begriffe:&nbsp; &#123;FWORDS&#125;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td colspan="2"&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+<br />
+<b>&#123;SEARCH.SUCHE.PAST&#125;</b><br />
+&lt;/table&gt;
+</BLOCKQUOTE>
+</p>
+<B_BOX_STOP>
+
+<a name="ergebnis"></a>
+<B_BOX_START "Anlegen einer Ergebnisseite">
+<p>
+Auch bei der Seite, die für die Anzeige der Ergebnisse angelegt wird,
+handelt es sich um eine normale phpCMS-Content-Datei. Es gelten alle
+Rahmenbedingungen, wie bei einer normalen Content-Datei. Lediglich
+der Projekt-Eintrag zeigt auf die vorhin angelegte Projekt-Datei.
+</p>
+<B_BOX_STOP>
+
+<a name="formular"></a>
+<B_BOX_START "Aufbau eines Suchformulars">
+<p>
+Jetzt wird es wieder kniffelig. Das Formular mit dem die Suche Ausgelöst wird,
+muß bestimmte Felder enthalten:
+<p>
+<TABELLE>
+<Z><S><b>Feldname</b></SF>	<S><b>Feldtyp</b></SF>	<S><b>Wert</b></SF>		<SR><b>Bedeutung</b></S></ZF>
+<Z><S>action</SF>			<S>form-action</SF>	<SN>ergebnis.htm</SF>		<SR>zeigt auf die Ergebnisseite</S></ZF>
+<Z><S>method</SF>			<S>form-action</SF>	<SN>GET oder POST</SF>		<SR>Methode, mit der das Formular gesendet wird. Empfohlen: GET</S></ZF>
+<Z><S>datadir</SF>			<S>hidden</SF>			<S>Datenverzeichnis</SF>	<SR>Jenes Verzeichnis in dem der Index abgelegt ist.</S></ZF>
+<Z><S>gzip</SF>				<S>hidden</SF>			<S>"on" oder "off"</SF>	<SR>Komprimierung wird verwendet oder nicht (optional)</S></ZF>
+<Z><S>phpcms_result_count</SF><SN>hidden</SF>		<S>beliebige Zahl</SF>		<SR>Anzahl der Trefferausgabe pro Seite (optional)</S></ZF>
+<Z><S>query</SF>			<S>text</SF>			<S>leer</SF>				<SR>Für die Eingabe der Suchbegriffe</S></Z>
+</TABELLE>
+</p>
+In HTML sieht das dann in etwa so aus:
+<hr />
+<CODE><PRE>
+&lt;form action="&#36;home/ergebnis.htm" method = "GET"&gt;
+&lt;input type="hidden" name="datadir" value="$home/suche"&gt;
+&lt;input type="hidden" name="gzip" value="on"&gt;
+&lt;input type="hidden" name="phpcms_result_count" value="7"&gt;
+&lt;input name="query" value="" type="text" size=20 maxsize=30&gt;
+&lt;input type="submit" name="submit" value="go get it"&gt;
+&lt;/form>
+</PRE></CODE>
+<hr />
+<b>Achtung:</b> Wenn Ihr Euren Index mit Komprimierung erstellt habt, <b>muß</b>
+das versteckte Feld "gzip" den Wert "on" enthalten. Habt Ihr ohne
+Komprimierung gearbeitet, <b>darf</b> das Feld nur "off" enthalten oder
+es ist gar nicht vorhanden. Standard-Einstellung vom Such-Skript ist "off".
+</p>
+<B_BOX_STOP>

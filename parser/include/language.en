@@ -1,0 +1,802 @@
+<?php
+/* $Id: language.en,v 1.13.2.53 2006/05/16 10:01:49 guandalug Exp $ */
+/*
+   +----------------------------------------------------------------------+
+   | phpCMS Content Management System - Version 1.2.0
+   +----------------------------------------------------------------------+
+   | phpCMS is Copyright (c) 2001-2003 by Michael Brauchl
+   | and Contributing phpCMS Team Members
+   +----------------------------------------------------------------------+
+   | This program is free software; you can redistribute it and/or modify
+   | it under the terms of the GNU General Public License as published by
+   | the Free Software Foundation; either version 2 of the License, or
+   | (at your option) any later version.
+   |
+   | This program is distributed in the hope that it will be useful, but
+   | WITHOUT ANY WARRANTY; without even the implied warranty of
+   | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   | General Public License for more details.
+   |
+   | You should have received a copy of the GNU General Public License
+   | along with this program; if not, write to the Free Software
+   | Foundation, Inc., 59 Temple Place - Suite 330, Boston,
+   | MA  02111-1307, USA.
+   +----------------------------------------------------------------------+
+   | Original Author: Michael Brauchl (mcyra)
+   | Contributors:
+   |    Tobias Dönz (tobiasd)
+   |    Martin Jahn (mjahn)
+   |    Beate Paland (beate76)
+   |    Henning Poerschke (hpoe)
+   |    Markus Richert (e157m369)
+   |    Thilo Wagner (ignatius0815)
+   +----------------------------------------------------------------------+
+*/
+
+$MESSAGES['ON'] = 'on';	// THIS VALUE SHOULD NOT BE CHANGED!
+$MESSAGES['OFF'] = 'off';	// THIS VALUE SHOULD NOT BE CHANGED!
+
+$MESSAGES['NOPASSES'] = "<p>phpCMS doesn't accept the following passwords:</p><p>'yourpasswordhere',<br />'phpcms',<br />'cms',<br />'test',<br />'pass'.</p><p>Additionally your password has to be at least $DEFAULTS->PASS_MIN_LENGTH characters long.</p>";
+
+$MESSAGES['SETUP'] = array(
+	'BACKUP_FAILED' => array(
+		'TITLE' => 'Parser - Configuration and Options',
+		'INFO' => '<p><b>Error: Unable to back-up default.php ...</b></p><p>Please make a back-up copy default.php yourself...</p><p>Or just skip the backup...</p>',
+		'SUBMIT' => 'Skip Backup',
+		'STATUS' => 'Converting old Configuration and Options...',
+	),
+	'CONVERT' => array(
+		'TITLE' => 'Parser - Configuration and Options',
+		'INFO' =>  '<p><b>Incompatible Configuration File Format</b></p>'.
+                              '<p>Your current configuration file is incompatible to the format used in this version of phpCMS.</p>'.
+			      '<p><b>Auto-Conversion of default.php</b></p>'.
+			      '<p>After an upgrade to phpCMS '."$DEFAULTS->VERSION".', or if you made manual changes to your configuration file, '.
+			      'the file "default.php" needs to be converted into the proper format.</p>'.
+			      '<p>The conversion process will leave your current settings unchanged. Any custom variables you may have '.
+			      'added manually to default.php will be moved to the bottom of the file.</p>'.
+                              '<p>A backup of your original configuration will be saved as default.bak.php in the same directory as default.php.</p>'.
+			      '<p>If for some reason you do not wish to convert your current configuration file, phpCMS may run nevertheless, however, you will not be able to access the configuration page...</p>'.
+			      '<p>Please click on "Convert Now" below, to continue.</p>'.
+			      '<blockquote style="border:1px solid darkgreen;padding:5px"><p><small><b>NOTE: additional format change in v1.2.0</b></p>'.
+			      '<p>An additional format change was introduced in v1.2.0 which affects the search function.</p>'.
+                              '<p>After an upgrade to v'."$DEFAULTS->VERSION".' from v1.1.9 or lower, please note that in order to use the '.
+                              'search function <b>you need to change</b> the contents of your stop words file (<b>stop.db</b>) and any word index files (<b>words.db</b>)  you '.
+			      'created with an earlier version of phpCMS <b>to all lowercase</b>.</p>'.
+                              '</small></blockquote>',
+		'SUBMIT' => 'Convert Now',
+		'STATUS' => 'Converting your Configurations and Options...',
+		'SAVED' => '<b>The Conversion was done successfully.</b><br />Below you can see your converted default.php...',
+		'FAILED' => '<b>The Conversion couldn&#8217;t be completed:</b><br />The settings couldn&#8217;t be saved back to the file.<br />Please check for writing-permission set on '.PHPCMS_INCLUDEPATH.'/default.php...',
+	),
+	'BACK_TO_CONFIG' => 'Go to Configuration',
+);
+
+$MESSAGES['NAVIGATION'][1]  = 'configuration';
+$MESSAGES['NAVIGATION'][2]  = 'filemanager';
+$MESSAGES['NAVIGATION'][3]  = 'cache';
+$MESSAGES['NAVIGATION'][4]  = 'statistics';
+$MESSAGES['NAVIGATION'][5]  = 'spider';
+$MESSAGES['NAVIGATION'][6]  = 'fileindexer';
+$MESSAGES['NAVIGATION'][7]  = 'php-info';
+$MESSAGES['NAVIGATION'][8]  = 'error-codes';
+$MESSAGES['NAVIGATION'][9]  = 'documentation';
+$MESSAGES['NAVIGATION'][10] = 'news_mailing_list';
+$MESSAGES['NAVIGATION'][11]  = 'http-indexer';
+
+$MESSAGES['NAVIGATION'][20] = 'Login';
+$MESSAGES['NAVIGATION'][21] = 'Login:';
+$MESSAGES['NAVIGATION'][22] = 'Password';
+$MESSAGES['NAVIGATION'][23] = 'Login';
+$MESSAGES['NAVIGATION'][24] = 'First Run';
+$MESSAGES['NAVIGATION'][25] = 'No Password set!';
+$MESSAGES['NAVIGATION'][26] = '<br />For security no access is possible unless an individual password has been set in "default.php". <br /><br />For more info please read &sect; 6, <a href="readme/en/install.txt" target="content">install.txt</a> in "/parser/readme/en/".';
+$MESSAGES['NAVIGATION'][27] = 'Password too short!';
+$MESSAGES['NAVIGATION'][28] = '<br />For security reasons you should choose a password that is at least '.$DEFAULTS->PASS_MIN_LENGTH.' characters long!';
+
+$MESSAGES['NAVIGATION'][30] = 'your phpCMS version is up to date';
+$MESSAGES['NAVIGATION'][31] = 'Upgrade available';
+
+$MESSAGES['OPTIONS'][01]    = 'Save phpCMS Settings';
+$MESSAGES['OPTIONS'][02]    = 'view usage notes';
+
+$MESSAGES['OPTIONS'][11]    = 'Parser - Configuration and Options';
+$MESSAGES['OPTIONS'][12]    = 'phpCMS Parser Configuration.';
+
+$MESSAGES['OPTIONS']['DOC_ROOT'] = '<br /><font size="1">(coming up from <span title="'.$GLOBALS['DOCUMENT_ROOT'].'">$DOCUMENT_ROOT <img src="'.$DEFAULTS->SCRIPT_PATH.'/gif/info.gif" align="top"></span>)</font>';
+$MESSAGES['OPTIONS']['FIREWALL'] = '<br /><font size="1" color="red">Turn off, if you are behind a fire wall...</font>';
+$MESSAGES['OPTIONS']['NO_SLASH'] = '<br /><font size="1">(without closing slash)</font>';
+
+$MESSAGES['OPTIONS']['SAVED'] = 'Your configuration has been saved...';
+$MESSAGES['OPTIONS']['FAILED'] = '<font color="red">Your configuration couldn&#8217;t be saved...<br />Please check for writing-permission set on '.PHPCMS_INCLUDEPATH.'/default.php...</font>';
+$MESSAGES['OPTIONS']['NOPASS'] = array('<font color="red">For security-reasons your changes on the password haven&#8217;t been saved...<br />The password was empty or shorter than ', ' characters...</font>');
+
+$MESSAGES['OPTIONS'][21]    = 'Files & Directories';
+$MESSAGES['OPTIONS'][22]    = 'Main Domain';
+$MESSAGES['OPTIONS'][23]    = 'Page Extension to be parsed';
+$MESSAGES['OPTIONS'][24]    = 'Name of default page';
+$MESSAGES['OPTIONS'][25]    = 'Extension for Templates';
+$MESSAGES['OPTIONS'][26]    = 'Global Project file';
+$MESSAGES['OPTIONS'][27]    = 'Global Home-Directory for all Projects';
+$MESSAGES['OPTIONS'][28]    = 'Plug-In Directory';
+
+$MESSAGES['OPTIONS'][31]    = 'Parser';
+$MESSAGES['OPTIONS'][32]    = 'Field-Delimiter start tag';
+$MESSAGES['OPTIONS'][33]    = 'Field-Delimiter end tag';
+$MESSAGES['OPTIONS'][34]    = 'Use PAXPHP in your Files';
+$MESSAGES['OPTIONS'][35]    = 'Parse PAX TAGS';
+$MESSAGES['OPTIONS'][36]    = 'Mail2Crypt (Anti SPAM)';
+$MESSAGES['OPTIONS'][37]    = 'Mail2Crypt JavaScript Directory';
+$MESSAGES['OPTIONS'][38]    = 'Mail2Crypt Icon Directory';
+
+$MESSAGES['OPTIONS'][41]    = 'Cache & Proxy';
+$MESSAGES['OPTIONS'][42]    = 'Server Cache';
+$MESSAGES['OPTIONS'][43]    = 'Server Cache Directory';
+$MESSAGES['OPTIONS'][44]    = 'Client Cache';
+$MESSAGES['OPTIONS'][45]    = 'Live time of Proxy/Client Cache in days';
+
+$MESSAGES['OPTIONS'][51]    = 'Transport';
+$MESSAGES['OPTIONS'][52]    = 'GZIP Compression';
+$MESSAGES['OPTIONS'][53]    = 'File-Stealth-Mode';
+$MESSAGES['OPTIONS'][54]    = 'Secure Stealth Mode';
+$MESSAGES['OPTIONS'][55]    = 'Non-changeable Extensions in Non-Stealth-Mode';
+$MESSAGES['OPTIONS'][56]    = 'Debug Mode';
+$MESSAGES['OPTIONS'][57]    = 'Custom error page';
+$MESSAGES['OPTIONS'][58]    = 'Custom 404-error page';
+$MESSAGES['OPTIONS'][59]    = 'Error on empty TAG';
+
+$MESSAGES['OPTIONS'][96]	= 'I18N';
+$MESSAGES['OPTIONS'][108]	= 'I18N-Support';
+$MESSAGES['OPTIONS'][109]	= 'Default language';
+$MESSAGES['OPTIONS'][97]	= 'Use ISO-country-code';
+$MESSAGES['OPTIONS'][98]	= 'Possible languages';
+$MESSAGES['OPTIONS'][99]	= 'Give a comma-separated list of prossible ISO-country-codes';
+$MESSAGES['OPTIONS'][100]	= 'I18N-Mode';
+$MESSAGES['OPTIONS'][101]	= 'How is the country-code injected into the path of a contentfile?';
+$MESSAGES['OPTIONS'][102]	= 'suffix (www.example.com/index.de.htm)';
+$MESSAGES['OPTIONS'][103]	= 'dir (www.example.com/de/index.htm)';
+$MESSAGES['OPTIONS'][104]	= 'var (www.example.com/index.htm?lang=de)';
+$MESSAGES['OPTIONS'][105]	= 'host (www.example.de/index.htm or www.example.com/index.htm)';
+$MESSAGES['OPTIONS'][106]	= 'session (www.example.com/index.htm?sid=1234 or cookie)';
+$MESSAGES['OPTIONS'][107]	= 'Name of the URI-parameter';
+
+$MESSAGES['OPTIONS'][61]    = 'Statistics';
+$MESSAGES['OPTIONS'][62]    = 'Statistics';
+$MESSAGES['OPTIONS'][63]    = 'Statistics - Directory';
+$MESSAGES['OPTIONS'][64]    = 'Statistics - Log Directory';
+$MESSAGES['OPTIONS'][65]    = 'Statistics - Log File';
+$MESSAGES['OPTIONS'][66]    = 'Statistics - Backup-Directory';
+$MESSAGES['OPTIONS']['REFLOG'][10]    = 'Referrer Logging';
+$MESSAGES['OPTIONS']['REFLOG'][11]    = 'Top Referrer log file missing or lacking write permission';
+$MESSAGES['OPTIONS']['REFLOG'][12]    = 'Referrer - Directory';
+$MESSAGES['OPTIONS']['REFLOG'][13]    = 'Referrer - Log File';
+$MESSAGES['OPTIONS']['REFLOG'][14]    = 'Referrer - Reload Lock';
+$MESSAGES['OPTIONS']['REFLOG'][15]    = '<br /><font size="1">for last IP in Seconds</font>';
+
+$MESSAGES['OPTIONS'][71]    = 'FileManager';
+$MESSAGES['OPTIONS'][72]    = 'Startup directory of FileManager';
+$MESSAGES['OPTIONS'][73]    = 'Show dirsize in FileManager';
+$MESSAGES['OPTIONS'][74]    = array('Size of Editing Area in FileManager', '<br /><font size="1">(Width, Height in Characters)</font>');
+$MESSAGES['OPTIONS'][75]    = array('Shorten display of long file names', '<br /><font size="1">(Number of Characters to display)');
+$MESSAGES['OPTIONS'][76]    = array('Shorten display of long URL aliases in CacheView', '<br /><font size="1">(Number of Characters to display)');
+
+$MESSAGES['OPTIONS'][81]    = 'Admin-GUI';
+$MESSAGES['OPTIONS'][82]    = 'Select GUI language';
+$MESSAGES['OPTIONS'][83]    = 'Password';
+$MESSAGES['OPTIONS'][84]    = 'Show me';
+$MESSAGES['OPTIONS'][85]    = 'Your password';
+$MESSAGES['OPTIONS'][86]    = 'Online-Editor';
+$MESSAGES['OPTIONS'][87]    = 'Check for Updates';
+
+$MESSAGES['OPTIONS'][91]    = 'Search Function';
+$MESSAGES['OPTIONS'][92]    = 'Highlight Search Results';
+$MESSAGES['OPTIONS'][93]    = 'Name of Results Page';
+
+$MESSAGES['OPTIONS'][94]    = 'Menu delimiter';
+$MESSAGES['OPTIONS'][95]    = 'Tag parameter delimiter';
+
+
+$MESSAGES['P3PHEADER'][1]   = 'P3P Statement (w3c.org/P3P/)';
+$MESSAGES['P3PHEADER'][2]   = 'Send P3P Header';
+$MESSAGES['P3PHEADER'][3]   = 'Global P3P Policy Header';
+$MESSAGES['P3PHEADER'][4]   = 'P3P Policy href';
+
+$MESSAGES['INFO'][11]       = 'php-info';
+
+$MESSAGES['ERRORCODES'][11] = 'phpCMS - error codes';
+$MESSAGES['ERRORCODES'][12] = '07: could not find file for parsing.';
+$MESSAGES['ERRORCODES'][13] = '08: field end not found.';
+$MESSAGES['ERRORCODES'][14] = '09: project file not found.';
+$MESSAGES['ERRORCODES'][15] = '10: template file not found.';
+$MESSAGES['ERRORCODES'][16] = '11: menu template file not found.';
+$MESSAGES['ERRORCODES'][17] = '12: tag file not found.';
+$MESSAGES['ERRORCODES'][18] = '13: menu file not found.';
+$MESSAGES['ERRORCODES'][19] = '14: menu template not defined.';
+$MESSAGES['ERRORCODES'][20] = '15: tag that is to be replaced was not set.';
+$MESSAGES['ERRORCODES'][21] = '16: a replacement tag was not defined.';
+$MESSAGES['ERRORCODES'][22] = '17: sub template file not found.';
+$MESSAGES['ERRORCODES'][23] = '18: undefined menu in menu file.';
+$MESSAGES['ERRORCODES'][25] = '20: included file was not found.';
+$MESSAGES['ERRORCODES'][30] = '25: tag file not defined.';
+$MESSAGES['ERRORCODES'][95] = '90: Missing file js_mail2crypt.js for Mail2Crypt could not be created.';
+
+$MESSAGES['MAIL2CRYPT'][1] =  '<br /><br />Please copy and paste the following code to a new file, '.
+                              '<br />then save it as "js_mail2crypt.js" in your document root:<br />';
+
+$MESSAGES['HELP'][11]       = 'Error';
+$MESSAGES['HELP'][12]       = '20: file not found.';
+
+$MESSAGES['LIST'][11]       = 'Mailing List phpCMS-News';
+$MESSAGES['LIST'][12]       = 'Archive';
+$MESSAGES['LIST'][13]       = 'To see the collection of prior postings to the list, visit the SourceForge.net ';
+$MESSAGES['LIST'][14]       = 'phpCMS-News Archives';
+$MESSAGES['LIST'][15]       = 'Subscribing to phpCMS-News';
+$MESSAGES['LIST'][16]       = 'Subscribe to phpCMS-News by filling out the following form. You will be sent e-mail requesting confirmation, to prevent others from gratuitously subscribing you. This is a hidden list, which means that the members list is available only to the list administrator.';
+$MESSAGES['LIST'][17]       = 'Your e-mail address:';
+$MESSAGES['LIST'][18]       = 'You must enter a privacy password. This provides only mild security, but should prevent others from messing with your subscription. <b>Do not use a valuable password</b> as it will occasionally be e-mailed back to you in clear text.';
+$MESSAGES['LIST'][19]       = 'Pick a password:';
+$MESSAGES['LIST'][20]       = 'Reenter password to confirm:';
+$MESSAGES['LIST'][21]       = 'Subscribe';
+
+$MESSAGES[0]   = 'Choose a file or directory';
+
+$MESSAGES[19]  = 'phpCMS - description of options and configurations';
+$MESSAGES[34]  = 'delete';
+$MESSAGES[38]  = 'on';
+$MESSAGES[39]  = 'off';
+$MESSAGES[44]  = 'field name of project file';
+$MESSAGES[45]  = 'document root of your web server';
+$MESSAGES[46]  = 'Save Settings';
+$MESSAGES[49]  = 'parser options';
+
+// editor
+$MESSAGES[50]  = 'phpCMS online editor';
+$MESSAGES[51]  = 'For security reasons an individual edit<br />password must be set in your project-file<br />and must be at least '.$DEFAULTS->PASS_MIN_LENGTH.' characters long...';
+$MESSAGES[52]  = 'Type in your password:';
+
+// filemanager
+$MESSAGES['FILEMANAGER'] = array(
+	'TITLE' => 'FileManager',
+	'SAVE' => 'Save',
+	'RUN' => 'Execute',
+	'CANCEL' => 'Cancel',
+	'TOOLBAR' => array(
+		'HOME' => 'Change to DOCUMENT_ROOT...',
+		'RELOAD' => 'Reload...',
+		'CHDR' => 'Back to directory-view...',
+		'SHOW' => 'Show this file...',
+		'EDIT' => 'Edit this file...',
+		'CLEAR_CACHE' => 'Clear ServerCache',
+		'MOVE' => 'Copy/Move/Rename selected...',
+		'DELETE' => 'Delete selected...',
+	),
+	'DIRLIST' => array(
+		'CHDR' => array(
+			'SHOW' => array('Change to directory: ', ''),
+			'NO_PERMS' => array('No read- and execution-permission set for ', ' ...'),
+		),
+		'SHOWFILE' => array('Show ', ' ...'),
+		'BROWSE' => array('Show ', ' in browser...'),
+		'EDITFILE' => array('Edit ', ' ...'),
+	),
+	'INSTANT' => array(
+		'UPLOAD' => 'Upload file...',
+		'NEWDIR' => 'Create new directory...',
+		'NEWFILE' => 'Create new file...',
+		'TEMPLATE' => array(
+			'TITLE' => 'Template: ',
+			'EMPTY' => '--- empty file ---',
+		),
+	),
+	'DIRSIZE' => array(
+		'ACTIVE' => 'File space needed: ',
+		'INACTIVE' => 'Showing the dirsize is switched off.',
+	),
+	'SHOW' => array(
+		'EDIT_INFO' => 'Your changes on this file haven&#8217;t been saved yet.<br />'.
+			'You can also switch back to the editor via the toolbar to make additional changes.<br />'.
+			'The changes will be saved temporarily, until you switch back to the directory-view...',
+	),
+	'EDIT' => array(
+		'LOAD_ERROR' => array('', ' couldn&#8217;t be loaded...'),
+		'SAVE_ERROR' => array('Changes on ', ' couldn&#8217;t be saved back...'),
+	),
+	'CREATE' => array(
+		'LOAD_ERROR' => array('The template ', ' couldn&#8217;t be loaded...'),
+		'SAVE_ERROR' => array('The file ', ' couldn&#8217;t be created...'),
+	),
+	'MOVE' => array(
+		'MAKE_DIR' => array('The directory<br /><b>', '</b><br />doesn&#8217;t exist!<br />', ' Create it now?'),
+		'MADE_DIR' => array('The directory ', ' has been created...'),
+		'COPIED' => array('', ' has been copied to ', '.'),
+		'MOVED' => array('', ' has been moved to ', '.'),
+		'RENAMED' => array('', ' has been renamed to ', '.'),
+		'FAILED' => array(
+			'MAKE_DIR' => array('The directory ', ' couldn&#8217;t be created.'),
+			'COPY' => array('', ' couldn&#8217;t be copied.'),
+			'MOVE' => array('', ' couldn&#8217;t be moved.'),
+			'RENAME' => array('', ' couldn&#8217;t be renamed.'),
+			'NOEX_COPY' => array('', ' can not be copied, because it doesn&#8217;t exist anymore.'),
+			'NOEX_MOVE' => array('', ' can not be moved, because it doesn&#8217;t exist anymore.'),
+			'NOEX_RENAME' => array('', ' can not be renamed, because it doesn&#8217;t exist anymore.'),
+			'DIR_IS_FILE' => array('The named directory ', ' is an existing <b>file</b>.'),
+			'NO_SELFCOPY' => 'Files and directories can&#8217;t be copied into themselves.<br />Please change your submission...',
+			'NO_SELFMOVE' => 'Files and directories can&#8217;t be moved or renamed into themselves.<br />Please change your submission...',
+			'IS_FILE' => array('<b>Conflict:</b> The target-file ', ' already exists!<br />', ' Overwrite it?'),
+		),
+		'SELECTED' => array(
+			'ONE' => 'Selected file:',
+			'MANY' => 'Selected files:',
+		),
+		'ACTIONS' => array(
+			'COPY' => 'copy',
+			'MOVE' => 'move/rename',
+		),
+		'TO' => 'to',
+		'DIRNAME' => 'Base-Directory: ',
+		'FILENAME' => array(
+			'FILE' => 'Filename/Target-Directory:',
+			'PREFIX' => 'Prefix for Filename/Target-Directory:',
+			'SUFFIX' => 'Suffix for Filename/Target-Directory:',
+		),
+		'OVERWRITE_ALL' => 'Overwrite all?',
+	),
+	'DELETE' => array(
+		'TITLE' => 'Are you sure you want to DELETE these files?',
+		'DIR' => array(
+			'DONE' => array('The directory ', ' has been deleted.'),
+			'FAILED' => array('The directory ', ' couldn&#8217;t be deleted.'),
+		),
+		'FILE' => array(
+			'DONE' => array('The file ', ' has been deleted.'),
+			'FAILED' => array('The file ', ' couldn&#8217;t be deleted.'),
+		),
+	),
+	'STATUS' => array(
+		'NO_STARTDIR' => 'The startup directory set in configuration doesn&#8217;t exist!',
+		'SHOW' => array(
+			'EDIT' => array('Displaying: TEMP @ ', ''),
+			'FILE' => array('Displaying: ', ''),
+		),
+		'EDIT' => array(
+			'WORKING' => array('Editing: ', ''),
+			'SAVED' => array('Changes on ', ' have been saved.'),
+			'FAILED' => array(
+				'FILE' => array('Changes on ', ' could NOT be saved.'),
+			),
+		),
+		'CREATE' => array(
+			'FAILED' => array(
+				'NO_DIR' => 'You haven&#8217;t named a directory to be created...',
+				'NO_FILE' => 'You haven&#8217;t named a file to be created...',
+				'IS_DIR' => array('The directory ', ' already exists...'),
+				'IS_FILE' => array('The file ', ' already exists...'),
+				'DIR' => array('The directory ', ' could not be created...'),
+				'FILE' => array('The file ', ' could not be created...'),
+			),
+			'WORKING' => array('Editing: TEMP @ ', ''),
+			'MADE_DIR' => array('The directory ', ' has been created...'),
+			'SAVED' => array('', ' has been created.'),
+		),
+		'MOVE' => array(
+			'NO_SELECT' => 'You haven&#8217;t named a directory or file to be copied/renamed/moved...',
+		),
+		'DELETE' => array(
+			'NO_SELECT' => 'You haven&#8217;t named a directory or file to be deleted...',
+		),
+		'UPLOAD' => array(
+			'FROM' => 'Uploading \'',
+			'TO' => '\' to ',
+			'SUCCESS' => ' successful.',
+			'FAILED' => ' failed.',
+			'NO_FILE' => 'You haven&#8217;t selected a file to upload...',
+		),
+		'CACHE' => array(
+			'NO_DIR' => 'Invalid Cache-Directory. Please set a correct one.',
+			'SHOW' => 'Displaying the contents of the ServerCache.',
+			'ON' => 'Caching is on.',
+			'OFF' => 'Caching is off.',
+			'CLEARED' => 'ServerCache has been cleared.',
+			'CLEAR_FAILED' => 'ServerCache couldn&#8217;t be cleared...',
+		),
+	),
+);
+
+// commons
+$MESSAGES[57]  = 'Error: ';
+$MESSAGES[112] = 'Login';
+$MESSAGES[113] = 'Dutch';
+$MESSAGES[114] = 'Error in module TOC: no template class defined';
+$MESSAGES[115] = 'Error in module TOC: toc template not found';
+$MESSAGES[117] = 'Spanish';
+$MESSAGES[118] = 'Progress';
+$MESSAGES[119] = 'Current file';
+$MESSAGES[120] = 'Directories created';
+$MESSAGES[121] = 'phpCMS - Spider';
+$MESSAGES[122] = 'Files to ignore';
+$MESSAGES[123] = 'Files to copy';
+$MESSAGES[124] = 'Extensions to spider';
+$MESSAGES[125] = 'Start with file';
+$MESSAGES[126] = 'Directory to write to';
+$MESSAGES[127] = 'Start spidering';
+$MESSAGES[128] = 'Configurations for spidering';
+
+// stats
+$MESSAGES[130] = 'Statistics';
+$MESSAGES[131] = 'Execute';
+$MESSAGES[135] = 'max reverrer count';
+$MESSAGES[136] = 'statistics configurations and options';
+$MESSAGES[137] = 'ignore these referrers';
+$MESSAGES[138] = 'max count IPs';
+$MESSAGES[139] = 'ignore these IPs';
+$MESSAGES[140] = 'max count pages';
+$MESSAGES[141] = 'phpCMS - statistics module';
+$MESSAGES[142] = 'summary of all statistics';
+$MESSAGES[143] = 'show graphs of this month';
+$MESSAGES[144] = 'import current log file into database';
+$MESSAGES[145] = 'recover database from backup files';
+$MESSAGES[146] = 'delete old summary files';
+$MESSAGES[147] = 'importing backup files';
+$MESSAGES[148] = 'finish';
+$MESSAGES[149] = 'back';
+$MESSAGES[150] = 'building summary for: ';
+$MESSAGES[151] = 'writing stats';
+$MESSAGES[152] = 'summary';
+$MESSAGES[153] = 'URLs and referrer - ';
+$MESSAGES[154] = 'URL/referrer';
+$MESSAGES[155] = 'start date';
+$MESSAGES[156] = 'end date';
+$MESSAGES[157] = 'number of days logged';
+$MESSAGES[158] = 'total page impressions';
+$MESSAGES[159] = 'total IP addresses';
+$MESSAGES[160] = 'total unique users';
+$MESSAGES[161] = 'average users/day';
+$MESSAGES[162] = 'average visits/user';
+$MESSAGES[163] = 'average impressions/user';
+$MESSAGES[164] = 'average impressions/day';
+$MESSAGES[165] = 'Importing current log file';
+$MESSAGES[166] = 'all logfiles';
+$MESSAGES[167] = 'Statistics are switched off.<br />Please change in the configuration, if you want to use them.';
+$MESSAGES[168] = 'No log-file has been imported yet.';
+$MESSAGES[169] = 'Error with opening stat-file in function MakeFiles in Class "class.stat_phpcms.php"';
+$MESSAGES[170] = 'pageviews';
+$MESSAGES[171] = 'unique users';
+$MESSAGES[172] = 'unique IPs';
+$MESSAGES[173] = 'show URL/referer';
+$MESSAGES[174] = 'monthly statistics';
+$MESSAGES[175] = 'summary';
+$MESSAGES[176] = 'actual month';
+$MESSAGES[177] = 'click to see details of';
+$MESSAGES[178] = 'daily stats';
+
+// file indexer
+$MESSAGES['FILE_SRC'][00] = 'FileIndexer';
+$MESSAGES['FILE_SRC'][10] = 'Message';
+$MESSAGES['FILE_SRC'][11] = 'Directories';
+$MESSAGES['FILE_SRC'][12] = 'Start path:';
+$MESSAGES['FILE_SRC'][13] = 'Data directory:';
+$MESSAGES['FILE_SRC'][14] = '';
+$MESSAGES['FILE_SRC'][15] = 'Block size';
+$MESSAGES['FILE_SRC'][16] = 'Bytes:';
+$MESSAGES['FILE_SRC'][17] = 'Word length';
+$MESSAGES['FILE_SRC'][18] = 'Minimum word length:';
+$MESSAGES['FILE_SRC'][19] = 'Text length';
+$MESSAGES['FILE_SRC'][20] = 'Text length to display with results:';
+$MESSAGES['FILE_SRC'][21] = 'Gzip compression';
+$MESSAGES['FILE_SRC'][22] = $MESSAGES['OFF'];
+$MESSAGES['FILE_SRC'][23] = $MESSAGES['ON'];
+$MESSAGES['FILE_SRC'][24] = 'Set indexing parameters.';
+$MESSAGES['FILE_SRC'][25] = 'Start indexing';
+$MESSAGES['FILE_SRC'][26] = 'Full Text Index';
+$MESSAGES['FILE_SRC'][27] = 'Files indexed: ';
+$MESSAGES['FILE_SRC'][28] = '';
+$MESSAGES['FILE_SRC'][29] = 'Files left: ';
+$MESSAGES['FILE_SRC'][30] = '';
+$MESSAGES['FILE_SRC'][31] = 'In the last step, these files where indexed:';
+$MESSAGES['FILE_SRC'][32] = 'Merger step 1';
+$MESSAGES['FILE_SRC'][33] = 'Next file starts at: ';
+$MESSAGES['FILE_SRC'][34] = ' from ';
+$MESSAGES['FILE_SRC'][35] = ' byte';
+$MESSAGES['FILE_SRC'][36] = 'Start time: ';
+$MESSAGES['FILE_SRC'][37] = 'End time: ';
+$MESSAGES['FILE_SRC'][38] = 'Elapsed time: ';
+$MESSAGES['FILE_SRC'][39] = 'Merger step 2';
+$MESSAGES['FILE_SRC'][40] = 'Last word length: ';
+$MESSAGES['FILE_SRC'][41] = 'Full text index and compression finished!';
+$MESSAGES['FILE_SRC'][42] = 'Time needed for full text index: ';
+$MESSAGES['FILE_SRC'][43] = 'Full text index created successfully!';
+
+$MESSAGES['FILE_SRC'][50] = 'Stop words';
+$MESSAGES['FILE_SRC'][51] = 'Local stop words file:';
+$MESSAGES['FILE_SRC'][52] = $MESSAGES['ON'];
+$MESSAGES['FILE_SRC'][53] = $MESSAGES['OFF'];
+$MESSAGES['FILE_SRC'][54] = 'Global stop words file:';
+$MESSAGES['FILE_SRC'][55] = 'Stop words optimization:';
+$MESSAGES['FILE_SRC'][56] = $MESSAGES['ON'];
+$MESSAGES['FILE_SRC'][57] = $MESSAGES['OFF'];
+
+$MESSAGES['FILE_SRC'][60] = 'Fields to Index';
+$MESSAGES['FILE_SRC'][61] = 'Title Field:';
+$MESSAGES['FILE_SRC'][62] = 'Content Field:';
+$MESSAGES['FILE_SRC'][63] = 'Additional Fields:';
+
+$MESSAGES['FILE_SRC']['EXPATH'][1] = 'Exclude path  1:';
+$MESSAGES['FILE_SRC']['EXPATH'][2] = 'Exclude path  2:';
+$MESSAGES['FILE_SRC']['EXPATH'][3] = 'Exclude path  3:';
+$MESSAGES['FILE_SRC']['EXPATH'][4] = 'Exclude path 4:';
+$MESSAGES['FILE_SRC']['EXPATH'][5] = 'Exclude path 5:';
+$MESSAGES['FILE_SRC']['EXPATH'][6] = 'Exclude path 6:';
+$MESSAGES['FILE_SRC']['EXPATH'][7] = 'Exclude path 7:';
+$MESSAGES['FILE_SRC']['EXPATH'][8] = 'Exclude path 8:';
+$MESSAGES['FILE_SRC']['EXPATH']['ERR1'] = 'Wrong exclusion path 1. Provide a valid path!';
+$MESSAGES['FILE_SRC']['EXPATH']['ERR2'] = 'Wrong exclusion path 2. Provide a valid path!';
+$MESSAGES['FILE_SRC']['EXPATH']['ERR3'] = 'Wrong exclusion path 3. Provide a valid path!';
+$MESSAGES['FILE_SRC']['EXPATH']['ERR4'] = 'Wrong exclude path 4. Input a valid path or leave empty!';
+$MESSAGES['FILE_SRC']['EXPATH']['ERR5'] = 'Wrong exclude path 5. Input a valid path or leave empty!';
+$MESSAGES['FILE_SRC']['EXPATH']['ERR6'] = 'Wrong exclude path 6. Input a valid path or leave empty!';
+$MESSAGES['FILE_SRC']['EXPATH']['ERR7'] = 'Wrong exclude path 7. Input a valid path or leave empty!';
+$MESSAGES['FILE_SRC']['EXPATH']['ERR8'] = 'Wrong exclude path 8. Input a valid path or leave empty!';
+
+$MESSAGES['FILE_SRC']['ERR'][1] = 'Nonexistent or wrong start path. Input a valid start path!';
+$MESSAGES['FILE_SRC']['ERR'][2] = 'For indexing we need a valid data directory with write permissions. Enter a valid data directory and maintain write permissions. Enter a valid data directory and maintain write permissions.';
+$MESSAGES['FILE_SRC']['ERR'][3] = 'The web server lacks permission to access the data directory. Please enter a valid data directory and/or set sufficient permissions.';
+$MESSAGES['FILE_SRC']['ERR'][4] = 'Wrong or non existent stop word file!';
+$MESSAGES['FILE_SRC']['ERR'][5] = 'The block size for the file buffer should be at least 1,000 bytes. Higher values result in better performance when indexing. Unreasonably high values may result in a server timeout! ';
+$MESSAGES['FILE_SRC']['ERR'][6] = 'With the minimum word length you decide how long a word must be in order to be indexed.<br /><br />The smallest value is 2.';
+$MESSAGES['FILE_SRC']['ERR'][7] = 'Impossible length for displaying results entered!<br /><br />This value defines the length of the displayed text within the results. A good value i. e. is 360 characters.';
+$MESSAGES['FILE_SRC']['ERR'][8] = 'Local stop word file error!<br /><b>';
+$MESSAGES['FILE_SRC']['ERR'][9] = '<b><br />The attempt failed to either open the stop word file for optimization, or to create a new one.';
+$MESSAGES['FILE_SRC']['ERR'][10] = 'Format of stop word file is incompatible.';
+$MESSAGES['FILE_SRC']['ERR'][11] = 'No field name supplied for page title!';
+$MESSAGES['FILE_SRC']['ERR'][12] = 'No field name supplied for page content!';
+$MESSAGES['FILE_SRC']['ERR'][13] = 'Cannot optimize stop word file. Write access is denied. Please set permissions for stop.db accordingly!';
+
+// erweiterung für phpcms
+$MESSAGES[500] = 'Directory for plug-ins';
+$MESSAGES[501] = 'Info on updates';
+$MESSAGES[502] = 'Extension for Templates';
+$MESSAGES[503] = 'Check directory size in file manager';
+
+//Indexer
+$MESSAGES['HTTP_SRC'][00] = 'no description!';
+$MESSAGES['HTTP_SRC'][01] = 'Word analysis';
+$MESSAGES['HTTP_SRC'][02] = 'The word analysis serves the stop word file for the '.
+                 'structure. The first 50 words are spent, after frequency of '.
+                 'the occurrence. Select a full text index for analysis! ';
+$MESSAGES['HTTP_SRC'][03] = 'Selection';
+$MESSAGES['HTTP_SRC'][04] = 'full text index';
+$MESSAGES['HTTP_SRC'][05] = 'number of words';
+$MESSAGES['HTTP_SRC'][06] = 'analyze';
+$MESSAGES['HTTP_SRC'][07] = 'No full text index was found. Create a full text index first! ';
+$MESSAGES['HTTP_SRC'][08] = 'rank';
+$MESSAGES['HTTP_SRC'][09] = 'word';
+$MESSAGES['HTTP_SRC'][10] = 'occurrences';
+$MESSAGES['HTTP_SRC'][11] = 'Check of a full text index';
+$MESSAGES['HTTP_SRC'][12] = 'Select a full text index for checking!';
+$MESSAGES['HTTP_SRC'][13] = 'Query term:';
+$MESSAGES['HTTP_SRC'][14] = 'search now';
+$MESSAGES['HTTP_SRC'][15] = 'The query term "';
+$MESSAGES['HTTP_SRC'][16] = '" is too small. Minimal word length: (';
+$MESSAGES['HTTP_SRC'][17] = 'No valid query term found!';
+$MESSAGES['HTTP_SRC'][18] = 'No result was found!';
+$MESSAGES['HTTP_SRC'][19] = 'rank';
+$MESSAGES['HTTP_SRC'][20] = 'back';
+$MESSAGES['HTTP_SRC'][21] = 'continue';
+$MESSAGES['HTTP_SRC'][22] = 'List of all profiles';
+$MESSAGES['HTTP_SRC'][23] = 'Chose an action to perform on your stored profiles:<br />';
+$MESSAGES['HTTP_SRC'][24] = 'Click on&nbsp;';
+$MESSAGES['HTTP_SRC'][25] = '&nbsp;to generate or update a new full text index.';
+$MESSAGES['HTTP_SRC'][26] = '&nbsp;to delete a profile.';
+$MESSAGES['HTTP_SRC'][27] = 'Create full text index';
+$MESSAGES['HTTP_SRC'][28] = 'Delete profile';
+$MESSAGES['HTTP_SRC'][29] = 'No search profiles were found. '.
+                 'You must create a search profile first!';
+$MESSAGES['HTTP_SRC'][30] = 'login';
+$MESSAGES['HTTP_SRC'][31] = 'password';
+$MESSAGES['HTTP_SRC'][32] = 'Create full text index - step one of five.';
+$MESSAGES['HTTP_SRC'][33] = 'You have selected this profile to create the full text index.<br />'.
+                 'To create the full text index now, click on the button "continue"<br />'.
+                 'After this, the spider is starting to load the target pages on this system.<br />'.
+                 'This will take a little time, depending on the size of your site.<br />'.
+                 'If the spider "hangs" while processing the download, '.
+                 'simply push the "reload" button in your browser.<br />'.
+                 'The spider will then continue the download.';
+$MESSAGES['HTTP_SRC'][34] = 'Base data';
+$MESSAGES['HTTP_SRC'][35] = 'Starting address:';
+$MESSAGES['HTTP_SRC'][36] = 'robots.txt:';
+$MESSAGES['HTTP_SRC'][37] = 'observe';
+$MESSAGES['HTTP_SRC'][38] = 'don&#8217;t observe';
+$MESSAGES['HTTP_SRC'][39] = 'robot-META-TAGS:';
+$MESSAGES['HTTP_SRC'][40] = 'desc-META-TAGS:';
+$MESSAGES['HTTP_SRC'][41] = 'Compression:';
+$MESSAGES['HTTP_SRC'][42] = 'use';
+$MESSAGES['HTTP_SRC'][43] = 'don&#8217;t use';
+$MESSAGES['HTTP_SRC'][44] = 'Directory for storing data:';
+$MESSAGES['HTTP_SRC'][45] = 'Extensions not to index:';
+$MESSAGES['HTTP_SRC'][46] = 'Stop word file:';
+$MESSAGES['HTTP_SRC'][47] = 'Min. word length:';
+$MESSAGES['HTTP_SRC'][48] = 'Buffer size:';
+$MESSAGES['HTTP_SRC'][49] = 'Description:';
+$MESSAGES['HTTP_SRC'][50] = 'Servers allowed';
+$MESSAGES['HTTP_SRC'][51] = 'address ';
+$MESSAGES['HTTP_SRC'][52] = 'URL parts to omit';
+$MESSAGES['HTTP_SRC'][53] = 'URL part ';
+$MESSAGES['HTTP_SRC'][54] = 'URL parts explicit to include';
+$MESSAGES['HTTP_SRC'][55] = 'URL part ';
+$MESSAGES['HTTP_SRC'][56] = 'Address:';
+$MESSAGES['HTTP_SRC'][57] = 'Dead links:';
+$MESSAGES['HTTP_SRC'][58] = 'progress';
+$MESSAGES['HTTP_SRC'][59] = '';
+$MESSAGES['HTTP_SRC'][60] = ' of ';
+$MESSAGES['HTTP_SRC'][61] = ' URLs processed.<br />';
+$MESSAGES['HTTP_SRC'][62] = 'Create full text index - Step 2 of 5';
+$MESSAGES['HTTP_SRC'][63] = '';
+$MESSAGES['HTTP_SRC'][64] = ' files have been spidered. ';
+$MESSAGES['HTTP_SRC'][65] = 'No dead links were found. ';
+$MESSAGES['HTTP_SRC'][66] = 'One dead link found (see below). ';
+$MESSAGES['HTTP_SRC'][67] = '';
+$MESSAGES['HTTP_SRC'][68] = ' dead links found (see below). ';
+$MESSAGES['HTTP_SRC'][69] = 'You can cancel now (switch to another menu entry) or simply ignore the dead links.';
+$MESSAGES['HTTP_SRC'][70] = 'dead links';
+$MESSAGES['HTTP_SRC'][71] = 'Explanation step two';
+$MESSAGES['HTTP_SRC'][72] = 'In the step that follows, the word index will be created. Depending on your site&#8217;s size, this may take some time.'.
+                 '<br /><br />In case of interruptions during the creation of the word index, push the reload button of your browser.'.
+                 '<br /><br />This step involves the creation of a temporary data base which will be deleted after completion. The final index will take up considerably less disk space than the temporary index.'.
+                 '<br /><br />If this still leads to problems with your disk space quota, you may try installing phpCMS, '.
+                 'and indexing your site, locally, and then uploading the index files to your server.';
+$MESSAGES['HTTP_SRC'][73] = 'local name:';
+$MESSAGES['HTTP_SRC'][74] = 'Create full text index - Step 3 of 5';
+$MESSAGES['HTTP_SRC'][75] = 'The word index has been created. In the step that follows, the words will be sorted by length.<p>'.
+                 'If you encounter a time-out or a script abortion in this step you may try to reduce the "buffer" value in the search profile. '.
+                 '<br /><br />Push "continue" to start sorting!';
+$MESSAGES['HTTP_SRC'][76] = ' bytes sorted.<br />';
+$MESSAGES['HTTP_SRC'][77] = 'Create full text index - Step 4 of 5';
+$MESSAGES['HTTP_SRC'][78] = 'In the step that follows, the various word length files are processed. <p>'.
+                 'Push "continue" to finish the indexer.';
+$MESSAGES['HTTP_SRC'][79] = 'Current word length:';
+$MESSAGES['HTTP_SRC'][80] = ' chars.';
+$MESSAGES['HTTP_SRC'][81] = ' word lengths processed.<br />';
+$MESSAGES['HTTP_SRC'][82] = 'Create full text index - Step 5 of 5';
+$MESSAGES['HTTP_SRC'][83] = 'In the step that follows, the newly created index will be copied to the '.
+                 'destination directory you selected:<br /><br />"';
+$MESSAGES['HTTP_SRC'][84] = '\'.<p>To start copying, push "finish"!';
+$MESSAGES['HTTP_SRC'][85] = 'finish';
+$MESSAGES['HTTP_SRC'][86] = 'Search profile - Step 1 of 7';
+$MESSAGES['HTTP_SRC'][87] = 'In the first step, you must enter the addresses of the pages, which will be indexed. '.
+                 'Only pages will be indexed, which will stay on the given servers.<p> '.
+                 'E.g.. to get all pages on "http://phpcms.de/" indexed, '.
+                 'you will start at the address "http://phpcms.de/homepage/index.htm". '.
+                 'To do so enter the address:<p> '.
+                 '<blockquote><b>http://phpcms.de/homepage/index.htm</b></blockquote> '.
+                 'as starting address. Enter now your starting address: ';
+$MESSAGES['HTTP_SRC'][88] = 'Data';
+$MESSAGES['HTTP_SRC'][89] = 'Address:';
+$MESSAGES['HTTP_SRC'][90] = 'add';
+$MESSAGES['HTTP_SRC'][91] = 'The Indexer gets only pages of the assigned server. '.
+                 'To get pages of another server enter the address of this server here '.
+                 'and push "add"<p>In the other case push "continue". ';
+$MESSAGES['HTTP_SRC'][92] = 'Server';
+$MESSAGES['HTTP_SRC'][93] = 'no address entered';
+$MESSAGES['HTTP_SRC'][94] = 'Add a server';
+$MESSAGES['HTTP_SRC'][95] = 'Search profile - Step 2 of 7';
+$MESSAGES['HTTP_SRC'][96] = 'In the second step we will decide, how to deal with "robots.txt" '.
+                 'and META-TAGS in HTML-pages.<p>'.
+                 'Additional you have in the following step the possibility to add one or more addresses, '.
+                 'which will be excluded from indexing.';
+$MESSAGES['HTTP_SRC'][97] = 'Defaults';
+$MESSAGES['HTTP_SRC'][98] = ' The exclusion address you have entered: "';
+$MESSAGES['HTTP_SRC'][99] = '" on from server "http://';
+$MESSAGES['HTTP_SRC'][100] = '" will cause, that no page will be indexed. For this reason this exclusion is not allowed.';
+$MESSAGES['HTTP_SRC'][101] = 'Search profile - Step 3 of 7';
+$MESSAGES['HTTP_SRC'][102] = 'Now you have the possibility to enter parts of an address. '.
+                 'Addresses with this parts in the URL will not be indexed.<p>'.
+                 'An example: files in the directory "/test" in the root of your server http://';
+$MESSAGES['HTTP_SRC'][103] = '" should not be indexed. In this case you will enter:<blockquote><b>';
+$MESSAGES['HTTP_SRC'][104] = '/test/</b></blockquote><b>without</b> leading http:// as '.
+                 'exclusion. You may also enter parts of an address without the server name.';
+$MESSAGES['HTTP_SRC'][105] = 'Exclusion of address parts';
+$MESSAGES['HTTP_SRC'][106] = 'The address you have entered for inclusion could not be found '.
+                 'in the starting address. No page will be indexed in this case. '.
+                 'Please enter another address for inclusion.';
+$MESSAGES['HTTP_SRC'][107] = 'Search profile - Step 4 of 7';
+$MESSAGES['HTTP_SRC'][108] = 'Now you have the possibility to enter parts of addresses '.
+                 'which must exist in any URL so this URL will be spidered.'.
+                 '<p>An Example: Only pages should be indexed in directory "/test" '.
+                 'in the root of your server "http://';
+$MESSAGES['HTTP_SRC'][109] = '" In this case enter:<blockquote><b>http://';
+$MESSAGES['HTTP_SRC'][110] = '/test/</b></blockquote> as address for inclusion.';
+$MESSAGES['HTTP_SRC'][111] = 'Inclusion';
+$MESSAGES['HTTP_SRC'][112] = 'Inclusion of address parts';
+$MESSAGES['HTTP_SRC'][113] = 'The directory you have entered: "';
+$MESSAGES['HTTP_SRC'][114] = '" could not be found. Choose another directory or create it manually.';
+$MESSAGES['HTTP_SRC'][115] = '" could not be found. There was a file with the same name '.
+                 'you have entered for the directory! Choose another directory '.
+                 'or create it manually.';
+$MESSAGES['HTTP_SRC'][116] = 'The attempt to write a test file in the directory of your choice: "';
+$MESSAGES['HTTP_SRC'][117] = '" fails. The directory is exist. Maybe you have not the '.
+                 'required rights to write a file in this directory? There could '.
+                 'also be a file with the same name which is write protected.';
+$MESSAGES['HTTP_SRC'][118] = 'The stop word file could not be found. Create the named stop '.
+                 'word file or ensure that the stop word file is in the right '.
+                 'place. ';
+$MESSAGES['HTTP_SRC'][119] = 'You have chosen to index with compression. The required '.
+                 'extension of PHP is not installed on your server. '.
+                 'Please try it without compression!';
+$MESSAGES['HTTP_SRC'][120] = 'Search profile - Step 6 of 7';
+$MESSAGES['HTTP_SRC'][121] = 'The indexer will deploy the index files in the data directory '.
+                 'on your server<p>'.
+                 'Extensions to exclude mark files, which will not be indexed.'.
+                 'Enter here the extensions of your choice, delimited by a '.
+                 'semicolon (;).<p>'.
+                 'With GZIP, you decide to compress your index files. '.
+                 'If GZIP is activated (on) the index files will be smaller and need less '.
+                 'space on your web server. But the search will be take a little '.
+                 'bit longer.<p>'.
+                 'The stop word file contains the words witch should be '.
+                 'ignored by the indexer. <p>'.
+                 'The minimum word length define how many chars a word must have '.
+                 'to be indexed. Word lengths smaller then 3 chars will be '.
+                 'ignored by the indexer.<p>'.
+                 'The buffer space define the block length of the data blocks '.
+                 'within the index progress. If you run in trouble while '.
+                 'indexing or merging you should decrease this value.<p>'.
+                 'Description - enter here the length of the description '.
+                 'which will be displayed with the search result.';
+$MESSAGES['HTTP_SRC'][122] = 'Server Tuning';
+$MESSAGES['HTTP_SRC'][123] = 'data directory:';
+$MESSAGES['HTTP_SRC'][124] = 'extensions to exclude:';
+$MESSAGES['HTTP_SRC'][125] = 'GZIP';
+$MESSAGES['HTTP_SRC'][126] = 'The name you have chosen for the profile is already in use.'.
+                 'Choose another name for this profile!';
+$MESSAGES['HTTP_SRC'][127] = 'Search profile - Step 7 of 7';
+$MESSAGES['HTTP_SRC'][128] = 'Now you can check the entered data a last time. '.
+                 'If you detect errors in the profile you must start the '.
+                 'wizard again (click on "Profile wizard").<p>'.
+                 'If the profile is OK, then you should save now this profile '.
+                 'with a name of your choice. '.
+                 'Hint: A good choice for a profile name is the start address.';
+$MESSAGES['HTTP_SRC'][129] = 'Robots/META';
+$MESSAGES['HTTP_SRC'][130] = '"robots.txt" will be considered.<br />';
+$MESSAGES['HTTP_SRC'][131] = '"robots.txt" will <b>not</b> be considered.<br />';
+$MESSAGES['HTTP_SRC'][132] = '"robot-META-TAGS" will be considered.<br />';
+$MESSAGES['HTTP_SRC'][133] = '"robot-META-TAGS" will <b>not</b> be considered.<br />';
+$MESSAGES['HTTP_SRC'][134] = '"desc-META-TAGS" will be considered.<br />';
+$MESSAGES['HTTP_SRC'][135] = '"desc-META-TAGS" will <b>not</b> be considered.<br />';
+$MESSAGES['HTTP_SRC'][136] = 'Save as';
+$MESSAGES['HTTP_SRC'][137] = 'profile name:';
+$MESSAGES['HTTP_SRC'][138] = 'save';
+$MESSAGES['HTTP_SRC'][139] = 'You entered a wrong address:<br /><b>';
+$MESSAGES['HTTP_SRC'][140] = '</b><br />A correct address always starts with "http://" '.
+                 'or "https://"!';
+$MESSAGES['HTTP_SRC'][141] = 'You have entered a wrong address or the chosen server:<br /><b>';
+$MESSAGES['HTTP_SRC'][142] = '</b><br /> is not available!';
+$MESSAGES['HTTP_SRC'][143] = '&nbsp;to edit a profile.';
+$MESSAGES['HTTP_SRC'][144] = 'Edit profile';
+$MESSAGES['HTTP_SRC'][145] = 'Delete server';
+$MESSAGES['HTTP_SRC'][146] = 'Delete exclusion address';
+$MESSAGES['HTTP_SRC'][147] = 'Delete inclusion address';
+$MESSAGES['HTTP_SRC'][148] = 'Search profile - Step 5 of 7';
+$MESSAGES['HTTP_SRC'][149] = 'In this step you can define a regular expression '.
+                 'to change parts of the URLs after the indexing process.<p>'.
+                 'The HTTP indexer saves the absolute URLs oft the spidered '.
+                 'files. This enables phpCMS to use arbitrary server addresses to '.
+                 'spider and use for the full text search. But to spider files on '.
+                 'another server than the public available one (e.g. a local test server) '.
+                 'isn&#8217;t possible without the settings on this page.<p>'.
+                 'A pattern (regular expression) can be defined and all URL parts which match '.
+                 'this pattern get replaced by the replacement. The PHP function <a href="'.
+                 'http://www.php.net/manual/en/function.preg-replace.php" target="_blank">preg_replace</a> '.
+                 'is used for this. Notice the special syntax needed for the pattern.<p>An example: <br />'.
+                 'The test server in the intranet is "http://phpcms.de.local", the public available server '.
+                 'is named "http://phpcms.de". To replace "phpcms.de.local" with "phpcms.de" you can use the<br />'.
+                 '<b>Pattern "/phpcms\.de\.local/"</b><br />'.
+                 'and the<br />'.
+                 '<b>Replacement "phpcms.de"</b>.';
+$MESSAGES['HTTP_SRC'][150] = 'Change URLs';
+$MESSAGES['HTTP_SRC'][151] = 'Pattern:';
+$MESSAGES['HTTP_SRC'][152] = 'Replacement:';
+
+$MESSAGES['HTTP_SRC'][160] = '<b>An error occured!</b><br />Indexing cannot continue - the spider process did not return any links to files that could be read.<br /><br />';
+$MESSAGES['HTTP_SRC'][161] = 'It is possible that the start page you defined in the search profile cannot be indexed because of an entry in robots.txt or a robots meta tag.<br /><br />';
+$MESSAGES['HTTP_SRC'][162] = 'Please chose "Create Index" from the menu and edit your search profile!';
+
+?>

@@ -1,0 +1,150 @@
+{PROJECT}		../../template/doc.de.ini
+{ROBOTS}INDEX, FOLLOW
+{DESCRIPTION}TAGS sind replacements von Text. So ähnlich wie in Word-Formularen. Man kann TAGS auch mit Style-Sheet-Angaben vergleichen, nur dass TAGS wesentlich flexibler sind und alle Ersetzungen zulassen.
+{MENU}			00.06.06
+{TITEL}			Tag-Dateien
+{CONTENT}
+<B_BOX_START "Übersicht">
+<li><a href="$self#wozu">Wozu Tag-Dateien?</a></li>
+<li><a href="$self#erstellen">Erstellen einer Tag-Datei.</a></li>
+<li><a href="$self#einbinden">Einbinden von Tags in Content-Dateien oder Templates.</a></li>
+<li><a href="$self#beispiel">Ein Beispiel für eine Tag-Datei</a></li>
+<B_BOX_STOP>
+<a name="wozu"></a>
+<B_BOX_START "Wozu Tag-Dateien?">
+<p>
+Ist es Euch schon mal passiert, daß Ihr 10 HTML-Dokumente erstellt habt, und 
+später, nach Fertigstellung der Seiten, haben Euch die horizontalen Trennlinien 
+nicht mehr gefallen die Ihr für die Trennung der einzelnen Kapitel benutzt habt?
+</p>
+<p>
+Bei phpCMS könnt Ihr solche Situationen vermeiden, wenn Ihr phpCMS richtig einsetzt.
+</p>
+<p>
+Ihr definiert einfach Eure eigenen Tags in der Tag-Datei und benutzt diese Tags 
+dann als Platzhalter in den Content-Dateien. Wollt Ihr später diese Tags durch 
+andere HTML-Tags ersetzen, könnt Ihr einfach die Definition in der Tag-Datei 
+ändern und schon werden automatisch alle Tags Eurer Site durch die neue 
+Definition ersetzt.
+</p>
+<B_BOX_STOP>
+<a name="erstellen"></a>
+<B_BOX_START "Erstellen einer Tag-Datei">
+<p>
+Eine Tag-Datei ist ein ganz normales Text-File, das Ihr mit jedem beliebigen 
+Text-Editor bearbeiten oder erstellen könnt. Ich habe mir angewöhnt, wegen der 
+Übersicht nur eine Tag-Datei pro Site anzulegen, Ihr könnt aber natürlich Eure 
+Site in mehrere Projekte gliedern und in der jeweiligen Projekt-Datei die 
+entsprechende Tag-Datei anführen.
+</p>
+<p>
+Innerhalb der Tag-Datei beginnen Kommentarzeilen mit einem Semikolon (;). 
+Solche Semikolone können nur am Anfang der Zeile stehen. Semikolone in der 
+mitte der Zeile werden <WICHTIG>nicht</WICHTIG> als Kommentar interpretiert.
+Leerzeichen und Tabulatoren werden nicht interpretiert. Ihr könnt also Eure 
+Tag-Dateien übersichtlich formatieren indem Ihr reichlich Gebrauch von 
+Tabulatoren macht.
+</p>
+<p>
+In Definitionszeilen steht erst das Tag, welches Ihr in der Content-Datei oder 
+im Template als Platzhalter einsetzt. Danach kommt das Zuweisungszeichen ":=" 
+(ohne Anführungszeichen). Dahinter folgt jene(s) HTML-Tag(s) mit dem(nen)
+die Platzhalter ersetzt werden sollen. Ich mußte für das Trennzeichen leider 
+diese Kombination wählen, weil in manchen HTML-Tags das "=" - Zeichen benutzt 
+wird und der Parser dann das Trennzeichen nicht erkannt hätte. Eine 
+Definitionszeile kann also so aussehen:
+</p>
+<BLOCKQUOTE>&lt;BILDERRAHMEN&gt;&nbsp;&nbsp;&nbsp;&nbsp;:=&nbsp;&nbsp; &lt;table border="0" cellspacing="0" cellpadding="2"&gt;</BLOCKQUOTE>
+<p>
+<WICHTIG>Tipp:</WICHTIG> Ich habe mir angewöhnt, in jeder Tag-Datei die 
+deutschen Umlaute durch die HTML-Maskierungen ersetzen zu lassen. Seitdem kann 
+ich meine eigenen Content-Dateien auch selbst lesen. :-)
+</p>
+<p>
+Es können auch beliebig viele Parameter in Tags verwendet werden. 
+Das kann z.B. so aussehen:
+</p>
+<BLOCKQUOTE>
+&lt;a "$url,$target,$text"&gt;&nbsp;&nbsp;&nbsp;&nbsp;:=&nbsp;&nbsp;&lt;a href="$url" target="$target"&gt;$text&lt;/a&gt;
+</BLOCKQUOTE>
+<p>
+Dabei wird jeweils der dem Tag übergebene Wert in den HTML-Code eingesetzt. 
+<br /><br /><WICHTIG>Achtung: </WICHTIG> Als Trennzeichen bei Tags wird das Komma benutzt. 
+Wenn Ihr also innerhalb der Parameter ein Komma habt, dann wird dieses Komma als 
+Trennzeichen zu weiteren Parametern interpretiert. Auch Hochkomma werden als 
+Begrenzer benutzt und dürfen nicht innerhalb von TAG-Parametern benutzt werden.
+</p>
+<B_BOX_STOP>
+<a name="einbinden"></a>
+<B_BOX_START "Einbinden von Tags in Content-Dateien oder Templates.">
+<p>
+Ihr habt bereits Eure Platzhalter in der Tag-Datei definiert. Jetzt geht es an 
+die Erstellung der Content-Datei oder des Templates.
+</p>
+<p>
+Ihr notiert einfach dort, wo das entsprechende HTML-Tag stehen soll, den 
+Platzhalter, den Ihr für dieses HTML-Tag in der Tag-Datei definiert habt. 
+phpCMS ersetzt diesen Platzhalter dann beim parsen durch das entsprechende 
+HTML-Tag. Am besten seht Ihr Euch das Beispiel an!
+</p>
+<B_BOX_STOP>
+<a name="beispiel"></a>
+<B_BOX_START "Ein Beispiel für eine Tag-Datei">
+<p>
+Da ich selbst am besten anhand von Beispielen lerne, hier ein Auszug aus meiner 
+Tag-Datei:<br />&nbsp;</p>
+
+<SEITE><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3><Z><S>
+        &szlig;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;szlig;<br />
+        &Auml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Auml;<br />
+        &Ouml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Ouml;<br />
+        &Uuml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Uuml;<br />
+        &auml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;auml;<br />
+        &ouml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;ouml;<br />
+        &uuml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;uuml;<br />
+        &lt;WICHTIG&gt;&nbsp;:= &lt;strong&gt;<br />
+        &lt;/WICHTIG&gt;:= &lt;/strong&gt;
+</S></Z></TABLE></SEITE>
+
+<p>
+Angenommen ich möchte Euch einen Tipp geben und will, daß das Wort "Tipp:" 
+hervorgehoben dargestellt wird. Der Satz lautet: "Tipp: Benutzt möglichst oft 
+Tags!". In der Content-Datei würde ich den Satz dann so notieren:
+</p>
+
+<BLOCKQUOTE>&lt;WICHTIG&gt;Tipp:&lt;/WICHTIG&gt;Benutzt möglichst oft Tags!</BLOCKQUOTE>
+<p>
+phpCMS ersetzt dann das Tag "&lt;WICHTIG&gt;" durch das in der Tag-Datei 
+definierte Zeichen "&lt;strong&gt;" und das Tag "&lt;/WICHTIG&gt;" durch das Zeichen 
+"&lt;/strong&gt;". Außerdem wird das Zeichen "ö" durch "&amp;ouml;" ersetzt. Im
+Browser sieht der Satz dann so aus:
+</p>
+<BLOCKQUOTE><WICHTIG>Tipp:</WICHTIG> Benutzt möglichst oft Tags!</BLOCKQUOTE>
+<p>
+Weiters angenommen, Ihr habt jetzt Eure Semesterarbeit über phpCMS ins Internet 
+gestellt und geht noch einmal über die Formatierung. Jetzt fällt Euch ein, daß 
+Ihr eigentlich alle Tipp's nicht nur im Fettdruck haben wollt, sondern daß
+die Tipps außerdem kursiv dargestellt werden sollen. In phpCMS ganz einfach: Ihr 
+ändert einfach die Tag-Datei
+in dieser Art:<br />&nbsp;</p>
+
+<SEITE><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3><Z><S>
+        &szlig;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;szlig;<br />
+        &Auml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Auml;<br />
+        &Ouml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Ouml;<br />
+        &Uuml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Uuml;<br />
+        &auml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;auml;<br />
+        &ouml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;ouml;<br />
+        &uuml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;uuml;<br />
+        &lt;WICHTIG&gt;&nbsp;:= &lt;i&gt;&lt;strong&gt;<br />
+        &lt;/WICHTIG&gt;:= &lt;/strong&gt;&lt;/i&gt;
+</S></Z></TABLE></SEITE>
+
+<p>
+Und schon wird der im Beispiel angeführte Satz wie folgt ausgegeben:
+</p>
+<BLOCKQUOTE><I><WICHTIG>Tipp:</WICHTIG></I> Benutzt möglichst oft Tags!</BLOCKQUOTE>
+<p>
+So einfach ist das mit phpCMS!
+</p>
+<B_BOX_STOP>

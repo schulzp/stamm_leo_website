@@ -1,0 +1,80 @@
+{PROJECT}../../template/doc.de.ini
+{ROBOTS}INDEX, FOLLOW
+{DESCRIPTION}Content-dateien ersetzen die bisherigien HTML-Dateien. Mit Content-Dateien "überlisten" wir den Webserver. In Content-Dateien steht der eigentliche Inhalt der Seite bei phpCMS.
+{MENU}			00.06.05
+{TITEL}			Content-Dateien
+{CONTENT}
+<B_BOX_START "Übersicht">
+<li><a href="$self#was">Was sind Content-Dateien?</a></li>
+<li><a href="$self#felder">Besondere, reservierte Felder.</a></li>
+<li><a href="$self#beispiel">Ein Beispiel</a></li>
+<B_BOX_STOP>
+<a name="was"></a>
+<B_BOX_START "Was sind Content-Dateien?">
+<p>
+Content-Dateien beinhalten die eigentlichen Informationen, die Ihr publizieren 
+wollt. Zur Formatierung verwendet Ihr am Besten Tags, die Ihr zuvor im Tag-File 
+selbst definiert habt. Wie das geht, wird auf der Seite Tag-Files beschrieben.
+</p>
+<p>
+Content-Dateien sollten immer mit Feldern beginnen. Ihr könnt für Eure Felder 
+beliebige Feldnamen vergeben, es sollten aber die selben sein, die auch im 
+Template stehen, damit der Platzhalter im Template dann mit dem Inhalt des 
+Feldes ersetzt wird.
+</p>
+<p>
+Ein Feld mit dem Namen "CONTENT" sieht zum Beispiel so aus: 
+<WICHTIG>&#123;CONTENT&#125;</WICHTIG>
+</p>
+<p>
+<WICHTIG>Achtung:</WICHTIG> phpCMS ist case-sensitiv. Das bedeutet, daß Groß- 
+und Kleinschreibung unterschieden
+wird.
+</p>
+<p>
+Ein Feld wird automatisch durch den Start des nächsten Feldes beendet. Das 
+Schließen eines solchen Feldes, wie es bei HTML üblich ist, ist nicht erforderlich.
+</p>
+<B_BOX_STOP>
+<a name="felder"></a>
+<B_BOX_START "Besondere und reservierte Felder">
+<p>
+Bei phpCMS gibt es in Content-Dateien derzeit zwei besondere Felder: Das Feld 
+"PROJECT" und das Feld "MENU".<br />
+Im Feld "PROJECT" gebt Ihr den Pfad zu Eurer Projektdatei, absolut zum 
+Document-Root Eures Webservers oder relativ zur CONTENT-Datei an.
+<WICHTIG>"&#36;home" funktioniert hier nicht!</WICHTIG><br />
+Im Feld "MENU" erfolgt die Zuordnung zu Hauptmenü und, wenn vorhanden, 
+Untermenü. Das Feld "MENU" wird ausgiebig bei der Dokumentation der Menüs 
+erklärt. Alle Felder die mit "&#123;SCRIPT" beginnen, dienen zur dynamischen
+Skript-Einbindung. Diese wird näher bei der Dokumentation von Skripten erklärt.
+</p>
+<B_BOX_STOP>
+<a name="beispiel"></a>
+<B_BOX_START "Ein Beispiel">
+<p>
+Weil ich selbst auch am leichtesten lerne, wenn ich ein Beispiel zum abkupfern 
+habe, hier ein Beispiel
+einer kleinen Content-Datei für Euch:
+<hr />
+<CODE><PRE>
+<b>&#123;PROJECT&#125;</b>
+/homepage/template/test.ini
+
+<b>&#123;MENU&#125;</b>
+00.01.01
+
+<B>&#123;TITEL&#125;</b>
+Ein Beispiel
+
+<b>&#123;CONTENT&#125;</b>
+Hier steht überflüssiges Gequassel, das dann in das Template eingesetzt wird.&lt;br&gt;
+Ihr könnt zur Formatierung normale HTML-Tags einsetzen. Intelligenter ist es aber,&lt;br&gt;
+die Formatierung mit eigenen TAGS durchzuführen.
+
+</PRE></CODE>
+<hr /><br />
+Wie das Ganze dann im Template aussieht, seht Ihr auf der Seite über 
+<a href="templates.htm">Templates</a>.
+</p>
+<B_BOX_STOP>

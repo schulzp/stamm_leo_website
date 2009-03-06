@@ -1,0 +1,220 @@
+{PROJECT}		../../template/doc.en.ini
+{GRAFIK_LINKS}	$home/gifs/li_phpcms.gif
+{LOGO_1}		$home/gifs/cmslogo1.gif
+{LOGO_2}		$home/gifs/cmslogo2.gif
+{MENU}			00.08.10.06
+{TITEL}			Menus
+{CONTENT}
+<ul>
+<li><a href="$self#intro">Dynamic menus in phpCMS</a></li>
+<li><a href="$self#datei">Creation of a menu file</a></li>
+<li><a href="$self#datei_beispiel">Example of a menu file</a></li>
+<li><a href="$self#template">Creation of menu templates</a></li>
+<li><a href="$self#template_beispiel">Example of a menu template</a></li>
+<li><a href="$self#zuordnen">Linking of a content file to a menu option</a></li>
+</ul>
+<p>
+<hr />
+</p>
+<US><a name="intro"><a href="$self#top">Dynamic menus in phpCMS</a></a></US>
+<p>
+If you work on larger web projects with many pages you need a navigation system.
+If frames or menu applets aren't acceptable for your project you have to edit each page
+of your project if you add one menu option. This job does phpCMS for you. phpCMS supports
+a dynamic menusystem.
+</p>
+<p><img src="gifs/workflow.gif" width="354" height="265" alt="Workflow" align="right" vspace="7" hspace="7">
+You only have to put a menu number in your content file and add this number with some other
+fields in a menu file. It is possible that two or more pages have the same menu number.
+Now you have to create one menu template per project which describes the format of your menus. You can define a format for active and for inactive menu options.
+</p>
+<p>
+With the call of the content file by the parser on the basis the menu number in the menu file the status of the content file is determined. Then the menus are inserted into the template. Dependent on the status of the content file the menu options are presented as active or as inactive.
+</p>
+<p>
+Submenus are displayed only if they fit even selected upper menu option. Theoretically you can create as many as desired menu levels. Because of good operability should you should not use more than three menu levels.
+</p>
+<p>
+<hr />
+</p>
+<US><a name="datei"><a href="$self#top">Creation of a menu file</a></a></US>
+<p>
+A menu file is a normal text file so you can edit this file with every plain text editor.
+The file extention is freely selectable. Personally, I prefer the extentions ".mnu" or ".menu".
+</p>
+<p>
+<WICHTIG>In menu files are no comments allowed!</WICHTIG>
+</p>
+<p>
+First you have to create the root menu level. I name this level "MAIN" because it is the
+main menu but the name is freely selectable. The field name for the menuname is "MENU:". A line looks e.g. like this:
+</p><BLOCKQUOTE>MENU: MAIN</BLOCKQUOTE><p>
+There must be no other things in this line.
+Now you can define the menu options for this menu level below.
+You must at least define the menu class the link an the name of this menu option; other
+fields are optionally and freely selectable.
+</p>
+<p>
+Further fields are for example to create graphical menus where a path to the graphic is needed or if you want to use special separators etc.
+</p>
+<p>
+A line to define a menu option looks e.g. in that way:
+</p>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100%><Z><SN>CLASS;</S><SN>MNAME;</S><SN>LINK;</S><SN>TEXT ;</S></Z></TN>
+<ul>
+<li>"CLASS" field name of the menu level given in the content file.</li>
+<li>"MNAME" text which is shown in the menu.</li>
+<li>"LINK" the link to the content file or a external page. You can use the variable &#36;home
+           if you have defined it in the project file.</li>
+<li>"TEXT" this field is not needed but I use it to show a description of a menu option in the status bar if you move the mouse over a menu option.</li>
+</ul>
+<p>
+You surely noticed the semicolons (;) as separators between the fields.etrennt.
+</p>
+<p>
+The menu class is used to link a lower class menu option to a upper class menu option
+If you have the main menu option "phpCMS" on the 8th place in your main menu then the number
+of this menu option is 00.08. Now you have to define some sub menu options like "About phpCMS", "Download, and so on. These sub menu options now have the numbers 00.08.01 then 00.08.02 and so on.
+</p>
+<p>
+You should define the "LINK" absolutly to your document root because it is possible to call the menu is call
+the menu system from different directories of your web server.
+</p>
+<p>
+It is important that you don't use the semicolon (;) in a field because this symbol is
+the separator for each field. Most of the Field names are freely selectable so you can
+write "ADDRESS" instead of "LINK".
+</p>
+<p><WICHTIG>Exception: The field "CLASS" can't be renamed and is needed in the menu definition</WICHTIG></p>
+<p>
+The correct allocation of sub menus would not be possible otherwise.
+</p>
+<p>
+Now you can define a submenu for each main menu option you want a sub menu. A sub menu is
+exactly the same as a main menue.
+</p>
+<p>
+<hr />
+</p>
+<US><a name="datei_beispiel"><a href="$self#top">Example of a menu file</a></a></US>
+<p>This is a dump of one of mine menu files:</p>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2><TR><TD BGCOLOR="#006600"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=7 WIDTH=100%><TR><TD BGCOLOR=#DDEEDD>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3><Z><S>
+<TABLE BORDER=1 BORDERCOLOR=FFFFFF CELLSPACING=0 CELLPADDING=0>
+<Z><TD COLSPAN=4 class="ncell">MENU: MAIN</S></Z>
+<Z><SN>CLASS;        </S><SN>MNAME;                        </S><SN>LINK;                                                </S><SN>TEXT;</S></Z>
+<Z><SN>00.01;                </S><SN>Galerie;                </S><SN>&#36;home/galerie/galerie/_parseext_;                </S><SN>Zur Galerie;</S></Z>
+<Z><SN>00.02;                </S><SN>Dokumentationen;</S><SN>&#36;home/dokumentationen/doku/_parseext_;        </S><SN>Zu den Dokumentationen;</S></Z>
+<Z><SN>00.03;                </S><SN>Links;                        </S><SN>&#36;home/links/links/_parseext_;                        </S><SN>Interessante Pl&auml;tze im WWW;</S></Z>
+<Z><SN>00.04;                </S><SN>Firma;                        </S><SN>&#36;home/firma/firma/_parseext_;                        </S><SN>&Uuml;ber das Unternehmen in dem ich arbeite;</S></Z>
+<Z><SN>00.05;                </S><SN>Renate;                        </S><SN>&#36;home/renate/renate/_parseext_;                        </S><SN>F&uuml;r meine Gattin;</S></Z>
+<Z><SN>00.06;                </S><SN>Michael;                </S><SN>&#36;home/michael/michael/_parseext_;                </S><SN>Das ist nur f&uuml;r mich!;</S></Z>
+<Z><SN>00.07;                </S><SN>Security;                </S><SN>&#36;home/security/security/_parseext_;                </S><SN>Alles &uuml;ber Security im Internet!;</S></Z>
+<Z><SN>00.08;                </S><SN>phpCMS;                        </S><SN>&#36;home/phpcms/phpcms/_parseext_;                        </S><SN>Mein Content-Management-System;</S></Z>
+<Z><TD COLSPAN=4 class="ncell">&nbsp;</S></Z>
+<Z><TD COLSPAN=4 class="ncell">MENU: SUB1</S></Z>
+<Z><SN>CLASS;                </S><SN>MNAME;                                </S><SN>LINK;                                                </S><SN>TEXT;</S></Z>
+<Z><SN>00.01.01;                </S><SN>Sageders Abschied;        </S><SN>&#36;home/galerie/sageder/_parseext_;                </S><SN>Als Walter Sageder unser Unternehmen verlassen hat.;</S></Z>
+<Z><SN>00.01.02;                </S><SN>Leo '99;                        </S><SN>&#36;home/galerie/leo99/_parseext_;                        </S><SN>Wie ich den Leo 99 gewann;</S></Z>
+<Z><SN>00.01.03;                </S><SN>Diverse Bilder;                </S><SN>&#36;home/galerie/diverse/_parseext_;                </S><SN>Allerlei;</S></Z>
+<Z><SN>00.01.04;                </S><SN>EBS;                                </S><SN>&#36;home/galerie/ebs/ebs/_parseext_;                </S><SN>Bilder vom Projekt;</S></Z>
+</TN></S></Z></TABLE></SEITE>
+<p>
+<hr />
+</p>
+<US><a name="template"><a href="$self#top">Creation of a menu template</a></a></US>
+<p>
+In menu Templates the layout of the menus is defined. A menu file is a normal text file so you can edit this file with every plain text editor. The file extention is freely selectable
+ but i prefer the extention ".mtpl". Comments are allowed in menu templates.
+The Fields begin with the same symbols as in content fields or content-templates. I use the
+swung brackets (&#123;&#125;) for it. The layout definitions of all menus of a project are in this one file.
+</p>
+<p>
+A layout definition block begins with the menu name and then the keyword ".PRE"
+Example:
+</p>
+<BLOCKQUOTE>&#123;MAIN.PRE&#125;</BLOCKQUOTE>
+<p>
+Now you have to define the HTML-tags which you want to include before the menu:
+</p>
+<BLOCKQUOTE>&lt;TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0&gt;&lt;TR&gt;</BLOCKQUOTE>
+<p>
+With the menu name followed by the keyword ".NORMAL" you define what the parser does with inactive menu options:
+</p>
+<BLOCKQUOTE>&#123;MAIN.NORMAL&#125;</BLOCKQUOTE>
+<p>
+Now write the HTML-tags which you want to set for inactive menu options:
+</p>
+<BLOCKQUOTE>&lt;TD&gt;&lt;FONT FACE="Arial" class="mainmenu"&gt;&lt;FONT POINT-SIZE=10pt&gt;&lt;A HREF="&#123;LINK&#125;" onMouseOver="window.status='&#123;TEXT&#125;';return true;" class="main"&gt;&nbsp;&#123;MNAME&#125;&nbsp;&lt;/A&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/TD&gt;</BLOCKQUOTE>
+<p>
+As you can see there are Placeholder in the HTML-code which will be replaced by text HTML-code defined in the menu file.
+In the line above these are the fields &#123;LINK&#125;, &#123;TEXT&#125; and &#123;MNAME&#125;. The field &#123;CLASS&#125; is a field which is only used by the parser
+to realize the link between a submenu option and a main menu option.
+</p>
+<p>
+Now you have to define the menu name followed by the keywork ".AKTIV". This defines the
+HTML-tags for an activated menu option. This is the same procedure as you did on the inactive menu options.
+</p>
+<p>
+With the menu name followed by ".PAST" you have to close the layout definition of this
+menu level:
+</p>
+<BLOCKQUOTE>&#123;MAIN.PAST&#125;</BLOCKQUOTE>
+<p>
+After this tag you can define the HTML tags which should be insterted after the menu.
+</p>
+<p>
+<hr />
+</p>
+<US><a name="template_beispiel"><a href="$self#top">Example of a menu template</a></a></US>
+<p>
+This a an example of one of mine menu templates:
+</p>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2><TR><TD BGCOLOR="#006600"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=7 WIDTH=100%><TR><TD BGCOLOR=#DDEEDD>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3><Z><S>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<Z><S>&#123;MAIN.PRE&#125;</S></Z>
+<Z><S>&lt;!-- Main Menu starts --&gt;</S></Z>
+<Z><S>&lt;TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0&gt;&lt;TR&gt;</S></Z>
+<Z><S>&nbsp;</S></Z>
+<Z><S>&#123;MAIN.NORMAL&#125;</S></Z>
+<Z><S>&lt;TD&gt;&lt;FONT FACE="Arial" class="mainmenu"&gt;&lt;FONT POINT-SIZE=10pt&gt;&lt;A HREF="&#123;LINK&#125;" onMouseOver="window.status='&#123;TEXT&#125;';return true;" class="main"&gt;&nbsp;&#123;MNAME&#125;&nbsp;&lt;/A&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/TD&gt;</S></Z>
+<Z><S>&nbsp;</S></Z>
+<Z><S>&#123;MAIN.AKTIV&#125;</S></Z>
+<Z><S>&lt;TD&gt;&lt;FONT FACE="Arial" class="mainmenu"&gt;&lt;FONT POINT-SIZE=10pt&gt;&lt;B>&lt;A HREF="&#123;LINK&#125;" onMouseOver="window.status='&#123;TEXT&#125;';return true;" class="maina"&gt;&nbsp;&#123;MNAME&#125;&nbsp;&lt;/A&gt;&lt;/B&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/TD&gt;</S></Z>
+<Z><S>&nbsp;</S></Z>
+<Z><S>&#123;MAIN.PAST&#125;</S></Z>
+<Z><S>&lt;/TR&gt;&lt;/TABLE&gt;</S></Z>
+<Z><S>&lt;!-- Main Menu ends --&gt;</S></Z>
+<Z><S>&nbsp;</S></Z>
+<Z><S>&#123;SUB1.PRE&#125;</S></Z>
+<Z><S>&lt;!-- Sub Menu 1 starts --&gt;</S></Z>
+<Z><S>&lt;FONT FACE="Arial" class="mainmenu"&gt;&lt;FONT POINT-SIZE=10pt&gt;&nbsp;&lt;BR&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0&gt;</S></Z>
+<Z><S>&nbsp;</S></Z>
+<Z><S>&#123;SUB1.NORMAL&#125;</S></Z>
+<Z><S>&lt;TR&gt;&lt;TD&gt;&lt;FONT FACE="Arial" class="mainmenu"&gt;&lt;FONT POINT-SIZE=10pt&gt;&nbsp;&nbsp;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/TD&gt;&lt;TD&gt;&lt;FONT FACE="Arial" class="mainmenu"&gt;&lt;FONT POINT-SIZE=10pt&gt;&lt;A HREF="&#123;LINK&#125;" onMouseOver="window.status='&#123;TEXT&#125;';return true;" class ="sub"&gt;&nbsp;&#123;MNAME&#125;&nbsp;&lt;/A&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/TD&gt;&lt;/TR&gt;</S></Z>
+<Z><S>&nbsp;</S></Z>
+<Z><S>&#123;SUB1.AKTIV&#125;</S></Z>
+<Z><S>&lt;TR&gt;&lt;TD&gt;&lt;FONT FACE="Arial" class="mainmenu"&gt;&lt;FONT POINT-SIZE=10pt&gt;&nbsp;&nbsp;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/TD&gt;&lt;TD&gt;&lt;FONT FACE="Arial" class="mainmenu"&gt;&lt;FONT POINT-SIZE=10pt&gt;&lt;B&gt;&lt;A HREF="&#123;LINK&#125;" onMouseOver="window.status='&#123;TEXT&#125;';return true;" class = "suba"&gt;&nbsp;&#123;MNAME&#125;&nbsp;&lt;/A&gt;&lt;/B&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/TD&gt;&lt;/TR&gt;</S></Z>
+<Z><S>&nbsp;</S></Z>
+<Z><S>&#123;SUB1.PAST&#125;</S></Z>
+<Z><S>&lt;/TABLE&gt;</S></Z>
+<Z><S>&lt;!-- Sub Menu 1 ends --&gt;</S></Z>
+<Z><S>&nbsp;</S></Z>
+</TN></S></Z></TABLE></SEITE>
+
+<p>
+<hr />
+</p>
+<US><a name="zuordnen"><a href="$self#top">Linking of a content file to a menu option</a></a></US>
+<p>
+The link from a content file to a menu option will be done through the predefined field
+"MENU" in the content file.
+This could look for example like this:
+</p>
+<BLOCKQUOTE>&#123;MENU&#125;<BR>
+                        00.08.10.07</BLOCKQUOTE>
+<p>
+This would link the content file to the main menu option "8", the sub menu "6" and
+the sub menu option "7" of this level.
+</p>

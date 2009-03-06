@@ -1,0 +1,58 @@
+{PROJECT}		../../template/doc.en.ini
+{GRAFIK_LINKS}	$home/gifs/li_phpcms.gif
+{LOGO_1}		$home/gifs/cmslogo1.gif
+{LOGO_2}		$home/gifs/cmslogo2.gif
+{MENU}			00.08.10.09
+{TITEL}			Integration of own PHP scripts
+{CONTENT}
+<ul>
+<li><a href="$self#allg">General remarks on dynamic scripts</a></li>
+<li><a href="$self#template">Definition in the template</a></li>
+<li><a href="$self#content">Definition in the content file</a></li>
+</ul>
+<p>
+<hr />
+</p>
+<US><a name="allg"><a href="$self#top">General remarks on dynamic scripts</a></a></US>
+<p>
+With phpCMS you can merge as many as desired scripts in one content file. This documentation describes how to merge your existing PHP scripts.
+At present the script integration is still very new, so the header output is still something "tricky". :-). For a correct output of headers you need modifications in the template file and the content file.</p>
+<p>
+<hr />
+</p>
+<US><a name="template"><a href="$self#top">Definition in the template</a></a></US>
+<p>
+In the template file you have to note only a placeholder beginning with "&#123;SCRIPT".
+(Of cause without the quotes.) Now this placeholder is followed by a unique name for this script.
+The complete definition then looks like this:
+</p>
+<BLOCKQUOTE>
+&#123;SCRIPT_NR1&#125;
+</BLOCKQUOTE>
+<p>
+This script placeholder now works like a normal placeholder. If you need to output HTTP-Headers in your scripts so divide your scripts in two pieces. One of them holds the HTTP-Headers in it and the other the main program. The program which sends tht HTTP-Headers should called on the beginning of the template.
+</p>
+<p>
+<hr />
+</p>
+<US><a name="content"><a href="$self#top">Definition in the content file</a></a></US>
+<p>
+You can chose in every content file which script should merged with the content. It is also possible to not define a script so the script tag in the template will be ignored. To define
+which script the parser should merge with the content write "&#123;SCRIPT"  (without quotes) followes by the unique name:
+</p>
+<BLOCKQUOTE>
+&#123;SCRIPT_NR1&#125; ./guestbook.php
+</BLOCKQUOTE>
+<p>
+
+Valid path definitions are for example:
+</p>
+<BLOCKQUOTE>
+&#123;SCRIPT_NR1&#125; ./guestbook.php<br />
+&#123;SCRIPT_NR1&#125; ../cgi-bin/guestbook.php<br />
+&#123;SCRIPT_NR1&#125; &#36;home/cgi-bin/guestbook.php<br />
+&#123;SCRIPT_NR1&#125; /cgi-bin/guestbook.php<br />
+</BLOCKQUOTE>
+<p>
+the variable "&#36;home" is only defined if "HOME" is defined in the project file.
+</p>

@@ -1,0 +1,138 @@
+{PROJECT}		../../template/doc.en.ini
+{GRAFIK_LINKS}		$home/gifs/li_phpcms.gif
+{LOGO_1}		$home/gifs/cmslogo1.gif
+{LOGO_2}		$home/gifs/cmslogo2.gif
+{MENU}			00.08.10.14
+{TITEL}			Built-in Functions
+
+{CONTENT}
+<ul>
+<li><a href="$self#mailcrypt">Mail2Crypt</a> SPAM proofing your e-mail addresses</li>	
+</ul>
+
+<hr />
+<US><a name="mailcrypt"><a href="$self#top">Mail2Crypt: SPAM proofing your e-mail addresses</a></a></US>
+<p>
+<b>TAG SYNTAX: </b><br />
+&lt;!-- MAIL2CRYPT mail@domain.xyz[,link text][,ICON | custom image][,noscript link | PARANOID] --&gt;
+</p>
+---------------
+<!-- <p><em><strong>Quick Reference</strong></em>
+<br />Put this somewhere in one of your Content file:
+<strong>&lt;!-- MAIL2CRYPT help --&gt;</strong>
+</p> -->
+
+<p><strong style="color: darkgreen;font-size:110%">What is Mail2Crypt?</strong>
+<br />
+Mail2Crypt is a built-in function that encrypts and thus protects your e-mail addresses from SPAM bots.
+</p>
+
+<p><strong style="color: darkgreen;font-size:110%">What does Mail2Crypt do?</strong>
+<br />Mail2Crypt acts to ensure that e-mail addresses are kept from the prying eyes of unfriendly search engines (SPAM bots). SPAM bots are used by spammers to search the Internet for e-mail addresses they can sell, and/or send Unsolicited Commercial E-Mail (UCE) to.
+<br />
+<br />
+Protecting you e-mail addresses from being harvested by SPAM bots now is as easy as putting them into a Mail2Crypt tag. The parser automatically encrypts them, and produces the code that is needed for your address to display in your visitors&#8217; browser - <em>with as well as without JavaScript</em>!
+</p>
+
+<p><strong style="color: darkgreen;font-size:110%">How does Mail2Crypt work?</strong>
+<br />
+In order to render e-mail addresses unreadable by SPAM bots, Mail2Crypt employs a combination techniques. Their objective is to purge your pages from any text strings identifiable as e-mail addresses.</p>
+
+<p>Simply put, Mail2Crypt turns each e-mail address into an encrypted string of digits which is then embedded into a JavaScript function call. When viewed in a browser the string is decrypted on the fly, and acts just like a conventional e-mail link.
+<br />
+<br />
+The <strong>JavaScript code</strong> that is needed to display addresses is stored in an external .js file a reference to which is automatically placed inside the head section of your document.
+</p>
+
+<p>In order to maintain accessibility of your contact information, in addition to the JavaScript described above, Mail2Crypt also creates a noscript section. The noscript section makes sure that user agents that do not support JavaScript may still display your e-mail address.
+<br />
+<br />In the <strong>&lt;noscript&gt; section</strong> all the characters your e-mail address is made up of are converted into their <strong>ASCII equivalents</strong>. Since this by itself would not offer sufficient protection from SPAM bots, the @ is not treated as a character, but instead is replaced by a <strong>GIF file</strong>.
+<br />
+<br />The noscript section does not contain an clickable mailto: link. In order to provide users with non-JavaScript enabled browsers a convenient way to contact you, you may turn the address displayed in the noscript section into a link that points, for example, to your contact form.
+</p>
+
+<p><strong style="color: darkgreen;font-size:110%">The Mail2Crypt Tag and Attributes</strong>
+<br />The Mail2Crypt tag uses the following format:
+<br />
+<br />
+<b>&lt;!-- MAIL2CRYPT mail@domain.xyz[,link text][,ICON | custom image][,noscript link | PARANOID] --&gt;</b>
+</p>
+
+<ul>
+<li><strong>mail@domain.xyz</strong><br /><ul>
+    <li>e-mail address you want to protect</li></ul></li>
+<li><strong>link text</strong> (optional)<br /><ul>
+    <li>text you want to turn into e-mail link</li></ul></li>
+<li><strong>ICON</strong> (optional)<br /><ul>
+    <li>Add the "ICON" attribute if you want to display a small letter icon after (or in some cases instead of) the e-mail link</li></ul></li>
+<li><strong>custom image</strong> (optional)<br /><ul>
+    <li>instead of using the pre-defined icon, you may specify your own icon here</li></ul></li>
+<li><strong>noscript link</strong> (optional)<br /><ul>
+    <li>in the noscript section you may turn the e-mail address into a link that points e.g. to your contact form</li></ul></li>
+<li><strong>PARANOID</strong> (optional)<br /><ul>
+    <li>The "PARANOID" (or simply "p") attribute instructs Mail2Crypt <strong>not</strong> to create a noscript section</li></ul></li>
+</ul>
+
+<p><strong style="color: darkgreen;font-size:110%">Mail2Crypt display options</strong>.
+<br />For each option, you see the JavaScript created format, followed by the corresponding noscript format.</p>
+
+<ul>
+	<li><strong>Simple e-mail link</strong>:
+		<ul>
+			<li>Mail2Crypt tag: <strong>&lt;!-- MAIL2CRYPT info@phpcms.de --&gt;</strong></li>
+			<li>JavaScript: <!-- MAIL2CRYPT info@phpcms.de --></li>
+			<li>&lt;noscript&gt;  &#105;&#110;&#102;&#111;<img src="/demo/gif/at.gif" width="11" height="12" border="0" alt="&#64;" />&#112;&#104;&#112;&#99;&#109;&#115;&#46;&#100;&#101;</li>
+			<br />
+		</ul>
+	</li>
+		
+	<li><strong>Text w/ e-mail link</strong>:
+		<ul>
+			<li>Mail2Crypt tag: <strong>&lt;!-- MAIL2CRYPT info@phpcms.de, Write us! --&gt;</strong></li>
+			<li>JavaScript: <!-- MAIL2CRYPT info@phpcms.de, Write us! --></li>
+			<li>&lt;noscript&gt; Write us! (&#105;&#110;&#102;&#111;<img src="/demo/gif/at.gif" width="11" height="12" border="0" alt="&#64;" />&#112;&#104;&#112;&#99;&#109;&#115;&#46;&#100;&#101;)</li>
+			<br />
+		</ul>
+	</li>
+
+	<li><strong>Standard icon w/ e-mail link</strong>:
+		<ul>
+			<li>Mail2Crypt tag: <strong>&lt;!-- MAIL2CRYPT info@phpcms.de,,icon --&gt;</strong></li>
+			<li>JavaScript: <!-- MAIL2CRYPT info@phpcms.de,,icon --></li>
+			<li>&lt;noscript&gt; &#105;&#110;&#102;&#111;<img src="/demo/gif/at.gif" width="11" height="12" border="0" alt="&#64;" />&#112;&#104;&#112;&#99;&#109;&#115;&#46;&#100;&#101; <img src="/demo/gif/mail.gif" width="14" height="10" border="0" alt="" /></li>
+			<br />
+		</ul>
+	</li>
+
+	<li><strong>Text, standard icon, e-mail link</strong>:
+		<ul>
+			<li>Mail2Crypt tag: <strong>&lt;!-- MAIL2CRYPT info@phpcms.de, Write us!, icon --&gt;</strong></li>
+			<li>JavaScript: <!-- MAIL2CRYPT info@phpcms.de, Write us!, icon --></li>
+			<li>&lt;noscript&gt; Write us! <img src="/demo/gif/mail.gif" width="14" height="10" border="0" alt="" /> (&#105;&#110;&#102;&#111;<img src="/demo/gif/at.gif" width="11" height="12" border="0" alt="&#64;" />&#112;&#104;&#112;&#99;&#109;&#115;&#46;&#100;&#101;)</li>
+			<br />
+		</ul>
+	</li>
+
+	<li><strong>Custom graphic w/ e-mail link</strong>:
+		<ul>
+			<li>Mail2Crypt tag: <strong>&lt;!-- MAIL2CRYPT info@phpcms.de,,/parser/doc/mail_example.jpeg --&gt;</strong></li>
+			<li>JavaScript: <!-- MAIL2CRYPT info@phpcms.de,,/parser/doc/mail_example.jpeg --><br /><br /></li>
+			<li>&lt;noscript&gt; &#105;&#110;&#102;&#111;<img src="/demo/gif/at.gif" width="11" height="12" border="0" alt="&#64;" />&#112;&#104;&#112;&#99;&#109;&#115;&#46;&#100;&#101; <img src="/parser/doc/mail_example.jpeg" width="100" height="67" border="0" alt="" /></li>
+			<br />
+		</ul>
+	</li>
+</ul>
+
+<p><strong style="color: darkgreen;font-size:110%">How secure is Mail2Crypt?</strong>
+<br />Spammers are constantly increasing their efforts in order to get hold of those precious e-mail addresses of yours.
+<br />Because of this, there is no telling how effective Mail2Crypt will prove to be in fending off these efforts. During the first year Mail2Crypt has been used, we have had no reports of e-mail addresses that were harvested while being protected through Mail2Crypt.
+</p>
+
+<p><strong style="color: darkgreen;font-size:110%">Further Security Measures</strong></p>
+<ul>
+<li>Don&#8217;t use e-mail - use smoke signs instead!</li>
+<li>If you want to, Mail2Crypt can remove the &lt;noscript&gt; section:
+<br /><strong>&lt;!-- MAIL2CRYPT info@phpcms.de,,,paranoid --&gt;</strong></li>
+</ul>
+
+

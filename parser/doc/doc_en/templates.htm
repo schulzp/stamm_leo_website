@@ -1,0 +1,143 @@
+{PROJECT}		../../template/doc.en.ini
+{GRAFIK_LINKS}	$home/gifs/li_phpcms.gif
+{LOGO_1}		$home/gifs/cmslogo1.gif
+{LOGO_2}		$home/gifs/cmslogo2.gif
+{MENU}			00.08.10.02
+{TITEL}			Templates
+
+{CONTENT}
+<ul>
+<li><a href="$self#beschr">Description of Templates</a></li>
+<li><a href="$self#home">Usage of the "&#36;home" - variable in templates</a></li>
+<li><a href="$self#beispiel">An example</a></li>
+<li><a href="$self#was">What are sub templates?</a></li>
+<li><a href="$self#wozu">Why use sub templates?</a></li>
+
+</ul>
+<p><hr /></p>
+<US><a name="beschr"><a href="$self#top">Description of Templates</a></a></US>
+<p>
+Templates are like those templates from Word for standard uses.
+A template is a normal HTML file with substitute symbols in it.
+</p>
+<p>
+The substitute symbols are then replaced by the real contents,
+which are under the same field name in the content files. This splits the
+content from the layout of a website.
+</p>
+<p>
+We do not consider now the project file and the menus. We treat these things in the area about content files.
+</p>
+<p><hr /></p>
+<US><a name="home"><a href="$self#top">Usage of the "&#36;home" - variable in templates</a></a></US>
+<p>
+Often you have to use the absolute path to graphics and/or style-sheets in your templates.
+If you plan to transfer your hole website to another server or simply change the directorys
+in your serverroot you run in problems with absolut paths.
+Then you must change each path in your template by hand. You can avoid this, if you use the
+"&#36;home"-variable from your <a href="projektdatei.htm">project-file</a>.
+Simply set these variable in the path to your graphics and in future you have to change this path
+in only one place - the project-file.
+</p>
+<p><hr /></p>
+<p>
+A simple Template can look e.g. in such a way:
+</p>
+<US><a name="beispiel"><a href="$self#top">An example</a></a></US>
+<br /><br />
+<SEITE>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3>
+<Z><S>
+&lt;HTML&gt;<br />
+&lt;HEAD&gt;<br />
+&lt;TITLE&gt;<B>&#123;TITEL&#125;</B>&lt;/TITLE&gt;<br />
+&lt;/HEAD&gt;<br />
+&lt;BODY&gt;<br />
+&lt;H1&gt;<B>&#123;TITEL&#125;</B>&lt;/H1&gt;<br />
+&lt;P&gt;<br />
+<B>&#123;CONTENT&#125;</B><br />
+&lt;/BODY&gt;<br />
+&lt;/HTML&gt;
+</S></Z></TABLE></SEITE>
+<p>
+We assume that in the first content page after the field &#123;TITEL&#125; the words:
+" my first homepage with phpCMS " and after the field designator &#123;CONTENT&#125;
+the words: " here is unnecessary talk, which is then inserted into the template.<br />
+You can use normal HTML tags for formatting. More intelligent it is however
+to use own TAGS to format a content.
+</p>
+<p>
+The Parser replaces then with the call of the content page the substitute
+symbols in the Template with the values from the content page. That looks then
+in such a way:
+</p>
+<SEITE>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3>
+<Z><S>
+&lt;HTML&gt;<br />
+&lt;HEAD&gt;<br />
+&lt;TITLE&gt;<B>my first homepage with phpCMS</B>&lt;/TITLE&gt;<br />
+&lt;/HEAD&gt;<br />
+&lt;BODY&gt;<br />
+&lt;H1&gt;<B>my first homepage with phpCMS</B>&lt;/H1&gt;<br />
+&lt;P&gt;<br />
+<B>here is unnecessary talk, which is then inserted into the template.&lt;BR&gt;<br />
+you can use normal HTML tags for formatting. More intelligent it is however
+to use own TAGS to format a content.</B>
+&lt;/BODY&gt;<br />
+&lt;/HTML&gt;
+</S></Z></TABLE></SEITE>
+<p>
+As you can see: phpCMS is really easy to use!
+</p>
+
+<p><hr /></p>
+<US><a name="was"><a href="$self#top">What are Subtemplates?</a></a></US>
+<p>
+If you have recurring HTML items in your templates, which should be alike however in all pages,
+you use at the best sub templates. Also within the same page (the same template) the same sub template
+can be used several times.
+</p>
+<p>
+To use a sub template in a template file you must write a command like the following one:
+</p>
+<BLOCKQUOTE>&#123;TEMPLATE FILE="/homepage/templates/sub_template.tpl"&#125;</BLOCKQUOTE>
+<p>
+<WICHTIG>Note:</WICHTIG>The line must be written just as, thus in large writing and with
+<WICHTIHG>one</WICHTIG> blank after the keyword "TEMPLATE". If you use simple or no quotes,
+the sub template cannot be found.
+</p>
+<p>
+You can use absolute or relative path definitions to call a template. Optionally you can use the
+variable &#36;home. Some examples for valid commands to call a sub template:
+</p>
+<BLOCKQUOTE>&#123;TEMPLATE FILE="/homepage/templates/sub_template.tpl"&#125;<br />
+                        &#123;TEMPLATE FILE="./sub_template.tpl"&#125;<br />
+                        &#123;TEMPLATE FILE="&#36;home/templates/sub_template.tpl"&#125;<br />
+</BLOCKQUOTE>
+<p>
+The variable &#36;home is only defined if HOME is defined in the project file.
+</p>
+<p>
+You can call sub templates also nesting, i.e. in a Sub Template a further Sub Template, but do not
+produce a recursion, when you try to call a sub template from the same sub template!
+</p>
+<p>
+Except from these notes sub templates are just like normal templates!
+</p>
+<p><hr /></p>
+<US><a name="wozu"><a href="$self#top">Why use sub templates?</a></a></US>
+<p>
+Take for example the copyright text on the top right of the authors page. This text is
+with one email-links provided. The text occurs on all pages of my homepage. I use
+different templates on my homepage.
+</p>
+<p>
+If now my email address changes, I would have to modify the new address in each individual
+template if i would'nt use sub templates. With sub templates I only have to modify the email
+address in one sub template and this modification affects all pages.
+</p>
+<p>
+<WICHTIG>
+Sub Templates are thus used for items in the side structure, which are same on all pages.</WICHTIG>
+</p>

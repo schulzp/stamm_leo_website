@@ -1,0 +1,5 @@
+# [de] Verhindert den Web-Zugriff auf das Pluginverzeichnis
+# [en] Prevents web access to the plugin directory
+
+Order Deny,Allow
+Deny from all

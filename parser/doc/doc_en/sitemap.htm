@@ -1,0 +1,101 @@
+{PROJECT}		../../template/doc.en.ini
+{GRAFIK_LINKS}	$home/gifs/li_phpcms.gif
+{LOGO_1}		$home/gifs/cmslogo1.gif
+{LOGO_2}		$home/gifs/cmslogo2.gif
+{MENU}			00.08.10.10
+{TITEL}			Implementing an automated site map
+
+{CONTENT}
+<ul>
+<li><a href="$self#wozu">Why have an automated site map?</a></li>
+<li><a href="$self#template">Setting up the menu template.</a></li>
+<li><a href="$self#sitetemplate">Setting up the page template.</a></li>
+<li><a href="$self#weitere">Further files</a></li>
+</ul>
+<p><hr /></p>
+<US><a name="wozu"><a href="$self#top">Why have an automated site map?</a></a></US>
+<p>
+A site map can be a valuable aide that may help visitors to your site find their way 'round.
+When you site starts getting <q>deeper</q>, and you have many levels in your menus
+it will become increasingly difficult for your visitors to quickly see where they're going.
+</p>
+<p>
+Keeping your site map up to date manually, however, can give you a hard time. It is easy to 
+forget putting that quick last minute addition in your site map as well...
+</p>
+<p>
+Enter phpCMS: from version 1.0.9 on, it allows you to automatically have a site map created for you.
+All you need to do is define the looks of your site map in a template, and from then on any changes to your site's
+structure will be automatically read from your menu file, and reflected in your site map.
+</p>
+<p>
+<WICHTIG>Important:</WICHTIG> Your site map is cached on the server just like any other page!
+Therefore, in order to actually see changes you have made to your menu structure (and site map),
+you need to flush the server cache! Otherwise visitors to your site will be served those outdated files
+that are in the cache.
+</p>
+<p><hr /></p>
+<US><a name="template"><a href="$self#top">Setting up the Menu Template</a></a></US>
+<p>
+<p>
+The menu template is where you define the looks of your site map. This works very similar to the way you define the looks of the various menus. You can specify HTML that is to appear either before, next to, or after an item.
+<br /><br />HTML code that is to appear before each item in your site map is preceded by a &#123;field reference&#125; that starts with &#8220;TOC&#8221; followed by a full stop &#8220;.&#8221;, followed by the name of the menu that is referenced (e.g. &#8220;MAIN&#8221;). The &#123;field reference&#125; ends with &#8220;PRE&#8221;.
+<br />Following this scheme, the field reference that indicates HTML that is to appear next to an item, ends with &#8220;NORMAL&#8221;, and the one indicating HTML that appears after an item ends with &#8220;PAST&#8221; </p>Suppose you wanted an entry in your site map that corresponds to the top level in your navigation hierarchy,
+you would write something like this:
+</p>
+<BLOCKQUOTE>
+	<table border=0>
+	<tr><td>&#123;TOC.MAIN.PRE&#125;</td>		<td>&lt;table&gt;</td></tr>
+	<tr><td>&#123;TOC.MAIN.NORMAL&#125;</td>	<td>&lt;tr&gt;&lt;td&gt;&#123;MNAME&#125;&lt;/td&gt;&lt;/tr&gt;</td>
+	<tr><td>&#123;TOC.MAIN.PAST&#125;</td>		<td>&lt;/table&gt;</td>
+	</table>
+</BLOCKQUOTE>
+<p>
+<WICHTIG>NOTE:</WICHTIG> Due to an as yet unfixed bug in the parser, the first field name of the menu that is referenced ( &#8220;MNAME&#8221; in our example) needs to be preceded by at least one character. Otherwise nothing would be shown in its place in the parsed page. In the example above &#123;MNAME&#125; is preceded by &lt;tr&gt;&lt;td&gt;.  
+</p>
+<p>
+You can apply the scheme outlined above to all levels of your menu hierarchy accordingly.
+</p>
+<p><hr /></p>
+<US><a name="sitetemplate"><a href="$self#top">Setting up the page template</a></a></US>
+<p>You need to define an extra template for the site map (e.g. site.tpl). This template basically looks the same as a template for a regular content page. The site map is then included into this template by a &#123;field reference&#125; starting with &#8220;TOC&#8221;, followed by &#8220;CLASS&#8221; and the name of the menu class that is to be the starting point of the menu items shown.<br />This would look similar to the following:
+</p>
+<BLOCKQUOTE>
+	&lt;Your HTML code here&gt;
+	&#123;TOC CLASS="00"&#125;
+	&lt;Your HTML code here&gt;
+</BLOCKQUOTE>
+<p>
+If you wanted to display submenu items starting at class 00.01 only, you would write:
+</p>
+<BLOCKQUOTE>
+	&lt;Your HTML code here&gt;
+	&#123;TOC CLASS="00.01"&#125;
+	&lt;Your HTML code here&gt;
+</BLOCKQUOTE>
+
+<p>
+<WICHTIG>NOTE:</WICHTIG> A single space after &#8220;TOC&#8221; as well as the straight double quotation marks "" after &#8220;CLASS&#8221; are essential and need to be written this exact same way!
+</p>
+<p>
+Within the site map template you are allowed to have multiple instances of &#123;TOC CLASS=""&#125; fields referencing either the same or different menu classes. This is necessary if, for example, you want to have a multiple column layout. In this case you would use HTML mark up to define where each main menu item should be displayed, and add a &#123;TOC CLASS=""&#125; field referencing the menu class you want displayed in each location.
+</p>
+
+<p><hr /></p>
+<US><a name="weitere"><a href="$self#top">Additional files</a></a></US>
+<p>
+In addition to the modifications made to your menu template and the extra site map template described above, you will need:</p>
+<ul>
+<li>a project file (e.g. site.ini) and</li>
+<li>a content file (e.g. sitemap.htm).</li>
+</ul>
+<p>Both project file and content file are created the same way as for a regular HTML page.
+Theoretically you might even create a dynamic template for the site map, in which case there would be no need for an extra project file. This is not advisable, however, since the use of dynamic templates prevents pages from being cached on your server, and adds significantly to the amount of time it takes to parse and display the site map. 
+
+</p>
+<p>
+The site map's project file contains the same paths and file references as your regular project file, except for the reference to the template to be used in your site map. You simply change this reference to the site map template you just created.
+</p>
+<p>
+A content file is needed to display the actual site map. Within the content file you may have extra &#123;CONTENT&#125; fields e.g. for additional explanatory text. No special notation is needed here.
+</p>

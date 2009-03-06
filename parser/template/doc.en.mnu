@@ -1,0 +1,26 @@
+MENU: MAIN
+CLASS;          MNAME;          LINK;                           ACTION;     PHPCMSACTION;
+00.01;          configuration;  $home/parser.php;               CONF;       OPTIONS;
+00.02;          php-info;       $home/parser.php;               INFO;       OPTIONS;
+00.03;          error-codes;    $home/parser.php;               FEHLER;     OPTIONS;
+00.04;          cache;          $home/parser.php;               CACHE;      OPTIONS;
+00.05;          filemanager;    $home/parser.php;               ;           FILEMANAGER;
+00.06;          spider;         $home/parser.php;               ;           SPIDER;
+00.08;          documentation;  $home/doc/doc_en/index.htm;     ;           ;
+
+MENU: SUB1
+CLASS;          MNAME;          LINK;                                                   TEXT;                                           SPACE;
+00.08.10.00;    Overview;       $home/doc/doc_en/index.htm;       Table of contents;                              |;
+00.08.10.01;    Project Files;    $home/doc/doc_en/projektdatei.htm;What is a project file and how can i use them?; |;
+00.08.10.02;    Templates;      $home/doc/doc_en/templates.htm;   How to create a template?;                      |;
+00.08.10.04;    Content-Files;  $home/doc/doc_en/content.htm;     How to create a content file;                  |;
+00.08.10.05;    Tags;      $home/doc/doc_en/tags.htm;        How to create and use tags files;                      |;
+00.08.10.06;    Menu;    $home/doc/doc_en/menu.htm;        How to create dynamical menus?;                 |;
+00.08.10.11;    Search;         $home/doc/doc_en/suche.htm;       How to integrate the search-function?;          |;
+00.08.10.10;    Sitemap;        $home/doc/doc_en/sitemap.htm;     How to build an automatic Sitemap?;             |;
+00.08.10.14;    Functions;        $home/doc/doc_en/functions.htm;     Functions built-in into phpCMS;             |;
+00.08.10.09;    Scripts;        $home/doc/doc_en/scripte.htm;     How to use own scripts in phpCMS?;              |;
+00.08.10.07;    Plug-Ins;       $home/doc/doc_en/plugins.htm;     How to create Plug-ins?;                        |;
+00.08.10.12;    PAX;            $home/doc/doc_en/pax.htm;         All about PAX;                                  |;
+00.08.10.08;    Fields;         $home/doc/doc_en/felder.htm;      Important fields in phpCMS;                     |;
+00.08.10.13;    Debugging;     $home/doc/doc_en/debug.htm;   parameters in Debug-mode;                      ;

@@ -1,0 +1,38 @@
+{PROJECT}		../../template/doc.de.ini
+{MENU}			00.06.13
+{TITEL}			Parameter im Debug-Modus von phpCMS
+{CONTENT}
+<p>
+phpCMS besitzt einen Debug-Modus, der während der Entwicklung einer Website mit phpCMS hilfreich sein kann.
+<br />
+<br />Der Aufruf einer Seite im Debug-Mode erfolgt durch das Anhängen des Schlüsselwortes "?debug=debug".
+<br />
+Der Aufruf sieht dann z.B. so aus:
+</p>
+<blockquote>http://www.yourdomain.com/some/document.htm<b>?debug=debug</b></blockquote>
+
+<p><strong style="color:red">Der Debug-Modus ist Passwort-geschützt. Bitte vergessen Sie nach getaner Arbeit nicht, sich auszuloggen!! </strong>
+</p>
+
+<B_BOX_START "Parameter des Debug-Modus">
+<TABELLE>
+<Z><S><B>Parameter</B></SF>		<SR><B>Funktion</B></S></ZF>
+<Z><S>debug</SF>				<SN>lädt die Seite in der Debug-Ansicht</S></ZF>
+<Z><S>content_file</SF>	<SN>Content-Datei, ungeparst</S></ZF>
+<Z><S>content_rep</SF>		<SN>Content-Datei, mit ersetzten Tags</S></ZF>
+<Z><S>template_file</SF>				<SN>Template-Datei(en), ungeparst mit Zeilennummern</S></ZF>
+<Z><S>template_rep</SF>			<SN>Template-Datei(en), mit ersetzten Tags und Feldern</S></ZF>
+<Z><S>tags</SF>				<SN>alle verfügbaren Tags und deren Ersetzungen</S></ZF>
+<Z><S>menu_file</SF>		<SN>Menü-Datei(en), ungeparst</S></Z>
+<Z><S>menu_name</SF>		<SN>Menü-Datei(en), nach NAME sortiert</S></Z>
+<Z><S>menu_class</SF>		<SN>Menü-Datei(en), nach CLASS sortiert</S></Z>
+<Z><S>page</SF>		<SN>Content-Datei, fertig geparst</S></Z>
+<Z><S>time</SF>		<SN>Content-Datei, geparst mit Ausführungszeit (ohne PAX o. Scripte)</S></Z>
+<Z><S>vars</SF>		<SN>alle über $DEFAULTS ansprechbaren Einstellungen von phpCMS</S></Z>
+<Z><S>dev</SF>		<SN>Inhalt des $GLOBALS Arrays</S></Z>
+</TABELLE>
+<B_BOX_STOP>
+
+<p>
+<WICHTIG>Debug-mode muss im GUI aktiviert sein, um diese Parameter einzusetzen.</WICHTIG>
+</p>

@@ -1,0 +1,41 @@
+{PROJECT}		../../template/doc.en.ini
+{GRAFIK_LINKS}	$home/gifs/li_phpcms.gif
+{LOGO_1}		$home/gifs/cmslogo1.gif
+{LOGO_2}		$home/gifs/cmslogo2.gif
+{MENU}			00.08.10.13
+{TITEL}
+Debug Mode Parameters
+
+{CONTENT}
+<p>
+phpCMS contains a debug mode that can be very handy while developing your website with phpCMS.
+<br />
+<br />Debug mode is invoked by adding the special query string "?debug=debug" to the page you want to examine.
+</p>
+<blockquote>http://www.yourdomain.com/some/document.htm<b>?debug=debug</b></blockquote>
+
+<p><strong style="color:red">Debug mode is password protected. Please do not forget to log out after your work is finished.</strong>
+</p>
+
+<B_BOX_START "Debug Mode Parameters">
+<TABELLE>
+<Z><S><B>Parameter</B></SF>		<SR><B>Function</B></S></ZF>
+<Z><S>debug</SF>				<SN>opens a page in Debug Mode</S></ZF>
+<Z><S>content_file</SF>	<SN>Content file, unparsed</S></ZF>
+<Z><S>content_rep</SF>		<SN>Content file, with tags replaced</S></ZF>
+<Z><S>template_file</SF>				<SN>Template file(s), unparsed with line numbers</S></ZF>
+<Z><S>template_rep</SF>			<SN>Template file(s), with tags and fields replaced</S></ZF>
+<Z><S>tags</SF>				<SN>all available tags and their replacements</S></ZF>
+<Z><S>menu_file</SF>		<SN>Menu file(s), ungeparst</S></Z>
+<Z><S>menu_name</SF>		<SN>Menu file(s), sorted by NAME</S></Z>
+<Z><S>menu_class</SF>		<SN>Menu file(s), sorted by CLASS</S></Z>
+<Z><S>page</SF>		<SN>Content file, parsed</S></Z>
+<Z><S>time</SF>		<SN>Content file, parsed with execution time (w/o PAX or Scripts)</S></Z>
+<Z><S>vars</SF>		<SN>all phpCMS settings accessible via $DEFAULTS</S></Z>
+<Z><S>dev</SF>		<SN>contents of the $GLOBALS array</S></Z>
+</TABELLE>
+<B_BOX_STOP>
+
+<p>
+<WICHTIG>Debug Mode must also be activated in GUI-&gt;Configuration in order to use debugging.</WICHTIG>
+</p>

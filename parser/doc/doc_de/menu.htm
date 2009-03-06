@@ -1,0 +1,312 @@
+{PROJECT}		../../template/doc.de.ini
+{ROBOTS}INDEX, FOLLOW
+{DESCRIPTION}Die automatische menü-Verwaltung ist eine der mächtigsten Funktionen von phpCMS. Hier lest Ihr, wie das funktioniert und was Ihr tun müßt um das einzusetzen.
+{MENU}			00.06.07
+{TITEL}			Menüs
+{CONTENT}
+<B_BOX_START "Übersicht">
+<li><a href="$self#intro">Dynamische Menüs in phpCMS.</a></li>
+<li><a href="$self#datei">Erstellen einer Menü-Datei.</a></li>
+<li><a href="$self#datei_beispiel">Beispiel einer Menü-Datei.</a></li>
+<li><a href="$self#template">Erstellen eines Menü-Templates.</a></li>
+<li><a href="$self#template_beispiel">Beispiel eines Menü-Templates.</a></li>
+<li><a href="$self#template_menu">Einbinden des Menüs in das Seiten-Template.</a></li>
+<li><a href="$self#current">Besondere Menüart: CURRENT</a></li>
+<li><a href="$self#zuordnen">Zuordnen von Content-Dateien zu Menüpunkten.</a></li>
+<B_BOX_STOP>
+<a name="intro"></a>
+<B_BOX_START "Dynamische Menüs in phpCMS">
+<p>
+Wenn Ihr größere Web-Projekte realisiert, die mehrere oder gar viele Seiten 
+umfassen, benötigt Ihr ein Navigationssystem. Wollt Ihr keine Frames oder 
+Plug-In's einsetzen, bleibt Euch im Normalfall gar nichts anderes
+übrig, als jeden neuen Menüpunkt in jeder Seite Eures Projektes manuell 
+nachzutragen.<br />Besonders peinlich ist, wenn man dann eine oder gar mehrere 
+Seiten vergißt. Um diese Verwaltungstätigkeit möglichst gering zu halten, bietet 
+phpCMS ein dynamisches Menüsystem.
+</p>
+<p><img src="$home/doc/doc_de/gifs/workflow.gif" width="354" height="265" alt="Workflow" align="right" vspace="7" hspace="7" />
+In jeder Content-Datei wird eine Menünummer vergeben. Parallel dazu wird eine 
+Menüdatei angelegt, in der die Menünummern und weitere Felder notiert werden. 
+Natürlich können auch mehrere Seiten die gleiche Menünummer haben. Pro Projekt 
+legt Ihr dann noch eine Template-Datei an, in der die geanue Formatierung der 
+einzelnen Menüs festgelegt wird. Ihr könnt in dem Menü-Template je eine 
+Formatierung für aktive und passive Menüpunkte definieren.
+</p>
+<p>
+Beim Abruf der Content-Datei wird nun vom Parser anhand der Menünummer in der 
+Menüdatei der Status der Content-Datei ermittelt. Dann werden die Menüs in das 
+Template eingesetzt. Abhängig vom Status der Content-Datei werden dann
+die Menüpunkte als aktiv oder als inaktiv dargestellt.
+</p>
+<p>
+Untermenüs werden nur dann angezeigt, wenn sie zum gerade ausgewählten 
+Obermenüpunkt passen. Es sind theoretisch beliebig viele Menüebenen möglich. 
+Wegen guter Bedienbarkeit solltet Ihr aber nicht mehr als drei Menüebenen einsetzen.
+</p>
+<B_BOX_STOP>
+<a name="datei"></a>
+<B_BOX_START "Erstellen einer Menü-Datei">
+<p>
+Eine Menü-Datei ist ein normales Text-File, das Ihr mit jedem Text-Editor 
+bearbeiten könnt. Die Dateiendung ist frei wählbar. Ich habe mir der Übersicht 
+wegen angewöhnt, Menü-Dateien auf ".mnu" enden zu lassen.
+</p>
+<p>
+<WICHTIG>In Menü-Dateien sind keine Kommentarzeilen zulässig!</WICHTIG>
+</p>
+<p>
+Zuerst vergebt Ihr einen Namen für die Menüebene. Ich starte immer mit dem 
+Hauptmenü "MAIN", der Name ist aber wieder frei wählbar. Die Feldbezeichnung 
+für den Menünamen ist "MENU:". Die Zeile sieht also so aus:
+</p><BLOCKQUOTE>MENU: MAIN</BLOCKQUOTE><p>
+Sonst darf nichts in dieser Zeile stehen. Danach überlegt Ihr Euch, welche 
+Felder Ihr für diese Menüebene vergeben wollt. Die Menüklasse, der Link und der 
+Name des Menüpunktes müssen mindestens angegeben werde. Zusätzlich könnt Ihr noch
+beliebig viele andere Felder angeben.
+</p>
+<p>
+Weitere Felder machen dann Sinn, wenn Ihr z.B. statt eines Text-Menüs grafische 
+Symbole verwenden wollt. In diesem Fall gebt Ihr ein weiteres Feld an, das dann 
+auf den Speicherort der Grafik zeigt. Oder Ihr wollt besondere Trennzeichen
+für Menüpunkte benutzen, etc.
+</p>
+<p>
+Die Zeile mit den Feldern sieht dann so aus:
+</p>
+<CODE><PRE>  CLASS;    MNAME;    LINK;    TEXT;</PRE></CODE>
+<ul>
+<li>"CLASS" ist der Feldnamen für die Menüklasse, die in der Content-Datei angegeben wird.</li>
+<li>"MNAME" ist der Platzhalter für den Text, der als Menüpunkt angezeigt wird.</li>
+<li>"LINK" ist die Adresse, auf die verwiesen wird, wenn der Menüpunkt ausgewählt wurde.
+	Wenn Ihr hier die Variable "&#36;home" benutzt, muß diese in der PROJECT-Datei definiert sein. Andernfalls
+	müssen die Pfade absolut zum ROOT-Directory Eures Webservers angegeben werden.</li>
+<li>"TEXT" habe ich bei meinen Menüs zusätzlich definiert. Dieser Text wird in der Statuszeile angezeigt, wenn man mit
+	der Maus über den Menüpunkt fährt.</li>
+</ul>
+<p>
+Wie Ihr sicher bemerkt habt, werden die einzelnen Felder durch Semikolone (;) getrennt.
+</p>
+<p>
+Die Menüklasse dient zur
+Zuordnung von Untermenüpunkten. Angenommen wir haben einen Hauptmenüpunkt "phpCMS" der an 8. Stelle in Eurem
+Hauptmenü steht. Dieser Hauptmenüpunkt hat dann die Menüklasse "00.08". Diesem Hauptmenüpunkt werden nun die Untermenüpunkte
+"Über phpCMS", "Download", "Lizenz", "Features", "Voraussetzungen", "Konfiguration" und "Dokumentation" zugeordnet.
+Der Untermenüpunkt "Über phpCMS" hätte nun die Menüklasse "00.08.01", der Untermenüpunkt "Download" die
+Klasse "00.08.02" und so fort.
+</p>
+<p>
+Den "LINK" gebt Ihr absolut zum Document-Root Eures Webservers an. Das ist erforderlich, weil das Menü ja von
+unterschiedlichsten Unterverzeichnissen Eures Webservers aufgerufen wird.
+</p>
+<p>
+Achtet darauf, daß Ihr bei keinem der Menü-Felder ein Semikolon (;) im Feldinhalt habt. phpCMS würde das als
+Feldtrennzeichen interpretieren und dahinter den Beginn des nächsten Feldes annehmen.
+Die Namen der Feldbezeichner sind frei wählbar. Statt "MNAME" könntet Ihr also auch "MENÜNAME" schreiben.
+</p>
+<p><WICHTIG>Ausnahme: "CLASS" und "LINK" müssen genau so geschrieben werden und müssen auch in der
+Menü-Definition vorkommen.</WICHTIG></p>
+<p>
+Die korrekte Zuordnung von Untermenüs wäre sonst nicht möglich.
+</p>
+<p>
+Untermenüs werden dann für jeden Menüpunkt definiert, bei dem es sie gibt. Verfahrt bei der Definition von
+Untermenüs genau so wie bei der Definition des Hauptmenüs.
+</p>
+<B_BOX_STOP>
+<a name="datei_beispiel"></a>
+<B_BOX_START "Beispiel einer Menü-Datei">
+Hier nun als Beispiel ein Auszug aus meiner Menü-Datei:<br />&nbsp;
+<hr />
+<CODE><PRE>
+MENU: MAIN
+CLASS;  MNAME;           LINK;                   TEXT;
+00.01;  Galerie;         &#36;home/galerie.htm;  Zur Galerie;
+00.02;  Dokumentationen; &#36;home/doku.htm;     Zu den Dokumentationen;
+00.03;  Links;           &#36;home/links.htm;    Interessante Plätze im WWW;
+00.04;  Firma;           &#36;home/firma.htm;    Über das Unternehmen in dem ich arbeite;
+00.05;  Renate;          &#36;home/renate.htm;   Für meine Gattin;
+00.06;  Michael;         &#36;home/michael.htm;  Das ist nur für mich!;
+00.07;  Security;        &#36;home/security.htm; Alles über Security im Internet!;
+00.08;  phpCMS;          &#36;home/phpcms.htm;   Mein Content-Management-System;
+&nbsp;
+MENU: SUB1
+CLASS;      MNAME;          LINK;                           TEXT;
+00.01.01;   Sageder;        &#36;home/galerie/sageder.htm;  Walter Sageder;
+00.01.02;   Leo '99;        &#36;home/galerie/leo99.htm;    Wie ich den Leo 99 gewann;
+00.01.03;   Diverse Bilder; &#36;home/galerie/diverse.htm;  Allerlei;
+00.01.04;   EBS;            &#36;home/galerie/ebs/ebs.htm;  Bilder vom Projekt;
+</PRE></CODE>
+<hr /><br />
+Natürlich ist das nur ein Beispiel und die Inhalte müssen durch Eure Begriffe ersetzt werden.
+<B_BOX_STOP>
+<a name="template"></a>
+<B_BOX_START "Erstellen eines Menü-Templates">
+<p>
+In Menü-Templates wird das Layout der Menüs definiert. Menü-Templates sind normale Text-Dateien, können also
+mit jedem Text-Editor bearbeitet werden.
+Die Datei-Endung ist wieder frei wählbar. Meine Menu-Templates enden auf ".mtpl".
+Kommentarzeilen beginnen mit einem Semikolon (;) und sind hier wieder erlaubt.
+Felder beginnen bei Menü-Templates mit den gleichen Feld-Trennzeichen wie in Content-Dateien oder Templates.
+Ich benutze die geschwungene Klammern dafür.
+Die Layoutdefinitionen aller Menüs eines Projekts werden in dieser Datei notiert.
+</p>
+<p>
+Ein Layout-Definitions-Block beginnt mit dem Menünamen, gefolgt von dem Schlüsselwort ".PRE".
+Das sieht z.B. so aus:
+</p>
+<BLOCKQUOTE>&#123;MAIN.PRE&#125;</BLOCKQUOTE>
+<p>
+Dahinter folgen die HTML-Tags, die vor dem Menü angezeigt werden sollen:
+</p>
+<BLOCKQUOTE>&lt;table border="0" cellspacing="0" cellpadding="0"&gt;&lt;tr&gt;</BLOCKQUOTE>
+<p>
+Mit dem Menünamen, gefolgt von dem Schlüsselwort ".NORMAL" teilen wir dem Parser mit, daß nun
+die Definition der HTML-Tags für inaktive Menüpunkte folgt:
+</p>
+<BLOCKQUOTE>&#123;MAIN.NORMAL&#125;</BLOCKQUOTE>
+<p>
+Danach folgt die Definition jener Tags, die
+für die Darstellung eines inaktiven Menüpunktes benutzt werden:
+</p>
+<BLOCKQUOTE>&lt;td&gt;&lt;a href="&#123;LINK&#125;" title="&#123;TEXT&#125;" 
+class="main"&gt;&nbsp;&#123;MNAME&#125;&nbsp;&lt;/a&gt;&lt;/td&gt;</BLOCKQUOTE>
+<p>
+Wie Ihr hier sehr gut sehen könnt, werden in den HTML-Code dort wo später die einzelnen Element der Menüs
+stehen sollen jene Platzhalter eingesetzt, die zuvor in der Menü-Datei definiert wurden. In der Zeile oben sind das
+die Felder &#123;LINK&#125;, &#123;TEXT&#125; und &#123;MNAME&#125;. Das Feld &#123;CLASS&#125; wird nur vom Parser intern verwendet
+um die richtige Zuordnung von Untermenüpunkten zu Hauptmenüpunkten zu realisieren. Deshalb kommt es in der Layoutdefinition auch nicht vor.
+</p>
+<p>
+Als Nächstes definieren wir mit dem Menünamen, gefolgt von dem Schlüsselwort ".AKTIV" die HTML-Tags für Aktive Menüpunkte.
+Ihr verfahrt hier wie bei inaktiven Menüpunkten.
+</p>
+<p>
+Mit dem Menünamen gefolgt von ".PAST" beendet Ihr die Layoutdefinition dieser Menüebene:
+</p>
+<BLOCKQUOTE>&#123;MAIN.PAST&#125;</BLOCKQUOTE>
+<p>
+Dahinter wieder jene Tags notieren, die nach dem Menü angezeigt werden sollen.
+</p>
+<B_BOX_STOP>
+<a name="template_beispiel"></a>
+<B_BOX_START "Beispiel eines Menü-Templates">
+<p>
+Hier nun als Beispiel ein Auszug aus meinem Menü-Template:
+</p>
+<hr />
+<CODE><PRE>
+&#123;MAIN.PRE&#125;
+&lt;!-- Main Menu starts --&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;&lt;tr&gt;
+&nbsp;
+&#123;MAIN.NORMAL&#125;
+&lt;td&gt;&lt;a href="&#123;LINK&#125;" title="&#123;TEXT&#125;" class="main"&gt;&nbsp;&#123;MNAME&#125;&nbsp;&lt;/a&gt;&lt;/td&gt;
+&nbsp;
+&#123;MAIN.AKTIV&#125;
+&lt;td&gt;&lt;b&gt;&lt;a href="&#123;LINK&#125;" title="&#123;TEXT&#125;" class="maina"&gt;&nbsp;&#123;MNAME&#125;&nbsp;&lt;/a&gt;&lt;/b&gt;&lt;/td&gt;
+&nbsp;
+&#123;MAIN.PAST&#125;
+&lt;/tr&gt;&lt;/table&gt;
+&lt;!-- Main Menu ends --&gt;
+&nbsp;
+&#123;SUB1.PRE&#125;
+&lt;!-- Sub Menu 1 starts --&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+&nbsp;
+&#123;SUB1.NORMAL&#125;
+&lt;tr&gt;&lt;td&gt;&lt;a href="&#123;LINK&#125;" title="&#123;TEXT&#125;" class="sub"&gt;&nbsp;&#123;MNAME&#125;&nbsp;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&nbsp;
+&#123;SUB1.AKTIV&#125;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;a href="&#123;LINK&#125;" title="&#123;TEXT&#125;" class="suba"&gt;&nbsp;&#123;MNAME&#125;&nbsp;&lt;/a&gt;&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+&nbsp;
+&#123;SUB1.PAST&#125;
+&lt;/table&gt;
+&lt;!-- Sub Menu 1 ends --&gt;
+</PRE></CODE>
+
+<B_BOX_STOP>
+<a name="template_menu"></a>
+<B_BOX_START "Einbinden des Menüs in das Seiten-Template.">
+<p>
+<p>
+Jetzt müssen wir noch im Template für die Content-Seite eintragen, wo und wie das Menü angezeigt wird.
+Ihr notiert dafür in der Template-Datei einfach den Feldbezeichner "MENU" mit dem Attribut "NAME=" und den Menünamen,
+als z.B. für das Hauptmenü den Namen "MAIN". Habt Ihr Eure Sub-Menüs erster Ebene, wie im obigen Beispiel, "SUB1"
+genannt, notiert Ihr im Template diesen Namen an der Position, wo später das Submenü angezeigt werden soll, z.B.:
+</p>
+<hr />
+<CODE><PRE>
+&lt;html&gt;
+&lt;body&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;Erste Splate links oben&lt;/td&gt;&lt;td&gt;&#123;MENU NAME="MAIN"&#125;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&#123;MENU NAME="SUB1"&#125;&lt;/td&gt;&lt;td&gt;Hier steht der Content&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</PRE></CODE>
+<hr />
+<p>
+Das entspricht einer Aufteilung der Seite, wie auf dieser Website. Zusätzlich könnt Ihr bei der Notation
+des Menüs in der Template-Datei auch noch einen Namen für ein Menütemplate angeben, mit dem
+diese Menüebene angezeigt werden soll. Dafür muß ein entsprechendes Menütemplate natürlich
+in der Menü-Template-Datei definiert sein. Die Notation sieht dann so aus:
+</p>
+<BLOCKQUOTE>
+	&#123;MENU NAME="MAIN" MENTEMP="LINE"&#125;
+</BLOCKQUOTE>
+<p>
+In diesem Beispiel werden also die Menüeinträge für das Menü "MAIN" aus der Menüdatei gelesen.
+Dann werden diese Menüeinträge mit dem Menü-Template "LINE" geparsed, daß In der
+Menü-Template-Datei notiert ist.
+</p>
+<p>
+Diese Funktion ist hilfreich, wenn Ihr den Inhalt eines Menüs erneut, in anderem Layout
+auf der selben Seite anzeigen wollt, oder wenn Ihr den bisherigen Pfad durch die
+Menüebenen anzeigen wollt (Brotkrümelnavigation). Dem Download liegt eine Beispiel-Site
+bei, in der eine solche Navigation realisiert ist.
+</p>
+<B_BOX_STOP>
+<a name="current"></a>
+<B_BOX_START "Besondere Menüart: CURRENT">
+<p>
+In manchen Fällen möchte man nur all jene Menüpunkte anzeigen, die sich auf der selben
+Menüebene befinden wie der gerade ausgewählte Menüpunkt. Das erreicht man durch die
+Notation:
+</p>
+<BLOCKQUOTE>
+	&#123;MENU NAME="CURRENT" MENTEMP="SUB1"&#125;
+</BLOCKQUOTE>
+<p>
+Durch das Schlüsselwort "CURRENT" wird nur die gewünschte Menüebene angezeigt.
+Wichtig ist die Angabe eines Menütemplates, da sonst im jeweiligen Menütemplate des
+ausgewählten Menüs angezeigt wird. Das bedeutet aber, daß die erforderlichen
+Felder in der Menüdefinition vorhanden sein müssen.
+</p>
+<B_BOX_STOP>
+<a name="zuordnen"></a>
+<B_BOX_START "Zuordnen von Content-Dateien zu Menüpunkten">
+<p>
+Die Zuordnung von Content-Dateien zu Menüpunkten erfolgt durch das vordefinierte Feld "MENU" in der Content-Datei.
+Das sieht z.B. so aus:
+</p>
+<BLOCKQUOTE>&#123;MENU&#125;<br />
+			00.08.06.07</BLOCKQUOTE>
+<p>
+Diese Notation würde also das Content-Dokument zum Hauptmenüpunkt "8", zum Untermenüpunkt der ersten Ebene "6" und
+zum Untermenüpunkt der zweiten Ebene "7" zuordnen. Es können ohne weiteres mehrere Dokumente diesen Menüpunkten
+zugeordnet werden.
+</p>
+<p>
+Auf Anregung von Emile habe ich ein Feature eingebaut: Ihr könnt in Zukunft die Angabe der Menüklasse
+in der Content-Datei unterlassen. In diesem Fall sucht der Parser nach einem passenden
+Eintrag mit der gleichen URL in der Menüdatei. Dann ist aber wichtig, daß die Menüdatei in der Reihenfolge
+aufgebaut ist, in der auch die Einträge hierachisch angeordnet sind, da der Parser die Menüs
+beim Auslesen von Oben nach Unten durchläuft.
+</p>
+<p>
+Gebt Ihr trotzdem eine Menüklasse im Content-Dokument an, überschreibt dieser Wert den automatisch
+ermittelten Wert.
+</p>
+<B_BOX_STOP>

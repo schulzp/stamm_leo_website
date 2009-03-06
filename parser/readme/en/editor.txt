@@ -1,0 +1,69 @@
+********************************************************************************
+*                           The phpCMS Online-Editor                           *
+********************************************************************************
+
+At this stage of development of phpCMS the online editor is not of top priority.
+Online editing will be addressed by phpCMS 2.0.
+
+In order to use phpCMS' edit mode follow the instructions below.
+Have a close look at the files in the "demo" folder, and also at the templates
+in the "templates" folder.
+
+1) You need a working phpCMS setup
+
+2) Decide which template you will be using for editing.
+   This may be your standard template or you may create one for this purpose.
+
+   At the top of the template file you will be using for editing, add
+   "<START_EDIT>" (w/o the quotation marks).
+   This is a hard coded tag that tells phpCMS where to look for content to edit.
+
+3) At the end of the page template add the tag <END_EDIT>.
+   This is where phpCMS will later display the editing controls.
+
+4) MAKE SURE there are no <form> or <script> elements between the <START_EDIT>
+   and <END_EDIT> tags.
+   If needed you might be able to add a second <END_EDIT> tag
+   (i.e. editing controls) in a different location.
+
+6) In your content files you need to mark up the content fields you want to
+   make editable:
+
+   Single line text field:
+      E.g.: {TITLE EDITTYPE="TEXT" SIZE="25"}
+      When in edit mode this will turn your {TITLE} field into an editable
+      text field 25 characters wide.
+
+   Multiple lines text area:
+      E.g.: {CONTENT EDITTYPE="TEXTAREA" ROWS="20" COLS="70"}
+      When in edit mode this will turn your {CONTENT} field into an editable
+      textarea 20 rows high and 70 characters wide.
+
+7) Open the project-file (e.g. "home.ini") and add a password for accessing
+   edit mode.
+   The password entry needs to look like this:
+      EDITPASSWORD := mypassword
+   Replace "mypassword" with something to your liking.
+   Since phpCMS version 1.2.x it is possible to define multiple passwords, 
+   seperated by kommas, for example
+      EDITPASSWORD := mypassword1, mypassword2, mypassword3
+   This could be for example useful if you have different areas of your site with 
+   different editor-passwords but you want to have an aditional password for the 
+   adminitstrator to grant editor-access to all areas.
+
+   Additionally the "Online-Editor" has to be activated in the configuration GUI.
+   This switch was included to provide the ability of deactivating the editor
+   completely.
+
+8) If all went well you may now access edit mode with the following
+   parameters: "?phpcmsaction=edit", e.g.
+      http://domain.com/path_to_file/file.htm?phpcmsaction=edit
+   Or, if in non-stealth-mode:
+      http://domain.com/parser/parser.php?file=/path_to_file/file.htm&phpcmsaction=edit
+
+9) If all of the above works you may try switching to custom subtemplates for
+   the header and footer of your editing template.
+   Subtemplates to be used in edit mode are included into the template thus:
+      e.g. {EDITLINE FILE="path_to_subtemplate/end_edit.tpl"}
+   The advantage of this method is that your editing subtemplates will
+   only be used when in edit mode.

@@ -1,0 +1,114 @@
+/* $Id: css_doc.css,v 1.1.2.2 2004/07/16 09:01:23 bjmg Exp $ */
+/*
+   +----------------------------------------------------------------------+
+   | phpCMS Content Management System - Version 1.2.0
+   +----------------------------------------------------------------------+
+   | phpCMS is Copyright (c) 2001-2003 by Michael Brauchl
+   | and Contributing phpCMS Team Members
+   +----------------------------------------------------------------------+
+   | This program is free software; you can redistribute it and/or modify
+   | it under the terms of the GNU General Public License as published by
+   | the Free Software Foundation; either version 2 of the License, or
+   | (at your option) any later version.
+   |
+   | This program is distributed in the hope that it will be useful, but
+   | WITHOUT ANY WARRANTY; without even the implied warranty of
+   | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   | General Public License for more details.
+   |
+   | You should have received a copy of the GNU General Public License
+   | along with this program; if not, write to the Free Software
+   | Foundation, Inc., 59 Temple Place - Suite 330, Boston,
+   | MA  02111-1307, USA.
+   +----------------------------------------------------------------------+
+   | Original Author: Henning Poerschke (hpoe)
+   | Contributors:
+   +----------------------------------------------------------------------+
+*/
+
+
+html, body {
+padding: 0px;
+margin: 0px;
+}
+body {
+width:auto;
+height:100%;
+border: 0px;
+background-color: #FFFFFF;
+}
+
+body, p {
+font-family:Verdana, Helvetica, Arial, sans-serif;
+font-size:96%;
+color: #000000;
+}
+
+a:link
+{
+background-color:inherit;
+color:#006600;
+}
+
+a:visited
+{
+background-color:inherit;
+color:#006600;
+}
+
+a:active
+{
+background-color:inherit;
+color:#006600;
+}
+
+a:hover
+{
+background-color:inherit;
+color:#006600;
+}
+
+
+.sub1 {
+width: 100%;
+height:auto;
+padding: 2px 0px;
+background-color: #006600;
+text-align:center;
+font-size:12px;
+font-family:Arial, Verdana, Helvetica,  sans-serif;
+}
+
+.sub1normal {
+height:100%;
+margin: 3px 0px;
+padding:2px 1px 2px 0px;
+color:#FFFFFF;
+font-weight: bold; 
+}
+
+.sub1active {
+height:100%;
+margin: 3px 0px;
+padding: 2px 1px 2px 0px;
+font-family:Verdana, Helvetica, Arial, sans-serif;
+font-size:11px;
+color:#000000;
+background-color:#EBEBEB;
+}
+
+.printlink {
+font-family:Verdana, Helvetica, Arial, sans-serif;
+font-size:10px;
+}
+
+h2 {
+margin-top: 2em;
+font-family:Verdana, Helvetica, Arial, sans-serif;
+font-size:110%;
+color: darkgreen;
+}
+
+dt {
+font-weight: bold;
+}

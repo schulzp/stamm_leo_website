@@ -1,0 +1,354 @@
+{PROJECT}		../../template/doc.en.ini
+{GRAFIK_LINKS}		$home/gifs/li_phpcms.gif
+{LOGO_1}		$home/gifs/cmslogo1.gif
+{LOGO_2}		$home/gifs/cmslogo2.gif
+{MENU}			00.08.10.12
+{TITEL}			PAX
+{HEADERSCRIPT} <!-- MAILCRYPT embed -->
+
+{CONTENT}
+<ul>
+<li><a href="$self#wie">What is PAX? How does it work?</a></li>
+<li><a href="$self#einbindung">Including PHP into templates </a></li>
+<li><a href="$self#paxtags">What are PAX TAGS? </a></li>		
+	<ul>
+		<li><a href="$self#include">PAXINC</a><br />Include additional templates or (text) files </li>
+		<li><a href="$self#highlight">PAXHIGHLIGHT</a><br />Syntax highlight your PHP source code</li>
+		<li><a href="$self#menutags">PAXMENU</a><br />Call on MENU CLASSES and FIELDS</li>
+		<li><a href="$self#paxcombo">PAXCOMBO</a><br />Create simple drop-down menus</li>
+		<li><a href="$self#paxcomboall">PAXCOMBOALL</a><br />Create a drop-down menu from all menus in your menu file(s)</li>
+		<li><a href="$self#lastmod">PAXLASTMOD</a><br />Display your files' <em>last modified</em> date</li>
+	</ul>
+<li><a href="$self#dynatag">DYNATAG</a></li>
+<li><a href="$self#globale">Global variables </a></li>
+<li><a href="$self#fehlerquellen">Bugs and errors</a></li>
+</ul>
+
+<hr />
+
+<US><a name="wie"><a href="$self#top">What is PAX? How does it work?</a></a></US>
+<p>
+PAX offers a way to have PHP code in either your content file or template that differs from the use of the 
+&#123;SCRIPT&#125; method. With PAX turned on in the admin panel, templates and content files alike will 
+be preprocessed by the PAX module before being parsed by phpCMS. PAX strips PHP code from these files, 
+processes it and stores its results for later inclusion into the page after it has been parsed by phpCMS. 
+This ensures smooth operation of phpCMS and allows for further development of the PAX module without the need 
+for major modifications to phpCMS' core routines. <br /><br />
+PAX works similar to the &#123;SCRIPT&#125; inclusion method that comes with phpCMS. &#123;SCRIPT&#125; allows you to include scripts into content files but not templates. PHP scripts included via &#123;SCRIPT&#125; are dynamically inserted into a page at runtime. While the static part of a page may be cached on the server (if caching is turned on in the admin panel), scripts are inserted into the page each time the page is requested. PAX works similar to &#123;SCRIPT&#125; inclusion as far as caching is concerned, but may be used to insert scripts into templates as well.
+</p>
+<p>
+<b>PAX may be used to include PHP into templates.<br />
+PAX also offers a variety of TAGS (PAXTAGS) that perform special tasks.</b><br />
+</p>
+
+<hr />
+
+<US><a name="einbindung"><a href="$self#top">Including PHP into templates </a></a></US>
+<p>
+<b>It is important to note that debugging is not available when including scripts via PAX! </b><br />
+Inclusion of <b>PHP in templates</b> is achieved quite easily and at your own risk: 
+</p>
+<p>
+<u><b>Example:</b></u><br />
+<font color="#006600"><b>&lt;!-- PAXPHP name_of_code_block</b></font><br />
+echo 'Hello World!';<br />
+<font color="#006600"><b>PAXPHP name_of_code_block --&gt;</b></font>
+</p>
+<!-- PAXPHP hello_world
+echo '<p>if  "php in templates" is turned on in your parser gui you should see: "Hello World!" <br />';
+echo '<font size="+1" color="#990000">Hello World!</font></p>';
+PAXPHP hello_world -->
+<p>
+<ol>
+<li>Within PAX, PHP code needs to be written in a single block. This block of code is stripped by PAX before the template is parsed by phpCMS. It is then reinserted into the page before the page is served.</li>
+<br /><br />
+<li><b>The "name_of_code_block" must NOT be used more than once </b>, regardless of which template it is used in!</li>
+<br /><br />
+<li>The "name_of_code_block" may contain lower/upper case letters, underscores_ , and numbers ( A-Z , a-z , _ , 0-9 ). NO SPACE or SPECIAL CHARACTERS are allowed!</li>
+<br /><br />
+<li>The block of code consists of an <strong>opening tag</strong> and a <strong>closing tag</strong> (&lt;!-- PAXPHP <font color="#CC0000">paxphp_id</font> $yourcode = here; <font color="#CC0000">paxphp_id</font> --&gt;)</b></li>
+<br /><br />
+<li>It is important to note that there must be a <b>space</b> between the PAXPHP-Tag and the paxphp_id.</li>
+<br /><br />
+<li><b>NO PHP START TAGS ( &lt;? , &lt;?php ) or END TAGS  ( ?&gt; ) must be used!</b></li>
+<br /><br />
+</ol>
+</p>
+<p>
+As you will see from the examples below, it is easy to include PHP code via PAX.
+</p>
+<hr />
+
+<US><a name="paxtags"><a href="$self#top">What are PAX TAGS?</a></a></US>
+<p>
+<ul>
+<li><b>PAXTAGS</b> are special <b>tags that are hard coded</b> in the parser, and perform a number of predefined tasks.</li>
+<li><b>PAXTAGS</b> are available <b>within templates and/or content files</b></li>
+<li><b>PAXTAGS</b> are always static. This means when changing a content file that has a PAXTAG in it, this will automatically reflect in the served page. After changing a template file with a PAXTAG in it, however, if server caching is turned on you need to flush the server cache in order for the change to appear in the served page.</li>
+</ul>
+---------------
+<p>
+PAXTAGS add some interesting features to phpCMS. 
+</p>
+
+<hr />
+
+<US><a name="include"><a href="$self#top">PAXINC: Including additional templates or (text) files</a></a></US>
+<p>
+With PAXINC you may include additional templates or external files (not! scripts) into your template or content files. <br />
+<b>Note that within those templates/files included via PAXINC links are <font color="#990000">NOT</font> being checked.  </b>
+</p>
+<p>
+<b>TAG:</b><br />
+PAXINC<br /><br />
+<b>SYNTAX: </b><br />
+&lt;!-- PAXINC /path/from_root/to/template/or/file.html --&gt;
+<br />or<br />
+&lt;!-- PAXINC http://www.domain.xyz/data.html --&gt;
+</p>
+---------------
+<p>
+<b>Example:</b><br />
+&lt;!-- PAXINC http://phpcms.de/phpcms/doku/paxtest_en.html --&gt;<br /><br />
+with PAXTAGS turned on will result in:<br /><!-- PAXINC http://phpcms.de/phpcms/doku/paxtest_en.html -->
+</p>
+<p>
+Of course, you may also use additional PAXTAGS within those templates/files you include via PAXINC.
+</p>
+
+<hr />
+
+<US><a name="highlight"><a href="$self#top">PAXHIGHLIGHT: PHP Syntax Highlighting of a given file</a></a></US>
+<p>
+PAXHIGHLIGHT prints out a syntax highlighted version of the code you included using the colors defined in the built-in syntax highlighter for PHP.<br />
+</p>
+<p>
+<b>TAG:</b><br />
+PAXHIGHLIGHT<br /><br />
+<b>SYNTAX: </b><br />
+&lt;!-- PAXHIGHLIGHT /path/from_root/to/template/or/file.php --&gt;
+<br />or<br />
+&lt;!-- PAXHIGHLIGHT http://www.domain.net/data.php --&gt;
+</p>
+When set, the variable &#36;home can be used as well.<br />
+---------------
+<p>
+<b>Example:</b><br />
+with PAXTAGS turned on you should see the highlighted php source code of the file "/demo/user.php".<br /><br />
+<!-- PAXHIGHLIGHT /demo/user.php -->
+</p>
+
+<hr />
+
+<US><a name="menutags"><a href="$self#top">PAXMENU: Calling on MENU CLASSES and FIELDS </a></a></US>
+<p>
+<b>PAXMENU </b> gives you the ability to call on any menu class or field.<br />
+<br /><font color="#CC0000">PAXMENU is only fully supported in stealth-mode !</font></b>
+</p>
+<p>
+<b>TAG:</b><br />
+PAXMENU<br /><br />
+<b>SYNTAX: </b><br />
+<font color="#006600"><b>&lt;!-- PAXMENU FIELDNAME,CLASS --&gt;</b></font>
+</p>
+---------------
+<p>
+<b>simple example:</b><br />
+Suppose you want to create a link to a specific item of your menus within a template or file. This is how you would do it: 
+</p>
+<p>
+<font color="#006600"><b>&lt;a href="&lt;!-- PAXMENU LINK,00.08.10.12 --&gt;"&gt;&lt;!-- PAXMENU MNAME,00.08.10.12 --&gt;&lt;/a></b></font><br />
+This would create a link to the menu item with class 00.08.10.12. The link text would be what you have defined for MNAME for that menu.
+<br /><br />Actual output with PAXTAGS turned on is a link back to this document: <a href="<!-- PAXMENU LINK,00.08.10.12 -->"
+><!-- PAXMENU MNAME,00.08.10.12 --></a>
+</p>
+---------------
+<p>
+<b>Example for a link with "title" and "target" attributes, and an on mouseover status message:</b>
+</p>
+<p>
+<font color="#006600"><b>&lt;A HREF="&lt;!-- PAXMENU LINK,00.08.10.12 --&gt;" TARGET="&lt;!-- PAXMENU TARGET,00.08.10.12 --&gt;" onmouseover="window.status='&lt;!-- PAXMENU TEXT,00.08.10.12 --&gt;';return true;" title="&lt;!-- PAXMENU TEXT,00.08.10.12 --&gt;"&gt;&lt;!-- PAXMENU MNAME,00.08.10.12 --&gt;&lt;/a&gt;</b></font>
+<br /><br />Actual output with PAXTAGS turned on: <a href="<!-- PAXMENU LINK,00.08.10.12 -->" target="<!-- PAXMENU TARGET,00.08.10.12 -->" onmouseover="window.status='<!-- PAXMENU TEXT,00.08.10.12 -->';return true;" title="<!-- PAXMENU TEXT,00.08.10.12 -->"><!-- PAXMENU MNAME,00.08.10.12 --></a>
+</p>
+<p>
+<b>In the above example the menu fields are as follows:</b><br />
+<b>LINK</b> and <b>CLASS</b> - these fields and their exact spelling are required by phpCMS, and may not be changed!<br />
+<b>TARGET:</b> the "target=" frame/window for LINK<br />
+<b>TEXT:</b> message to be displayed in the status bar on mouseover.<br />
+<b>MNAME:</b> the actual text that is turned into a link 
+</p>
+---------------
+<p>
+<b>Summing up</b> you may call on <b>any menu field</b>, that has <b>been defined in your .mnu file</b> (the menu definition file).
+</p>
+
+<hr />
+
+<US><a name="paxcombo"><a href="$self#top">PAXCOMBO: creating drop down menus</a></a></US>
+<p>
+<font color="#CC0000"><b>The menu must have a unique name! If any of your menu names (e.g. SUB1) is used more than once, display errors are inevitable!</b></font><br /><br />
+<b><font color="#CC0000">Links are generally created relative to "&#36;home".</font>
+<br /><font color="#CC0000">Note that currently PAXCOMBO only works as intended in <strong>non-stealth-mode</strong> !</font></b>
+
+</p>
+<p>
+<b>TAG:</b><br />
+PAXCOMBO<br /><br />
+<b>SYNTAX: </b><br />
+&lt;!-- PAXCOMBO MENUNAME,FIELDNAME,VALUES,SELECTED,SIZE,MULTI,ONCHANGE,FIRSTENTRY --&gt;
+</p>
+<p>
+<table>
+<tr>
+	<td valign="top"><b>MENUNAME</b></td>
+	<td valign="top">Name of the menu - as defined in your .mnu file - that is used to create the drop down menu. MENU:MAIN -&gt; thus MAIN would be appropriate here. This name must only be used once!</td>
+</tr>
+<tr>
+	<td valign="top"><b>FIELDNAME</b></td>
+	<td valign="top">Field - as defined in your .mnu file - whose content is to be displayed in the drop down menu. E.g. LINK, TEXT, NAME, etc...</td>
+</tr>
+<tr>
+	<td valign="top"><b>VALUES</b></td>
+	<td valign="top">optional: Field - as defined in your .mnu file - whose content is to be used as value for the drop down's &lt;option&gt; tags. This comes in handy to create link lists, for example. By default (if empty) VALUES uses the same setting as FIELDNAME.</td>
+</tr>
+<tr>
+	<td valign="top"><b>SELECTED</b></td>
+	<td valign="top">optional: line number of your drop down menu that should get focus on initial page load.</td>
+</tr>
+<tr>
+	<td valign="top"><b>SIZE</b></td>
+	<td valign="top">optional: <em>height</em> of menu selection box. Default value is 1. A value of 1 usually creates a "true" drop down menu, while in most browsers values higher 1 display as selection box with scroll a bar.</td>
+</tr>
+<tr>
+	<td valign="top"><b>MULTI</b></td>
+	<td valign="top">(on/off) optional: allow multiple selections from drop down menu?</td>
+</tr>
+<tr>
+	<td valign="top"><b>ONCHANGE</b></td>
+	<td valign="top">(on/off) optional: Adds a JavaScript OnChange handler. This may be used to automatically take the user to a selected page in a link list.</td>
+</tr>
+<tr>
+	<td valign="top"><b>FIRSTENTRY</b></td>
+	<td valign="top">optional: text to be displayed as first entry. E.g.: ~ select an entry ~</td>
+</tr>
+
+</table>
+</p>
+---------------
+<p>
+<b>Example:</b><br />
+&lt;!-- PAXCOMBO SUB1, TEXT, LINK,, 1, off, on, ~ select your favorite ~ --&gt;<br /><br />
+with PAXTAGS set to "on" this will result in<br /><!-- PAXCOMBO SUB1, TEXT, LINK, , , off, on, ~ select your favorite ~ -->
+</p>
+
+<hr />
+
+<US><a name="paxcomboall"><a href="$self#top">PAXCOMBOALL: Create a drop-down menu from all menus in your menu file(s)</a></a></US>
+
+<p>PAXCOMBOALL may be used to automatically create a drop down menu from all of the menus you have defined.
+</p>
+
+<p>
+<b>TAG:</b><br />
+PAXCOMBOALL<br /><br />
+<b>SYNTAX: </b><br />
+&lt;!-- PAXCOMBO FIELDNAME,SIZE,MULTI,ONCHANGE,FIRSTENTRY --&gt;
+</p>
+<p>
+<table>
+<tr>
+	<td valign="top"><b>FIELDNAME</b></td>
+	<td valign="top">Field - as defined in your .mnu file - whose content is to be displayed in the drop down menu. E.g. LINK, TEXT, NAME, etc...</td>
+</tr>
+<tr>
+	<td valign="top"><b>SIZE</b></td>
+	<td valign="top">optional: <em>height</em> of menu selection box. Default value is 1. A value of 1 usually creates a "true" drop down menu, while in most browsers values higher 1 display as selection box with scroll a bar.</td>
+</tr>
+<tr>
+	<td valign="top"><b>MULTI</b></td>
+	<td valign="top">(on/off) optional: allow multiple selections from drop down menu?</td>
+</tr>
+<tr>
+	<td valign="top"><b>ONCHANGE</b></td>
+	<td valign="top">(on/off) optional: Adds a JavaScript OnChange handler. This may be used to automatically take the user to a selected page in a link list.</td>
+</tr>
+<tr>
+	<td valign="top"><b>FIRSTENTRY</b></td>
+	<td valign="top">optional: text to be displayed as first entry. E.g.: ~ select an entry ~</td>
+</tr>
+
+</table>
+</p>
+---------------
+<p>
+<b>Example:</b><br />
+&lt;!-- PAXCOMBOALL TEXT, 1, off, on, phpCMS Documentation --&gt;<br /><br />
+<br />
+<br /><!-- PAXCOMBOALL TEXT, 1, off, on, phpCMS Documentation -->
+</p>
+
+<hr />
+
+<US><a name="lastmod"><a href="$self#top">PAXLASTMOD: Display your files' <em>last modified</em> date.</a></a></US>
+<p>
+<b>TAG:</b><br />
+PAXLASTMOD<br /><br />
+<b>SYNTAX: </b><br />
+&lt;!-- PAXLASTMOD M d Y - H:m:s --&gt;
+</p>
+---------------
+<p>
+<b>Example:</b><br />
+&lt;!-- PAXLASTMOD M d Y - H:m:s --&gt;<br /><br />
+with PAXTAGS set to "on" this will result in:<br /><!-- PAXLASTMOD M d Y - H:m:s -->
+<br /><br />
+The output is formatted according to the rules defined in the PHP <a href="http://www.phpcenter.de/en-html-manual/function.date.html" target="_blank">date</a> function.
+</p>
+
+<hr />
+
+<US><a name="dynatag"><a href="$self#top">DYNATAG</a></a></US>
+<p>
+DYNATAGs are TAGS within your TAG file that are not being replaced simply by some text string but that use and execute PHP code as their replacement.
+</p>
+---------------
+<p>
+<b>Example of a DYNATAG within the TAG file:</b><br />
+Current date and time on every page (thanks to Dirk)
+<br /><br />
+Open your TAG file and create a new TAG:
+<pre>
+&lt;CURDATE&gt;:=
+&lt;!-- PAXPHP datetime
+&nbsp;&nbsp;&nbsp;$date = date("M d Y");
+&nbsp;&nbsp;&nbsp;$time = date("H:i");
+&nbsp;&nbsp;&nbsp;echo $date," - ",$time," h";
+PAXPHP datetime --&gt;
+</pre>
+From now on you may display the current date and time in either your template or in separate content files simply by inserting the DYNATAG &lt;CURDATE&gt;.<br />
+When PAXPHP is activated in the GUI, &lt;CURDATE&gt; will turn into : <font  color="#CC0000"><b><CURDATE></b></font>
+</p>
+
+<hr />
+
+<US><a name="globale"><a href="$self#top">Global variables</a></a></US>
+<p>
+Within PHP code included via PAXPHP you have access to all global variables that were defined prior to the page being parsed by phpCMS/PAX. A list of global variable that are accessible can be found in the phpCMS documentation.<br />
+Note that not all global variables accessible to plug-ins are also accessible via PAX. So you may need to experiment a little.<br />
+
+$PHP_SELF is also accessible via PAX. This way the execution of code, or the display of certain parts of the code, could be made dependant on the page that is being displayed.
+</p>
+
+<hr />
+<US><a name="fehlerquellen"><a href="$self#top">Bugs and errors</a></a></US>
+<p>
+Currently none known. If you stick to the general guidelines of phpCMS, PAX and PHP everything should work just fine.
+</p>
+<hr />
+<p>
+Tips&Tricks&FAQ for PAX at <a href="http://www.lemon.ac" target="_blank">Lemon.ac Forum</a><br />
+Enjoy
+... <a href="mailto:fresh@lemon.ac">Wernhard</a>
+</p>
+<hr />
+

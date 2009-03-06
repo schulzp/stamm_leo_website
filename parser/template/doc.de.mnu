@@ -1,0 +1,26 @@
+MENU: MAIN
+CLASS;      MNAME;              LINK;                           ACTION;     PHPCMSACTION;
+00.01;      konfiguration;      $home/parser.php;               CONF;       OPTIONS;
+00.02;      info;               $home/parser.php;               INFO;       OPTIONS;
+00.03;      fehlermeldungen;    $home/parser.php;               FEHLER;     OPTIONS;
+00.04;      cache;              $home/parser.php;               CACHE;      OPTIONS;
+00.05;      filemanager;        $home/parser.php;               ;           FILEMANAGER;
+00.08;      spider;             $home/parser.php;               ;           SPIDER;
+00.06;      dokumentation;      $home/doc/doc_de/index.htm;     ;           ;
+
+MENU: SUB1
+CLASS;      MNAME;          LINK;                                                   TEXT;                                                   SPACE;
+00.06.00;   Übersicht;      $home/doc/doc_de/index.htm;       Übersicht Dokumentation;                                |;
+00.06.02;   Projektdatei;   $home/doc/doc_de/projektdatei.htm;Was ist eine Projektdatei und wofür wird sie verwendet?;|;
+00.06.03;   Templates;      $home/doc/doc_de/templates.htm;   Wie erstellt man ein Template?;                         |;
+00.06.05;   Content-Datei;$home/doc/doc_de/content.htm;     Wie erstellt man eine Content-Seite?;                   |;
+00.06.06;   Tags;    $home/doc/doc_de/tags.htm;        Wie erstellt man eine Tag-Seite?;                       |;
+00.06.07;   Menüs;          $home/doc/doc_de/menu.htm;        Wie erstellt man dynamische Menüs?;                     |;
+00.06.11;   Suche;          $home/doc/doc_de/suche.htm;       Wie binde ich die Suche ein?;                           |;
+00.06.10;   Sitemap; $home/doc/doc_de/sitemap.htm;     Wie binde ich eine automatische Sitemap ein?;           |;
+00.06.14;   Funktionen;        $home/doc/doc_de/funktionen.htm;     In phpCMS integrierte Funkionen;                       |;
+00.06.01;   Skripte;        $home/doc/doc_de/scripte.htm;     Wie binde ich meine Skripte ein?;                       |;
+00.06.08;   Plug-Ins;       $home/doc/doc_de/plugins.htm;     Wie funktionieren Plug-Ins bei phpCMS?;                  |;
+00.06.12;   PAX;            $home/doc/doc_de/pax.htm;         Alles über PAX;                                         |;
+00.06.09;   Felder;         $home/doc/doc_de/felder.htm;      Besondere Felder in phpCMS?;                            |;
+00.06.13;   Debugging;      $home/doc/doc_de/debug.htm;   Parameter im Debug-Modus;                               ;

@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- parsed by phpCMS 1.2.1CVS. Get phpCMS at http://phpcms.de -->
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+<meta name="Content-Language"  content="en" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta name="copyright" content="Copyright (c) 2001-2003 by Michael Brauchl and Contributors" />
+<title>phpCMS - Explanations of GUI Settings</title>
+<link rel="stylesheet" href="css_options.css" type="text/css" media="screen" />
+</head>
+<body>
+<div id="topbar"><h1>phpCMS - Explanations of GUI Settings</h1></div>
+<div id="content">
+
+                                     <!-- Page-Extension to be parsed -->
+
+<a name="page_extension">&nbsp;</a>
+<h2>Page Extension to be parsed</h2>
+<h3>Extension of content files to be parsed by phpCMS</h3>
+
+<p>Each file has an extension. HTML-files usually end with ".html" or ".htm".<br />
+This setting tells phpCMS what extension files have that it should look out for and parse.
+<br />
+In addition the web server has to be configured so as to send files with this extension to the parser (e.g. via a .htaccess file).
+<br />
+<br />Default configuration is ".htm".<br />
+Regular HTML-files might be given the extension ".html" and phpCMS-files the extension ".htm". But even ".htm"-files that do not contain phpCMS fields would be passed through unchanged.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Name of default page -->
+
+<a name="page_defaultname">&nbsp;</a>
+<h2>Name of Default Page</h2>
+<h3>Page to display when directory is requested</h3>
+
+<p>When a client sends a request that does not specify a page name phpCMS will try to display this page.
+<br />
+<br />Example: If your default page is set to "index" and your page extension is ".htm", then a request for http://server.com/docs/ would return http://server.com/docs/index.htm, if it exists.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Extension for Templates -->
+
+<a name="tempext">&nbsp;</a>
+<h2>Extension for Templates</h2>
+<h3>File extension of template files</h3>
+
+<p>The file extension used for templates can of course also be chosen freely.
+<br />But the parser must know it...<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Global Project File -->
+
+<a name="global_project_file">&nbsp;</a>
+<h2>Global Project File</h2>
+<h3>Optional: project file valid for entire project</h3>
+
+<p>Here a global project-file can be defined that is used if a requested content-file contains phpCMS fields but no project-file or an invalid project-file is defined there.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Global Home-Directory -->
+
+<a name="global_project_home">&nbsp;</a>
+<h2>Global Home-Directory for all Projects</h2>
+<h3>Optional: home directory valid for entire project</h3>
+
+<p>Here a global home-directory can be defined that is used if the project-file doesn't contain a value to set the home-directory.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Plug-In Directory -->
+
+<a name="plugindir">&nbsp;</a>
+<h2>Plug-In Directory</h2>
+<h3>Directory that stores phpCMS plug-ins</h3>
+
+<p>The directory containing the Plug-Ins for phpCMS. Throughout your project you may use "/test/parser/plugs" to access this directory. <br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Field-Delimiter start tag -->
+
+<a name="start_field">&nbsp;</a>
+<h2>Field-Delimiter Start Tag</h2>
+<h3>Character signaling start of field</h3>
+
+<p>With this character the start of a field in templates and content-files is marked.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Stopzeichen der Felder -->
+
+<a name="stop_field">&nbsp;</a>
+<h2>Field-Delimiter End Tag</h2>
+<h3>Character signaling end of field</h3>
+
+<p>With this character the end of a field in templates and content-files is marked.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+
+
+<a name="menu_delimiter">&nbsp;</a>
+<h2>Menu delimiter<h2>
+<h3>Character signaling end of a menu field</h3>
+
+<p>With this character the end of a menu field in the menu templates is marked.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+<a name="tag_delimiter">&nbsp;</a>
+<h2>Tag parameter delimiter<h2>
+<h3>Character signaling end of a parameter in tags</h3>
+
+<p>With this character the end of a parameter in tag files is marked.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- PAXPHP verwenden -->
+
+<a name="pax">&nbsp;</a>
+<h2>Use PAXPHP in your files</h2>
+<h3>Parse embedded PHP code</h3>
+
+<p>PAXPHP lets you use regular PHP code within content, and template files.<br />
+So called DynaTags are an application of PAXPHP. DynaTags are user-defined tags that are substituted by a PHP expression marked up as PAXPHP<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- PAX TAGS ber&uuml;cksichtigen -->
+
+<a name="paxtags">&nbsp;</a>
+<h2>Parse PAX TAGS</h2>
+<h3>Execute hard coded PAX TAGS</h3>
+
+<p>PAX TAGS are special functions that are hard coded within the PAX-Module.<br />
+Available PAX TAGS are: PAXINC, PAXLASTMOD, PAXCOMBO, PAXCOMBOALL, PAXMENU, PAXHIGLIGHT and PAXRTF.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Mail2Crypt -->
+
+<a name="mail2crypt">&nbsp;</a></a>
+<h2>Mail2Crypt (Anti Spam)</h2>
+<h3>Hide e-mail addresses from SPAM bots</h3>
+
+<p>By using a tag like &lt;!-- MAIL2CRYPT mail@domain.xyz --&gt; e-mail addresses are scrambled on the fly to protect them from being harvested by SPAM bots. When turned off, addresses inside the tag are displayed as plain text. Mail2Crypt is configurable. See the manual for details. (Currently still under &#8220;PAX&#8221;)
+<br />
+<br />In phpCMS 1.2.0 and higher Mail2Crypt is fully integrated into the Parser and works independent of PAX.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Mail2Crypt JS Verzeichnis -->
+
+<a name="mail2crypt_js">&nbsp;</a>
+<h2>Mail2Crypt JavaScript Directory</h2>
+<h3>Path to Mail2Crypt JS file</h3>
+
+<p>Here you may specify the path to the directory that contains the Mail2Crypt JavaScript file. The file "js_mail2crypt.js" which is needed to display scrambled e-mail addresses in the browser is located in the document root by default.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Mail2Crypt Grafik Verzeichnis -->
+
+<a name="mail2crypt_img">&nbsp;</a>
+<h2>Mail2Crypt Icon Directory</h2>
+<h3>Path to Mail2Crypt icon file</h3>
+
+<p>Here you may specify the path to the directory that contains the Mail2Crypt icon files. The Mail2Crypt standard icons are located in "/parser/gif/" by default.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+
+                                     <!-- Server-Cache -->
+
+<a name="cache_state">&nbsp;</a>
+<a name="cache_dir">&nbsp;</a>
+<h2>Server Cache / Server Cache Directory</h2>
+<h3>Allow storage and reuse of parsed pages on the server</h3>
+
+<p>Pages and parts of pages that have already been parsed by phpCMS can be stored (cached) on the server for reuse. A page thus cached does not have to be re-parsed on subsequent requests. Through this technique phpCMS significantly reduces the server&#8217;s response time.
+<br />
+<br />When deactivating this feature the server cache needs to be cleaned (flushed) manually since pages still in the cache otherwise remain to be served to visitors.</p>
+<p>Note to Linux users: PHP needs to have write access to the cache directory. Should you not want to grant write access - e.g. for security reasons - the phpCMS cache feature can not be used.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Client-Cache -->
+
+<a name="cache_client">&nbsp;</a>
+<h2>Client Cache</h2>
+<h3>Allow storage of pages in the browser</h3>
+
+<p>Gives visitor&#8217;s browsers permission to store pages in their local cache. This setting takes effect for pages that are, or could be, cached server side. If this is not the case (e.g. because pages contain dynamic plug-ins) phpCMS deactivates this setting automatically.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Speicherzeit Proxy/Client-Cache -->
+
+<a name="proxy_cache_time">&nbsp;</a>
+<h2>Live time of Proxy/Client Cache in days:</h2>
+<h3>Amount of time pages may be stored by clients</h3>
+
+<p>Specifies the amount of time clients are allowed to keep pages stored in local cache. After this time clients must send a request for a fresh copy of a page. This setting will be ignored if pages contain dynamic content, i.e. scripts or dynamic plug-ins.
+<br />
+<br />A value of "1"  means that proxy servers or clients must request a fresh copy of a page after one day.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- G-Zip Compression -->
+
+<a name="gzip">&nbsp;</a>
+<h2>G-Zip Compression</h2>
+<h3>Compress pages before transmission</h3>
+
+<p>Specifies whether G-Zip compression should be used to transmit pages if available. All of today&#8217;s major browsers can handle G-Zip compressed files.
+<br />
+<br />With this option switched on HTML files will be compressed in size by up to 70% before they are transmitted over the Internet. Pages thus transmitted load faster in your visitors&#8217; browsers, and cause less traffic volume on your server!
+<br />
+<br />This feature can be used only if PHP runs with the "zlib" extension loaded. Please refer to the PHP documentation for further details...<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- File-Stealth-Mode -->
+
+<a name="stealth">&nbsp;</a>
+<h2>File-Stealth-Mode</h2>
+<h3>Make URLs search engine friendly</h3>
+
+<p>Use of this feature is recommended.
+<br />In Stealth-Mode pages are accessed through &#8220;normal&#8221; looking URLs, i.e. without the &#8220;parser.php?file=&#8221; showing in the address bar. This makes sure that pages can be found and are indexed by search engines. Search engines often will not index pages whose URL contains a &#8220;?&#8221;!
+<br />
+<br />Stealth-Mode requires that you be able to use .htaccess files to configure your server. If you cannot use .htaccess files and cannot configure your server so that ".htm" files will be parsed by phpCMS, this feature must be deactivated. <br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Secure Stealth-Mode -->
+
+<a name="stealth_secure">&nbsp;</a>
+<h2>Secure Stealth-Mode</h2>
+<h3>Disallow access to secured directories</h3>
+
+<p>Use of this feature is recommended.<br />
+Secure Stealth-Mode blocks requests via &#8220;parser.php?file=filename.htm&#8221; to prevent unauthorized access to files located in directories secured through a .htaccess file.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Fixe Endungen im Normal-Mode -->
+
+<a name="nolinkchange">&nbsp;</a>
+<h2>Non-changeable extensions in Non-Stealth-Mode</h2>
+<h3>File types not to be sent to the Parser</h3>
+
+<p>Specifies extensions of files references to which, in Non-Stealth-Mode, should not be changed to "parser.php?file=".
+<br />
+<br />In Non-Stealth-Mode HTML links are automatically converted so that requests are correctly sent to the Parser. Here you may specify those kinds of files links to which should remain unchanged.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Fehler bei leerem TAG -->
+
+<a name="tags_error">&nbsp;</a>
+<h2>Error on empty TAG</h2>
+<h3>Handling of empty substitute tags</h3>
+
+<p>With this option activated an error-message will be displayed should a tag be encountered that does not have its substitution string defined.
+<br />
+When deactivated, such a tag will be substituted with an empty string, i.e. it will not produce any output in the parsed page.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Debug-Modus -->
+
+<a name="debug">&nbsp;</a>
+<h2>Debug-Mode</h2>
+<h3>Display error messages during development cycle</h3>
+
+<p>When Debug-Mode is activated phpCMS&#8217;s internal error messages will be displayed if a file cannot be found or some other error occurs.
+<br />
+<br />In Debug-Mode you may also use the phpCMS Debug-Tool. The Debug-Tool can be accessed by appending &#8220;?debug&#8221; to the URL of any content page.
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+									 <!-- Error-Page -->
+
+<a name="error_page">&nbsp;</a>
+<a name="error_page_404">&nbsp;</a></a>
+<h2>Custom Error-Page / Custom 404-Error-Page</h2>
+<h3>Use of customized error pages</h3>
+
+<p>
+When Debug-Mode is not activated, the Error-Page will be displayed should phpCMS encounter an internal error condition.
+<br />
+<br />Special treatment is given to &#8220;Error 404s&#8221;. Since, from the server&#8217;s perspective, the file &#8220;parser.php&#8221; is the only one that is ever requested, the server cannot detect a missing content page and, consequently, cannot generate a 404 error message.
+<br />
+<br />The difference between the regular &#8220;Error-Page&#8221; and the 404-Error-Page is that the 404-Error-Page is not sent via HTTP redirect, but instead is send directly by and though the parser. This way the status of the browser address bar remains unchanged.
+<br />
+<br />In the event that no 404-Error-Page is specified or none exists, the regular Error-Page will be displayed.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+
+                                     <!-- P3P Header senden -->
+
+<a name="p3p_header">&nbsp;</a>
+<h2>Send P3P Header</h2>
+<h3>Send P3P statement with HTTP header</h3>
+
+<p>P3P stands for &#8220;Platform for Privacy Preferences Project&#8221;. P3P offers a way to send machine readable privacy information to the browser. Some browsers base the acceptance of cookies on this information.
+<br />
+<br />A starting point for finding further information is <b>http://w3c.org/P3P/</b>...<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Globaler P3P Policy Header -->
+
+<a name="p3p_policy">&nbsp;</a>
+<h2>Global P3P Policy Header</h2>
+<h3>Content of global P3P header</h3>
+
+<p>Here you may enter the machine readable P3P compact policy.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+									 <!-- P3P Policy href -->
+
+<a name="p3p_href">&nbsp;</a>
+<h2>P3P Policy href</h2>
+<h3>Directory of P3P Policy</h3>
+
+<p>Directory that stores the comprehensive P3P privacy policy. Usually this is &#8220;/w3c/p3p.xml&#8221;.
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Statistik -->
+
+<a name="stats">&nbsp;</a>
+<h2>Statistics</h2>
+<h3>Activate phpCMS&#8217;s statistics feature</h3>
+
+<p>This will activate phpCMS&#8217;s statistics function. When activated, phpCMS logs information about every request it handles which can then be viewed through the statistics module in the GUI.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Statistik - Verzeichnis -->
+
+<a name="stats_dir">&nbsp;</a>
+<a name="stats_current">&nbsp;</a>
+<a name="stats_backup">&nbsp;</a>
+<h2>Statistics-Directory / Log-Directory / Backup-Directory</h2>
+<h3>Statistics data directories</h3>
+
+<p>Specifies directories for storing several statistics data. phpCMS needs write permission for these directories!<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Log-Datei -->
+
+<a name="stats_file">&nbsp;</a>
+<h2>Statistics - Log File</h2>
+<h3>Name of the statistics log file</h3>
+
+<p>Name of the log file that stores raw data on every page request.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Referrer Logging -->
+
+<a name="referrer">&nbsp;</a>
+<h2>Referrer Logging</h2>
+<h3>Log and display top and last referrer data</h3>
+
+<p>Keeps a log of referrers that point to your site. This function works independently of the statistics module. To display a list of top and last referrers on your pages, you may use the plug-in "topref.php", located in the plug-ins directory, which can be integrated as a plug-in, script or via PAX.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Referrer-Verzeichnis -->
+
+<a name="referrer_dir">&nbsp;</a>
+<h2>Referrer - Directory</h2>
+<h3>Directory of referrer log file</h3>
+
+<p>Directory that is used to store the referrer log file. phpCMS needs write permission for this directory!
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Referrer - Log-Datei -->
+
+<a name="referrer_file">&nbsp;</a>
+<h2>Referrer - Log File</h2>
+<h3>Name of referrer log file</h3>
+
+<p>Specifies the name of the log file that stores referrer data.
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Referrer - Reloadsperre -->
+<a name="ref_reload_lock">&nbsp;</a>
+<h2>Referrer - Reload Lock</h2>
+<h3>Duration of referrer reload lock</h3>
+
+<p>Specifies the amount of time in seconds during which repeat page requests originating from the same client IP will be ignored. This prevents, to some extent, an unwanted &#8220;counting up&#8221; of top referrers.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+
+                                     <!-- Verzeichnis beim Start des FileManagers -->
+
+<a name="filemanager_startdir">&nbsp;</a>
+<h2>Startup directory of FileManager</h2>
+<h3>Default display of the FileManager</h3>
+
+<p>Specifies which directory should be displayed in the FileManager when it is opened from the main navigation.<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Ordnergr&ouml;sse im FileManager -->
+
+<a name="filemanager_dirsize">&nbsp;</a>
+<h2>Show dirsize in FileManager</h2>
+<h3>Calculate directory sizes</h3>
+
+<p>Specifies whether the size of directories should be calculated. Since this requires some heavy processing when a directory contains many files, it may lead to performance problems on slow servers or servers that are under high load.
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Gr&ouml;&szlig;e des Editier-Feldes im FileManager -->
+
+<a name="filemanager_area_size">&nbsp;</a>
+<h2>Size of Editing Area in FileManager</h2>
+<h3>Adjust dimensions of editing area</h3>
+
+<p>Specifies the dimensions of the editing area in the FileManager.
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+									 <!-- Anzeige langer Dateinamen verk&uuml;rzen -->
+
+<a name="filemanager_shortname_length">&nbsp;</a>
+<h2>Shorten display of long file names</h2>
+<h3>Length of file names displayed in FileManager</h3>
+
+<p>Specifies how many characters of file names should be displayed in the FileManager.
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Anzeige langer URL-Aliase im Cache verk&uuml;rzen -->
+
+<a name="cacheview_shortname_length">&nbsp;</a>
+<h2>Shorten display of long URL aliases in CacheView</h2>
+<h3>Length of URL aliases displayed in FileManager</h3>
+
+<p>Specifies how many characters of URL aliases should be displayed in the FileManager.
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+									 <!-- Sprachwahl -->
+
+<a name="language">&nbsp;</a>
+<h2>Select GUI language</h2>
+<h3>Select GUI display language</h3>
+
+<p>Specifies which language should be used in the GUI.
+<br />NOTE: If your language is not yet available we invite you to help us translate phpCMS into your language!
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Passwort -->
+
+<a name="pass">&nbsp;</a>
+<h2>Password</h2>
+<h3>Set administrator password</h3>
+
+<p>Specifies the password that is used to access the GUI. Click on &#8220;Show me...&#8221; to view the current password (needs JavaScript).
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+                                     <!-- Online-Editor -->
+
+<a name="enable_online_editor">&nbsp;</a>
+<h2>Online-Editor</h2>
+<h3>Allow use of the Online-Editors</h3>
+
+<p>Specifies whether the Online-Editor may be used. For security reasons use the phpCMS Online-Editor should be disallowed, if it is not currently used or not installed.
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+                                     <!-- Info &uuml;ber Updates -->
+
+<a name="update">&nbsp;</a>
+<h2>Check for Updates</h2>
+<h3>Notification of phpCMS Updates</h3>
+
+<p>Activates update notification. The update check compares your current installation&#8217;s version number with that of the latest available version, which is stored in a text file on phpcms.de. As soon as a new version of phpCMS becomes available you will be notified by a small display in the GUI.
+<br /><a href="javascript:history.back()"  class="back"><img src="/test/parser/help/../gif/back.gif" border="0" width="12" heigth="10" alt="back" title="back" /></a></p>
+
+</div>
+<div id="bottombar">&nbsp;</div>
+</body>
+</html>

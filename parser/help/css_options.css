@@ -1,0 +1,149 @@
+/* $Id: css_options.css,v 1.1.2.2 2004/07/16 09:01:23 bjmg Exp $ */
+/*
+   +----------------------------------------------------------------------+
+   | phpCMS Content Management System - Version 1.2.0
+   +----------------------------------------------------------------------+
+   | phpCMS is Copyright (c) 2001-2003 by Michael Brauchl
+   | and Contributing phpCMS Team Members
+   +----------------------------------------------------------------------+
+   | This program is free software; you can redistribute it and/or modify
+   | it under the terms of the GNU General Public License as published by
+   | the Free Software Foundation; either version 2 of the License, or
+   | (at your option) any later version.
+   |
+   | This program is distributed in the hope that it will be useful, but
+   | WITHOUT ANY WARRANTY; without even the implied warranty of
+   | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   | General Public License for more details.
+   |
+   | You should have received a copy of the GNU General Public License
+   | along with this program; if not, write to the Free Software
+   | Foundation, Inc., 59 Temple Place - Suite 330, Boston,
+   | MA  02111-1307, USA.
+   +----------------------------------------------------------------------+
+   | Original Author: Henning Poerschke (hpoe)
+   | Contributors:
+   +----------------------------------------------------------------------+
+*/
+
+
+html, body {
+margin: 0px;
+}
+body {
+width:auto;
+height:100%;
+padding: 5px;
+border: 0px;
+background-color: #FFFFFF;
+}
+
+#topbar {
+position: fixed;
+top:0px;
+left:0px;
+width:600px;
+height:40px;
+border: 0 none;
+margin: 0 0 40px 0;
+padding:2px 0 0 3px;
+background-color:white;
+}
+
+#topbar h1 {
+margin:0 5px;
+padding:3px;
+background-color:#006600;
+color:white;
+font-size:16px;
+font-family:Verdana, Helvetica, Arial, sans-serif;
+line-height: 1.2em;
+}
+
+#content {
+width:600px;
+height:auto;
+margin: 0px;
+border: 0 none;
+}
+html>body>#content {
+margin: 0px 0 0 0;
+}
+
+html>body>#content>a {
+width: auto;
+border:0px none;
+margin-bottom: 50px 0;
+}
+
+#bottombar {
+width:600px;
+height:18px;
+border:0 none;
+margin: 20px 0 0 10px;
+padding:1px 0 0 1px;
+background-color:#006600;
+color:white;
+}
+
+h2 {
+margin:40px 0 0 0;
+padding-bottom:0px;
+color: black;
+font-family:  Verdana, Helvetica, Arial, sans-serif;
+font-size: 100%;
+line-height: 1em;
+}
+
+h3 {
+margin: 0px;
+color: black;
+font-family:  "Trebuchet MS", Arial, Verdana, Helvetica, sans-serif;
+font-size: 95%;
+line-height: 1.5em;
+font-weight: normal;
+}
+
+p {
+color: black;
+font-family:  Verdana, Helvetica, Arial, sans-serif;
+font-size:92%;
+}
+
+h2 p {
+margin-top:0px;
+padding-top:0px;
+}
+
+p h2 {
+margin-bottom:0px;
+padding-bottom:0px;
+}
+
+a:link
+{
+background-color:inherit;
+color:#006600;
+}
+
+a:visited
+{
+background-color:inherit;
+color:#006600;
+}
+
+a:active
+{
+background-color:inherit;
+color:#006600;
+}
+
+a:hover
+{
+background-color:inherit;
+color:#006600;
+}
+
+a.back {
+padding-top:5px;
+}

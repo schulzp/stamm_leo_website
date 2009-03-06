@@ -1,0 +1,71 @@
+{PROJECT}		../../template/doc.en.ini
+{GRAFIK_LINKS}	$home/gifs/li_phpcms.gif
+{LOGO_1}		$home/gifs/cmslogo1.gif
+{LOGO_2}		$home/gifs/cmslogo2.gif
+{MENU}			00.08.10.01
+{TITEL}			What is a Project File and for which it is used?
+
+{CONTENT}
+<ul>
+<li><a href="$self#wasist">What is a Project File and how is it used?</a></li>
+<li><a href="$self#beschreibung">Description of the fields used at present.</a></li>
+</ul>
+<p><hr /></p>
+<US><a name="wasist"><a href="$self#top">What is a Project File and how is it used?</a></a></US>
+<p>
+A Project File is the main file in a new project. I this file are all paths
+which are needed to parse a content-file.
+</p>
+<p>
+Projectfiles are normal text files and you can edit them with every texteditor.
+The Extention of the Authors Project Files are always ".ini" but you can name
+them like you want!
+</p>
+<p>
+Example of a Project File:
+</p>
+<SEITE>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3>
+<Z><S>;</S>        <S>name of the field</S>        <S>:=</S>        <S>value of the field</S></Z>
+<Z><S></S>        <S>HOME</S>                                <S>:=</S>        <S>/homepage</S></Z>
+<Z><S></S>        <S>TAGS</S>                                <S>:=</S>        <S>&#36;home/template/home.tag</S></Z>
+<Z><S></S>        <S>TEMPLATE</S>                        <S>:=</S>        <S>&#36;home/template/home.tpl</S></Z>
+<Z><S></S>        <S>MENU</S>                                <S>:=</S>        <S>&#36;home/template/home.mnu</S></Z>
+<Z><S></S>        <S>MENUTEMPLATE</S>                <S>:=</S>        <S>&#36;home/template/home.mtpl</S></Z>
+</TABLE>
+</SEITE>
+<p>
+If a semikolon (;) is at the start of a line, the entire line is interpreted as
+comment and is not considered by the parser. You can insert as many as desired comments.<br />
+<WICHTIG>Note:</WICHTIG> Whitin a contents line comments are not permitted!
+</p>
+<p>
+On the left side is alwaay the field name, followed from the separator ":=" and the value of the field.
+</p>
+<p><hr /></p>
+<US><a name="beschreibung"><a href="$self#top">Description of the fields used at present:</a></a></US>
+<ul>
+<li><WICHTIG>HOME</WICHTIG><br />
+Indicates the path to that directory, under which all files are. The
+specification is optional. If you define HOME, this value must be defined in
+the first place in the Project File! If you do not use HOME, you have to use
+the absolute path everywhere.</li>
+<li><WICHTIG>TAGS</WICHTIG><br />
+Indicates the path to that file, which contains the definition of the tags, which the parser has to replace.</li>
+<li><WICHTIG>TEMPLATE</WICHTIG><br />
+The path to the template, with which the content page has to be parsed.</li>
+<li><WICHTIG>MENU</WICHTIG><br />
+This file contains the menu definitions for the homepage</li>
+<li><WICHTIG>MENUTEMPLATE</WICHTIG><br />
+The path to the template, with which the menu definitions has to be parsed.</li>
+</ul>
+<p>
+Those are at present all fields, which are used from the Project File reader. With future versions of phpCMS new
+fields can be added.
+</p>
+<p>
+<WICHTIG>
+If you do not use &#36;home then you always have to write the paths absolutely to the document root of your
+webserver. Only then it is guaranteed that the parser also finds these files.
+</WICHTIG>
+</p>

@@ -1,0 +1,112 @@
+{PROJECT}		../../template/doc.en.ini
+{GRAFIK_LINKS}	$home/gifs/li_phpcms.gif
+{LOGO_1}		$home/gifs/cmslogo1.gif
+{LOGO_2}		$home/gifs/cmslogo2.gif
+{MENU}			00.08.10.05
+{TITEL}			TAG files
+{CONTENT}
+<ul>
+<li><a href="$self#wozu">Why use TAG files?</a></li>
+<li><a href="$self#erstellen">Creating a TAG file</a></li>
+<li><a href="$self#einbinden">UsingTAGS in content- or template-files </a></li>
+<li><a href="$self#beispiel">An example</a></li>
+</ul>
+<p><hr /></p>
+<US><a name="wozu"><a href="$self#top">Why use TAG files?</a></a></US>
+<p>
+So you just created this huge number of HTML documents - then you realize that those horizontal lines do not fit the layout on half of your site! Does this sound familiar to you at all?
+</p>
+<p>
+With phpCMS you can avoid situations like the one described above by using TAG files.
+</p>
+<p>
+You simply define your own TAGS in the TAG file, thats all. From now on you can
+use your custom TAGS in your content and template files. If later on you decide you want to replace some TAGs with different HTML, all you need to do is modify the definition in the tag file.
+</p>
+<p><hr /></p>
+<US><a name="erstellen"><a href="$self#top">Creating a TAG file</a></a></US>
+<p>
+A TAG file is a normal text file. You may define only one TAG file per project,
+but you can divide your site into several projects.
+</p>
+<p>
+Within a TAG file commented lines are those that begin with a semicolon (;). Blanks and tabus
+are not interpreted. So, for easier reading, you may format your TAG files with as many tabs as you like.
+</p>
+<p>
+A definition lines contains your TAG, the separator ":=" (without quotes) and behind this
+the HTML tags you want to replace with your own TAG. A Line in a TAG file looks e.g. in that way:
+</p>
+<BLOCKQUOTE>&lt;PICTUREFRAME&gt;&nbsp;&nbsp;&nbsp;&nbsp;:=&nbsp;&nbsp; &lt;table border="0" cellspacing="0" cellpadding="2"&gt;</BLOCKQUOTE>
+<p>
+<WICHTIG>Tip:</WICHTIG> You may replace diacritics (e.g. German "umlaute" or accented characters) by their equivalent HTML tags.
+This makes content files much easier to read. :-)
+</p>
+<p>
+You can use parameters with you custom TAGS as well.
+Have a look at the following line:
+</p>
+<BLOCKQUOTE>
+&lt;a "$url,$target,$text"&gt;&nbsp;&nbsp;&nbsp;&nbsp;:=&nbsp;&nbsp;&lt;a href="$url" target="$target"&gt;$text&lt;/a&gt;
+</BLOCKQUOTE>
+<p>
+Each value in the comma separated list of values is placed into the HTML on the right.
+<br /><br /><WICHTIG>NOTE: </WICHTIG> TAGS use commas as delimeters for parameters. 
+You may not use commas within parameter values since these would be interpreted as delimeters of the parameter list. Single straight quotes ( ' ) are also used as delimeters and must not be used within parameter values.
+</p>
+<p><hr /></p>
+<US><a name="einbinden"><a href="$self#top">Using TAGS in content, or template, files</a></a></US>
+<p>
+Using TAGS is as easy as writing a HTML tag, so there is not much to say.
+</p>
+<p>
+The phpCMS parser replaces the TAG with the HTML tags defined behind your own TAG.
+</p>
+<p><hr /></p>
+<US><a name="beispiel"><a href="$self#top">An example</a></a></US>
+<p>
+Since learning by example is much easier look at this example TAG file:
+</p>
+
+<SEITE><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3><Z><S>
+        &szlig;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;szlig;<br />
+        &Auml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Auml;<br />
+        &Ouml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Ouml;<br />
+        &Uuml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Uuml;<br />
+        &auml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;auml;<br />
+        &ouml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;ouml;<br />
+        &uuml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;uuml;<br />
+        &lt;IMPORTANT&gt;&nbsp;:= &lt;strong&gt;<br />
+        &lt;/IMPORTANT&gt;:= &lt;/strong&gt;
+</S></Z></TABLE></SEITE>
+
+<p>
+Here is how you use these tags in a content file:
+</p>
+<BLOCKQUOTE>&lt;IMPORTANT&gt;Tip:&lt;/IMPORTANT&gt; Use TAGS as often as possible!</BLOCKQUOTE>
+<p>
+phpCMS replaces the TAG "&lt;IMPORTANT&gt;" with the HTML defined behind the separator.
+In a Browser the above line looks like this:
+</p>
+<BLOCKQUOTE><WICHTIG>Tip:</WICHTIG> Use TAGS as often as possible!</BLOCKQUOTE>
+<p>
+Now let's assume just bolding your important words is not what you really wanted. Simply open the TAG file and edit your custom difinition:
+</p>
+<SEITE><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3><Z><S>
+        &szlig;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;szlig;<br />
+        &Auml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Auml;<br />
+        &Ouml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Ouml;<br />
+        &Uuml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;Uuml;<br />
+        &auml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;auml;<br />
+        &ouml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;ouml;<br />
+        &uuml;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= &amp;uuml;<br />
+        &lt;IMPORTANT&gt;&nbsp;:= &lt;i&gt;&lt;strong&gt;<br />
+        &lt;/IMPORTANT&gt;:= &lt;/strong&gt;&lt;/i&gt;
+</S></Z></TABLE></SEITE>
+<p>
+And now the <strong>important</strong> word from above will be displayed thus:
+</p>
+<BLOCKQUOTE><i><WICHTIG>Tip:</WICHTIG></i> Use TAGS as often as possible!</BLOCKQUOTE>
+<p>
+As you can see: phpCMS is really easy to use!
+</p>

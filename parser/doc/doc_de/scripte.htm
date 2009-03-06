@@ -1,0 +1,63 @@
+{PROJECT}		../../template/doc.de.ini
+{ROBOTS}INDEX, FOLLOW
+{DESCRIPTION}Man kann in phpCMS auf fremde SKripte einbinden. Anders als bei WebGrab integrieren sich die Skripte hier in phpCMS und benötigen weniger Zeit zur Ausführung als bei WebGrab. Allerdings können auf diese Art nur PHP Skripte eingefügt werden.
+{MENU}			00.06.01
+{TITEL}			Einbindung externer Skripte
+{CONTENT}
+<B_BOX_START "Übersicht">
+<li><a href="$self#allg">Allgemeines zu dynamischen Skripten.</a></li>
+<li><a href="$self#template">Definition im Template.</a></li>
+<li><a href="$self#content">Definition in der CONTENT-Datei.</a></li>
+<B_BOX_STOP>
+<a name="allg"></a>
+<B_BOX_START "Allgemeines zu dynamischen Skripten">
+<p>
+Bei phpCMS könnt Ihr beliebig viele dynamische Skripte einbinden. Im folgenden wird beschrieben,
+wie Ihr Eure bestehenden PHP-Skripte einbindet. Derzeit ist die Skripteinbindung noch sehr neu,
+so ist die Header-Ausgabe noch etwas "tricky". :-) Für eine korrekte Ausgabe sind Angaben in
+der TEMPLATE-Datei und in der CONTENT-Datei erforderlich.
+</p>
+<B_BOX_STOP>
+<a name="template"></a>
+<B_BOX_START "Definition im Template">
+<p>
+In der Template-Datei vermerkt Ihr einfach einen Platzhalter der mit den Zeichen "&#123;SCRIPT" beginnt.
+Natürlich wie immer ohne Anführungszeichen. Darauf folgt ein eindeutiger Bezeichner für dieses Skript.
+Die komplette Definition siehr dann in etwa so aus:
+</p>
+<BLOCKQUOTE>
+&#123;SCRIPT_NR1&#125;
+</BLOCKQUOTE>
+<p>
+Dieser Platzhalter wird immer dort im Template eingefügt, wo die Skriptausgabe erfolgen soll. Wenn
+Eure Skripte HTTP-Header ausgeben, ist es erforderlich, daß Ihr den Inhalt dieser Skripte in
+zwei Dateien aufteilt und an erster Stelle des Templates jenes Skript einbindet, das den HTTP-Header
+ausgibt.
+</p>
+<B_BOX_STOP>
+<a name="content"></a>
+<B_BOX_START "Definition in der CONTENT-Datei">
+<p>
+Ihr entscheidet in jeder CONTENT-Datei, ob und welches Skript eingebunden werden soll. Das
+geschieht mit dem Feld "&#123;SCRIPT" - wieder ohne Anführungszeichen - gefolgt von dem eindeutigen
+Bezeichner, z.B. also:
+</p>
+<BLOCKQUOTE>
+&#123;SCRIPT_NR1&#125; ./guestbook.php
+</BLOCKQUOTE>
+<p>
+wenn das Skript "guestbook.php" im selben Verzeichnis liegt, wie Eure Content-Datei. Ich benutze immer
+relative Pfadangaben, weil so die Übertragung von einem Server auf einen anderen Server einfacher ist.
+Habt Ihr in Eurer CONTENT-Datei kein entsprechendes Skript-Feld, wird der Eintrag im Template bei der
+Ausgabe einfach ignoriert. Valide Pfadangaben sind z.B.:
+</p>
+<BLOCKQUOTE>
+&#123;SCRIPT_NR1&#125; ./guestbook.php<br />
+&#123;SCRIPT_NR1&#125; ../cgi-bin/guestbook.php<br />
+&#123;SCRIPT_NR1&#125; &#36;home/cgi-bin/guestbook.php<br />
+&#123;SCRIPT_NR1&#125; /cgi-bin/guestbook.php<br />
+</BLOCKQUOTE>
+<p>
+Wenn Ihr die Variable "&#36;home" einsetzt, muß diese in der PROJECT-Datei definiert sein.
+</p>
+<B_BOX_STOP>

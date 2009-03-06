@@ -1,0 +1,255 @@
+{PROJECT}		../../template/doc.en.ini
+{GRAFIK_LINKS}	$home/gifs/li_phpcms.gif
+{LOGO_1}		$home/gifs/cmslogo1.gif
+{LOGO_2}		$home/gifs/cmslogo2.gif
+{MENU}			00.08.10.11
+{TITEL}			Volltextsuche in phpCMS
+{CONTENT}
+<p><strong>This document is currently being translated into English. Stand by. Sorry.</strong>
+</p>
+<ul>
+<li><a href="$self#einfuerung">Wie funktioniert die Volltextsuche in phpCMS?</a></li>
+<li><a href="$self#inizieren">Erstellen des Volltextindexes.</a></li>
+<li><a href="$self#template">Aufbau eines Templates für die Anzeige der Suchergebnisse.</a></li>
+<li><a href="$self#menu">Ergänzung des Menütemplates.</a></li>
+<li><a href="$self#project">Erstellen der Projektdatei.</a></li>
+<li><a href="$self#ergebnis">Anlegen einer Ergebnisseite.</a></li>
+<li><a href="$self#formular">Aufbau eines Suchformulars.</a></li>
+</ul>
+
+<p><hr /></p>
+<US><a name="einfuerung"><a href="$self#top">Wie funktioniert die Volltextsuche in phpCMS?</a></a></US>
+<p>
+Der Aufbau einer Volltextsuche für Eure eigene Homepage erfordert
+mehrere Schritte. Zuerst wird der Volltext-Index erstellt. Dabei werden
+sowohl normale HTML-Dateien als auch phpCMS-Content-Dateien indiziert. Danach
+legt Ihr ein eigenes Template für die Suchergebnisse an. Eine
+eigene Projektdatei für die Ergebnisseite ist ebenfalls erforderlich.
+Dann werden im Menütemplate einige Einstellungen vorgenommen.
+Danach erstellt Ihr eine Seite, in der die Suchergebnisse angezeigt
+werden sollen. Ist diese Seite fertig, bindet Ihr die Suchabfrage,
+das Formular, in eine oder mehrere Seiten ein.
+</p>
+
+<p><hr /></p>
+<US><a name="indizieren"><a href="$self#top">Erstellen des Volltextindexes.</a></a></US>
+<p>
+Überlegt Euch zuerst, ab welchem Verzeichnis Eurer Website indiziert werden soll.
+Ihr habt in dieser ersten Version der Volltextsuche von phpCMS die Möglichkeit,
+innerhalb des zu indizierenden Verzeichnisses bis zu drei Verzeichnisse anzugeben,
+die ignoriert werden sollen. Es ist eine kluge Idee, für große Seitenteile Eurer
+Homepage einen eigenen Index zu erstellen. Mit phpCMS könnt Ihr beliebig viele
+Indizies erstellen und somit beliebig viele Suchen ermöglichen.
+<b>Derzeit</b> ist die Nachindizierung von Seiten noch nicht möglich, es muß
+also immer bei groben Änderungen ein kompletter Index erstellt werden.
+</p>
+<p>
+Ein Index-Vorgang kann unterschiedlich lange dauern. Das hängt sehr vom Umfang
+der indizierten Daten ab. Meine Website hier, die unter anderem die komplette Dokumentation
+vom Apache-Webserver, das Kompendium SELFHTML von Stefan Münz und die Dokumentation
+von PHP spiegelt umfasst ca. 3.000 Seiten. Die Erstellung eines Indexes dieser
+ganzen Seite dauert mit phpCMS ca. 20-30 Minuten. Dabei werden temporär zusätzlich,
+zum bereits verbrauchten Webspace ca. 5 MB belegt. Ihr solltet also bevor Ihr zu indizieren
+beginnt checken, ob Ihr noch genug Webspace zur Verfügung habt. Nach der erfolgten
+Indizierung reduziert sich der Verbrauch ungefähr auf 1/5 der temporären Größe.
+</p>
+<p>
+Jetzt überlegt Ihr Euch, wohin der Index installiert werden soll, wenn er erstellt ist.
+Am besten macht Ihr Euch eine Liste mit diese Überlegungen (es kommen noch ein paar dazu).
+phpCMS bietet die Option, den Index als normale Dateien zu speichern, oder
+mit gzip zu komprimieren. Um die komprimierte Version zu nutzen, muß
+bei Eurem Provider aber das zlib-Library installiert sein (phpinfo() is your friend).
+Der komprimierte Index belegt wesentlich weniger Speicherplatz (nur ca. 1/3 des Unkomprimierten),
+verlangsamt aber den Suchvorgang, da der Index erst im Speicher dekomprimiert werden muß,
+bevor die Suche durchgeführt werden kann.
+Also: Nächste Entscheidung auf der Liste = gzip oder nicht gzip.
+</p>
+<p>
+Jetzt müßt Ihr entscheiden, wieviele Zeichen bei der Anzeige des Suchergebnisses
+ausgegeben werden sollen. Ein guter Wert liegt bei ca. 300 Zeichen. Wählt Ihr zu
+wenige Zeichen, kann sich der User unter dem Ergebniss nichts vorstellen, zu viele
+Zeichen verlangsamen die Anzeige des Suchergebnisses.
+</p>
+<p>
+Eine Stopwortdatei enthält jene Wörter, die nicht in den Index aufgenommen werden sollen.
+Ihr erstellt eine solche Datei einfach mit einem Texteditor und speichert sie am Webserver
+in einem Verzeichnis Eurer Wahl. Eine Stopwortdatei enthält die Wörter, getrennt
+durch einen Zeilenumbruch:
+<ul>
+<li>und</li>
+<li>ihr</li>
+<li>seine</li>
+<li>eure</li>
+</ul>
+Alle Stopwörter werden klein geschrieben. Ein Beispiel einer solchen Stopwortdatei findet Ihr
+im Verzeichnis "parser/include". Diese Datei heißt "stop.db" und enthält Stopwörter
+in Deutsch und Englisch. Ihr könnt für jeden Index eine eigene Stopwortdatei erstellen,
+oder Ihr benutzt für alle Indizies die selbe Datei. Vor der Erstellung des Indexes muß
+man das in den Optionen angeben. Also auf die Liste damit!
+</p>
+<p>
+Bei der Entwicklung der Volltextsuche und des Indexers bin ich auf das Problem
+gestoßen, dass einige Provider timeouts für PHP-Skripte gesetzt haben. Bei längeren
+Laufzeiten von Skripten, werden diese dann einfach abgebrochen. Dabei wird der Index
+natürlich zerstört. Um das zu umgehen, wird in mehreren Schritten indiziert.
+Je größer diese Schritte sind, um so schneller geht der Vorgang der Indizierung.
+Ihr könnt diese Schrittgröße ebenfalls in den Optionen einstellen und zwar unter
+dem Namen "Blockgröße". Der Vorgabewert sind 200.000 Byte, für einige Provider
+sicher bereits zu groß. Ihr tastet Euch am Besten schrittweise an das Limit Eures
+Providers heran, um die optimale Einstellung herauszufinden. Habt Ihr optimale
+Blockgröße gefunden, könnt Ihr diese in der Datei "default.php" die Ihr im
+Verzeichnis "parser/include" findet eintragen.
+</p>
+<p>
+Jetzt überlegt Euch, wie lange die kürzesten Wörter sein dürfen, die noch
+indiziert werden. In den Optionen stellt Ihr die minimale Wortlänge ein.
+<b>Achtung:</b> Wörter die kleiner als zwei Buchstaben sind akzeptiert das
+Suchskript nicht. Je länger die kürzesten Wörter sind, die indiziert werden,
+um so schneller funktioniert die Suche. Das System funktioniert hervorragend mit
+der Einstellung einer Wortlänge von drei Buchstaben.
+</p>
+<p>
+Nun sind wir endlich so weit, den Index-Vorgang zu starten. Ruft einfach
+die Datei "parser.php" ohne Optionen auf. Nach Eingabe des Paßwortes
+(dass Ihr hoffentlich längst geändert habt), klickt links auf den Menüpunkt
+"Volltextsuche" und gebt die Optionen auf Eurer Liste ein. Was Ihr habt keine
+Liste? Dann passiert den Start, kassiert keine 200. :-)
+</p>
+<p>
+Nach einem Klick, auf den Button "Indizieren starten" beginnt die Indizierung.
+Zuerst wird eine Liste mit allen Wörtern gebildet. phpCMS zeigt Euch
+als Status, welche Dateien gerade indiziert wurde und wie lange das
+gedauert hat, sowie wieviele Dateien noch zu indizieren sind. Die erste
+Statusinfo kann ein paar Sekunden dauern, nicht ungeduldig werden.
+Nachdem die Wortliste gebildet ist, startet der Merger automatisch.
+Der Merger scheidet doppelte Wörter aus und erfasst die Häuffigkeit
+von vorkommenden Wörtern in einzelnen Seiten.
+Auch der Merger liefert Status-Informationen.
+Am Ende des Mergers erhaltet Ihr eine Anzeige, wie lange der gesamte
+Vorgang gedauert hat. Auch der Merger funktioniert mehrstufig, also
+erst wieder klicken, wenn Ihr die Meldung habt, dass der Indiziervorgang
+abgeschlossen ist. <b>Ihr zerstört sonst den Index.</b>
+</p>
+<p>
+Das wars, der Index ist erstellt.
+</p>
+
+<p><hr /></p>
+<US><a name="template"><a href="$self#top">Aufbau eines Templates für die Anzeige der Suchergebnisse</a></a></US>
+<p>
+Dieses Template ist im Prinzip ein ganz normales Template von phpCMS.
+Den einzigen Unterschied zu normalen Templates bildet ein Feld,
+statt dem dann die Suchergebnisse angezeigt werden. Ihr tragt dieses Feld
+wie folgt ein:
+<BLOCKQUOTE>
+&#123;SEARCHRESULT SEARCHTEMP="SUCHE"&#125;
+</BLOCKQUOTE>
+Das Schlüsselwort "SEARCHRESULT" bezeichnet, dass an dieser Stelle im Template die
+Suchergebnisse angezeigt werden. Der Parameter "SUCHE" im obigen Beispiel
+besagt, dass aus dem Menütemplate die Werte mit den Namen "SUCHE" ausgelesen
+werden sollen. Diese Werte tragen wir bei der Erstellung
+des Menütemplates ein.
+</p>
+
+<p><hr /></p>
+<US><a name="project"><a href="$self#top">Erstellen der Projektdatei</a></a></US>
+<p>
+phpCMS-Profis wissen jetzt sicher schon was kommt: Im wesentlichen handelt es sich um
+eine ganz normale Prjektdatei, die lediglich, statt auf das normale Template, auf das Template
+zeigt, daß wir gerade für die Sucher erstellt haben.
+</p>
+
+<p><hr /></p>
+<US><a name="menu"><a href="$self#top">Ergänzung des Menütemplates</a></a></US>
+<p>
+Im Menütemplate stellt phpCMS einige Felder und TAGS zur Verfügung, mit deren
+Hilfe das Aussehen der Ausgabe beeinflusst werden kann. Die Felder sind:
+<ul>
+	<li><b>&#123;TITLE&#125;</b> - der Titel der gefundenen Seite</li>
+	<li><b>&#123;RANKING&#125;</b> - die Wertung nach der Gewichtung der gefundenen Wörter</li>
+	<li><b>&#123;URL&#125;</b> - die komplette URL der gefundenen Seite</li>
+	<li><b>&#123;FWORDS&#125;</b> - die Such-Begriffe, die in dieser Seite gefunden wurden</li>
+	<li><b>&#123;TEXT&#125;</b> - die ersten Zeichen im Content der gefundenen Seite (wieviele habt Ihr zuvor bei der Indizierung eingestellt)</li>
+</ul>
+Die TAGS, die Ihr zur Anzeige benutzen könnt sind:
+<ul>
+	<li><b>&lt;SEARCH_TIME&gt;</b> - wie lange der Suchvorgang gedauert hat</li>
+	<li><b>&lt;WORD_COUNT&gt;</b> - die Anzahl der insgesamt gefundenen Suchbegriffe, wenn mehrere Begriffe angegeben wurden</li>
+	<li><b>&lt;PAGE_COUNT&gt;</b> - die Anzahl der gefundenen Seiten, die Suchbegriffe enthalten</li>
+</ul>
+Über diese "eingebauten" TAGS hinaus, könnt Ihr in der TAG-Datei folgende TAGS definieren:
+<ul>
+	<li><b>&lt;RANK_5&gt;</b> - Das höchstrangige Ergebnis bei der Suche. Hier könnt Ihr einen Text oder eine Grafik einsetzen.</li>
+	<li><b>&lt;RANK_4&gt;</b> - Das nächst-niedrigere Ergebnis bei der Suche.</li>
+	<li><b>&lt;RANK_3&gt;</b> - Das nächst-niedrigere Ergebnis bei der Suche.</li>
+	<li><b>&lt;RANK_2&gt;</b> - Das nächst-niedrigere Ergebnis bei der Suche.</li>
+	<li><b>&lt;RANK_1&gt;</b> - Das niedrigste Ergebnis bei der Suche.</li>
+	<li><b>&lt;NO_DATA_DIR&gt;</b> - Die Fehlermeldung, wenn kein Daten-Verzeichnis gefunden wurde.</li>
+	<li><b>&lt;NO_SEARCH_TERM&gt;</b> - Die Fehlermeldung, wenn kein, oder ein fehlerhafter Suchbegriff angegeben wurde.</li>
+	<li><b>&lt;NO_SEARCH_RESULT&gt;</b> - Die Fehlermeldung, wenn kein Ergebnis gefunden wurde.</li>
+	<li><b>&lt;SEARCH_PREV&gt;</b> - Der Text oder die Grafik, die angezeigt werden soll um nach vorne zu blättern.</li>
+	<li><b>&lt;SEARCH_MIDDLE&gt;</b> - Der Text oder die Grafik, die zwischen "vorne" und "zurück" angezeigt werden soll.</li>
+	<li><b>&lt;SEARCH_NEXT&gt;</b> - Der Text oder die Grafik, die angezeigt werden soll um nach hinten zu blättern.</li>
+	<li><b>&lt;QUERY_TERM&gt;</b> - Der gesuchte, oder die gesuchten Begriff(e).</li>
+</ul>
+Diese TAGS dürfen nirgends sonst in phpCMS oder Euren eigenen Seiten benutzt 
+werden, sonst kommt es zu falschen Ausgaben durch den Parser.
+Das Menütemplate der Demo enthält also z.B. folgende Einträge:
+<BLOCKQUOTE>
+<b>&#123;SEARCH.SUCHE.PRE&#125;</b><br />
+&lt;font face="Arial" size=3&gt;&lt;b&gt;Ergebnisse:&lt;/b&gt;&lt;/font&gt;&lt;br&gt;<br />
+&lt;font face="Arial" size=1&gt;Suchzeit: &lt;SEARCH_TIME&gt;&lt;br&gt;<br />
+Anzahl der gefundenen Begriffe: &lt;WORD_COUNT&gt;&lt;br&gt;<br />
+Anzahl der gefundenen Seiten: &lt;PAGE_COUNT&gt;&lt;/font&gt;<br />
+&lt;table border=0 cellspacing=0 cellpadding=0 width=600&gt;&lt;tr&gt;&lt;td&gt;<br />
+<br />
+<b>&#123;SEARCH.SUCHE.NORMAL&#125;</b><br />
+&lt;hr&gt;&lt;font face="Arial" size=2&gt;&lt;b&gt;&lt;a href="&#123;URL&#125;"&gt;&#123;TITLE&#125;&lt;/a&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;<br />
+&lt;font size=1&gt;Reihung: &#123;RANKING&#125;&lt;/font&gt;&lt;br&gt;&lt;br&gt;<br />
+&lt;font face="Arial" size=2&gt;&#123;TEXT&#125; ...&lt;/font&gt;&lt;br&gt;&lt;br&gt;<br />
+&lt;font size=1&gt;Gefundene Begriffe: &#123;FWORDS&#125;&lt;/font&gt;<br />
+<br />
+<b>&#123;SEARCH.SUCHE.PAST&#125;</b><br />
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+</BLOCKQUOTE>
+</p>
+
+<p><hr /></p>
+<US><a name="ergebnis"><a href="$self#top">Anlegen einer Ergebnisseite</a></a></US>
+<p>
+Auch bei der Seite, die für die Anzeige der Ergebnisse angelegt wird,
+handelt es sich um eine normale phpCMS-Content-Datei. Es gelten alle
+Rahmenbedingungen, wie bei einer normalen Content-Datei. Lediglich
+der Projekt-Eintrag zeigt auf die vorhin angelegte Projekt-Datei.
+</p>
+
+<p><hr /></p>
+<US><a name="formular"><a href="$self#top">Aufbau eines Suchformulars</a></a></US>
+<p>
+Jetzt wird es wieder kniffelig. Das Formular mit dem die Suche Ausgelöst wird,
+muß bestimmte Felder enthalten:
+<p>
+<TABELLE>
+<Z><S><b>Feldname</b></S><S><b>Feldtyp</b></S><S><b>Wert</b></S><S><b>Bedeutung</b></S></Z>
+<Z><S>action</S><S>form-action</S><S>ergebnis/_parseext_</S><S>zeigt auf die Ergebnisseite</S></Z>
+<Z><S>method</S><S>form-action</S><S>POST</S><S>Methode, mit der das Formular gesendet wird</S></Z>
+<Z><S>datadir</S><S>hidden</S><S>Datenverzeichnis</S><S>Jenes Verzeichnis in dem der Index abgelegt ist.</S></Z>
+<Z><S>gzip</S><S>hidden</S><S>"on" oder "off"</S><S>Komprimierung wird verwendet oder nicht</S></Z>
+<Z><S>query</S><S>text</S><S>leer</S><S>Für die Eingabe der Suchbegriffe</S></Z>
+</TABELLE>
+</p>
+In HTML sieht das dann in etwa so aus:
+<BLOCKQUOTE>
+&lt;form action="&#36;home/ergebnis/_parseext_" method = "POST"&gt;<br />
+&lt;input type="hidden" name="datadir" value="$home/suche"&gt;<br />
+&lt;input type="hidden" name="gzip" value="on"&gt;<br />
+&lt;input name="query" value="" type="text" size=20 maxsize=30&gt;<br />
+&lt;input type="submit" name="submit" value="go get it"&gt;<br />
+&lt;/form>
+</BLOCKQUOTE>
+<b>Achtung:</b> Wenn Ihr Euren Index mit Komprimierung erstellt habt, <b>muß</b>
+das versteckte Feld "gzip" den Wert "on" enthalten. Habt Ihr ohne
+Komprimierung gearbeitet, <b>darf</b> das Feld nur "off" enthalten oder
+es ist gar nicht vorhanden. Standard-Einstellung vom Such-Skript ist "off".
+</p>
+<hr />

@@ -1,0 +1,7 @@
+{PROJECT}
+
+{MENU}
+
+{TITLE}
+
+{CONTENT}

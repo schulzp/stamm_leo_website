@@ -1,0 +1,53 @@
+********************************************************************************
+*                      PlugIn-Entwicklung für phpCMS                           *
+********************************************************************************
+
+Wenn Ihr beim Entwickeln von PlugIn's eine der folgende Klassen benutzt, müßt
+Ihr am Beginn Eures PlugIns testen, ob diese Klasse bereits von einem anderen
+PlugIn, einem Skript oder von phpCMS selbst eingebunden wurde, da PHP keine
+Klassen redeklarieren kann.
+
+Zwar unterstützt phpCMS mit der Version 1.2.x nur noch PHP4 - es könnte also
+der Befehl class_exists() ohne Einschränkungen verwendet werden - dennoch wurde
+die PHP3-kompatible Definition der Klassen-Konstanten beibehalten.
+
+Dadurch sollten alle Plugins für die Schnittstelle aller Versionen ab 1.1.6 mit
+all diesen kompatibel sein und bleiben.
+
+In den angeführten Klassen wird deshalb jeweils eine Konstante definiert, die
+dann von Euren Skripten geprüft werden kann.
+
+Am Beispiel der Klasse class.form_phpcms.php sieht das in Eurem Skript dann
+so aus:
+
+    if(!defined("_FORM_")) {
+        include(PHPCMS_INCLUDEPATH.'/class.form_phpcms.php' );
+    }
+
+Hier nun die Liste der Klassen und Konstanten:
+
+    Klasse                              | Konstante
+    =========================================================
+    class.form_phpcms.php               | _FORM_
+    class.group_phpcms.php              | _GROUP_
+    class.lib_data_file_phpcms.php      | _DATACONTAINER_
+    class.lib_error_phpcms.php          | _ERROR_
+    class.lib_phpcms.php                | _LIBPHPCMS_
+    class.lib_session_file_phpcms.php   | _SESSION_FILE_
+    class.session_phpcms.php            | _SESSION_
+    class.user_phpcms.php               | _USER_
+    =========================================================
+
+********************************************************************************
+
+Außerdem existiert eine Reihe automatischer Variablen und Konstanten, die die 
+Entwicklung von PlugIns etc. erleichtern sollen:
+
+    PHPCMS_INCLUDEPATH = absoluter Pfad zum Include-Verzeichnis von phpCMS.
+
+    $DEFAULTS->SCRIPT_PATH = Pfad zum Parser (parser.php).
+    $DEFAULTS->SCRIPT_NAME = Dateiname des Parsers.
+
+********************************************************************************
+
+Viel Spass bei der PlugIn-Entwicklung!

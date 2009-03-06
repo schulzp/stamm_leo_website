@@ -1,0 +1,125 @@
+{PROJECT}		../../template/doc.de.ini
+{ROBOTS}INDEX, FOLLOW
+{DESCRIPTION}phpCMS stellt eine automatische Site-Map zur Verfügung. Hier wird beschrieben wie das funktioniert und wie man die Sitemap einrichtet.
+{MENU}			00.06.10
+{TITEL}			Einbindung einer automatischen Sitemap
+{CONTENT}
+<B_BOX_START "Übersicht">
+<li><a href="sitemap.htm#wozu">Wozu eine automatische Sitemap?</a></li>
+<li><a href="sitemap.htm#template">Definition im Menü-Template</a></li>
+<li><a href="sitemap.htm#sitetemplate">Definition im Seiten-Template</a></li>
+<li><a href="sitemap.htm#weitere">Weitere Dateien</a></li>
+<B_BOX_STOP>
+<a name="wozu"></a>
+<B_BOX_START "Wozu eine automatische Sitemap?">
+<p>
+Die Sitemap stellt für Betrachter Eurer Seiten eine gute Orientierungshilfe dar.
+Vor allem, wenn Ihr viele Menüebenen einsetzt, wird es für den Betrachter immer
+schwieriger, sich auf Eurer Homepage zurecht  zu finden.
+</p>
+<p>
+Die Wartung einer solchen Sitemap ist aber sehr mühsam. Vor allem vergißt man schnell
+mal eine neue Seite oder einen neuen Menüpunkt, wenn eine neue Info ins Netz soll.
+</p>
+<p>
+phpCMS nimmt Euch diese Arbeit ab. Ihr definiert einmal, wie Eure
+Sitemap aussehen soll und in Zukunft wird bei jeder Änderung in Eurer Menü-Datei automatisch
+die Sitemap neu generiert.
+</p>
+<p>
+<WICHTIG>Achtung:</WICHTIG> Sitemaps werden auch bei Euch am Server gecached! Das bedeutet,
+daß Ihr bei Änderungen im Menü den gesamten Cache auf Eurem Server löschen müßt, damit
+der Benutzer auch die aktuellen Versionen Eurer Seiten sehen. Das solltet Ihr aber ohnehin tun,
+da nur dann die Menüs korrekt angezeigt werden.
+</p>
+<B_BOX_STOP>
+<a name="wozu"></a>
+<B_BOX_START "Definition im Menü-Template">
+<p>
+Im Menü-Template definiert Ihr, wie Eure Sitemap-Einträge angezeigt werden. Ähnlich wie bei den
+Menü-Templates, habt Ihr die Möglichkeit, HTML-Code zu definieren, der vor einer Menüebene,
+beim Menüpunkt selbst und nach einer Menüebene angezeigt wird. Das Feld für den HTML-Code
+vor einer Menüeben beginnt mit dem Feldbezeichner "TOC" gefolgt von einem Punkt "." gefolgt
+vom Namen der Menüeben (z.B. "MAIN") gefolgt vom Feldbezeichner "PRE". Angenommen Ihr wollt
+den Sitemap-Eintrag für die Haupt-Menü-Ebene mit dem Namen "MAIN" notieren, dann kann das
+so aussehen:
+</p>
+<BLOCKQUOTE>
+	&#123;TOC.MAIN.PRE&#125; &lt;table&gt;<br />
+	&#123;TOC.MAIN.NORMAL&#125; &lt;tr&gt;&lt;td&gt;&#123;MNAME&#125;&lt;/td&gt;&lt;/tr&gt;<br />
+	&#123;TOC.MAIN.PAST&#125; &lt;/table&gt;
+</BLOCKQUOTE>
+<p>
+<WICHTIG>Achtung:</WICHTIG> Aufgrund eines kleinen Bugs im Parser muß vor dem ersten
+Feldbezeichner, im Beispiel "MNAME" in jedem Fall ein Zeichen stehen, sonst wird
+dieser Feldbezeichner nicht interpretiert.
+</p>
+<p>
+Wie Ihr am Beispiel sehen könnt, werden die Menü-Einträge dann mit dem Feldbezeichner
+"NORMAL" verknüpft. Genau wie beim Hauptmenü verfahrt Ihr mit allen Menüebenen.
+</p>
+<B_BOX_STOP>
+<a name="sitetemplate"></a>
+<B_BOX_START "Definition im Seiten-Template">
+<p>
+Ihr müßt für die Sitemap ein eigenes Template definieren. Dafür verfahrt Ihr, wie bei der
+Erstellung eines normalen Templates für eine normale Content-Seite. Die Einbindung der Sitemap
+in das Template erfolgt dann mit dem Feldbezeichner "TOC" gefolgt von der Angabe der
+Menüklasse, ab der die Sitemap angezeigt werden soll, mit "CLASS=". Das sieht z.B. so aus:
+</p>
+<BLOCKQUOTE>
+	&lt;Normaler HTML-Code&gt;
+	&#123;TOC CLASS="00"&#125;
+	&lt;Normaler HTML-Code&gt;
+</BLOCKQUOTE>
+<p>
+Wollt Ihr lediglich die Menüebene ab der Klasse 00.01 anzeigen notiert Ihr wie folgt:
+</p>
+<BLOCKQUOTE>
+	&lt;Normaler HTML-Code&gt;
+	&#123;TOC CLASS="00.01"&#125;
+	&lt;Normaler HTML-Code&gt;
+</BLOCKQUOTE>
+<p>
+In diesem Fall werden nur alle Untermenüpunkte ab der Menüklasse "00.01" angezeigt.
+</p>
+<p>
+<WICHTIG>Achtung:</WICHTIG> Sowohl das Leerzeichen nach "TOC" als auch die Anführungszeichen nach
+"CLASS" sind wichtig und müssen notiert werden.
+</p>
+<p>
+Dieser Feldbezeichner kann auch mehrfach mit gleichen oder Unterschiedlichen Klassenangaben
+in das Template eingefügt werden. Das mehrfache Einfügen des Bezeichners ist dann erforderlich,
+wenn Ihr merspaltige Sitemaps anlegen wollt. In diesem Fall definiert Ihr für jeden Hauptmenüpunkt
+exakt im HTML-Code die Anordnung und fügt dann den Feldbezeichner mit der entsprechenden
+Hauptmenüklasse ein.
+</p>
+<B_BOX_STOP>
+<a name="weitere"></a>
+<B_BOX_START "Weitere Dateien.">
+<p>
+Für den Einsatz der Sitemap benötigt Ihr noch:
+</p>
+<ul>
+<li>eine Projekt-Datei und</li>
+<li>eine Content-Datei.</li>
+</ul>
+<p>
+Beide Dateien werden ganz normal erstellt, wie wenn Ihr eine normale HTML-Seite
+aufbauen würdet. Theoretisch könntet Ihr auch ein dynamisches Template für die
+Sitemap verwenden, dann erspart Ihr Euch das Anlegen einer eigenen Projekt-Datei.
+Ich rate aber davon ab, weil bei dynamischen Templates nichts auf Eurem Server
+gecached wird und das Parsen der Sitemap sehr zeitintensiv ist.
+</p>
+<p>
+In die Projekt-Datei tragt Ihr alle normalen Pfade und Dateien, wie beim Rest
+Eures Projektes ein. Nur als Template wird jenes Template angegeben, daß Ihr
+gerade für die Sitemap definiert habt.
+</p>
+<p>
+Die Content-Datei benötigt Ihr zum einen für den Aufruf der Sitemap, zum anderen
+könnt Ihr in dieser Datei zusätzliche Content-Felder einbauen und damit
+einleitende Worte an den Betrachter richten. Besondere, abweichende Notationen
+sind nicht erforderlich.
+</p>
+<B_BOX_STOP>
