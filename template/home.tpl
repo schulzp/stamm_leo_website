@@ -5,9 +5,9 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <!-- add your meta tags here -->
 
-    <link href="css/leo_layout.css" rel="stylesheet" type="text/css" />
+    <link href="/css/leo_layout.css" rel="stylesheet" type="text/css" />
     <!--[if lte IE 7]>
-    <link href="css/patches/patch_leo_layout.css" rel="stylesheet" type="text/css" />
+    <link href="/css/patches/patch_leo_layout.css" rel="stylesheet" type="text/css" />
     <![endif]-->
   </head>
   <body>
