@@ -1,0 +1,56 @@
+<h3>Simple</h3><p>
+SkyBlueCanvas allows you, the site owner, to keep your site content fresh using the skills you already have. If you can use a word processor, you can write your site's text. You can upload your photos and other art work directly from your browser with a few clicks of your mouse (4 clicks to be exact).
+</p><p>
+SkyBlueCanvas uses easy-to-understand menus, buttons, and forms to give you the power to change the text and artwork on your site. In most cases, it is just point, click, type and the content is changed.
+</p><h3>Feature Summary:</h3><ul>
+    <li>Easy-to-use</li>
+    <li>Easy-to-install</li>
+    <li>XML Data Storage (no database required)</li> 
+    <li>Extensible</li>
+    <li>Flexible &amp; Powerful Plugin API</li>
+    <li>Skinnable</li>
+    <li>Small in size (3.5MB)</li>
+    <li>Valid XHTML 1.0 Strict output</li>
+    <li>Search Engine Friendly URLs (requires mod_rewrite)</li>
+    <li>Customizable Meta Tags (globally or by page)</li><li>Built-in RSS feed creation of pages, articles and news items</li></ul><h3>Complete List of Available Add-ons</h3><ul>
+    <li><strong>Articles</strong>
+        <p>Organize your site text in categorized articles.</p></li><li><strong>Banner Ads</strong>
+        <p>Placing ads on your site is as easy as copy, paste, point and click.</p></li>
+    <li><strong>Case Studies</strong>
+        <p>Show case studies of your product or service with images and a full description.</p></li><li><strong>Custom Form Builder</strong>
+        <p>
+        Build your own forms and surveys to use on your site. FormBuilder allows you 
+        to create custom forms, specify field types and validate the user input. The respnonses 
+        to your form can be emailed to one or multiple addresses or witten to a text file.</p></li><li><strong>Events</strong>
+        <p>Show a list of upcoming events on your web site.</p>
+    </li><li><strong>FAQs</strong>
+        <p>Answer your site vistors' frequently asked questions.</p></li><li><strong>Gallery/Portfolio</strong>
+        <p>
+        Photo galleries are one of the most popular features on any website. This extension 
+        allows you to include a categorized photo gallery. The gallery can be displayed with 
+        one of four navigation styles: thumbnails, numbered items, text links or a slide show.</p>
+       <strong>Features:</strong>
+       <ul><li>Skinnable separately from page skins</li><li>Thumbnail, Title or Numeric item navigation</li><li>Link items to external sites</li><li>Portfolio Categories</li><li>Item groups (for alternate or multiple views)</li><li>Built-in support for ThickBox and LightBox modal overlay plugins for  the jQuery JavaScript library</li></ul>
+   </li><li><strong>Google Gadgets</strong>
+        <p>Enhancing your site with Google Gadgets is as easy as copy, paste, point and click.</p></li><li><strong>Metrics</strong>
+        <p>Simply copy and paste your favorite tracking code in the easy-to-use manager to track your web site traffic.</p>
+    </li>
+    <li><strong>Multiple Contacts</strong>
+        <p>Enable your contact form to show multiple contacts within your organization.</p>
+    </li><li><strong>Links</strong>
+        <p>
+        List links to useful resources by category. You can even include a description for each
+        link.
+        </p>
+    </li>
+    <li><strong>News</strong>
+        <p>
+        The news extension allows you to add news announcements to your site.
+        </p>
+    </li>
+    
+    <li><strong>Teasers</strong>
+        <p>
+        Displaying a short intro on your home page that points to content on other pages is a great 
+        way to entice site visitors to go deeper into your site. This extension creates what we 
+        call teasers to draw site visitors into your site.</p></li></ul>

@@ -1,0 +1,44 @@
+<fieldset class="right">
+    <input type="hidden" name="id" value="{OBJ:ID}" />
+    <input type="hidden" name="cantarget" value="{OBJ:CANTARGET}" />
+    <input type="hidden" name="bundletype" value="{OBJ:BUNDLETYPE}" />
+    <input type="hidden" name="source" value="{OBJ:SOURCE}" />
+    <input type="hidden" name="engine" value="{OBJ:ENGINE}" />
+    <input type="hidden" name="name" value="{OBJ:NAME}" />
+    <input type="hidden" name="loadas" value="{OBJ:LOADAS}" />
+    <tr style="padding: 0px 0px 4px 0px;">
+    <td>
+    <img src="ui/admin/images/diagram.regions.gif"
+         width="227"
+         height="175"
+         id="regiondigram"
+         alt="page regions diagram"
+         />
+    </td>
+    <td>
+    <p id="pageregioninfo">
+        The page regions in this diagram are a loose guide to the areas where 
+        collections can appear on a page. The actual layout of each skin 
+        may vary and is left to the discretion of the skin designer. 
+        Some skins may have more or fewer regions than shown.
+    </p>
+    </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <table class="linkstable" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td colspan="2"  style="border: none;">
+                        {OBJ:SELECTORS}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="published" class="strong">Published?:</label>
+                         &nbsp;{OBJ:PUBLISHED}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</fieldset>

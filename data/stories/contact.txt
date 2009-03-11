@@ -1,0 +1,2 @@
+<p>Drop us a line. We will respond as soon as we can.</p>
+<p>{plugin:fragment(contacts,view)}</p>

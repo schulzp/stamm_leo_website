@@ -1,0 +1,32 @@
+/* IE 7 Only */
+
+#dashboard_main
+{
+  background: transparent;
+  width: auto;
+  height: 180px;
+  position: relative;
+  top: -11px;
+  left: -10px;
+  padding: 0px;
+}
+
+#tabs
+{
+  width: auto;
+  height: 24px;
+  list-style-type: none;
+  margin: -15px 0px 0px 0px;
+  border-left: 1px solid #CCC;
+}
+
+div#welcome
+{
+  margin-top: -16px;
+}
+
+ul#breadcrumbs
+{
+  margin: -22px 0px 22px 15px;
+}
+

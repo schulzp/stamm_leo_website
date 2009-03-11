@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<obj type="contacts">
+<item id="2"
+      name="Scott Lewis"
+      title="Developer"
+      email="scott@skybluecanvas.com"
+      phone="603-555-1212"
+      fax=""
+      address=""
+      city="Richmond"
+      state="VA"
+      zip="23220">
+</item>
+
+<item id="3"
+      name="Todd Crowe"
+      title="Developer"
+      email="toddbcrowe@gmail.com"
+      phone="503-398-2896"
+      fax=""
+      address=""
+      city="Cloverdale"
+      state="Oregon"
+      zip="97112">
+</item>
+
+	</obj>
+</root>

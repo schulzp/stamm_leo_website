@@ -1,0 +1,19 @@
+RewriteEngine on
+
+ErrorDocument 404    404-page-not-found
+
+RewriteRule xml/(.*)\.xml$  index.php?route=404-page-not-found
+RewriteRule email/(.*)$     index.php?route=404-page-not-found
+RewriteRule ads/(.*)$       index.php?route=404-page-not-found
+RewriteRule gadgets/(.*)$   index.php?route=404-page-not-found
+RewriteRule metrics/(.*)$   index.php?route=404-page-not-found
+RewriteRule modules/(.*)$   index.php?route=404-page-not-found
+RewriteRule data/plugins/(.*)$   index.php?route=404-page-not-found
+RewriteRule tmp/(.*)$       index.php?route=404-page-not-found
+RewriteRule stories/(.*)$   index.php?route=404-page-not-found
+RewriteRule (.*)data/(.*)$  data/$2
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]

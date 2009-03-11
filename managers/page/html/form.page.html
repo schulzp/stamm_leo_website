@@ -1,0 +1,173 @@
+<input id="id" type="hidden" name="id" value="{OBJ:ID}" />
+<input id="objtype" type="hidden" name="objtype" value="page" />
+
+<tr>
+  <td colspan="2" valign="top" style="padding: 0px;" id="page-manager">
+    <ul class="section-tabs">
+        <li id="tab-section-one">Article Text</li>
+        <li id="tab-section-two">Meta Data</li>
+        <li id="tab-section-three">Collections</li>
+    </ul>
+    <div id="mgr-section-one" class="mgr-section">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td colspan="2" style="padding: 0px;">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td colspan="6">
+                                <div id="editoranchor"></div>
+                                <div style="margin: -4px 1px 4px 4px; width: 99%;">
+                                <textarea id="story_content" 
+                                          name="story_content" 
+                                          class="editor"
+                                          cols="55" 
+                                          rows="22">{OBJ:STORY_CONTENT}</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <input id="storyfile" type="hidden" name="story" value="{OBJ:STORY}" />
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div><!-- section one -->
+    
+    <div id="mgr-section-two" class="mgr-section">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <th colspan="6">Page Naming</th>
+            </tr>
+            <tr>
+                <td valign="top" colspan="1">
+                    <label for="title" class="strong">Page Title:</label>
+                </td>
+                <td colspan="5">
+                    <input type="text" 
+                           name="title" 
+                           value="{OBJ:TITLE}" 
+                           size="42" 
+                           />
+                </td>
+            </tr>
+            <input type="hidden" name="usesitename" value="0" />
+            <tr>
+                <th colspan="6">Menu Info</th>
+            </tr>
+            <tr>
+                <td valign="top" colspan="1">
+                    <label for="name" class="strong">Menu Text:</label>
+                </td>
+                <td colspan="2">
+                    <input type="text" 
+                           name="name" 
+                           value="{OBJ:NAME}" 
+                           size="42" 
+                           />
+                </td>
+                <td valign="top" colspan="1">
+                    <label for="name" class="strong">Include in RSS?</label>
+                </td>
+                <td valign="top" colspan="2">
+                    {OBJ:SYNDICATE}
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%" style="border: none;">
+                    <label for="menu" class="strong">Menu:</label>
+                </td>
+                <td valign="top" align="left" style="border: none;">
+                    {OBJ:MENU}
+                </td>
+                <td  valign="top" align="left" style="border: none;">
+                    <label for="pagetype" class="strong">Page Layout:</label>
+                </td>
+                <td valign="top" align="left" style="border: none;">
+                    {OBJ:PAGETYPE}
+                </td>
+                <td valign="top" align="left" style="border: none;">
+                    <label for="title" class="strong">Parent:</label>
+                </td>
+                <td  valign="top" align="left" style="border: none;">
+                    {OBJ:PARENT}
+                </td>
+            </tr>
+            <tr>
+                <th colspan="6">Meta Data</th>
+            </tr>
+            <tr>
+                <td valign="top" colspan="1">
+                    <label for="metagroup" class="strong">Meta Tags:</label>
+                </td>
+                <td colspan="1">
+                    {OBJ:METAGROUP}
+                </td>
+                <td colspan="4">
+                You can create Meta Tag groups in Main Dashboard &gt; Collections &gt; Meta Data
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" colspan="1">
+                    <label for="keywords" class="strong">Keywords:</label>
+                </td>
+                <td style="padding: 2px;" colspan="5">
+                    <textarea name="keywords" 
+                              style="margin: 0px; border: 1px solid #AAA; width: 548px; font-family: monotype;"
+                              cols="32" 
+                              rows="2">{OBJ:KEYWORDS}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" colspan="1">
+                    <label for="keywords" class="strong">Meta Description:</label>
+                </td>
+                <td style="padding: 2px;" colspan="5">
+                    <textarea name="meta_description" 
+                              style="margin: 0px; border: 1px solid #AAA; width: 548px; font-family: monotype;"
+                              cols="32" 
+                              rows="2">{OBJ:META_DESCRIPTION}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="6">Publishing</th>
+            </tr>
+            <tr>
+                <td valign="top" align="left" colspan="1">
+                    <label for="published" class="strong">Published?:</label>
+                </td>
+                <td valign="top" align="left" colspan="1">
+                    {OBJ:PUBLISHED}
+                </td>
+                <td valign="top" align="left" colspan="1">
+                    <label for="isdefault" class="strong">Is This The Home Page?:</label>
+                </td>
+                <td valign="top" align="left" colspan="3">
+                    {OBJ:ISDEFAULT}
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" colspan="1">
+                    <label for="order" class="strong">Order:</label>
+                </td>
+                <td colspan="5">
+                    {OBJ:ORDER}
+                </td>
+            </tr>
+            <input type="hidden" name="modified" value="{OBJ:MODIFIED}" />
+        </table>
+    </div><!-- section two -->
+        
+    <div id="mgr-section-three" class="mgr-section">
+        <!-- collections go here -->
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <th width="25%">Module</th>
+                <th width="75%">Region</th>
+            </tr>
+            {OBJ:COLLECTIONS}
+        </table>
+    </div><!-- section three -->
+    <div class="clear"></div>
+  </td>
+</tr>
+
+

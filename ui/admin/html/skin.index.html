@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" {doc:lang}>
+    <head>
+        <title>{page:title}</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="ui/admin/css/ssm.master.css" />
+        <link rel="stylesheet" type="text/css" href="ui/elements/css/elements.css" />
+        <script type="text/javascript" src="ui/admin/js/jquery.js"></script>
+        <script type="text/javascript" src="ui/admin/js/imagehover.js"></script>
+        <script type="text/javascript" src="ui/admin/js/scripts.js"></script>
+        <!--#html.editor.links-->
+        <!--[if IE 6]>
+            <link rel="stylesheet" type="text/css" href="ui/admin/css/ie6.css" />
+        <![endif]-->
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="ui/admin/css/ie7.css" />
+        <![endif]-->
+    </head>
+    <body id="admin" class="manager">
+        <div id="container">
+            <div id="header">
+                <ul id="top-nav">
+                    <li><!--{admin.logout}--></li>
+                    <li><!--{admin.inbox}--></li>
+                </ul>
+            </div>
+            <div id="main">
+                <div id="navigation">
+                    <!--{admin.nav}-->
+                </div>
+                <div id="result">
+                    <!--{result}-->
+                    <!-- <div class="info"><h2>Foo Bar</h2><p>This is a test</p></div> -->
+                </div>
+                <div id="sub-menus">
+                    {page:dashboard}
+                </div>
+                <div id="main-content">
+                    {page:content}
+                </div>
+            </div>
+            <div id="footer">
+                <div id="copyright">{skyblue:name} {skyblue:version}</div>
+                <div id="performance"><!--#performance--></div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+        <!--analytics-->
+    </body>
+</html>
+<!-- skin.index.html -->

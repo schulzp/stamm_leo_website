@@ -1,0 +1,309 @@
+/* MAIN BODY DIVISIONS */
+
+#button_table td
+{
+  padding-right: 3px;
+}
+
+select
+{
+  border: 1px solid #CCC;
+  background: #F0F0EE;
+}
+
+#imglist
+{
+  padding: 4px 0;
+}
+
+#preview
+{
+  padding: 10px;
+  border: 1px solid #CCC;
+  background: #F0F0EE;
+}
+
+#preview input,
+#preview textarea
+{
+  background: #FFF;
+}
+
+textarea
+{
+  border: 1px solid #CCC;
+  margin: 0px 0px 10px 0px;
+  padding: 2px;
+  background: #F0F0EE;
+}
+  
+textarea.description
+{
+  border: 1px solid #CCC;
+  margin: 6px 0 6px 0;
+  padding: 2px;
+  background: #F0F0EE;
+}
+  
+table.linkstable
+{
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  border-bottom: none;
+}
+* html div#main_story fieldset
+{
+  margin-left: 16px;
+}
+
+table.linkstable
+{
+  border: none;
+  border-left: 1px solid #DDD;
+  border-top: 1px solid #DDD;
+  margin: 5px 0px;
+}
+
+#loginform table.linkstable
+{
+  margin: 15px 0px;
+}
+
+table.linkstable th,
+table.linkstable td
+{
+  padding: 6px 4px 4px 4px;
+  text-align: left;
+  border-right: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  font-family: Arial;
+  font-size: 12px;
+}
+
+table.linkstable th
+{
+  background: #EEE;
+  background-image: url(../images/bg.th.png);
+  background-repeat: repeat-x;
+  font-size: 10px;
+}
+
+table.linkstable tr.odd
+{
+  background: #ECF3FE;
+}
+
+table.linkstable td
+{
+  border-bottom: 1px solid #DDD;
+  height: 18px;
+}
+  
+table.linkstable td.odd
+{
+  background: #E9F0F7;
+  border-top: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+}
+
+table.linkstable td input
+{
+  border: 1px solid #CCC;
+  height: 16px;
+  margin: 2px 0 2px 0;
+  background: #F0F0EE;
+  padding: 2px;
+}
+  
+table.linkstable td select
+{
+  border: 1px solid #CCC;
+  margin: 2px 0 2px 0;
+  background: #F0F0EE;
+}
+
+a
+{
+  text-decoration: none;
+  border-bottom: 1px dotted #000;
+  color: #600;
+}
+  
+a:hover
+{
+  border-bottom: 1px solid #000;
+}
+
+table.linkstable a
+{
+  text-decoration: underline;
+  color: #00F;
+  padding: 0px 0px 0px 3px;
+  margin-left: 2px;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+  border: none;
+}
+
+table.linkstable a:hover
+{
+  color: #000;
+}
+
+table.linkstable span.task-disabled
+{
+  background-color: #EEE;
+  border: 1px solid #AAA;
+  text-decoration: none;
+  color: #AAA;
+  padding: 0px 2px;
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+input
+{
+  border: 1px solid #CCC;
+  margin: 2px 0 2px 0;
+  background: #F0F0EE;
+}
+
+input.button,
+table#fileuploader input.button
+{
+  color: #222;
+  font-weight: bold;
+  font-size: 14px;
+  background: #869BAE;
+  border-top: 1px solid #9196A1;
+  border-left: 1px solid #9196A1;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  padding: 4px 10px;
+}
+
+input.button:hover,
+table#fileuploader input.button:hover
+{
+  color: #FFF;
+  background-color: #768798;
+  border-top: 1px solid #9196A1;
+  border-left: 1px solid #9196A1;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+
+table.linkstable input.uploadfield
+{
+  height: 20px;
+}
+
+table#fileuploader
+{
+  background-color: #EEE;
+  border: 0px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+table#fileuploader th
+{
+  background-color: #CCC;
+  font-weight: bold;
+}
+
+table#fileuploader td input
+{
+  height: auto;
+}
+
+/* ** CONTACT FORM ** */
+
+#previewform
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+#previewform p,
+#previewform label,
+#previewform h3
+{
+  color: #000;
+  font-family: Verdana, Arial, Helvetica, Sans-serif;
+}
+
+#previewform label
+{
+  display: block;
+  height: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000;
+}
+
+#previewform label.above
+{
+  margin-top: 20px;
+}
+
+
+#previewform label.left
+{
+  float: left;
+  width: 160px;
+  height: 12px;
+  padding-top: 8px;
+}
+
+#previewform input.textfield
+{
+  border: 1px solid #CCC;
+  width: 268px;
+  height: 16px;
+  padding: 2px;
+  margin-bottom: 4px;
+}
+
+#previewform textarea
+{
+  border: 1px solid #CCC;
+  padding: 2px;
+}
+
+#previewform input.previewbutton
+{
+  cursor: pointer;
+  height: auto;
+  background-color: #888;
+  color: #FFF;
+}
+
+#previewform input.previewbutton:hover
+{
+  cursor: pointer;
+  height: auto;
+  background-color: #444;
+  color: #FFF;
+}
+
+#editor-table
+{
+  width: 100%;
+  border: 0px solid red;
+}
+
+#editor-table td
+{ 
+  border: none;
+}
+
+table.linkstable th.tasks,
+table.linkstable td.tasks
+{
+  width: 150px !important;
+}

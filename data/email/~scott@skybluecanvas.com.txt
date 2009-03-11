@@ -1,0 +1,14 @@
+04 Apr, 2008 Friday 10:28:59 AM
+
+From: Scott Lewis
+Email: scott@skybluecanvas.com
+
+Subject: Welcome
+
+Welcome to SkyBlueCanvas. Thank you for downloading my software.
+
+This is not a fully-functioning email client. However, so that messages are never lost, whenever anyone uses the contact form to send you an email, a text copy is saved in /skyblue/email/ for your convenience.
+
+Thank You,
+Scott Lewis
+SkyBlueCanvas Developer

@@ -1,0 +1,24 @@
+<input type="hidden" name="objtype" value="meta" />
+<tr>
+    <th valign="top">[TERM:ITEMID]:</th>
+    <th valign="top">{OBJ:ID}</th>
+</tr>
+<input type="hidden" name="id" value="{OBJ:ID}" />
+<tr>
+    <td valign="top">[TERM:NAME]:</td>
+    <td valign="top">
+        <input type="text" name="name" value="{OBJ:NAME}" size="45" />
+    </td>
+</tr>
+<tr>
+    <td valign="top">[TERM:CONTENT]:</td>
+    <td valign="top">
+        <textarea name="content" cols="44" rows="4">{OBJ:CONTENT}</textarea>
+    </td>
+</tr>
+<tr>
+    <td valign="top">Meta Groups:</td>
+    <td valign="top">
+        {OBJ:METAGROUPS}
+    </td>
+</tr>

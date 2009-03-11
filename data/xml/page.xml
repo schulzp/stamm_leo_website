@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<obj type="page">
+<item id="24"
+      objtype="page"
+      story="page.page.24.txt"
+      title="Stammesgeschichte"
+      usesitename="0"
+      name="Geschichte"
+      syndicate="0"
+      menu="2"
+      pagetype="default"
+      parent="2"
+      keywords="Stamm LEO, Pfadfinder, Geschichte"
+      meta_description=""
+      published="1"
+      isdefault="0"
+      order="1"
+      modified="2009-03-10T21:04:35+00:00">
+</item>
+
+<item id="1"
+      objtype="page"
+      story="home.page.txt"
+      title="SkyBlueCanvas - The Lightweight CMS Test"
+      usesitename="0"
+      name="Startseite"
+      syndicate="1"
+      menu="1"
+      pagetype="text"
+      parent=""
+      keywords="skyblue, canvas, lightweight, cms, content management system, small business, web site manager, xhtml, strict, css, valid, compliant, standards, tableless layout, open source, free"
+      meta_description="This is my test description."
+      published="1"
+      isdefault="1"
+      order=""
+      modified="2009-03-10T19:47:30+00:00"
+      metagroup="2">
+</item>
+
+<item id="2"
+      objtype="page"
+      story="features.txt"
+      title="SkyBlueCanvas - The lightweight CMS Features"
+      usesitename="0"
+      name="Stamm"
+      syndicate="1"
+      menu="1"
+      pagetype="default"
+      parent=""
+      keywords=""
+      meta_description=""
+      published="1"
+      isdefault="0"
+      order=""
+      modified="2009-03-10T19:48:11+00:00"
+      metagroup="2">
+</item>
+
+<item id="7"
+      objtype="page"
+      story="page.page.7.txt"
+      title="About SkyBlueCanvas - The Lightweight CMS"
+      usesitename="0"
+      name="About"
+      syndicate="1"
+      menu="1"
+      pagetype="default"
+      parent=""
+      keywords=""
+      meta_description=""
+      published="1"
+      isdefault="0"
+      order=""
+      modified="2008-10-02T08:15:17+00:00"
+      metagroup="2"
+      caretpos="">
+</item>
+
+<item id="4"
+      objtype="page"
+      story="contact.txt"
+      title="Contact Scott Lewis, SkyBlueCanvas Developer"
+      usesitename="0"
+      name="Contact"
+      syndicate="0"
+      menu="1"
+      pagetype="default"
+      parent=""
+      keywords=""
+      meta_description=""
+      published="1"
+      isdefault="0"
+      order=""
+      modified="2008-12-03T22:49:00+00:00"
+      metagroup="2"
+      caretpos="">
+</item>
+
+<item id="21"
+      objtype="page"
+      story="page.page.21.txt"
+      title="404 Page Not Found"
+      usesitename="0"
+      name="404 Page Not Found"
+      syndicate="0"
+      menu=""
+      pagetype="default"
+      parent=""
+      keywords=""
+      meta_description=""
+      published="1"
+      isdefault="0"
+      order=""
+      modified="2008-10-12T03:40:46+00:00"
+      metagroup=""
+      caretpos="">
+</item>
+
+	</obj>
+</root>

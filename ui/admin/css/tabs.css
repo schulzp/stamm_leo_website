@@ -1,0 +1,50 @@
+.section-tabs
+{
+  padding: 8px 8px 0px 8px;
+  margin: 0px;
+  list-style-type: none;
+  background-image: url(../images/bg.th.png);
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  background: none;
+  background: #E1E9F1;
+  height: 27px;
+}
+
+.section-tabs li
+{
+  width: 125px;
+  border: 1px solid #CCC;
+  border: none;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  margin: 1px 8px -3px 0px;
+  padding: 5px;
+  background: #AEC4DB;
+  color: #555;
+  font-weight: bold;
+}
+
+li#tab-section-one
+{
+  background: #FFF;
+}
+
+.mgr-section
+{
+  border-top: 0px solid #CCC;
+  width: 100%;
+}
+
+#mgr-section-two,
+#mgr-section-three
+{
+  display: none;
+}
+
+#editoranchor td,
+#editorancher th
+{
+  border: none !important;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>[[page.title]]</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<!-- add your meta tags here -->
+<?php echo $this->get_meta_data(); ?>
+<link href="<?php echo $this->get_path(); ?>css/leo_layout.css" rel="stylesheet" type="text/css" />
+<link href="[[site.url]]rss/" rel="alternate" type="application/rss+xml" title="[[site.name]] RSS Feed" />
+<!--[if lte IE 7]>
+<link href="/css/patches/patch_leo_layout.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!-- START preloader -->
+<!--#plugin.preloader-->
+<!-- END preloader -->
+</head>
+<body>
+<div class="page_margins">
+    <!-- start: skip link navigation -->
+    <!-- end: skip link navigation -->
+    <div class="page">
+        <div id="header">
+            <!--fragment(name=header)-->
+        </div>
+        <div id="nav">
+            <!-- skiplink anchor: navigation -->
+            <a id="navigation" name="navigation"></a>
+            <!--fragment(name=menu&menu=1)-->
+        </div>
+        <div id="subnav">
+            <div class="hlist col1">
+                <!-- main navigation: horizontal list -->
+                <!--fragment(name=menu&menu=2)-->
+            </div>
+            <div class="col3">
+                <form method="post" class="yform">
+                    <fieldset>
+                        <input type="text" name="search_field" id="search_field"
+                        value="Suchbegriff" class="type-text" 
+                        onfocus="LEO.searchform.clear(this);" onblur="LEO.searchform.reset(this);" />
+                        <input type="submit" name="search_smt" id="search_smt"
+                        value="Suche" class="type-button" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div id="main">
+            <div id="col1">
+                <div id="col1_content" class="clearfix">
+                    <div class="col_header">
+                        {MENU2 NAME="MAIN" TYPE="BREADCRUMEN"}
+                    </div>
+                    <!-- add your content here -->
+                    <!--fragment(name=page)-->
+                </div>
+            </div>
+            <div id="col3">
+                <div id="col3_content" class="clearfix">
+                    <!--fragment(name=sidebar)-->
+
+                    <div class="col_box">
+                        <h1>Anmeldeformular</h1>
+                        <div class="col_box_content">
+                            <p>Das Anmeldeformular können Sie über folgenden Link herunterladen</p>
+                            <a href="#">Anmelde Formular (PDF, ca. 0,8MB)</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- IE Column Clearing -->
+                <div id="ie_clearing"> &#160; </div>
+            </div>
+        </div>
+        <!-- begin: #footer -->
+        <div id="footer">
+                <!--fragment(name=footer)-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

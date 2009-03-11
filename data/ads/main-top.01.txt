@@ -1,0 +1,3 @@
+<div class="banner-ad-div">
+    <p>You can display banner ads here by going to Admin - Collections - Banner Ads</p>
+</div>

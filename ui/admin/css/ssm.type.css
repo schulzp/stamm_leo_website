@@ -1,0 +1,203 @@
+/* SSM Admin Typography Styles */
+
+body
+{
+
+  font-family: arial, helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #FFF;
+}
+
+body, p
+{
+  color: #666;
+}
+  
+legend
+{
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+}
+
+a.white
+{
+  border-bottom: 1px dotted #FFF;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+  
+a.white:hover
+{
+  border-bottom: 1px solid #FFF;
+}
+
+#copyright
+{
+  text-align: left;
+  color: #FFF;
+  font-size: 9px;
+  padding: 4px 10px;
+  width: 40%;
+  float: left;
+}
+
+#performance {
+  text-align: right;
+  color: #FFF;
+  font-size: 9px;
+  padding: 4px 10px;
+  width: 40%;
+  float: right;
+}
+  
+#copyright_login
+{
+  text-align: right;
+  color: #FFF;
+  font-size: 9px;
+}
+
+ul
+{
+  list-style: none;
+  line-height: 1.35em;
+  margin: 0px;
+  padding: 0px;
+}
+  
+ul li
+{
+  color: #000;
+}
+  
+ul li a
+{
+  text-decoration: none;
+  border-bottom: 1px dotted #000;
+  color: #600;
+}
+  
+ul li a:hover
+{
+  border-bottom: 1px solid #000;
+}
+  
+ul.submenu li
+{
+  margin: 0px 0px 0px 20px;
+}
+
+h1
+{
+  margin: 0px;
+  padding: 3px 0px 0px 0px;
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-serif;
+  font-weight: bold;
+  color: #872313;
+  font-size: 24px;
+}
+  
+h2
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-serif;
+  font-weight: bold;
+  color: #000;
+  font-size: 14px;
+}
+
+
+/* MESSAGING STYLES */
+
+h2.message,
+h2.confirm,
+h2.error,
+h2.caution
+{
+  padding: 3px;
+  margin: 10px 0px 6px 2px;
+}
+
+h2.confirm,
+h2.message
+{
+  color: #FFF;
+  border: 1px solid #0A0;
+  background-color: #0A0; /* #E0FFCC; */
+  border: 2px solid #000; /* A00; */
+}
+  
+h2.error
+{
+  color: #000;
+  border: 2px solid #000; /* A00; */
+  background-color: #F00;
+}
+  
+h2.caution
+{
+  color: #FFF;
+  border: 2px solid #000;
+  background-color: #F80;
+}
+
+.pleasewait
+{
+  color:#000; 
+  margin: 0px;
+  padding: 10px;
+  border: 2px solid #000;
+  background-color: #0A0;
+}
+
+.subpath
+{
+  color: #000;
+}
+  
+.subpathgrey
+{
+  color: #3C699C;
+}
+  
+textarea.description
+{
+  border: 1px solid #AAA;
+  padding: 6px 0 6px 0;
+  padding: 2px;
+  background: #EEE;
+  color: #000;
+}
+ 
+table.linkstable td, th
+{
+  text-align: left;
+}
+
+textarea.vi
+{
+  color: #333; /* #222; */
+  background: #EEE; /* #D6DBE2; */
+  padding: 3px;
+  font-size: 12px;
+  width: 100% !important; /* 618px; */
+}
+
+.strong
+{
+  font-weight: bold;
+  color: #000;
+}
+
+.violet
+{
+  color: #73177D;
+}
+
+.required
+{
+  font-weight: bold;
+  color: #F00;
+}

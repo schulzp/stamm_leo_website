@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<obj type="bundle">
+<item id="1"
+      bundletype="menu"
+      name="Main Menu [ID:1]"
+      page="10,7,21,22,20"
+      region="{region:top},{region:top},{region:top},{region:top},{region:top}"
+      published="1"
+      cantarget="1"
+      source=""
+      engine=""
+      loadas="">
+</item>
+
+<item id="2"
+      bundletype="menu"
+      name="Submenu [ID:2]"
+      page="10,7"
+      region="{region:top},{region:top}"
+      published="1"
+      cantarget="1"
+      source=""
+      engine=""
+      loadas="menu">
+</item>
+
+<item id="3"
+      bundletype="module"
+      name="mod.contacts.php"
+      page="!3"
+      region=""
+      published="1"
+      cantarget="1"
+      source=""
+      engine=""
+      loadas="module">
+</item>
+
+	</obj>
+</root>

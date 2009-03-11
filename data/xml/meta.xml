@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<obj type="meta">
+<item id="3"
+      objtype="meta"
+      name="description"
+      content="Light-weight CMS for small businesses that is easy-to-use. If you can use Microsoft word, you can change the text and pictures on your web site using SkyBlueCanvas."
+      metagroups="2">
+</item>
+
+<item id="4"
+      objtype="meta"
+      name="keywords"
+      content="light weight cms, lightweight, light-weight, cms, content management system, small business, plugin, php, xml"
+      metagroups="2">
+</item>
+
+<item id="5"
+      objtype="meta"
+      name="robots"
+      content="index, follow"
+      metagroups="2">
+</item>
+
+<item id="6"
+      objtype="meta"
+      name="author"
+      content="Scott Lewis"
+      metagroups="2">
+</item>
+
+<item id="7"
+      objtype="meta"
+      name="Generator"
+      content="SkyBlueCanvas v1.1"
+      metagroups="2">
+</item>
+
+	</obj>
+</root>

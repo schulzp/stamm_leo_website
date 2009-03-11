@@ -1,0 +1,47 @@
+/* IE 6 Only */
+
+#navigation
+{
+  margin: 3px 0px 15px 0px;
+  height: 24px;
+  width: auto;
+  border: 0px solid red;
+  z-index: 1000;
+}
+
+#tabs
+{
+  width: auto;
+  height: 24px;
+  list-style-type: none;
+  margin: 0px;
+  border-left: 1px solid #CCC;
+  z-index: 1001;
+}
+
+div#welcome
+{
+  margin-top: -32px;
+}
+
+ul#breadcrumbs
+{
+  margin: -22px 0px 22px 15px;
+}
+
+#pages_info,
+#pictures_info,
+#collections_info,
+#templates_info,
+#settings_info
+{
+  left: 30px;
+  height: auto;
+  padding: 16px 20px 0px 0px;
+}
+
+div.msg-info,
+div.msg-info p
+{
+  padding-bottom: 0px;
+}
