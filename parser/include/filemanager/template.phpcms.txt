@@ -1,7 +1,0 @@
-{PROJECT}
-
-{MENU}
-
-{TITLE}
-
-{CONTENT}
