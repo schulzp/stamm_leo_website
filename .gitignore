@@ -6,7 +6,11 @@ updates.txt
 UPGRADE.txt
 info.php
 *.swp
+old.*
 Thumbs.db
+
+data/xml/configuration.xml
+data/xml/password.xml
 
 data/media/*
 data/skins/techjunkie/*

@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
 	<obj type="page">
-<item id="24"
-      objtype="page"
-      story="page.page.24.txt"
-      title="Stammesgeschichte"
-      usesitename="0"
-      name="Geschichte"
-      syndicate="0"
-      menu="2"
-      pagetype="default"
-      parent="2"
-      keywords="Stamm LEO, Pfadfinder, Geschichte"
-      meta_description=""
-      published="1"
-      isdefault="0"
-      order="1"
-      modified="2009-03-10T21:04:35+00:00">
-</item>
-
 <item id="1"
       objtype="page"
       story="home.page.txt"
@@ -27,14 +9,14 @@
       name="Startseite"
       syndicate="1"
       menu="1"
-      pagetype="text"
+      pagetype="default"
       parent=""
       keywords="skyblue, canvas, lightweight, cms, content management system, small business, web site manager, xhtml, strict, css, valid, compliant, standards, tableless layout, open source, free"
       meta_description="This is my test description."
       published="1"
       isdefault="1"
       order=""
-      modified="2009-03-10T19:47:30+00:00"
+      modified="2009-03-12T19:29:47+00:00"
       metagroup="2">
 </item>
 
@@ -55,6 +37,25 @@
       order=""
       modified="2009-03-10T19:48:11+00:00"
       metagroup="2">
+</item>
+
+<item id="24"
+      objtype="page"
+      story="page.page.24.txt"
+      title="Stammesgeschichte"
+      usesitename="0"
+      name="Geschichte"
+      syndicate="0"
+      menu="1"
+      pagetype="default"
+      parent="2"
+      keywords="Stamm LEO, Pfadfinder, Geschichte"
+      meta_description=""
+      published="1"
+      isdefault="0"
+      order=""
+      modified="2009-03-12T19:26:20+00:00"
+      metagroup="">
 </item>
 
 <item id="7"
