@@ -3,7 +3,7 @@
 	<obj type="bundle">
 <item id="1"
       bundletype="menu"
-      name="Main Menu [ID:1]"
+      name="Hauptmenue [ID:1]"
       page="10,7,21,22,20"
       region="{region:top},{region:top},{region:top},{region:top},{region:top}"
       published="1"
@@ -15,7 +15,7 @@
 
 <item id="2"
       bundletype="menu"
-      name="Submenu [ID:2]"
+      name="Top Menue [ID:2]"
       page="10,7"
       region="{region:top},{region:top}"
       published="1"

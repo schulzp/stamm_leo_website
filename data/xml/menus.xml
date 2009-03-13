@@ -2,16 +2,16 @@
 <root>
 	<obj type="menus">
 <item id="1"
-      title="Main Menu"
+      title="Hauptmenue"
       menutype="horizontal"
       showtitle="0"
       order="">
 </item>
 
 <item id="2"
-      title="Submenu"
+      title="Top Menue"
       menutype="horizontal"
-      showtitle="1"
+      showtitle="0"
       order="">
 </item>
 
