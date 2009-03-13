@@ -1,22 +1,21 @@
 @media all
 {
   .hlist {
-    /* (en) containing floats in IE */
-    /* (de) Einfassen der Floats im IE */
-    width: 100%;
-    overflow: hidden;
-    /* (en) containing floats in all other browsers */
-    /* (de) Einfassen der Floats in allen anderen Browsern */
-    float: left;
-    display: inline;
-    /* (en|de) Bugfix: IE - collapsing horizontal margins */
-    position:relative;
-    /* (en) Repeat the main color from the image */
-    /* (de) Wiederholung der Hauptfarbe aus der Bilddatei */
-    background: #c0c0c0 url("../images/bar.gif") repeat-x top right;
-    border-top: 1px #000 solid;
-    border-bottom: 1px #606e8d solid;
-    line-height: 0;
+      /* (en) containing floats in IE */
+      /* (de) Einfassen der Floats im IE */
+      width: 100%;
+      overflow: hidden;
+      /* (en) containing floats in all other browsers */
+      /* (de) Einfassen der Floats in allen anderen Browsern */
+      float: left;
+      display: inline;
+      /* (en|de) Bugfix: IE - collapsing horizontal margins */
+      position:relative;
+      /* (en) Repeat the main color from the image */
+      /* (de) Wiederholung der Hauptfarbe aus der Bilddatei */
+      background: #c0c0c0 url("../images/bar.gif") repeat-x top right;
+      border-top: 1px #000 solid;
+      line-height: 0;
   }
 
   .hlist ul {
@@ -27,13 +26,13 @@
     /* (de) Abstand des ersten Buttons vom linken Rand  */
     margin: 0 0 0 50px; /* LTR */
     padding: 0;
-    border-left: 1px #4e5a73 solid;
-    border-right: 1px #606e8d solid;
-  }
+    border-right: 1px #292e4d solid;
+    border-left: 1px #0b132b solid;
+}
 
   .hlist ul li {
-    border-left: 1px #606e8d solid;
-    border-right: 1px #4e5a73 solid;
+    border-left: 1px #292e4d solid;
+    border-right: 1px #0b132b solid;
     /* (en|de) Bugfix: IE - Doubled Float Margin Bug */
     display: inline;
     float: left; /* LTR */
@@ -68,8 +67,6 @@
     /* (en) Repeat the main color from the image */
     /* (de) Wiederholung der Hauptfarbe aus der Bilddatei */
     background: #272727 url("../images/bar_bright.gif") repeat-x top right;
-    border-left: 1px #4e5a73 solid;
-    border-right: 1px #4e5a73 solid;
   }
 
   .hlist ul li.active strong,
@@ -81,8 +78,7 @@
   /*-------------------------------------------------------------------------*/
 
   #subnav .hlist {
-    background-image: none;
-    background-color: #657494;
+    background: #657494 url(../images/bg_subnav.gif) repeat-x bottom left;
     border: none;
   }
 
@@ -97,7 +93,8 @@
   }
 
   #subnav .hlist ul li.active {
-    background: #657494 url("../images/subnav_bullet.gif") no-repeat bottom center;
+    background: transparent url("../images/subnav_bullet.gif") no-repeat bottom center;
+    background-color: transparent!important;
   }
 
   #subnav .hlist ul li a,

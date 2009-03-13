@@ -47,7 +47,9 @@
 
   div.hlist {  }
 
-  #main { margin: 0; background: #fff; }
+  #main { 
+      margin: 0; 
+      background: #fff url(../images/page_bg.gif) repeat-x top left; }
 
   #footer { 
     padding: 5px 20px; 
