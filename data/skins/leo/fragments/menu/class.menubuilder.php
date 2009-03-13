@@ -79,8 +79,7 @@ class MenuBuilder {
 
         $this->loadTree($menuid);
         $currentItem = $this->menus[$menuid]->getCurrentItem();
-        $activeItems = $currentItem->getParents();
-        array_unshift($activeItems, $currentItem);
+        $activeItems = $currentItem->getParents(true);
 
         $html = '';
 
@@ -125,7 +124,7 @@ class MenuBuilder {
         $attribs = array();
         $sublist = '';
 
-        if ($item->isActive() && $item->hasChildren() && ($offset + $depth) > 0) {
+        if ($item->isActive() && $item->hasChildren() && ($offset + $depth + 1) > 0) {
 
             foreach ($item->getChildren() as $child) {
                 $sublist .= $this->renderTree($child, $offset-1, $depth-1);

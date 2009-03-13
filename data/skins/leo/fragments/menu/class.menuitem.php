@@ -153,7 +153,7 @@ class MenuRoot extends MenuItem {
      * Possebility to store an item
      */
     public function setCurrentItem(MenuItem &$item) {
-        $this->currentItem =& $item;
+        $this->currentItem = $item;
     }
 
     /**
