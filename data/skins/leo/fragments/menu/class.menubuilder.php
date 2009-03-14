@@ -29,7 +29,7 @@ class MenuBuilder {
      */
     private function buildTree(MenuItem &$parent, $menuId) {
         foreach ($this->pages as $page) {
-            if ($page->parent == $parent->get('id') && $page->menu == $menuId) {
+            if ($page->parent == $parent->get('id') && $page->menu == $menuId && $page->published == '1') {
                 $child = $parent->addChild($page);
                 $this->buildTree($child, $menuId);
 
