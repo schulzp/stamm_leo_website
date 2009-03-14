@@ -37,5 +37,17 @@
       loadas="module">
 </item>
 
+<item id="4"
+      bundletype="menu"
+      name="Sidebar Blocks [ID:3]"
+      page=""
+      region=""
+      published="1"
+      cantarget="1"
+      source=""
+      engine=""
+      loadas="menu">
+</item>
+
 	</obj>
 </root>
