@@ -173,6 +173,13 @@ sb_conf('SITE_ANALYTICS_FILE', SB_XML_DIR.'analytics.txt');
 sb_conf('SB_STORY_XML_FILE', SB_XML_DIR.'story.xml');
 
 # ###################################################################################
+# SB_BLOCK_FILE points to the XML file containting block meta data in 
+# a particular site.
+# ###################################################################################
+
+sb_conf('SB_BLOCK_FILE', SB_XML_DIR.'block.xml');
+
+# ###################################################################################
 # SB_MENUS_FILE points to the XML file containting menu meta data for 
 # a particular site.
 # ###################################################################################
