@@ -6,6 +6,7 @@ updates.txt
 UPGRADE.txt
 info.php
 *.swp
+*.php~
 old.*
 Thumbs.db
 
