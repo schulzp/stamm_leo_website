@@ -291,7 +291,7 @@ h2#want_to_edit
 {
   background: transparent;
   height: 130px;
-  width: 652px;
+  width: 782px;
   margin-left: 13px;
   border: 0px solid #EEE;
   padding: 0px;
@@ -320,7 +320,7 @@ h2#want_to_edit
   font-weight: bold;
   font-size: 14px;
   color: #777;
-  background-image: url(../images/btns.dashboard.gif);
+  background-image: url(../images/btns.dashboard2.gif);
   background-repeat: no-repeat;
 }
 
@@ -331,12 +331,16 @@ h2#want_to_edit
 #btn-dash-collections a {background-position: -260px -117px;}
 #btn-dash-templates a   {background-position: -390px -117px;}
 #btn-dash-settings a    {background-position: -520px -117px;}
+#btn-dash-blocks a      {background-position: -650px -117px;}
+
 
 #btn-dash-page a:hover        {background-position: 0px 0px;}
 #btn-dash-pictures a:hover    {background-position: -130px 0px;}
 #btn-dash-collections a:hover {background-position: -260px 0px;}
 #btn-dash-templates a:hover   {background-position: -390px 0px;}
 #btn-dash-settings a:hover    {background-position: -520px 0px;}
+#btn-dash-blocks a:hover      {background-position: -650px 0px;}
+
 
 #main_dashboard_div h2#want_to_edit
 {
@@ -385,7 +389,8 @@ h2#want_to_edit
 #pictures_info,
 #collections_info,
 #templates_info,
-#settings_info
+#settings_info,
+#blocks_info
 {
   margin-top: -8px;
   margin-left: 14px;
@@ -401,7 +406,8 @@ h2#want_to_edit
 #pictures_info p,
 #collections_info p,
 #templates_info p,
-#settings_info p
+#settings_info p,
+#blocks_info p
 {
   font-size: 12px;
   margin-top: 0px;

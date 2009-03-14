@@ -22,6 +22,10 @@ define('MAIN_DASHBOARD',
            onmouseover="$(\'#pages_info\').show();"
            onmouseout="$(\'#pages_info\').hide();"><span class="hide">Pages</span></a>
     </li>
+    <li id="btn-dash-blocks"><a href="'.BASE_PAGE.'?mgroup=pages&mgr=block" 
+           onmouseover="$(\'#blocks_info\').show();"
+           onmouseout="$(\'#blocks_info\').hide();"><span class="hide">Blocks</span></a>
+    </li>
     <li id="btn-dash-pictures"><a href="'.BASE_PAGE.'?mgroup=pictures&mgr=media" 
            onmouseover="$(\'#pictures_info\').show();"
            onmouseout="$(\'#pictures_info\').hide();"><span class="hide">Files</span></a>
@@ -42,6 +46,11 @@ define('MAIN_DASHBOARD',
 <div id="pages_info" class="msg-info">
     <p>
         Add, edit, publish or delete pages. Enter text and pictures for your pages here.
+    </p>
+</div>
+<div id="blocks_info" class="msg-info">
+    <p>
+	Add, edit, publish or delete block elements.
     </p>
 </div>
 <div id="pictures_info" class="msg-info">
