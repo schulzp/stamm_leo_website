@@ -1,0 +1,1 @@
+ <iframe src="http://www.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=200&amp;wkst=2&amp;hl=de&amp;bgcolor=%23eeeeee&amp;src=de.german%23holiday%40group.v.calendar.google.com&amp;color=%23A32929&amp;ctz=Europe%2FBerlin" frameborder="0" scrolling="no" id="dates"></iframe>

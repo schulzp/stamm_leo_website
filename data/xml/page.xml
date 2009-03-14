@@ -118,5 +118,43 @@
       caretpos="">
 </item>
 
+<item id="25"
+      objtype="page"
+      story="page.page.25.txt"
+      title="Gruppen"
+      usesitename="0"
+      name="Gruppen"
+      syndicate="0"
+      menu="1"
+      pagetype="default"
+      parent="2"
+      keywords=""
+      meta_description=""
+      published="1"
+      isdefault="0"
+      order=""
+      modified="2009-03-14T11:44:00+00:00"
+      metagroup=""
+      caretpos="">
+</item>
+
+<item id="26"
+      objtype="page"
+      story="page.page.26.txt"
+      title="Kalender"
+      usesitename="0"
+      name="Kalender"
+      syndicate="0"
+      menu="1"
+      pagetype="default"
+      parent="4"
+      keywords=""
+      meta_description=""
+      published="1"
+      isdefault="0"
+      order=""
+      modified="2009-03-14T11:59:59+00:00">
+</item>
+
 	</obj>
 </root>
