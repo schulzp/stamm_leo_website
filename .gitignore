@@ -5,15 +5,18 @@ INSTALL.txt
 updates.txt
 UPGRADE.txt
 info.php
+
 *.swp
 *.php~
 old.*
 Thumbs.db
 
-data/xml/configuration.xml
-data/xml/password.xml
-
+data/xml/*
+data/stories/*
 data/media/*
+data/tmp/*
+data/uploads/*
+
 data/skins/techjunkie/*
 
 data/skins/leo/yaml/add-ons/*
@@ -25,7 +28,5 @@ data/skins/leo/yaml/*.*
 data/skins/leo/yaml/print/print_*_draft.css
 !data/skins/leo/yaml/print/print_103_draft.css
 
-data/tmp/*
-data/uploads/*
 plugins/editors/tinymce/*
 setup/*
