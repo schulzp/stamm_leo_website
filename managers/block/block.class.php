@@ -357,6 +357,7 @@ class block extends manager {
             $pages = $Core->xmlHandler->ParserMain(SB_PAGE_FILE);
 
         $options   = array();
+        $options[] = $Core->MakeOption('- Everywhere -', 0, 0);
 
         foreach($pages as $p) {
             $s = in_array($p->id, split(',', $obj['pages']));
