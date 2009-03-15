@@ -15,5 +15,12 @@
       order="">
 </item>
 
+<item id="3"
+      title="Sidebar Blocks"
+      menutype="vertical"
+      showtitle="0"
+      order="">
+</item>
+
 	</obj>
 </root>

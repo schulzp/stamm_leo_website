@@ -92,14 +92,28 @@ class MenuItem {
      */
     public function getParents($includeSelf = false) {
         $parents = array();
-        $item    = $includeSelf ? $this : $this->parent;
+        $item    = $includeSelf ? $this : $this->getParent();
 
-        while ($item->hasParent()) {
+        while (is_a($item, __CLASS__) && $item->hasParent()) {
             array_push($parents, $item);
             $item = $item->getParent();
         }
 
         return $parents;
+    }
+
+    /**
+     * Returns the root element
+     *
+     * @return  MenuItem        the tree's root element (with no parent)
+     */
+    public function getRoot() {
+        $item = $this;
+
+        while($item->hasParent())
+            $item = $item->getParent();
+
+        return $item;
     }
 
     /**
@@ -146,20 +160,22 @@ class MenuRoot extends MenuItem {
     public function MenuRoot() {
         $this->id = '';
         $this->setActive();
-        $this->setCurrentItem($this);
     }
 
     /**
      * Possebility to store an item
      */
     public function setCurrentItem(MenuItem &$item) {
+        if (!$item->isCurrent()) 
+            $item->setCurent();
+
         $this->currentItem = $item;
     }
 
     /**
      * Returns the item stored via MenuRoot#setCurrentItem
      *
-     * @return  MenuItem        this defaults to the item itself
+     * @return  MenuItem       the current MenuItem object or +null+ 
      */
     public function getCurrentItem() {
         return $this->currentItem;

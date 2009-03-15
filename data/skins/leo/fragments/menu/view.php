@@ -1,8 +1,6 @@
 <?php
 
-global $Filter;
-
-$page    = $Core->SelectObj($data, $Filter->get($_GET, 'pid', DEFAULT_PAGE));
+$page    = $Core->SelectObj($data, $Core->GetVar($_GET, 'pid', DEFAULT_PAGE));
 $builder = MenuHelper::GetBuilder($data, $page);
 
 ?>

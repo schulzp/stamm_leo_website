@@ -24,18 +24,17 @@ class MenuBuilder {
     /**
      * Recursively creates a tree from the pages array
      *
-     * @param   MenuItem parent  MenuItem object under which the tree is build
-     * @param   int      menuId  menu id (belonging to the current page)
+     * @param   MenuItem parent         MenuItem object under which the tree is build
+     * @param   array    pageIdx        indices of pages for this tree
      */
-    private function buildTree(MenuItem &$parent, $menuId) {
-        foreach ($this->pages as $page) {
-            if ($page->parent == $parent->get('id') && $page->menu == $menuId && $page->published == '1') {
-                $child = $parent->addChild($page);
-                $this->buildTree($child, $menuId);
+    private function buildTree(MenuItem &$parent, $pageIdx) {
+        foreach ($pageIdx as $i) {
+            if ($this->pages[$i]->parent == $parent->get('id')) {
+                $child = $parent->addChild($this->pages[$i]);
+                $this->buildTree($child, array_diff($pageIdx, array($i)));
 
-                if ($this->pid == $page->id) {
-                    $child->setCurent();
-                    $this->menus[$menuId]->setCurrentItem($child);
+                if ($this->pid == $this->pages[$i]->id) {
+                    $parent->getRoot()->setCurrentItem($child);
                 }
             }
         }
@@ -108,7 +107,12 @@ class MenuBuilder {
     private function loadTree($menuid) {
         if (!array_key_exists($menuid, $this->menus)) {
             $this->menus[$menuid] = new MenuRoot();
-            $this->buildTree($this->menus[$menuid], $menuid);
+            $idx = array();
+            for ($i = 0; $i < count($this->pages); $i++) {
+                if ($this->pages[$i]->menu == $menuid && $this->pages[$i]->published == '1')
+                    array_push($idx, $i);
+            }
+            $this->buildTree($this->menus[$menuid], $idx);
         }
     }
 
@@ -123,6 +127,7 @@ class MenuBuilder {
 
         $attribs = array();
         $sublist = '';
+
 
         if ($item->isActive() && $item->hasChildren() && ($offset + $depth + 1) > 0) {
 
