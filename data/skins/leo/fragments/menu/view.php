@@ -6,5 +6,5 @@ $builder = MenuHelper::GetBuilder($data, $page);
 ?>
 
 <div class="hlist">
-<?php echo $builder->getHTML($page->menu, (int)$params['offset'], (int)$params['depth']); ?>
+<?php echo $builder->getHTML($page->menu, $params); ?>
 </div>

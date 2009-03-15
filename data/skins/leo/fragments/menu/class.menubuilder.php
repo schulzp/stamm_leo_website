@@ -4,7 +4,17 @@ require 'class.menuitem.php';
 /**
  * This class offers an interface to work with SkyBlue's page tree
  */
+
 class MenuBuilder {
+    private $DEFAULT_OPTIONS  = array(
+        'depth'         => 100,
+        'offset'        => 0,
+        'link_current'  => false,
+        'show_all'      => false,
+        'active_class'  => 'active',
+        'separator'     => ' &gt; '
+    );
+
     private $menus     = null;
     private $pages     = null;
     private $pid       = null;
@@ -47,19 +57,20 @@ class MenuBuilder {
      * istaead the item-title is wrapped in a <strong> tag.
      *
      * @param   int     menuId
-     * @param   int     offset  menu layers to skip
-     * @param   int     depth   layers to draw
+     * @param   array   options see DEFAULT_OPTIONS
      * @return  str             an unorded HTML list with links
      */
-    public function getHTML($menuid, $offset = 0, $depth = 10) {
+    public function getHTML($menuid, $options) {
         global $Core;
+
+        $options = array_merge($this->DEFAULT_OPTIONS, $options);
 
         $this->loadTree($menuid);
 
         return $Core->HTML->MakeElement(
             'ul',
             array(),
-            $this->renderTree($this->menus[$menuid], $offset, $depth)
+            $this->renderTree($this->menus[$menuid], $options['offset'], $options['depth'], $options)
         );
     }
 
@@ -69,12 +80,14 @@ class MenuBuilder {
      * a <span> tag.
      *
      * @param   int     menuId
-     * @param   str     seperator       this is placed between the links
+     * @param   array   options         valid keys are separator and link_current
      * @return  str                     HTML links
      */
-    public function getBreadcrumenHTML($menuid, $seperator) {
+    public function getBreadcrumenHTML($menuid, $options = array()) {
         global $Core;
         global $Router;
+
+        $options = array_merge($this->DEFAULT_OPTIONS, $options);
 
         $this->loadTree($menuid);
         $currentItem = $this->menus[$menuid]->getCurrentItem();
@@ -83,7 +96,7 @@ class MenuBuilder {
         $html = '';
 
         foreach (array_reverse($activeItems) as $item) {
-            if ($item->isCurrent()) {
+            if ($item->isCurrent() && !$options['link_current']) {
                 $html .= $Core->HTML->MakeElement(
                     'span',
                     array(),
@@ -94,7 +107,7 @@ class MenuBuilder {
                     'a',
                     array('href' => $Router->GetLink($item->get('id'))),
                     $item->get('title')
-                ) . $seperator;
+                ) . $options['separator'];
             }
         }
 
@@ -121,18 +134,18 @@ class MenuBuilder {
      *
      * @see #getHtml
      */
-    private function renderTree($item, $offset, $depth) {
+    private function renderTree($item, $offset, $depth, &$options) {
         global $Core;
         global $Router;
 
         $attribs = array();
         $sublist = '';
+        $active  = $options['show_all'] ? true : $item->isActive();
 
-
-        if ($item->isActive() && $item->hasChildren() && ($offset + $depth + 1) > 0) {
+        if ($active && $item->hasChildren() && ($offset + $depth + 1) > 0) {
 
             foreach ($item->getChildren() as $child) {
-                $sublist .= $this->renderTree($child, $offset-1, $depth-1);
+                $sublist .= $this->renderTree($child, $offset-1, $depth-1, $options);
             }
 
             if (is_null($item->get('title')) || $offset > 0) return $sublist;
@@ -148,10 +161,10 @@ class MenuBuilder {
 
         // add css class 'active' to the LI containing current link
         if ($item->isActive())
-            $attribs['class'] = 'active';
+            $attribs['class'] = $options['active_class'];
 
         // don't create a to the page we're currently viewing
-        if ($item->isCurrent())
+        if ($item->isCurrent() && !$options['link_current'])
             $link = $Core->HTML->MakeElement('strong', array(), $item->get('title'));
         else
             $link = $Core->HTML->MakeElement(
