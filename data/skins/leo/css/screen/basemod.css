@@ -47,9 +47,7 @@
 
   div.hlist {  }
 
-  #main { 
-      margin: 0; 
-      background: #fff url(../images/page_bg.gif) repeat-x top left; }
+  #main { margin: 0; background: #fff; }
 
   #footer { 
     padding: 5px 20px; 
@@ -93,6 +91,8 @@
   #main div.col_header {
     padding: 0.5em 0 0 0;
     line-height: 2em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #ddd;
   }
 
   /*-------------------------------------------------------------------------*/
