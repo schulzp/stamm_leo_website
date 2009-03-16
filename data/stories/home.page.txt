@@ -1,1 +1,66 @@
-<h2>SkyBlueCanvas Lightweight CMS v1.1 Beta</h2><p>The site you are now viewing is a demonstration of the SkyBlueCanvas Lightweight CMS v1.1 Beta. We have put a lot of effort into improving SkyBlueCanvas to make it even more user-friendly. You can read about the changes on the <a href="updates.html">Updates</a> page. The package is not yet available for download because we are still working out a few bugs in the code. We invite your feedback so please don't hesitate to let us know what you think or to report any bugs or errors using the <a href="contact.html">Contact</a> page.</p><h3>What is SkyBlueCanvas Lightweight CMS?</h3><p>SkyBlueCanvas is a web site content management system, commonly referred to as a CMS. In lay terms, a content management system is a software tool that allows a web site owner to change the text and pictures on their web site without the help of a programmer and without being required to have any knowledge of the underlying technologies. SkyBlueCanvas, and most other CMSs, do require a programmer or other person knowledgeable about web sites and web servers to perform the initial set up, but after that almost anyone can update the text and pictures on the site.</p><p>When we say that SkyBlueCanvas is lightweight, we mean two things: it is smaller in terms of the total amount of space it takes up on your computer or web server, and that it is designed for small web sites. We define a small web site as a site that has fewer than 100 pages. For more details, please see the <a href="about.html">About</a> page on this site.</p><h3>SkyBlueCanvas is Open Source and Free Software</h3><p>SkyBlueCanvas is open source, which means that you can download the source code and modify it to fit your needs. SkyBlueCanvas is also free software which means that you do not have to pay to use the software. SkyBlueCanvas is licensed under the GNU General Public License (GPL) v3.0. You can read the details of this license on the <a href="http://www.gnu.org/copyleft/gpl.html">GNU/GPL web site</a>. Some components of SkyBlueCanvas are produced by third-party developers and are protected by their respective licenses.</p>
+<h2>Pfadfinder - ein Wanderverein?</h2>
+<p>Nat&uuml;rlich machen wir Lager und Fahrten, aber eben mit "Pfadfindertouch".
+Das hei&szlig;t, wir lassen den Alltag zu Hause und gehen nur mit dem,
+was wir auf dem R&uuml;cken tragen k&ouml;nnen, raus in die Natur. In
+dieser Freiheit leben wir f&uuml;r eine Weile ohne Luxus, aber auch ohne
+die Zw&auml;nge, die wir sonst kennen.</p>
+
+<h2>Jeden Tag eine gute Tat?</h2>
+<p>Kommt vor ... aber normalerweise treffen wir uns einmal pro Woche zur
+Gruppenstunde. Das ist nie langweilig - wir spielen, singen oder sitzen
+einfach zusammen und lernen einander besser kennen. Oder wir bereiten
+unsere n&auml;chsten Unternehmungen und Abenteuer vor.</p>
+
+<h2>Was bringt das?</h2>
+<p>Wenn wir die technische Welt verlassen, wissen wir morgens noch nicht,
+was im Laufe des Tages passiert. Schwierige Situationen sind nicht nur
+eine Herausforderung, sondern oft der Anfang f&uuml;r unvergessliche
+Erlebnisse. Mit der Einstellung, Schwierigkeiten nicht aus dem Wege zu
+gehen, sondern sie gemeinsam mit anderen zu meistern, beginnt das
+Abenteuer. Und zu wissen, dass die anderen hinter einem stehen, gibt uns
+den Mut, unsere Grenzen zu &uuml;berschreiten.</p>
+
+<h2>Wer bestimmt?</h2>
+<p>Wir finden es wichtig, dass wir unsere Freizeit selber organisieren.
+Wir w&auml;hlen einen Gruppenleiter, der die Verantwortung tr&auml;gt
+und uns vertritt. Was wir machen, wird vorher in der Gruppe besprochen
+und dann gemeinsam beschlossen. Wenn wir Tipps brauchen, k&ouml;nnen wir
+auf erfahrene Leute aus dem Stamm zur&uuml;ckgreifen.</p>
+
+<h2>Was ist ein Stamm?</h2>
+<p>Unsere Pfadfinderguppen vor Ort nennen wir "St&auml;mme". Ein
+Stamm besteht aus mehreren kleinen Gruppen, die wir je nach Altersstufe
+als Meute, Sippe oder Runde bezeichnen. Der BdP (Bund der
+Pfadfinderinnen und Pfadfinder) ist nicht kirchlich gebunden. Er ist
+politisch unabh&auml;ngig und Mitglied in den Weltorganisationen der
+Pfadfinderinnen- und Pfadfinderbewegung.</p>
+
+<h2>Wozu die Uniform?</h2>
+<p>Das Pfadfinderhemd und das Halstuch hei&szlig;en bei uns "Kluft".
+Sie ist keine Uniform, sondern ein pers&ouml;nliches Statement - &auml;hnlich
+wie das Trikot einer Fu&szlig;ballmannschaft - dass wir zu der
+Gemeinschaft der Pfadfinderinnen und Pfadfinder geh&ouml;ren und mit
+ihnen unseren eigenen Weg gehen.</p>
+
+<h2>Und die Pfadfinderregeln?</h2>
+<p>Baden-Powell, der Gr&uuml;nder der Pfadfinderbewegung, hat einmal
+gesagt, dass wir unsere Welt ein bisschen besser hinterlassen sollten,
+als wir sie vorgefunden haben. Dass das Spa&szlig; machen kann, erleben
+wir immer wieder aufs Neue. Wir sehen das Lebe als gro&szlig;es Spiel,
+das wir nach den Pfadfinderregeln spielen. Diese Regeln sind keine
+Gesetze, sondern dr&uuml;cken unsere Lebenseinstellung aus. An sich
+selbst glauben und sich auf andere verlassen k&ouml;nnen - so erreichen
+wir unsere Ziele, bei den Pfadfindern und auch im Leben.</p>
+
+<h2>Pfadfinder - f&uuml;r wen ist das?</h2>
+<p>Bei uns finden und engagieren sich die unterschiedlichsten Leute. Jeder
+kann hier seine F&auml;higkeiten einbringen und weiterentwickeln. Wer
+Spa&szlig; daran hat, neue Freunde kennenzulernen, um mit ihnen st&auml;ndig
+etwas auf die Beine zu stellen, ist bei uns genau richtig.</p>
+
+<h2>Pfadfinder - total altmodisch?</h2>
+<p>Das Neue, das Ungewisse, das Abenteuer ist heute genauso spannend wie
+fr&uuml;her. So gesehen sind wir aus Tradition offen f&uuml;r das
+Unbekannte - dass sich Jungen und M&auml;dchen zutrauen damit zurecht zu
+kommen, war vor einigen Jahrzehnten au&szlig;ergew&ouml;hnlich und ist
+heute immer noch nicht selbstverst&auml;ndlich.
