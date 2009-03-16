@@ -34,57 +34,55 @@ if (the_action() == "send") {
         echo empty($config['contact_phone'])     ? null : "<br />Phone: {$config['contact_phone']}\n" ;
         echo "</address>\n";
     }
-    ?>
-    <form action="<?php echo the_form_action(); ?>" method="post" id="emailForm">
+?>
+<p>
+    Alternativ können Sie das folgende Formular verwenden, um uns eine E-Mail zu senden.
+</p>
+    <form action="<?php echo the_form_action(); ?>" method="post" id="emailForm" class="yform">
         <fieldset>
+            <legend>Ihre Angaben</legend>
             <div class="contact_email_contact">
                 <?php if (count($data) > 1) : ?>
-                <label class="fieldlabel">To:</label>
-                <select name="cid">
-                    <?php foreach ($data as $contact) : ?>
-                    <option value="<?php echo $contact->id; ?>"><?php echo $contact->name; ?></option>
-                    <?php endforeach; ?>
-                </select>
-                <?php endif; ?>
-                <label class="fieldlabel">Name:</label>
-                <input type="text" 
-                       name="name" 
-                       size="47" 
-                       class="inputbox" 
-                       value="" 
-                       />
-                <label class="fieldlabel">Email Address:</label>
-                <input type="text" 
-                       name="email" 
-                       size="47" 
-                       class="inputbox" 
-                       value="" 
-                       />
-                <label class="fieldlabel">Subject:</label>
-                <input type="text" 
-                       name="subject" 
-                       size="47" 
-                       class="inputbox" 
-                       value="" 
-                       />
-                <label class="fieldlabel">Message:</label>
-                <textarea cols="44" 
-                          rows="5" 
-                          name="message" 
-                          class="inputbox"></textarea>
-                <div class="buttons">
-                    <input type="submit" name="action" value="Send" class="button" />
+                <div class="type-select">
+                    <label for="cid">An:</label>
+                    <select name="cid" class="type-select">
+                        <?php foreach ($data as $contact) : ?>
+                        <option value="<?php echo $contact->id; ?>"><?php echo $contact->name; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+
                 </div>
-                <div id="contact_mailing_list">
-                    <label class="fieldlabel">
-                    Would you like to be added to our mailing list?
-	                </label>
-	                <input type="radio" name="mailinglist" value="1" checked="checked" />&nbsp;Yes&nbsp;
-	                <input type="radio" name="mailinglist" value="0" />&nbsp;No&nbsp;
+                <?php endif; ?>
+                <div class="type-text">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" value="" />
+                </div>
+                <div class="type-text">
+                    <label for="email">E-Mail Adresse:</label>
+                    <input type="text" name="email" size="47" value="" />
+                </div>
+                <div class="type-text">
+                    <label for="subject">Betreff:</label>
+                    <input type="text" name="subject" size="47" value="" />
+                </div>
+                <div class="type-text">
+                    <label for="message">Nachricht:</label>
+                    <textarea cols="44" rows="5" name="message"></textarea>
+                </div>
+                <div class="type-ceck" id="contact_mailing_list">
+                    <label for="">
+                        Wollen Sie useren Newsletter erhalten?
+                    </label>
+                    <input type="radio" name="mailinglist" value="1" />&nbsp;Ja&nbsp;
+                    <input type="radio" name="mailinglist" value="0" checked="checked" />&nbsp;Nein&nbsp;
                 </div>
                 <input type="hidden" name="cc" value="0" />
             </div>
         </fieldset>
+        <div class="type-buttons">
+            <input type="reset" name="reset" id="reset" value="Zurücksetzen"/>
+            <input type="submit" name="action" id="submit" value="Senden" />
+        </div>
     </form>
 </div>
 <!-- END CONTACT FORM -->

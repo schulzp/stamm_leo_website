@@ -1,13 +1,11 @@
 <?php
 
 function check_address($config) {
-    $check = 
-        $config['contact_address'] 
-        . $config['contact_city'] 
-        . $config['contact_state'] 
-        . $config['contact_zip']
-        . $config['contact_phone'];
-    return (empty($check) ? 0 : 1);
+    $ok = false;
+    foreach (split(',','address,city,state,zip,phone') as $key) {
+        if (!empty($config["contact_$key"])) return true;    
+    }
+    return false;
 }
 
 function the_contact($contacts, $config) {
