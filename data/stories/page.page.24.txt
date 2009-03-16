@@ -1,1 +1,1797 @@
-<p>Stamm LEO hat eine lange Geschichte</p>
+<p style="text-align: justify;">Diese und viele
+	weitere Informationen und Materialien wurden im Rahmen des Projektes "Die
+	Geschichte der Pfadfinder in Leipzig und Sachsen" der Runde
+	Silberlöwe anlässlich unseres 10. Stammesgeburtstages am 25.
+	Juni 2000 zusammengetragen. Besonderer Dank für ihre Unterstützung
+	geht an Dieter Sawitzky - Westmann und Adolf Schmeißer - Alo (†)
+	vom Verband Deutscher Altpfadfindergilden (VDAPG).</p><table width="100%">
+          <tbody>
+			  <tr>
+				  <td valign="top">18.01.1911</td>
+				  <td style="text-align: justify;" valign="top">Gründung
+					  des Deutschen Pfadfinderbundes (DPB) in Berlin. Bundeszeichen:
+					  schwarz-weiß-rotes Schachbrett. Militärische Gliederung.
+					  Reichsfeldmeister: Hauptmann Maximilian Bayer (Halberstadt).<br />
+					  <img alt="image" title="image" src="../../../../../../data/media/schachbrett-dpb.gif" /><br />
+				  </td></tr><tr>
+				  <td valign="top">1912 - 1938</td>
+				  <td style="text-align: justify;" valign="top">In Sachsen
+					  werden viele regionale, aber vor allem auch nationale und überbündische
+					  Zeitschriften und Bücher der Pfadfinderbewegung herausgegeben.
+					  Zu den wichtigsten Verlagen zählen u.a. Vg. Otto Spamer
+					  (Leipzig), Vg. J.J. Weber (Leipzig), Vg. K./R. Nuschke (Leipzig),
+					  Vg. C.C. Meindl (Dresden), Pfad-Verlag (Dresden), Das junge Volk - Günther
+					  Wolff (Plauen/Vogtl.). <br />
+
+					  <img alt="Bundeszeitschrift des DPB" title="image" src="../../../../../../data/media/der_pfadfinder.jpg" /><br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">16.06. 1912</td>
+
+				  <td style="text-align: justify;" valign="top">"Verein
+					  Pfadfinder Leipzig" wird gegründet. Der Verein unterstützt
+					  das Leipziger Pfadfinderkorps des DPB, dem im Januar 1913 etwa 900
+					  Kinder (ab 10 Jahren) in 27 Zügen und 40 Führer angehören.
+					  Ende der 20er Jahre Umbenennung in "Deutscher Pfadfinderbund,
+					  Horst Leipzig". <br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">1913</td>
+				  <td style="text-align: justify;" valign="top">Erste Erwähnung
+					  von Pfadfindern im Leipziger Adressbuch:<br />
+					  Verein Pfadfinder Leipzig<br />
+					  1. Vors.: Oberst z. D. Heinicke, Steinstr. 30. Schatzmstr.: Reg.
+					  Rat a. D. Dr. Schönfeld, Direktor d. Deutschen Bank,
+					  Rathausring 2. Schriftf.: Oberlehrer Dr. Böttcher, König-Albert-Gymnasium.
+					  Auskunft wird erteilt jed. Dienstag u. Freitag nachm. von 5 - 8½
+
+					  Uhr im Jugendheim, Töpferstr. 2. Daselbst jeden Dienstag Abend
+					  von 8½ Uhr ab Versamml. d. Führer (Feldmstr. des vom
+					  Verein unterstützten Pfadfinderkorps).<br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">04.01. 1913</td>
+
+				  <td style="text-align: justify;" valign="top">Elternabend
+					  des Pfadfinderkorps zu Leipzig (DPB) im Großen Saal des
+					  Zoologischen Gartens (Artikel im "Leipziger Tageblatt"). <br />
+					  Auf dem Programm stehen einige Reden, Vorträge, künstlerische,
+					  musikalische und andere Darbietungen (z.B. Fahnenschwenken). Als Gäste
+					  sind Frau Exzellenz v. Kirchbach, Bürgermeister Roth, Oberst z.
+					  D. Heinicke und Gaufeldmeister Leutnant Wenzel anwesend. Zur Zeit
+					  gibt es 2½ Millionen Jungen in Deutschland ohne Vereinigung,
+					  derer man sich annehmen will. Man möchte den Jungen "Ritterlichkeit
+					  im besten Sinne, Höflichkeit und Bescheidenheit lehren;
+					  Willenskraft soll geweckt und gehoben werden und damit die Selbständigkeit.
+					  Der Pfadfinder soll auch hilfsbereit sein, wird ausgebildet, um bei
+					  Unglücksfällen den Nebenmenschen Beistand leisten zu können
+					  (zwei Pfadfinder des hiesigen Korps wurden schon mit der
+					  Rettungsmedaille ausgezeichnet)". <br />
+
+					  Weiterhin sollen die Jungen Spurenlesen und die Beobachtung von
+					  Tieren und Pflanzen etc. erlernen. An schlechten Wintertagen werden
+					  "Vorträge über Pflichten und Rechte des deutschen
+					  Staatsbürgers" gehalten. "Die Auffassung, dass
+					  Pfadfinder militärische Dinge betreiben ist ein Irrtum.
+					  Pfadfinder haben keine Waffen!" <br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">18.01. 1913</td>
+				  <td style="text-align: justify;" valign="top">Hauptversammlung
+					  des DPB in Berlin (Artikel in den "Leipziger Neuesten
+					  Nachrichten"). Im Januar 1911 gab es 42 Ortsgruppen des Bundes.
+					  Nun gehören dem DPB 40.000 bis 50.000 Pfadfinder und 1.000
+					  Feldmeister aus 140 Ortsgruppen im gesamten Reich an. <br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">März 1913</td>
+				  <td style="text-align: justify;" valign="top">Gründung
+					  des Pfadfinderinnen-Vereins Leipzig (Artikel in "Leipziger
+					  Neuesten Nachrichten" im Juni) - später: "Bund
+					  deutscher Pfadfinderinnen, Ortsgruppe Leipzig". Der Verein hat über
+					  200 Mitglieder ab 10 Jahren. Unter den Mitgliedern des Ehrenpräsidiums
+					  befinden sich: Frau Oberbürgermeister Dr. Dittrich, Frau Dr.
+					  Henriette Goldschmidt (Gründerin der Frauenhochschule Leipzig),
+					  Herr Dr. Förster (Gründer der ersten Pfadfinderinnengruppe
+					  Deutschlands - 1910 in Hamburg). <br />
+
+					  Die Vereinsziele: "Unsere weibliche Jugend soll vor allem körperlich
+					  gekräftigt und angeleitet werden, den rechten Lebenspfad zu
+					  finden. Zur Erreichung dieser Ziele wird der Verein verschiedene
+					  Wege einschlagen: die jungen Mädchen sollen nicht nur wandern,
+					  Bewegungsspiele, praktische Übungen und Atemgymnastik im Freien
+					  treiben, sondern auch die Samariterpflege üben und den
+					  Gartenbau erlernen und pflegen." <br />
+					  Die Gruppe bewirtschaftet zwei Gärten mit Unterkunftshäusern
+					  im Norden und Süden Leipzigs. Geschäftsstelle: Grassistraße
+					  28. <br />
+
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">10.- 12.5. 1913</td>
+				  <td style="text-align: justify;" valign="top">Pfadfindertag
+					  in Magdeburg mit 1500 Pfadfindern aus 25 Städten und
+					  Ortschaften ganz Deutschlands und Böhmens (Artikel im "Leipziger
+					  Tageblatt"). Auch Leipzig war durch Herrn Oberst z.D. Heinicke
+					  und cand. zool. Fritzsche vertreten. Neben "allerlei gutem
+					  Essen" gab es auch von Maggi gesponserte Suppen. <br />
+
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">Nov. 1913</td>
+				  <td style="text-align: justify;" valign="top">Das
+					  Pfadfinderkorps "Sachsentreue" aus Leipzig stellt bei der
+					  Stadt einen Antrag auf finanzielle Unterstützung, der abgelehnt
+					  wird. Pfadfinderbüro Sachsentreue: Pestalozzistraße 1 (Nähe
+					  Carola-Bad), Telefon 20434. <br />
+
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">1914</td>
+				  <td valign="top">Aus den "Bestimmungen für
+					  den Pfadfinderverein und das Pfadfinderkorps in Leipzig":
+
+
+					  <ul>
+						  <li>nur die erwachsenen Pfadfinder sind Mitglieder im
+						  Pfadfinderverein</li>
+						  <li>Jahresbeitrag: 1 Mark   10 bis 20 Pfennig an die Gruppenkasse</li>
+						  <li>Feldmeister zahlen keinen Beitrag</li>
+						  <li>8 bis 12 Jungen =&gt; 1 Gruppe</li>
+						  <li>3 bis 4 Gruppen =&gt; 1 Zug</li>
+
+						  <li>3 bis 4 Züge =&gt; 1 Feldkompanie</li>
+						  <li>4 Feldkompanien =&gt; 1 Feldbataillon</li>
+						  <li>Ein älterer Pfadfinder, Kornett oder Gruppenführer
+						  genannt, befehligt die Gruppe. Er wird vom Hilfskornett
+						  vertreten.</li>
+						  <li>der Kornett soll älter sein als die anderen
+						  Gruppenmitglieder und wird vom Hauptfeldmeister auf Empfehlung
+						  des Feldmeisters eingesetzt</li>
+
+						  <li>Gruß der Pfadfinder in Tracht: schlichtes Anlegen der
+						  rechten Hand an den Hutrand</li>
+						  <li>die Pfadfinderausrüstung kann bei der Firma Hollenkamp &amp;
+						  Comp., Leipzig, Brühl, nur gegen Abgabe einer Bescheinigung
+						  gekauft werden</li>
+						  <li>Ausrüstung: Joppe und Beinkleid, im Winter gestrickte
+						  Unterjacke, Hut, Gürtel, Umhang, 2 Zeltriemen, Rucksack,
+						  Besteck, Trinkbecher</li>
+
+						  <li>Monatszeitschrift "Der Pfadfinder", Preis 10
+						  Pfennig</li>
+						  <li>Geschäftstelle: Jugendheim, Töpferstr. 2</li>
+				  </ul> </td>
+			  </tr>
+			  <tr>
+
+				  <td valign="top">1914 - 1918</td>
+				  <td valign="top">Während des 1.
+					  Weltkrieges leisten die Pfadfinder Kriegshilfsdienste im Reich und
+					  im besetzen Belgien.<br />
+					  Artikel in "Leipziger Neuesten Nachrichten" Nr. 23 vom
+					  23.01.1915:<br />
+					  "Unsere Leipziger Pfadfinder"<br />
+					  - dem DPB gehören 300 Ortsgruppen mit etwa 100.000 Mitgliedern
+					  an <br />
+
+					  - Leipziger Korps hat ca. 700 Mitglieder, Geschäftsstelle:
+					  Thomasring 9 <br />
+					  - die Leipziger Pfadfinder leisten zur Zeit Ordonnanzdienste,
+					  Schutzdienst für Fernverkehrswege und Fernsprech- sowie
+					  Telegraphenleitungen (275 Mann), Wach- und Botendienste, Hilfe beim
+					  Roten Kreuz, der allg. Wohltätigkeit, als Nationaler
+					  Frauendienst, Erfrischungsstationen auf den Bahnhöfen<br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+
+				  <td valign="top">15.01. 1915</td>
+				  <td style="text-align: justify;" valign="top">Frau Geheimrat
+					  Heinrici vom Pfadfinderinnen-Verein Leipzig eröffnet eine Nähstube
+					  für arbeitslose Frauen und Mädchen. Im Juni 1915 muss die
+					  Stube, in der bis zu 65 Frauen Beschäftigung fanden, mangels
+					  Arbeit geschlossen werden.<br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">26.05. 1918</td>
+				  <td style="text-align: justify;" valign="top">Gründung
+					  des DPB-Pfadfindercorps Falkenberg (Bez. Halle) durch den evang.
+					  Pastor Rudolf Bürger. 56 Mitglieder, wöchendliche Übungen. <br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">27./28.9. 1919</td>
+				  <td style="text-align: justify;" valign="top">Sächsischer
+					  Pfadfindertag des DPB in Pirna. Einleitung der Erneuerungsbewegung,
+					  die später in der Ringgemeinschaft mündet. <br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">1920</td>
+				  <td style="text-align: justify;" valign="top">Der Deutsche
+					  Pfadfinderbund für junge Mädchen nennt sich nunmehr Bund
+					  Deutscher Pfadfinderinnen. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+
+				  <td valign="top">01.05. 1920</td>
+				  <td style="text-align: justify;" valign="top">Unter der Führung
+					  der Dresdener Gruppen setzt sich in der Christlichen
+					  Pfadfinderschaft Sachsen (Teil der evang. Christlichen
+					  Pfadfinderschaft Deutschlands - CPD), die Reformbewegung
+					  Tatgemeinschaft Sachsen durch. Tagung auf der Augustusburg, Kr. Flöha. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">20.- 23.5. 1920</td>
+
+				  <td style="text-align: justify;" valign="top">Feldmeistertag
+					  des DPB in Naumburg, u.a. mit Teilnehmern aus Döbeln, Freiburg,
+					  Leipzig, Dresden und Merseburg. Ringen um die Erneuerung des Bundes.
+					  Zusammenschluss der Reformer (Ringgemeinschaft). <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">1920/1921</td>
+				  <td style="text-align: justify;" valign="top">Kampf der
+					  Tatgemeinschaft Sachsen (CPD) gegen Schmutz und Schund im öffentlichen
+					  Leben: Proteste gegen Filme und Bücher, Demonstrationen. <br />
+
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">15.- 18.10. 1920</td>
+				  <td style="text-align: justify;" valign="top">Die sächsischen
+					  Ringpfadfinder im DPB schließen sich auf einer Tagung auf der
+					  Rochsburg/Mulde enger zusammen. <br />
+					  <br />
+
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">13.02. 1921</td>
+				  <td style="text-align: justify;" valign="top">Die Bundesführung
+					  des DPB erkennt die "allgemeinen Richtlinien der
+					  Ringgemeinschaft" an. <br />
+					  <br />
+
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">01.05. 1921</td>
+				  <td style="text-align: justify;" valign="top">"Augustusburger
+					  Losung" der Tatgemeinschaft Sachsen (CPD).<br />
+					  <br />
+				  </td>
+
+			  </tr>
+			  <tr>
+				  <td valign="top">Mai 1921</td>
+				  <td style="text-align: justify;" valign="top">Die
+					  Ringgemeinschaft in Sachsen (DPB) richtet eine Mittelstelle für
+					  die sudetendeutschen Pfadfinder in Böhmen (CSR) ein.<br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">09./10.6. 1921</td>
+				  <td style="text-align: justify;" valign="top">Reichsführertagung
+					  der CPD in Neudietendorf bei Gotha. Gründung der einheitlichen
+					  CPD für das gesamte Reich. Bundeszeichen: Die Kreuzlilie.
+					  Reichsführer Lic. Erich Stange.<br /><img alt="Kreuzlilie der CPD" title="image" src="../../../../../../data/media/kreuzlilie-cpd.gif" /><br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">15.7.- 10.8. 1921</td>
+				  <td style="text-align: justify;" valign="top">Sommerlager
+					  der Ringgemeinschaft (DPB) bei Tirschenreuth (Bayrischer Wald). <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">21./22.8. 1921</td>
+
+				  <td style="text-align: justify;" valign="top">Landestreffen
+					  und Sportfest des Landesverbandes (LV) Mitteldeutschland des DPB in
+					  Ohrdruf (Thür.). Über 250 Teilnehmer, u.a. aus Naumburg. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">11.- 14.11. 1921</td>
+				  <td style="text-align: justify;" valign="top">Feldmeistertagung
+					  des DPB in Berlin. Vertreter aus Leipzig, Dresden und Falkenberg als
+					  Teilnehmer.<br />
+
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">1921</td>
+				  <td style="text-align: justify;" valign="top">Übergriffe
+					  kommunistischer Organisationen auf (deutschnationale) Pfadfinder des
+					  DPB in Sachsen und Thüringen. Auf Anordnung der Landesverbände
+					  werden die schwarz-weiß-roten Fahnen, Wimpel und Abzeichen
+					  nicht mehr in der Öffentlichkeit gezeigt. Ersatz-Bundeszeichen:
+					  Der Pfadfinder im Rund. <br />
+
+					  <img alt="image" title="image" src="../../../../../../data/media/pfadfinder_im_ring-dpb.gif" /><br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">19.02. 1922</td>
+				  <td style="text-align: justify;" valign="top">Auf Initiative
+					  der Neupfadfinder Tagung der Reformer in Berlin-Karlshorst. Sieben Bünde
+					  vertreten, darunter die Ringgemeinschaft (Sachsen). <br />
+					  <br />
+
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">1922</td>
+				  <td style="text-align: justify;" valign="top">Gründung
+					  des DPB-Horstes Torgau. Initiator: Zahnarzt Dr. Behmack. Unterstützung
+					  durch den Horst Falkenberg. Neuanfänge auch in Eilenburg und
+					  Wurzen. <br />
+					  <br />
+
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">09.03. 1922</td>
+				  <td style="text-align: justify;" valign="top">Reichsführertagung
+					  der CPD in Leipzig. Dem Bund gehören 165 Trupps mit 3.000
+					  Pfadfindern an. <br />
+					  <br />
+				  </td>
+
+			  </tr>
+			  <tr>
+				  <td valign="top">10./11.4. 1922</td>
+				  <td style="text-align: justify;" valign="top">Wartburg-Tagung
+					  von 7 Bünden. 45 Teilnehmer, darunter u.a. Dr. Hans Fritzsche
+					  (Leipzig) von der Ringgemeinschaft im DPB. <br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">20.- 24.4. 1922</td>
+				  <td style="text-align: justify;" valign="top">Bundestag des
+					  DPB in Bad Sachsa/Harz. Erneuerung des Bundes. Neue
+					  Bundesverfassung, neue jugendgemäße Kluft, Hinwendung zur
+					  Bündischen Jugend. Die Ringgemeinschaft scheidet aus dem DPB
+					  aus und bildet den selbständigen Bund Deutscher Ringpfadfinder
+					  (BDR) unter Dr. Hans Fritzsche. <br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">Mai 1922</td>
+				  <td style="text-align: justify;" valign="top">Freiherr v.
+					  Seckendorff tritt als Reichsfeldmeister des DPB zurück. Sein
+					  Nachfolger Hanns Ries (Keilhau/Thür.) fördert die bündische
+					  Entwicklung.<br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">Juni 1922</td>
+				  <td style="text-align: justify;" valign="top">Regierungsrat
+					  Paul Wilhelm Wetzel (Schwarzenberg) wird als Nachfolger von Hanns
+					  Ries Bundeskanzler des DPB. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">20.08. 1922</td>
+
+				  <td style="text-align: justify;" valign="top">Der
+					  Falkenhorst in Falkenberg (DPB) weiht nach zweijähriger Bauzeit
+					  (vorwiegend in Eigenarbeit!) sein Blockhaus in den Walbergen als
+					  Heim ein.<br />
+					  <br />
+
+					  <img alt="Blockhaus des Falkenhorst" title="image" src="../../../../../../data/media/blockhaus.gif" /><br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+
+				  <td valign="top">08.04. 1923</td>
+				  <td style="text-align: justify;" valign="top">Zusammenschluss
+					  der sächsischen christlichen Pfadfinderinnen zur
+					  Tatgemeinschaft Sachsen der christlichen Pfadfinderinnen. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">20.- 26.5. 1923</td>
+
+				  <td style="text-align: justify;" valign="top">Führerwoche
+					  des DPB in Dresden-Blasewitz. Bekenntnis zum Lebensbund. 371
+					  Teilnehmer, darunter 138 Feldmeister aus 73 Horsten und 4 Gäste
+					  aus dem Ausland. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">1924</td>
+				  <td style="text-align: justify;" valign="top">Bekannte
+					  Pfadfinderführer des DPB in Leipzig: Dr. Jochen Hahn, Jochen
+					  List, Gerhard Pallmann (Liederwart), Hans Zeisig (Papa Piep). <br />
+
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">6.- 9.6.1924</td>
+				  <td style="text-align: justify;" valign="top">2. Bundestag
+					  des DPB auf dem Knüll (Rhön) mit ca. 4.000 Teilnehmern.
+					  Bundesthing, Bundesfeier, Gottesdienst, Pfadfinderausstellung.
+					  Wilhelm Fabricius (Hartmut) wird zum Reichsvogt gewählt. Die
+					  Landesverbände Sachsen, Schlesien und Thüringen reisen ab
+					  Leipzig Hbf. mit einem Sonderzug bis Oberaula an, anschließend
+					  Fußmarsch (950 Teilnehmer). Im Lager wird für die im
+					  Rhein-Ruhr-Gebiet durch die französische Besatzungsmacht
+					  verbotenen Pfadfinder Geld gesammelt. <br />
+
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">9.6.- Herbst '24</td>
+				  <td style="text-align: justify;" valign="top"><a name="machern">Die</a>
+					  Leipziger Pfadfinder des DPB bauen sich den stark gebeutelten
+					  Machern-Turm bis Jahresende zu einer "behaglichen"
+
+					  Herberge um. Zum Turmausbau sind im Januar 1929 in der Zeitschrift "Der
+					  Pfadfinder" (DPB) ein interessanter
+					  <a href="machern_bericht.htm">Zeitzeugenbericht</a> mit Bauplan und
+					  ein <a href="machern_gedicht.htm">Gedicht</a> mit einigen
+					  Zeichnungen vom Bau erschienen.<br />
+					  <br />
+					  <img alt="Machern-Turm" title="image" src="../../../../../../data/media/machern_foto.gif" /><br />
+					  <br />
+
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">1924</td>
+				  <td style="text-align: justify;" valign="top">Der
+					  Falkenhorst in Falkenberg (DPB) gehört nun zum Gau Osterland
+					  der Landesmark (LM) Sachsen. Landesvogt: Regierungsrat Paul Wilhelm
+					  Wetzel (Schwarzenberg). Gauvogt: Dr. Jochen Hahn (Leipzig), später
+					  Jochen List. <br />
+					  <br />
+				  </td>
+
+			  </tr>
+			  <tr>
+				  <td valign="top">12./13.7. 1924</td>
+				  <td style="text-align: justify;" valign="top">Bezirksjugendtag
+					  in Merseburg, Jugendheim "Herzog Christian". Plan zum Bau
+					  eines Landheimes mit Jugendherberge an der Eckartsburg. Falkenhorst
+					  (Falkenberg) vertreten. <br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">Sommer 1924</td>
+				  <td style="text-align: justify;" valign="top">"Das Späherbuch"
+					  von Fritz Riebold erscheint als Arbeitshilfe für die Späherstufe
+					  der CPD in Dresden. <br />
+					  <br />
+				  </td>
+
+			  </tr>
+			  <tr>
+				  <td valign="top">20.- 24.9. 1924</td>
+				  <td style="text-align: justify;" valign="top">Tagung der
+					  Bundesleitung des BDR in Leipzig mit Grundsatzerklärung zum "Willen
+					  des Bundes". <br />
+					  <br />
+				  </td>
+
+			  </tr>
+			  <tr>
+				  <td valign="top">1924</td>
+				  <td style="text-align: justify;" valign="top">Aus dem Gau
+					  Osterland der DPB-LM Sachsen geht der neue Gau Kursachsen hervor.
+					  Gauvogt: Paul Struck (Torgau), später Rudi Planert (Wurzen).
+					  Horste im Gau Kursachsen: Belgern, Bockwitz, Eilenburg, Elsterwerda,
+					  Mückenberg, Torgau, Wittenberg und Wurzen. <br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">07./08.2. 1925</td>
+				  <td style="text-align: justify;" valign="top">Führertagung
+					  des BDR in Leipzig. Thema: Verfassung und Ziele des Bundes. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+
+				  <td valign="top">Ostern 1925</td>
+				  <td style="text-align: justify;" valign="top">Dr. Joachim
+					  (Jochen) Hahn (Leipzig) wird zum Bundesfeldmeister des
+					  DPB-Bundessprengels Mitteldeutschland berufen. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">1925 - 1926</td>
+
+				  <td style="text-align: justify;" valign="top">Dr. Gerhard
+					  Stephan (Kamenz) wird neuer Landesvogt und Gerhard Peitz
+					  (Falkenberg) neuer Landesschatzmeister der DPB-LM Sachsen. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">29.5.- 1.6. 1925</td>
+				  <td style="text-align: justify;" valign="top">Landeslager
+					  der DPB-LM Sachsen am Galgenberg bei Piskowitz (Oberlausitz) mit 600
+					  Teilnehmern. Feldgottesdienst mit Alt-FM Thierfelder, Theaterstück
+					  "Torgauer Heide" vom Horst Zittau, großes Geländespiel.
+					  Unterkünfte in den Scheunen der Bauern und Verpflegung aus
+					  Feldküchen. Organisation: Horst Kamenz. <br />
+
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">29.5.- 1.6. 1925</td>
+				  <td style="text-align: justify;" valign="top">Bund der
+					  Reichspfadfinder (BdR) wird in Rädnitz/Oder gegründet.<br />
+					  <br />
+
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">29.5.- 1.6. 1925</td>
+				  <td style="text-align: justify;" valign="top">Bundeslager
+					  des BDR am Regenstein im Harz. Zerfall des Bundes. Ein Teil der
+					  Gruppen bildet unter Hans Riedel (Leipzig) den neuen Bund
+					  Ringgemeinschaft deutscher Pfadfinder (RdP). Andere sächsische
+					  Gruppen kehren in den DPB zurück. <br />
+					  <br />
+				  </td>
+
+			  </tr>
+			  <tr>
+				  <td valign="top">1925/1926</td>
+				  <td style="text-align: justify;" valign="top">Die
+					  Waffenmeister (Erwachsene/Rover) des Horstes Falkenberg (DPB)
+					  erbauen sich ein eigenes kleines Heim in den Walbergen. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+
+				  <td valign="top">5./6.9. 1925</td>
+				  <td style="text-align: justify;" valign="top">Kreisjugendtreffen
+					  des Landkreises Liebenwerda in Falkenberg unter Teilnahme der
+					  Pfadfinder mit Gottesdienst und Fackelmarsch. Unterkunft:
+					  Jugendherberge und die beiden Pfadfinderheime in den Walbergen. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">21./22.11. 1925</td>
+
+				  <td style="text-align: justify;" valign="top">Älterentreffen
+					  der Tatgemeinschaft Sachsen (CPD) auf der Augustusburg. <br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">30.11. 1925</td>
+				  <td style="text-align: justify;" valign="top">Bund der
+					  Neupfadfinder und Bund Deutscher Ringpfadfinder bilden den Großdeutschen
+					  Pfadfinderbund. Führer: Pastor Martin Voelkel (Karlshorst) <br />
+
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">27./28.2. 1926</td>
+				  <td style="text-align: justify;" valign="top">Der Großdeutsche
+					  Pfadfinderbund (Ring- und Neupfadf.) gründet mit verschiedenen
+					  Wandervogel-Bünden den Bund der Wandervögel und Pfadfinder
+					  (BdWuP). Führer: Hans Dehmel (Löwenberg/Schles.). <br />
+
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">1926</td>
+				  <td style="text-align: justify;" valign="top">Dr. Wilhelm
+					  Schwenke (Leipzig) wird neuer Landesvogt der DPB-LM Sachsen. <br />
+					  <br />
+				  </td>
+
+			  </tr>
+			  <tr>
+				  <td valign="top">04.- 25.4. 1926</td>
+				  <td style="text-align: justify;" valign="top">
+					<img alt="Stilisierte Lilie der Deutschen Freischar" title="image" src="../../../../../../data/media/freischar.gif" /><br />
+				  Erstes
+					  Lager des Freiwilligen Arbeitsdienstes (FAD) in Hermannsburg/ Lüneburger
+					  Heide. Der BdWuP nennt sich nun Deutsche Freischar (DF).
+					  Bundeszeichen: Stilisierte Lilie. <br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">21.- 24.5. 1926</td>
+				  <td style="text-align: justify;" valign="top">Landeslager
+					  der DPB-LM Sachsen in Sacka (Erzgebirge).<br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">Mai 1926</td>
+
+				  <td style="text-align: justify;" valign="top">Während
+					  ihrer Großfahrt im Erzgebirge werden drei Jungmannen des
+					  Falkenhorstes (DPB) von kommunistischen Jugendlichen angegriffen.
+					  Die Polizei nimmt sie in Schutz, und sie verbringen unfreiwillig,
+					  aber sicher eine Nacht in einer Gefängniszelle.<br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">2./3.10. 1926</td>
+
+				  <td style="text-align: justify;" valign="top">Landestagung
+					  der Tatgemeinschaft Sachsen (CPD) in Lichtenstein-Callenberg.<br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">Pfingsten 1927</td>
+				  <td style="text-align: justify;" valign="top">Bundestag der
+					  Ringgemeinschaft deutscher Pfadfinder bei Dransdorf in der
+					  Niederlausitz.<br />
+
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">Sommer 1928</td>
+				  <td style="text-align: justify;" valign="top">Grenzlandfahrt
+					  der DPB-LM Sachsen nach Kärnten und in die Steiermark.<br />
+					  <br />
+
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">15./16.09. 1928</td>
+				  <td style="text-align: justify;" valign="top">Treffen des
+					  DPB-Gaues Kursachsen in Finsterwalde/NL. Teilnehmer u.a. Falkenberg
+					  und Torgau.<br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">30.9.- 4.10. 1928</td>
+				  <td style="text-align: justify;" valign="top">Führertreffen
+					  der CPD auf der Burg Hohenstein (Elbsandsteingebirge).<br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+
+				  <td valign="top">Frühjahr 1929</td>
+				  <td style="text-align: justify;" valign="top"> Beginn des
+					  Aufbaues einer geschlossenen Jungmannschaft (Ältere) im DPB.<br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+
+				  <td valign="top">Frühjahr 1929</td>
+				  <td style="text-align: justify;" valign="top"> Ende der
+					  Richtungskämpfe in der sächsischen CPD. Fritz Riebold
+					  wieder Führer der CP Sachsen.<br />
+					  <br />
+				  </td>
+			  </tr>
+
+			  <tr>
+				  <td valign="top">18.- 21.5. 1929</td>
+				  <td style="text-align: justify;" valign="top">
+					  DPB-Bundeslager bei Kähnsdorf am Seddiner See, nahe Potsdam,
+					  mit 3.600 Teilnehmern und Gästen aus Danzig, Tirol, Ungarn und
+					  Polen (DPB-Gruppe). Wettkämpfe, Bundesthing, Bundesfeuer. 400
+					  Banner und Wimpel, 20 Goulaschkanonen. Kundgebung mit dem Großdeutschen
+					  Jugendbund in Potsdam, Feierstunde in der Garnisonskirche, Ansprache
+					  von Admiral v. Trotha. Teilnehmer aus Sachsen u.a. Falkenberg und
+					  Zittau.<br />
+					  <br />
+					  <img alt="Falkenhorst am Seddiner See" title="image" src="../../../../../../data/media/seddinsee.jpg" /><br />
+					  <br />
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">18.- 21.5. 1929</td>
+				  <td style="text-align: justify;" valign="top"> Die Leipziger
+					  Gruppe des Bundes deutscher Kolonialpfadfinder nimmt am Bundeslager
+					  in Dessau teil.<br />
+					  <br />
+
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">Sommer 1929</td>
+				  <td style="text-align: justify;" valign="top">Führerlager
+					  der Ringgemeinschaft (RdP) in Lausitz b. Königsbrück.<br />
+					  <br />
+
+				  </td>
+			  </tr>
+			  <tr>
+				  <td valign="top">Sept. 1929 </td>
+				  <td style="text-align: justify;" valign="top">DPB-LM
+					  Sachsen, Kanzlei: Dr. Kurt Geyer, Döbeln, Geyersbergstr. 27.<br />
+					  <br />
+				  </td>
+
+			  </tr>
+			  <tr>
+				  <td valign="top">20.10. 1929</td>
+				  <td style="text-align: justify;" valign="top"> Aus dem
+					  gemeinsamen Auslandsamt verschiedener Bünde (1928) entsteht der
+					  Deutsche Pfadfinderverband (DPV) als Zweckbündnis. Mitglieder:
+					  BdR, CPD, DPB, Bund deutscher Kolonialpfadfinder, Deutscher
+					  Kolonialpfadfinderbund und RdP.<br />
+					  <br />
+				  </td>
+
+			  </tr>
+			  <tr>
+				  <td valign="top">Dez. 1929</td>
+				  <td style="text-align: justify;" valign="top"> Winterlager
+					  der RdP im Bundesheim Breitenhof (Erzgebirge).<br />
+					  <br />
+				  </td>
+			  </tr>
+
+	  </tbody>
+  </table>
+
+<TABLE >
+          <TR>
+            <TD >1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Der DPB hat 16
+            Landesmarken. Die LM Sachsen arbeitet in den Gauen Anhalt,
+            Erzgebirge, Kursachsen, Mittelelbe, Nordlausitz und Oberlausitz.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Gautreffen
+            des DPB-Gaues Kursachsen bei Lauchhammer.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> BdR-Gau
+            Sachsen: F&uuml;hrer bis April Eberhard Menzel, ab Mai 1930 Heinz
+            Naumann (Halle/Saale).<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> DPB-Horste in
+            der LM Sachsen: Annaberg/Sa., Bad Schandau, Bautzen,
+            Beierfeld/Erzgeb., Belgern, Bernsdorf bei Kamenz, Bischofswerda,
+            Blasewitz/Dresden, Bockwitz, Dahlen, Dessau, Eibau/OL, Eilenburg,
+            Elsterwerda, Falkenberg, Finsterwalde, Freiberg/Sa., Gottlauba Kr.
+            Pirna, G&ouml;&szlig;nitz bei Naumburg, Grimma, Gro&szlig;r&auml;hrsdorf,
+            Halberstadt, Halle, Hoyerswerda, Kamenz, Kirchhain/NL., K&ouml;nigsbr&uuml;ck,
+            K&ouml;then/Anh., Lauchhammer, Leipzig, Liebenwerda, Machern,
+            Magdeburg, Mittweida, Naumburg, Neust&auml;del/Sa., Pirna,
+            Plauen/Vogtl., Saalfeld, Schwarzenberg, Steinberg bei Kamenz,
+            Stolpen, Torgau, Wachwitz &quot;Heidew&ouml;lfe&quot;, Wittenberg,
+            Wurzen, W&uuml;stenbrand/Sa., Zeitz, Zittau.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >6.- 9.6. 1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Landeslager
+            der DPB-LM Sachsen bei Zittau. Zweit&auml;giges Gel&auml;ndespiel &quot;die
+            Schlacht bei Oderwitz&quot;, Ausarbeitung Rolf Schr&ouml;der
+            (Zittau). Westsachsen (Leipzig und Gau Kursachsen) unter Landesvogt
+            Wilhelm Schwenke gegen Ostsachsen (Gau Osterland und Gau Erzgebirge)
+            unter Dr. Gerhard Stephan (Kamenz). Landesthing. Teilnehmer u.a.
+            Bautzen, Dresden, Falkenberg, Kamenz, Leipzig, Pirna, Zittau.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >6.- 9.6. 1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Bundeslager
+            des Bundes deutscher Kolonialpfadfinder auf dem Knabenberg bei
+            Naumburg.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >03.08. 1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Der 1922 gegr&uuml;ndete
+            Neudeutsche Bund mit Schwerpunkt in Schlesien nennt sich nun
+            Neudeutscher Pfadfinderbund. Bundeszeichen: Rautenlilie. Der Elbgau
+            (Sachsen) wird von Kreisvogt Biok (Pirna) gef&uuml;hrt. Auch in
+            Leipzig besteht eine Gruppe des Bundes. Bundesf&uuml;hrer: Dr.
+            Rudolf J&uuml;rgens (Rulf), Leipzig-Marienh&ouml;he, Am Wasserwerk
+            7.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >7./8.9. 1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Die DPB-LM
+            Sachsen nimmt geschlossen am Treffen des Vereins f&uuml;r
+            Auslandsdeutschtum (VDA) in Mei&szlig;en teil. Der DPB stellt von
+            allen vertretenen Jugendb&uuml;nden das st&auml;rkste Kontingent.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >Herbst 1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Der DPB z&auml;hlt
+            12.000 Mitglieder in 16 Landesmarken und im Ausland.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >31.10./2.11.1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Jungmannschaftstreffen und F&uuml;hrertagung der DPB-LM Sachsen in
+            Dresden. Landesvogt Dr. Wilhelm Schwenke (Leipzig S 3, Brandtstr.
+            15) legt sein Amt nieder. Neuer Landesvogt: Dr. Walter Ulbricht
+            (Grimma).<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >Ende 1930 </TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Der Deutsche
+            Pfadfinderbund (DPB) beschlie&szlig;t auf einer F&uuml;hrertagung in
+            Kassel den Aufbau der Jungmannschaft.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Der Deutsche
+            Republikanische Pfadfinderbund (1929 gegr.) unterh&auml;lt in
+            Sachsen zwei Gruppen: Bautzen und Leipzig. DRPb.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >1930</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> &quot;Die
+            deutsche Pfadfinderbewegung in ihrer Organisation und staatsb&uuml;rgerlichen
+            T&auml;tigkeit unter Ber&uuml;cksichtigung des DPB&quot;.
+            Philosophische Dissertation von Hermann Domack, Universit&auml;t
+            Leipzig.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Anzeige in
+            einer Leipziger Tageszeitung:<BR>
+            &quot;Eltern! Warum ist euer Sohn noch
+            k. Pfadfinder? Zweieinhalb Millionen Jungen geh. dies. Bewegung
+            bereits an. Zeltlag., Wanderung, Heimabende schaffen ihnen eine
+            frohe Jugend und lassen sie etw. f. Leben lernen. Wir nehmen noch
+            Jung. v. 8 - 16 Jahren auf. Deutscher Sp&auml;herbund e.V. Leipzig,
+            Kreuzstr. 10, Erdg. links.&quot;<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Gauvogt
+            Rudolf Planert (Wurzen) gr&uuml;ndet die erste Jungmannschaft des
+            DPB-Gaues Kursachsen. F&uuml;hrer: Ludwig Heil (Helu) aus
+            Falkenberg.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Erw&auml;hnung
+            der Christlichen Alt-Pfadfinderschaft Sachsen im Leipziger
+            Adressbuch. Leipzig C1, Salomonstr. 3 H.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >30.3.- 6.4. 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Jungmannschafts- und Jungenf&uuml;hrerlager des DPB in Torgau mit
+            anschlie&szlig;endem Bundesf&uuml;hrertag.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >30.3.- 6.4. 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Gaulager des
+            BdR-Gaues Sachsen in der D&uuml;bener Heide. Bundesf&uuml;hrer
+            Heinrich Baniza v. Bazan (Berlin) als Gast.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >April 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Der DPB-Horst
+            Leipzig besteht fast ausschlie&szlig;lich aus Gymnasiasten.
+            Handwerker und Arbeiterkinder finden keinen Zutritt.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >23.- 31.5. 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            DPB-Bundeslager auf der Erpeler Ley am Rhein mit 4.000 Teilnehmern,
+            u.a. aus Sachsen. Bundesthing, offiz. Einf&uuml;hrung der neuen
+            Sturmfahne (Bundesbanner), der Jungenschaftsjacke und der blauen
+            Kurzhose. Eberhard Koebel (tusk) ist mit einer Berliner Horte der
+            dj. 1.11. im Lager.<BR>
+             <BR>
+            
+            <CENTER>
+			<img alt="Falkenberger Teilnehmer beim Bundestreffen 1931" title="image" src="../../../../../../data/media/erpeler_ley.jpg" /><br />
+            Herbert M&uuml;ller, Gerhard Ahrens,
+            Erich D&uuml;rr, Martin Zickert,<BR>
+             Ludwig Heil, Hans Hartmann (v.l.n.r.)</CENTER><BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >05.06. 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Erstes
+            Treffen der Jungmannschaften des DPB und der Deutschen Freischar
+            (DF) in Falkenberg.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >13./14.6. 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Kreisjugendtreffen in M&uuml;hlberg/Elbe mit 100 Teilnehmern aus 6
+            Orten, darunter DPB und DF.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Sommer 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Der DF-Gau
+            Sachsen f&uuml;hrt bei Glogau (Schlesien) mit 300 Teilnehmern einen
+            dreiw&ouml;chigen Landdienst mit Ernteeinsatz durch.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Juli 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Balten-Amt
+            des DPB: Alfred Stender, Leipzig O 27, Naunhoferstr. 11.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >30.08. 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> F&uuml;hrertreffen
+            der DPB-LM Sachsen in Torgau.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >Sept. 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Nach einer
+            Mitteilung des Hochschulamtes besteht an der Universit&auml;t
+            Leipzig ein aktiver Studentenkreis des DPB.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >19./20.9. 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Kreisjugendtreffen in Gr&ouml;den-Merzdorf. Unter den Teilnehmern
+            sind der DPB und die DF. Feldgottesdienst: Pastor Rudolf B&uuml;rger
+            (DPB).<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Kolonialbund
+            deutscher Pfadfinder:<BR>
+             Bundesf&uuml;hrer: Erhard P&ouml;rschmann, Leipzig N 22,
+            Pariserstr. 6a<BR>
+             Bundeskasse: Joachim Steckler, Leipzig C 1, Thomasiusstr. 1<BR>
+             Schriftwart: Max Gei&szlig;ler, Leipzig N 22, Dinterstr. 26<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Oktober 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">F&uuml;hrerschulungslager
+            f&uuml;r die Jungmannschaft der DPB-LM Sachsen bei Dresden. Leitung:
+            Walter Cramm, (Hoheneggelsen/Niedersachsen).<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >07./08.11. 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> F&uuml;hrertagung
+            der RdP in Klotzsche bei Dresden. Der Bund hat 700 Mitglieder.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >28./29.11. 1931</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Treffen des
+            BdR-Kreises Sachsen in Wittenberg unter der Leitung von Kreisf&uuml;hrer
+            Heinz Naumann.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >28.12.- 6.1.1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Winterlager
+            des DPB-Gaues Mittelsachsen auf dem Ascheberg.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Ringgemeinschaft
+            deutscher Pfadfinder (RdP):<BR>
+             Ringf&uuml;hrer: Dr. Hans Riedel, Leipzig C 1, Plagwitzerstr. 1a<BR>
+             Ringkanzler: Erwin Herbst (Ex), Dresden A 20, Kostritzerstr. 23<BR>
+             Ringkasse: Dr. Werner Heinze, Leipzig W 32, Stieglitzstr. 58, I <BR>
+             Gruppen der RdP gibt es in Bad Schandau, Chemnitz, Coswig, Dresden
+            1 - 5, K&ouml;tschenbroda, Pirna und Leipzig.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Studienrat
+            Dr. Reinhard Oehler (Leipzig) wird neuer Landesvogt der DPB-LM
+            Sachsen.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Fr&uuml;hjahr 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Werbeveranstaltung des DPB-Gaues Kursachsen in Elsterwerda. Ein
+            Gau-Banner wird angeschafft und vom Horst Elsterwerda gef&uuml;hrt.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >Ostern 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> RdP-F&uuml;hrerschulungslager
+            in Herrnsdorf bei Dresden. Dr. Hans Riedel tritt als Bundesf&uuml;hrer
+            zur&uuml;ck, sein Nachfolger wird Edu Kreuzer (Erlangen).<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >16./17.4. 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Werbeveranstaltung des DPB-Gaues Kursachsen in Belgern/Elbe mit 220
+            Teilnehmern aus Bitterfeld, Bockwitz, Dahlen, Eilenburg, Falkenberg,
+            Finsterwalde, Lauchhammer, Oschatz, Riesa, Wittenberg und Wurzen.
+            Horst Eilenburg erringt das Gau-Banner. G&auml;ste: DF Falkenberg.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >April/Mai 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Werbeveranstaltungen des DPB-Gaues Kursachsen in Bitterfeld, Wurzen
+            und Kirchhain/NL.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >Mai 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Landesschatzmeister der DPB-LM Sachsen: Fritz Firtzlaff, Leipzig,
+            Albertinerstra&szlig;e 100.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >14.- 16.5. 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Dr. Reinhard
+            Oehler (Leipzig) vom DPB als Gast im Bundeslager des BdR auf Burg
+            Greene bei Kreiensen.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >23.- 31.7. 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Gaulager des
+            DPB-Gaues Kursachsen zwischen Bockwitz u. Gr&uuml;newalde mit 140
+            Teilnehmern aus den Horsten Belgern, D&uuml;ben, Eilenburg, Torgau
+            und Wurzen. Singen, Pfadfinderk&uuml;nste, Sport, Gel&auml;ndespiel,
+            Wandertag, Werbemarsch, Lagerzirkus.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >August 1932
+            </TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Werbeveranstaltung
+            des DPB-Gaues Kursachsen in Bad Liebenwerda. Teilnehmer aus Belgern,
+            Bockwitz, Elsterwerda, Falkenberg, Finsterwalde, Lauchhammer und
+            Torgau.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Sept. 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Bund der
+            Reichspfadfinder und Deutscher Sp&auml;herbund schlie&szlig;en sich
+            zum Bund der Reichspfadfinder und Sp&auml;her zusammen.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Der starke
+            DPB-Gau Kursachsen wird geteilt. Der alte Gau besteht westlich der
+            Elbe weiter. Neuer Gauvogt: Fritz Gro&szlig;e (Eilenburg). &Ouml;stlich
+            der Elbe entsteht der neue Gau Schwarze Elster. Gauvogt: Ludwig Heil
+            (Falkenberg), Gau-Jungmannschaft: Erich Hauptvogel (Elsterwerda), sp&auml;ter
+            Gerhard Ahrens (Falkenberg). Horste im neuen Gau Schwarze Elster:
+            Bad Liebenwerda, Bockwitz, Elsterwerda, Falkenberg, Finsterwalde,
+            Kirchhain/NL., Lauchhammer, M&uuml;ckenberg und Wittenberg.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >8./9.10.1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Sachsentreffen des Deutschen Kolonialpfadfinderbundes in Freiberg,
+            u.a. mit Gruppen aus Leipzig, Mei&szlig;en, Oschatz, Pirna.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >Herbst 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Gruppen des
+            fr&uuml;heren BdR in Bitterfeld, Freiberg/Sa., Halle/Saale und
+            Niesky treten zum DPB &uuml;ber.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >15./16.10. 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> F&uuml;hrerlager
+            der DPB-LM Sachsen in Grillenburg bei Klingenberg.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >Herbst 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Im Sp&auml;tsommer
+            hatte der BdR einen gro&szlig;en B&uuml;ndigungsvorschag an alle
+            wichtigen Pfadfinderb&uuml;nde unterbreitet. In seiner Zeitschrift &quot;Der
+            Pfad zum Reich&quot; Nr. 8/9 wird die Stellungnahme von 23 ma&szlig;geblichen
+            F&uuml;hrern aus 9 B&uuml;nden und 2 unabh&auml;ngigen Beobachtern
+            ver&ouml;ffentlicht. Von den 5 F&uuml;hrern des DPB &auml;u&szlig;erst
+            sich lediglich Dr. Reinhard Oehler (Leipzig) dazu positiv.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >22./23.10. 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Gautreffen
+            des jungen DPB-Gaues Schwarze Elster in Schadewitz.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> In Leipzig
+            besteht der CPD-Stamm &quot;Walter Flex&quot; und der Leipziger
+            DPB-Trupp &quot;Raben&quot; wird durch sein selbstgebautes
+            Indianer-Tipi bekannt.<BR>
+             <BR>
+            
+            <img src="../../../../../../data/media/tipi.jpg" alt="Der DPB-Trupp Raben aus Leipzig mit seinem Tipi" ><BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Neuer
+            RdP-Ringkanzler: Dr. Wolfg. Rudert, Leipzig A 16, Arnoldstr. 31.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >13.11.1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Der Bund der
+            Reichspfadfinder und Sp&auml;her bildet mit dem Neudeutschen
+            Pfadfinderbund in Leipzig die Reichsschaft Deutscher Pfadfinder
+            (RDP). Bundesf&uuml;hrer: Dr. Rudolf (Rulf) J&uuml;rgens (Leipzig).
+            Bundeszeichen: Rautenlilie mit aufgelegtem Reichsadler. St&auml;nde:
+            W&ouml;lfling, Sp&auml;her, Knappe und Ritter.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >Dez. 1932</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Gro&szlig;es
+            Einigungstreffen der RDP auf dem Eckardskopf bei Oberhof/ Th&uuml;ringen.
+            Bundesthing. Sieben weitere B&uuml;nde schlie&szlig;en sich der RDP
+            an, darunter M&uuml;nchener Pfadfinderring, Bund deutscher
+            Neupfadfinder (Rheinland), DPB-St. Georgsring (Westf.),
+            Kreuzpfadfinder (Oberschlesien). Dr. Alexander Lion (Oberhof) ist
+            als Gast vertreten.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Sachsen ist
+            einer von acht Gauen der Reichsschaft Deutscher Pfadfinder.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >30.01.1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">&quot;Macht&uuml;bernahme&quot;
+            der Nationalsozialisten in Deutschland. Adolf Hitler wird zum
+            Reichskanzler berufen.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >12./13.3. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Werbeveranstaltung des DPB-Gaues Schwarze Elster in
+            Doberlug-Kirchhain mit Zeltlager. Abends weiht Landesvogt Dr.
+            Reinhard Oehler (Leipzig) die neue Gaufahne am Feuer. Sonntags
+            Kirchgang, anschlie&szlig;end Werbemarsch durch den Ort.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >02.04.1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Gr&uuml;ndung
+            des Gro&szlig;deutschen Bundes in Berlin-Frohnau. Zweckb&uuml;ndnis
+            zur Wahrung der b&uuml;ndischen Autonomie gegen&uuml;ber der
+            Hitlerjugend (HJ) durch acht Jugendb&uuml;nde, darunter dem DPB und
+            der DF, mit insegsamt 50.000 Mitgliedern. F&uuml;hrer: Admiral Adolf
+            von Trotha. Bundeszeichen: Schwarzes Balkenkreuz im wei&szlig;en
+            Schild.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >15.04.1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Konstituierung des Bundeskapitels des Gro&szlig;deutschen Bundes in
+            Berlin.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >23.04.1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Werbeveranstaltung des DPB-Gaues Schwarze Elster in Uebigau.
+            Werbemarsch durch den Ort, Zeltlager auf dem Sch&uuml;tzenplatz.
+            Teilnehmer aus Elsterwerda, Falkenberg, Kirchhain-Doberlug und
+            Liebenwerda.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >01.05.1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Der urspr&uuml;ngliche
+            &quot;Tag der Arbeit&quot; wird von der NS-Regierung zum &quot;Tag
+            der nationalen Einheit&quot; propagiert und erstmals im ganzen
+            Deutschen Reich offiziell gefeiert. In vielen Orten nehmen die
+            Gruppen der B&uuml;ndischen Jugend geschlossen in Kluft mit Fahnen
+            und Wimpeln an den gro&szlig;en Festumz&uuml;gen teil. Beteiligung
+            von HJ, DJ, Schulklassen, konfessionellen Gruppen, Vereinen,
+            Betriebsbelegschaften usw.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >04.05.1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Letztes Thing
+            des Falkenhorstes (DPB). Gr&uuml;ndung der Ortsgruppe des Gro&szlig;deutschen
+            Bundes mit der DF. Die Falkenhorster &uuml;bertragen ihre Anteile am
+            Blockhaus mit allem Inventar als Schenkung an Pastor Rudolf B&uuml;rger.
+            Dadurch soll der Beschlagnahme des Heimes durch die NS-Organe
+            vorgebeugt werden.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >01.06. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Die RDP tritt
+            aus taktischen Gr&uuml;nden wieder aus dem Gro&szlig;deutschen Bund
+            aus.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >3.- 6.6. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Letztes
+            Treffen des Gro&szlig;deutschen Bundes in Munsterlager, L&uuml;neburger
+            Heide mit 15.000 Teilnehmern. Nach einem Massenaufgebot von SA, HJ
+            und Polizei wird das Lager vom zust&auml;ndigen Landrat wegen bef&uuml;rchteter
+            Unruhen verboten und aufgel&ouml;st.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >3.- 6.6. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Pfingstlager
+            der DPB-LM Sachsen in Neu&szlig;en bei Belgern f&uuml;r alle Horste,
+            die wegen der weiten Entfernung nicht nach Munsterlager fahren.
+            Marsch mit Fahnen und Wimpeln nach Belgern. 300 Jungen
+            durchschwimmen die Elbe. Teilnehmer u.a. Falkenberg und Leipzig.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >3.- 6.6. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Letztes
+            CPD-Reichslager im Friedewald bei Coswig mit 3.000 Teilnehmern. Den
+            Auftakt bildet das mitteldeutsche Treffen in Mei&szlig;en.
+            Festpredigt im Dom, &ouml;ffentliche Kundgebung in der
+            Albrechtsburg, Auff&uuml;hrung des &quot;Domspieles&quot; von Fritz
+            Riebold. Reichsthing auf dem Hainstein.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >16./17.6. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Gautreffen
+            des DPB-Gaues Schwarze Elster am Winterberg in Elsterwerda.
+            Sportwettk&auml;mpfe um das Gaubanner, Sieger: Falkenhorst.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >17.06. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Adolf Hitler
+            beruft Baldur von Schirach zum Jugendf&uuml;hrer des Deutschen
+            Reiches. Totalit&auml;tsanspruch der Hitlerjugend! Erste
+            Amtshandlung: Aufl&ouml;sung des Reichsausschusses der deutschen
+            Jugendverb&auml;nde.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >21.06. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Verordnung
+            des Jugendf&uuml;hrers des Deutschen Reiches Baldur von Schirach
+            betreffs Aufl&ouml;sung der B&uuml;ndischen Jugend.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >17.- 30.6. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">
+            Werbeveranstaltungen der HJ im ganzen Reich (1932: 108.000
+            Mitglieder).<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >Ende Juni 1933
+            </TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Erstes Verbot
+            der Reichsschaft Deutscher Pfadfinder durch das NS-Regime.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >02.07. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Aufl&ouml;sung
+            des DPB-Gaues Schwarze Elster in Bad Liebenwerda. Gauvogt Ludwig
+            Heil verabschiedet jeden mit Handschlag. Um die alte Gemeinschaft zu
+            retten, &uuml;bernimmt die F&uuml;hrerschaft des Falkenhorstes in
+            Falkenberg alle F&uuml;hrerstellen im bis dahin unbedeutenden
+            Deutschen Jungvolk der HJ.<BR>
+             <BR>
+            
+            <CENTER><IMG SRC="../../../../../../data/media/walberge.jpg" ALT="Ehem. Pfadfinderführer aus Falkenberg" ><BR>
+            Ehemalige F&uuml;hrer des
+            Falkenhorstes nach Verbot des DPB in den Walbergen</CENTER><BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >08.07. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Baldur von
+            Schirach beruft einen &quot;Jugendf&uuml;hrerrat&quot;. Er &uuml;bernimmt
+            die Aufgaben des verbotenen Reichsausschusses der deutschen
+            Jugendverb&auml;nde und erh&auml;lt seine Richtlinien vom
+            Innenminister Wilhelm Frick. Mitglieder: f&uuml;nf Verb&auml;nde,
+            Vormachtstellung der HJ.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >Juli 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Verbot der
+            meisten b&uuml;ndischen Zeitschriften.<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;"> Um ihre
+            bisherigen Gemeinschaften zu erhalten und dem allgemeinen HJ-Dienst
+            mit seinem sturen Drill zu entgehen, bilden zwangsweise
+            eingegliederte Pfadfinder hier und da Spezialeinheiten: Flieger-HJ,
+            Sing- und Spielscharen, Pionier-Z&uuml;ge, Reiter-HJ in l&auml;ndlichen
+            Gegenden, Fanfaren-Z&uuml;ge, technische Einheiten, Marine-HJ usw.
+             Falkenberg: Gr&uuml;ndung einer Sing- und
+            Spielschar aus ehemaligen DPBern und Freisch&auml;rlern unter der F&uuml;hrung
+            von Herbert T&ouml;pfer (ehem. DF)<BR>
+             <BR>
+             </TD>
+          </TR>
+          <TR>
+            <TD >Sommer 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">In einigen
+            Teilen des Reiches arbeiten ehemalige Mitglieder der verbotenen B&uuml;nde
+            - unter ihnen auch Pfadfinder - illegal weiter. Heimliche Treffen an
+            abgelegenen Orten, illegale Fahrten im In- und Ausland. Repressalien
+            durch das NS-Regime: Hausdurchsuchungen, Verh&ouml;re durch die
+            Geheime Staatspolizei (Gestapo), Beschlagnahme von Heimen,
+            Schriftgut, Fahrten- und Lagermaterial.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1.- 16.8. 1933
+            </TD>
+            <TD VALIGN="TOP" style="text-align:justify;">4.
+            Welt-Jamboree der Pfadfinder in G&ouml;d&ouml;ll&ouml;/Ungarn mit
+            28.000 Teilnehmern aus 32 L&auml;ndern. Illegale Teilnahme von ca.
+            50 Mitgliedern des ehemaligen DPV und der RDP. Darunter Dr. Rudolf
+            (Rulf) J&uuml;rgens und Heino K&ouml;ssling aus Leipzig.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >August 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Aufhebung des
+            Verbotes der RDP. Versuch der Reichsjugendf&uuml;hrung, ihre
+            Auslandskontakte &uuml;ber die Reichsschaft auszubauen. Kontakte zum
+            Internationalen B&uuml;ro (IB) der Pfadfinder in London.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >19.11. 1933</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Abkommen der
+            Reichsjugendf&uuml;hrung mit dem evang. Reichsbischof Ludwig M&uuml;ller
+            (CPD) &uuml;ber die Eingliederung der evang. Jugend unter 18 Jahren
+            in die HJ. Die CPD verliert ca. 10.000 Jungen und besteht nur noch
+            aus etwa 2.000 Mitgliedern. In Sachsen verliert die CPD die H&auml;lfte
+            der rund 60 St&auml;mme. Proteste der ma&szlig;geblichen F&uuml;hrer
+            bleiben erfolglos.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >14.01. 1934</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">CPD-Reichsf&uuml;hrer
+            Friedrich Duensing spricht in Leipzig im gro&szlig;en Saal des
+            Hospizes vor 1.000 CPern. Ortsringf&uuml;hrer Rudolf Hirsch wird von
+            der Gestapo verhaftet und verh&ouml;rt.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Februar 1934</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">In das
+            Stadtheim der Leipziger RDP-Gruppe wird von NS-Anh&auml;ngern
+            eingebrochen.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >26.05. 1934</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Endg&uuml;ltiges
+            Verbot der Reichsschaft Deutscher Pfadfinder (RDP).<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >21.07. 1934</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">F&uuml;r
+            Polizeiaufgaben innerhalb der HJ und zur Bek&auml;mpfung
+            oppositioneller Jugendgruppen wird der HJ-Streifendienst als
+            Hilfspolizei eingef&uuml;hrt.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Sommer 1934</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Nord-Ostsee-Fahrt
+            einer Fahrtengruppe der HJ-Spielschar Falkenberg (ehemalige B&uuml;ndische)
+            mit 8 Teilnehmern.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Sommer 1934</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Das
+            Falkenberger Blockhaus in den Walbergen wird von der evang. Jugend
+            nicht voll genutzt. &Uuml;bernahme durch die HJ.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >22./23.9. 1934</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Landestreffen
+            der CPD-Sachsen mit 130 &auml;lteren Teilnehmern.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1934</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Dresdener
+            Gruppen der CPD vergraben Fahnen, Bildb&auml;nde und B&uuml;cher in
+            einem Eisenbeh&auml;lter in der D&uuml;bener Heide.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Ende 1934</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Hausdurchsuchung
+            im b&uuml;ndischen Verlag Plauen/Vogtl. G&uuml;nther Wolff wird
+            verhaftet und bleibt bis Oktober 1935 im Gef&auml;ngnis. Nach seiner
+            Entlassung f&uuml;hrt er seine Verlagsarbeit eingeschr&auml;nkt
+            fort. Im Dezember 1935 befindet sich G&uuml;nther Wolff erneut in
+            Gestapo-Haft.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Ende 1934</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Die HJ hat -
+            u.a. durch die zwangsweise Eingliederung der B&uuml;nde - 3.600.000
+            Mitglieder im Reich.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1935</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Die Einf&uuml;hrung
+            des Reichsarbeitsdienstes (RAD) und der allgemeinen Wehrpflicht
+            erschweren die illegale Arbeit der verbotenen Gruppen und der noch
+            bestehenden konfessionellen Gruppen.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >27.06. 1935</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Verhaftungswelle
+            gegen ehemalige Mitglieder der verbotenen Jugendb&uuml;nde. Heino K&ouml;ssling,
+            letzter Gauvogt Sachsen der RDP (Leipzig) bis 21.09.1935 in
+            Gestapo-Haft.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Oktober 1935</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">F&uuml;nf
+            Jungen des F&auml;hnleins &quot;Hagen von Tronje&quot; vom
+            ehemaligen DPB-Horst Dresden auf illegaler Fahrt ins Teufelsmoor bei
+            Bremen. Begegnung mit dem Dichter Manfred Hausmann in
+            Osterholz-Scharmbeck. Aus dieser Begegnung entsteht das bekannte
+            Lied &quot;Es tropft von Helm und S&auml;bel...&quot; als verschl&uuml;sseltes
+            Widerstandslied.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Dez. 1935</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Illegales
+            Winterlager der RDP in einer Baude in Gro&szlig;-Aupa/Erzgebirge
+            (Tschechoslowakei).<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >01.12. 1936</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Das &quot;Gesetz
+            &uuml;ber die Hitlerjugend&quot; tritt in Kraft. Damit wird die HJ
+            Staatsjugend und rechtlich einziger Tr&auml;ger der Jugenderziehung
+            im Deutschen Reich. Wer sich dem Jugenddienst entzieht, wird
+            strafrechtlich verfolgt!<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >10.06. 1937
+            </TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Endg&uuml;ltiges
+            Verbot und Aufl&ouml;sung der CPD.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Dez. 1937</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Der ehem. F&uuml;hrer
+            der CPD, Fritz Riebold (Dresden) wird w&auml;hrend eines
+            Wintersportaufenthaltes in Tellerh&auml;user bei Rittersgr&uuml;n/Erzgebirge
+            von der Gestapo verh&ouml;rt.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >Sommer 1938</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Der ehem. F&uuml;hrer
+            der CPD Sachsen, Fritz Riebold (Dresden), wird w&auml;hrend einer
+            Reise nach Oberbayern in Hof von der Gestapo erneut verhaftet. Verh&ouml;re,
+            Hausdurchsuchung, sechs Wochen Haft. Verfahren vor dem Landgericht
+            Dresden: Verbot jeder erzieherischen T&auml;tigkeit.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1938</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Erneute
+            Verhaftung des Verlegers G&uuml;nther Wolff (Plauen/Vogtl.) durch
+            die Gestapo. Verurteilung durch ein Sondergericht in Freiberg/Sa.
+            nach der Verordnung zum Schutze von Volk und Staat zu 15 Monaten Gef&auml;ngnis.
+            Liquidierung des Verlages &quot;Das junge Volk&quot;.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >28.10. 1938</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Der 1. Senat
+            des Volksgerichtshofes Leipzig verurteilt Helmut He&szlig;, Horst
+            Lippert und Kurt Hoppe (leitende Mitglieder der b&uuml;ndischen &quot;Leipziger
+            Meuten&quot;) wegen Vorbereitung zum Hochverrat zu ein bis f&uuml;nf
+            Jahren Zuchthaus.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >08.11. 1938</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Heinz (Heino)
+            K&ouml;ssling (Leipzig), letzter Gauvogt Sachsen der RDP, erneut
+            verhaftet. &Uuml;berf&uuml;hrung in das Gestapo-Hauptgef&auml;ngnis
+            Berlin, Prinz-Albrecht-Stra&szlig;e.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1938</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Dem Bundesf&uuml;hrer
+            der ehem. RDP, Prof. Dr. med. Rudolf (Rulf) J&uuml;rgens (Leipzig),
+            gelingt die Flucht in die Schweiz.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >1939</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Zur Bek&auml;mpfung
+            der &quot;B&uuml;ndischen Umtriebe&quot; besteht sechs Jahre nach
+            dem Verbot der freien Jugendb&uuml;nde noch immer das besondere
+            Dezernat &quot;B&uuml;ndische Jugend&quot; bei der Gestapo.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >25.03. 1939</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Die &quot;Jugenddienstverordnung&quot;
+            zum &quot;Gesetz &uuml;ber die Hitlerjugend&quot; tritt in Kraft.<BR>
+             <BR>
+            </TD>
+          </TR>
+          <TR>
+            <TD >01.09. 1939</TD>
+            <TD VALIGN="TOP" style="text-align:justify;">Ausbruch des
+            Zweiten Weltkrieges. Der b&uuml;ndische Widerstand erlischt
+            weitgehend. Massensterben der Jugend an allen Fronten.<BR>
+             <BR>
+             </TD>
+          </TR>
+        </TABLE>
+        
+        <P><U>Zeitungsartikel aus den &quot;Leipziger
+          Neuesten Nachrichten&quot; Nr. 209 vom 28.07.1939:</U></P>
+        
+        <H3>Das Verbot der b&uuml;ndischen Jugend</H3>
+        
+        <P style="text-align:justify;">Der Reichsf&uuml;hrer
+          SS und Chef der Deutschen Polizei im Reichsministerium des Innern hat
+          durch eine im Deutschen Reichs- und Preu&szlig;ischen Staatsanzeiger
+          vom 20. Juli 1938 ver&ouml;ffentlichte Verordnung das V e r b o t
+          &nbsp; d e r &nbsp; b &uuml; n d i s c h e n &nbsp; J u g e n d neu
+          gefa&szlig;t. Hiernach ist die Fortf&uuml;hrung der b&uuml;ndischen
+          Jugend (Deutsche Freischar, Freischar junge Nation, Gro&szlig;deutscher
+          Bund, Deutsche Jungenschaft vom 1.11., Deutsche Jugendtracht,
+          Oesterreichisches Jungenkorps, Graues Korps, Nerother Bund, Bund f&uuml;r
+          Errichtung der rheinischen Jugendburg, Reichsschaft deutscher
+          Pfadfinder, Deutscher Pfadfinderbund, Oesterreichischer
+          Pfadfinderbund, Christliche Pfadfinderschaft, Deutsche
+          Pfadfinderschaft, St. Georg-Pfadfinderkorps, Quickborn-Jungenschaft,
+          Deutschmeister-Jungenschaft, Stromkreis, Grauer Orden, Freischar
+          Schill und Eidgenossen, B&uuml;ndischer Selbstschutz, Navajo usw.)
+          untersagt.<BR>
+           Wer es unternimmt, den organisatorischen Zusammenhalt einer fr&uuml;heren
+          b&uuml;ndischen Vereinigung aufrecht zu erhalten oder eine neue b&uuml;ndische
+          Vereinigung zu bilden, insbesondere wer auf andere Personen durch
+          Weitergeben von b&uuml;ndischen Schrifttums, Liederb&uuml;chern, u.
+          dergl. in diesem Sinne einwirkt oder wer b&uuml;ndische Bestrebungen
+          in anderer Weise unterst&uuml;tzt, wird gem&auml;&szlig; &#167;4 der
+          Verordnung des Reichspr&auml;sidenten von Schutze von Volk und Staat
+          vom 28. Februar 1933 (RGBl. I, Seite 83) bestraft.</P>
+
