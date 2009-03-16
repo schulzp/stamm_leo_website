@@ -1,1 +1,6 @@
-<p>Das ist der Kalender:</p><pre class="html">{fragment(name=calendar)}</pre>
+<p>Der Kalender unten wird &uuml;ber Google eingebunden. Um ihn benutzen zu k&ouml;nnen braucht ihr JavaScript.
+Wenn ihr auch Google Kalender oder ein Terminverwaltungsprogramm wie <a
+href="http://www.sunbird-kalender.de/index.php">Sunbird</a> benutzt, koennt ihr unseren Kalender ueber diesen 
+<a href="http://www.google.com/calendar/ical/stamm_leo%40gmx.de/public/basic.ics">ICAL
+Link</a> in eurem Programm anzeigen.
+<pre class="html">{fragment(name=calendar)}</pre>

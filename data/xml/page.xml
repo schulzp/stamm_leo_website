@@ -4,26 +4,26 @@
 <item id="1"
       objtype="page"
       story="home.page.txt"
-      title="SkyBlueCanvas - The Lightweight CMS Test"
+      title="Pfadfinder-Stamm LEO"
       usesitename="0"
       name="Startseite"
       syndicate="1"
       menu="1"
       pagetype="default"
       parent=""
-      keywords="skyblue, canvas, lightweight, cms, content management system, small business, web site manager, xhtml, strict, css, valid, compliant, standards, tableless layout, open source, free"
-      meta_description="This is my test description."
+      keywords=""
+      meta_description=""
       published="1"
       isdefault="1"
       order=""
-      modified="2009-03-12T19:29:47+00:00"
+      modified="2009-03-17T00:15:25+00:00"
       metagroup="2">
 </item>
 
 <item id="2"
       objtype="page"
       story="features.txt"
-      title="SkyBlueCanvas - The lightweight CMS Features"
+      title="Unser Stamm"
       usesitename="0"
       name="Stamm"
       syndicate="1"
@@ -35,14 +35,14 @@
       published="1"
       isdefault="0"
       order=""
-      modified="2009-03-10T19:48:11+00:00"
+      modified="2009-03-16T23:26:08+00:00"
       metagroup="2">
 </item>
 
 <item id="24"
       objtype="page"
       story="page.page.24.txt"
-      title="Stammesgeschichte"
+      title="Geschichte der Pfadfinder in Leipzig und Sachsen"
       usesitename="0"
       name="Geschichte"
       syndicate="0"
@@ -54,36 +54,16 @@
       published="1"
       isdefault="0"
       order=""
-      modified="2009-03-12T19:26:20+00:00"
+      modified="2009-03-16T21:45:22+00:00"
       metagroup="">
-</item>
-
-<item id="7"
-      objtype="page"
-      story="page.page.7.txt"
-      title="About SkyBlueCanvas - The Lightweight CMS"
-      usesitename="0"
-      name="About"
-      syndicate="1"
-      menu="1"
-      pagetype="default"
-      parent=""
-      keywords=""
-      meta_description=""
-      published="1"
-      isdefault="0"
-      order=""
-      modified="2008-10-02T08:15:17+00:00"
-      metagroup="2"
-      caretpos="">
 </item>
 
 <item id="4"
       objtype="page"
       story="contact.txt"
-      title="Contact Scott Lewis, SkyBlueCanvas Developer"
+      title="Kontakt"
       usesitename="0"
-      name="Contact"
+      name="Kontakt"
       syndicate="0"
       menu="1"
       pagetype="default"
@@ -93,9 +73,8 @@
       published="1"
       isdefault="0"
       order=""
-      modified="2008-12-03T22:49:00+00:00"
-      metagroup="2"
-      caretpos="">
+      modified="2009-03-16T23:57:44+00:00"
+      metagroup="2">
 </item>
 
 <item id="21"
@@ -133,7 +112,7 @@
       published="1"
       isdefault="0"
       order=""
-      modified="2009-03-14T11:44:00+00:00"
+      modified="2009-03-16T22:12:59+00:00"
       metagroup=""
       caretpos="">
 </item>
@@ -153,7 +132,29 @@
       published="1"
       isdefault="0"
       order=""
-      modified="2009-03-14T11:59:59+00:00">
+      modified="2009-03-16T22:27:57+00:00"
+      metagroup=""
+      caretpos="">
+</item>
+
+<item id="27"
+      objtype="page"
+      story="page.page.27.txt"
+      title="Impressum"
+      usesitename="0"
+      name="Impressum"
+      syndicate="0"
+      menu="1"
+      pagetype="default"
+      parent="4"
+      keywords=""
+      meta_description=""
+      published="1"
+      isdefault="0"
+      order=""
+      modified="2009-03-16T23:40:45+00:00"
+      metagroup=""
+      caretpos="">
 </item>
 
 	</obj>
