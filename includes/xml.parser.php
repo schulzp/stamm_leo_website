@@ -157,7 +157,7 @@ class xmlHandler
                     {
                         $indent = str_repeat(' ', 6);
                     }
-                    $xml .= $indent.$k.'="'.htmlentities($v).'"';
+                    $xml .= $indent.$k.'="'.htmlspecialchars($v).'"';
                     $xml .= ($i + 1) != $count ? "\r\n" : '' ;
                     $i++;
                 }
