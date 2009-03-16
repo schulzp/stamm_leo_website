@@ -215,4 +215,8 @@
     background-position: 0 0.45em;
   }
   */
+
+  address {
+      margin: 1em 0;
+  }
 }

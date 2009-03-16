@@ -13,8 +13,35 @@
     padding: 0.2em 0;
   }
 
-  #col3 form.yform input.type-button {
-      background: #657494 url(../images/search_button.gif) no-repeat center center;
-      border: 1px solid #606e8d;
+  #col3 form.yform input {
+      display:block;
+      padding:0.3em;
+      position:relative;
   }
+
+  #col3 form.yform input#search_smt {
+      background: #657494 url(../images/search_button.gif) no-repeat center center;
+      display: inline;
+      width: auto;
+      border: 0;
+  }
+
+  #col3 form.yform input#search_ipt {
+      float:left;
+      width:60%;
+  }
+
+  form.yform .type-text input, 
+  form.yform .type-text textarea {
+      display:block;
+      padding:0.3em;
+      position:relative;
+      width:87.5%;}
+
+  form.yform .type-select select {
+      cursor:pointer;
+      display:block;
+      padding:0.3em 2px 0.3em 1px;
+      position:relative;
+      width:90%;}
 }
