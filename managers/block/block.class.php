@@ -290,7 +290,7 @@ class block extends manager {
 
         // Set the form message
 
-        $this->setFormMessage();
+        $this->SetFormMessage();
 
         // Initialize the object properties to empty strings or
         // the properties of the object being edited
@@ -303,7 +303,7 @@ class block extends manager {
         $form['ID']            = $this->GetObjID($_OBJ);
         $form['NAME']          = $this->GetObjName($_OBJ);
         $form['TITLE']         = $this->GetObjTitle($_OBJ);
-        $form['BLOCKTYPE']     = $this->GetBlockType($_OBJ);
+        $form['BLOCKCLASS']    = $this->GetBlockClass($_OBJ);
         $form['MODIFIED']      = $this->GetLastModified($_OBJ);
         $form['ORDER']         = $this->GetObjOrder($_OBJ);
         $form['PAGES']         = $this->GetPages($_OBJ);
@@ -356,11 +356,13 @@ class block extends manager {
         if (file_exists(SB_PAGE_FILE))
             $pages = $Core->xmlHandler->ParserMain(SB_PAGE_FILE);
 
+        $selectedIds = split(',', $obj['pages']);
+
         $options   = array();
-        $options[] = $Core->MakeOption('- Everywhere -', 0, 0);
+        $options[] = $Core->MakeOption('- Everywhere -', 0, $selectedIds[0] == '0');
 
         foreach($pages as $p) {
-            $s = in_array($p->id, split(',', $obj['pages']));
+            $s = in_array($p->id, $selectedIds);
             $options[] = $Core->MakeOption($p->name, $p->id, $s);
         }
 
@@ -404,11 +406,11 @@ class block extends manager {
         return $obj['title'];
     }
 
-    private function GetBlockType($obj) {
-        if (!isset($obj['blocktype']))
-            $obj['blocktype'] = null;
+    private function GetBlockClass($obj) {
+        if (!isset($obj['blockclass']))
+            $obj['blockclass'] = null;
 
-        return $this->GetTypeSelector($obj['blocktype']);
+        return $obj['blockclass'];
     }
 
     private function GetPublished($obj) {
@@ -417,30 +419,6 @@ class block extends manager {
             $obj['published'] = 0;
         
         return $Core->YesNoList('published', $obj['published']);
-    }
-
-    private function GetTypeSelector($selected=null) {
-        global $Core;
-        global $config;
-
-        $files = $Core->ListFilesOptionalRecurse(ACTIVE_SKIN_DIR, 0);
-
-        $options    = array();
-        for ($i=0; $i<count($files); $i++) 
-        {
-            $file = basename($files[$i]);
-            $bits = explode('.', $file);
-            $type = $bits[1];
-            $ext  = $bits[count($bits)-1];
-            if ($ext == 'html') 
-            {
-                $value = strToLower($type);
-                $text  = ucwords($type);
-                $s = $value == $selected ? 1 : 0 ;
-                $options[] = $Core->MakeOption($text, $value, $s);
-            }
-        }
-        return $Core->SelectList($options, 'blocktype', 1);
     }
 
     private function SaveBlockText() {
@@ -457,7 +435,7 @@ class block extends manager {
         unset($_POST['block_content']);
     }
     
-    public function setFormMessage() {
+    public function SetFormMessage() {
         global $Core;
 
         if ($this->button == 'edit' ||

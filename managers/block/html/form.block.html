@@ -55,7 +55,7 @@
                 <td valign="top" >
                     <label for="name" class="strong">Menu Text:</label>
                 </td>
-                <td>
+                <td style="border: none;">
                     <input type="text" name="name" value="{OBJ:NAME}" size="42" />
                 </td>
                 <td valign="top" width="12%" style="border: none;">
@@ -65,10 +65,10 @@
                     {OBJ:MENU}
                 </td>
                 <td  valign="top" align="left" style="border: none;">
-                    <label for="blocktype" class="strong">Block Layout:</label>
+                    <label for="blocktype" class="strong">CSS Class(es):</label>
                 </td>
                 <td valign="top" align="left" style="border: none;">
-                    {OBJ:BLOCKTYPE}
+                    <input type="text" name="blockclass" value="{OBJ:BLOCKCLASS}" />
                 </td>
             </tr>
             <tr>
@@ -78,15 +78,15 @@
             </tr>
             <tr>
                 <td valign="top" align="left" >
-                    <label for="published" class="strong">Published?:</label>
+                    <label for="published" class="strong">Published:</label>
                 </td>
-                <td valign="top" align="left" >
+                <td valign="top" align="left" style="border: none;">
                     {OBJ:PUBLISHED}
                 </td>
-                <td valign="top">
+                <td valign="top" align="left" style="border: none;">
                     <label for="order" class="strong">Order:</label>
                 </td>
-                <td >
+                <td valign="top" align="left" style="border:none;">
                     {OBJ:ORDER}
                 </td>
                 <td valign="top" align="left" style="border: none;">
