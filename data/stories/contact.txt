@@ -1,2 +1,1 @@
-<p>Drop us a line. We will respond as soon as we can.</p>
-<p>{plugin:fragment(contacts,view)}</p>
+<p>{fragment(name=contacts)}</p><p>Hinweis: Wenn ihr persönlich vorbeikommen wollt, richtet euch nach den <a title="Kalender" href="http://localhost:1082/index.php?pid=26">Zeiten für Gruppenstunden</a>.</p>
