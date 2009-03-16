@@ -71,7 +71,7 @@ function handle_contact_form($mailto) {
     if (count($errors)) {
         set_message(
             'error',
-            'Your message cannot be sent.<br />Please complete the following fields:',
+            'Ihre Nachricht kann nicht versandt werden.<br />Bitte fuellen Sie folgende Felder aus:',
             implode(', ', $errors)
         );
     } 
@@ -98,23 +98,23 @@ function handle_contact_form($mailto) {
 
         if (bashMail($form['subject'], $txtvers, $mailto)) {
             set_message(
-				'success',
-				'Your message has been sent',
-				'We will be in touch shortly'
+				'Erfolg',
+				'Ihre Nachricht wurde versandt.',
+				'Wir melden uns in Kuerze.'
 			);
         }
         else {
             set_message(
-				'error',
-				'Your message could not be sent',
-				'An unknown error occurred.'
+				'Fehler',
+				'Ihre Nachricht konnte nicht versandt werden.',
+				'Ein Fehler ist aufgetreten.'
 			);
         }
         
         if ($form['mailinglist'] == '1') {
             bashMail(
                 'Mailing List', 
-                 $form['name'] . " (" . $form['email'] . ") has requested to be added to the mailing list\n", 
+                 $form['name'] . " (" . $form['email'] . ") Moechte den Newsletter erhalten\n", 
                  $mailto
            );
         }
