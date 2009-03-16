@@ -24,9 +24,10 @@ data/skins/leo/yaml/navigation/*
 data/skins/leo/yaml/patches/*
 data/skins/leo/yaml/screen/*
 data/skins/leo/yaml/debug/*
-data/skins/leo/yaml/*.*
+data/skins/leo/yaml/*
 data/skins/leo/yaml/print/print_*_draft.css
 !data/skins/leo/yaml/print/print_103_draft.css
+!data/skins/leo/yaml/screen/forms.css
 
 plugins/editors/tinymce/*
 setup/*
