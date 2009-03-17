@@ -12,7 +12,6 @@ old.*
 Thumbs.db
 
 data/xml/*
-data/stories/*
 data/tmp/*
 data/uploads/*
 

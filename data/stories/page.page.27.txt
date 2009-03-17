@@ -1,0 +1,56 @@
+<table style="width: 100%; height: 156px;">
+<tbody>
+<tr>
+<td style="vertical-align: top;">
+Layout und SkyBlue Erweiterungen</td>
+<td style="vertical-align: top;">
+Pelz Rutsche</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+Technische Verantwortung</td>
+<td style="vertical-align: top;">
+<a title="Hannes Schulz" href="http://www.hannes-schulz.de">
+Hannes Schulz</a>
+</td>
+</tr>
+<tr>
+<td>
+Inhaltliche Verantwortung</td>
+<td>
+Stefan Zabel</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+Slomo</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+Marc Friede</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+Kontakt</td>
+<td style="vertical-align: top;">
+stamm_leo (bei) gmx (punkt) de</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+&#160;</td>
+<td style="vertical-align: top;">
+Klingenthaler Str. 14<br />
+04349 Leipzig</td>
+</tr>
+</tbody>
+</table>
+<p>
+<strong>
+Haftungshinweis:</strong>
+</p>
+<p>
+
+Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+</p>
+
