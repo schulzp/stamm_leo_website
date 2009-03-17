@@ -39,6 +39,43 @@
       metagroup="2">
 </item>
 
+<item id="28"
+      objtype="page"
+      story="page.page.28.txt"
+      title="Interner Bereich"
+      usesitename="0"
+      name="Intern"
+      syndicate="0"
+      menu="1"
+      pagetype="default"
+      parent=""
+      keywords=""
+      meta_description=""
+      published="1"
+      isdefault="0"
+      order=""
+      modified="2009-03-17T00:47:16+00:00"
+      metagroup="">
+</item>
+
+<item id="29"
+      objtype="page"
+      story="page.page.29.txt"
+      title="Links zum Thema Pfadfinder"
+      usesitename="0"
+      name="Pfadfinder-Links"
+      syndicate="0"
+      menu="1"
+      pagetype="default"
+      parent=""
+      keywords=""
+      meta_description=""
+      published="1"
+      isdefault="0"
+      order="4"
+      modified="2009-03-17T00:51:03+00:00">
+</item>
+
 <item id="24"
       objtype="page"
       story="page.page.24.txt"
@@ -126,13 +163,13 @@
       syndicate="0"
       menu="1"
       pagetype="default"
-      parent="4"
+      parent="28"
       keywords=""
       meta_description=""
       published="1"
       isdefault="0"
       order=""
-      modified="2009-03-16T22:27:57+00:00"
+      modified="2009-03-17T00:48:45+00:00"
       metagroup=""
       caretpos="">
 </item>
