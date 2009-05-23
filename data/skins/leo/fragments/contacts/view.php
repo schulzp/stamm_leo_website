@@ -9,9 +9,10 @@ global $Router;
 global $Core;
 global $config;
 
-if (the_action() == "send") {
+if (the_action() == "senden") {
     handle_contact_form(the_contact($data, $config));
 }
+
 
 ?>
 <!-- CONTACT FORM -->

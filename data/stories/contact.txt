@@ -1,1 +1,1 @@
-<p>{fragment(name=contacts)}</p><p>Hinweis: Wenn ihr persönlich vorbeikommen wollt, richtet euch nach den <a title="Kalender" href="http://localhost:1082/index.php?pid=26">Zeiten für Gruppenstunden</a>.</p>
+<p>{fragment(name=contacts)}</p><p>Hinweis: Wenn ihr persönlich vorbeikommen wollt, richtet euch nach den <a title="Kalender" href="index.php?pid=26">Zeiten für Gruppenstunden</a>.</p>

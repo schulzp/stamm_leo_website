@@ -13,5 +13,17 @@
       zip="">
 </item>
 
+<item id="3"
+      name="Webmaster"
+      title=""
+      email="temporaer@gmx.de"
+      phone=""
+      fax=""
+      address=""
+      city=""
+      state=""
+      zip="">
+</item>
+
 	</obj>
 </root>

@@ -139,6 +139,8 @@ class login
             SB_PASS_SALT.$Core->GetVar($_POST, 'username', ''));
         $this->password = md5(
             SB_PASS_SALT.$Core->GetVar($_POST, 'password', ''));
+//        $this->username = $Core->GetVar($_POST, 'username', '');
+//        $this->password = $Core->GetVar($_POST, 'password', '');
     }
     
     function GetStoredLogin() 

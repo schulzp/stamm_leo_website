@@ -12,6 +12,7 @@ $button = strToLower($button);
 $msg   = $Core->GetVar($_GET, 'msg', '');
 $token = $Core->token;
 
+
 switch ($msg) {
     case 1:
         $msg  = "<div class=\"success\">\n";

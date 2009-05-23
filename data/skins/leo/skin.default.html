@@ -4,6 +4,7 @@
 <title>[[page.title]]</title>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <!-- add your meta tags here -->
+<meta name="verify-v1" content="q/vwq1xxgySSKWK+J8xLDO1Vt94pac+biQBpLtVsmeY=" >
 <?php echo $this->get_meta_data(); ?>
 <link href="<?php echo $this->get_path(); ?>css/leo_layout.css" rel="stylesheet" type="text/css" />
 <link href="[[site.url]]rss/" rel="alternate" type="application/rss+xml" title="[[site.name]] RSS Feed" />
@@ -46,13 +47,16 @@
             </div>
             <div id="col3">
                 <div id="col3_content" class="clearfix">
-                    <form action="http://www.google.com/cse" method="post" class="yform col_box">
-                        <input name="cx" value="" type="hidden">
-                        <input name="ie" value="UTF-8" type="hidden">
-                        <input name="hl" value="de" type="hidden">
-                        <input type="q" name="search_field" id="search_ipt" value="Suchbegriff" class="type-text" />
-                        <input type="submit" name="sa" id="search_smt" value="&nbsp;&nbsp;&nbsp;" class="type-button" />
-                    </form>
+					<form action="http://www.google.com/cse" id="cse-main-search-box" class="yform col_box">
+						<div>
+							<input type="hidden" name="cx" value="013315504628135767172:d6shbtxu-uo" />
+							<input type="hidden" name="cof" value="FORID:10" />
+							<input type="hidden" name="ie" value="UTF-8" />
+							<input type="text" name="q" size="18" id="search_ipt" value="Suchbegriff" class="type-text"/>
+							<input type="submit" name="sa" id="search_smt" value="&nbsp;&nbsp;&nbsp;" class="type-button"/>
+						</div>
+					</form>
+					<!--<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-main-search-box&amp;lang=de"></script>-->
 
                     <!--fragment(name=sidebar&menuid=3)-->
                 </div>

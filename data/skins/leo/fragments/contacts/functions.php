@@ -77,10 +77,10 @@ function handle_contact_form($mailto) {
     } 
     else {
         $headers  = "MIME-Version: 1.0\n";
-        $headers .= "Content-type: text/html; charset=iso-8859-1\n";
+        $headers .= "Content-type: text/plain; charset=utf-8\n";
         $headers .= "From: ".$form['name']." <".$form['email'].">\n";
         $headers .= "Reply-To: <".$form['email'].">\n";
-        $headers .= "X-Priority: 3\r\n";
+        $headers .= "X-Priority: 3\n";
         $headers .= "X-MSMail-Priority: Low\n";
         $headers .= "X-Mailer: WebServer\n";
         
@@ -96,7 +96,7 @@ function handle_contact_form($mailto) {
             $txtvers
         );
 
-        if (bashMail($form['subject'], $txtvers, $mailto)) {
+        if (bashMail($form['subject'], $txtvers, $mailto, $headers)) {
             set_message(
 				'Erfolg',
 				'Ihre Nachricht wurde versandt.',
@@ -115,13 +115,15 @@ function handle_contact_form($mailto) {
             bashMail(
                 'Mailing List', 
                  $form['name'] . " (" . $form['email'] . ") Moechte den Newsletter erhalten\n", 
-                 $mailto
+                 $mailto,
+				 $headers
            );
         }
     }
 }
 
-function bashMail($sbj, $msg, $to, $cc='', $bc='') {
+function bashMail($sbj, $msg, $to, $headers, $cc='', $bc='') {
+	return mail($to, $sbj, $msg, $headers);
     $cmd = 'echo "'.$msg.'" | mail -s "'.$sbj.'" '.$to;
     exec($cmd, $err);
     $res = count($err) == 0 ? 1 : 4 ;
