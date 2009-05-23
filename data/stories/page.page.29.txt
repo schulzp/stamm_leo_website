@@ -1,0 +1,37 @@
+<h2>Andere St&auml;mme in Sachsen</h2>
+<ul>
+<li>Stamm Miriquidi<a href="mailto:Stamm_Miriquidi@gmx.de"> (Coswig)</li>
+<li><a href="http://www.drebach.sachsen.pfadfinden.de/">Gruppe Drehbach</a></li>
+<li><a href="http://www.dresden.sachsen.pfadfinden.de/">Stamm Goldener Reiter</a> (Dresden)</li>
+<li>Gruppe Wildkatzen<a href="mailto:Wildkatzen@Sachsen.Pfadfinden.de"> (Kirnitzschtal)</li>
+<li>Stamm Ancalagon<a href="mailto:liane.kischkel@pfadfinden.de"> (Taucha)</li>
+<li><a href="http://www.zwickau.sachsen.pfadfinden.de/">Gruppe Highlander</a> (Zwickau)</li>
+</ul>
+
+<h2>Pfadfinder in Sachsen allgemein</h2>
+<ul>
+<li><a href="http://sachsen.pfadfinden.de/">Homepage Landesverband Sachsen</a></li>
+<li><a href="http://www.rdp-sachsen.de/lohmen/">Pfadfinderplatz Lohmen / Sächsische Schweiz</a> </li>
+<li><a href="http://www.rdp-sachsen.de/">Ring deutscher Pfadfinderinnen- und Pfadfinderverbände - AG Sachsen</a></li>
+</ul>
+
+<h2>Bundesseiten</h2>
+<ul>
+<li><a href="http://www.pfadfinden.de/">BdP - Bund der Pfadfinderinnen und Pfadfinder e.V.</a></li>
+<li><a href="http://www.zentrum.pfadfinden.de/">BdP - Bundeszentrum Immenhausen</a></li>
+<li><a href="http://www.bundeskaemmerei.de/">Bundeskämmerei (Pfadfinder- Ausrüster)</a></li>
+<li><a href="http://www.stiftungpfadfinden.de/">Stiftung Pfadfinden</a></li>
+</ul>
+
+<h2>Sonstige Pfadfinderseiten</h2>
+<ul>
+<li><a href="http://www.scoutnet.de/rdp/">Ring deutscher Pfadfinderverbände (RdP) </a></li>
+<li><a href="http://www.scoutnet.de/rdp/">Ring Deutscher Pfadfinderinnenverbände (RDP) </a></li>
+<li><a href="http://www.scoutmix.de/">Scoutmix - Das Pfadfinder Verzeichnis </a></li>
+<li><a href="http://www.pfadfinder.de/">Scoutnet</a></li>
+<li><a href="http://www.scout-o-wiki.de/">Scout-o-Wiki</a></li>
+<li><a href="http://www.scoutnet.de/vdapg/">Verband deutscher Altpfadfindergilden (VDAPG)</a></li>
+<li><a href="http://www.wagggsworld.org/">World Association of Girl Guides and Girl Scouts (WAGGGS)</a></li>
+<li><a href="http://www.scout.org/">World Organization of the Scout Movement (WOSM)</a> </li>
+</ul>
+

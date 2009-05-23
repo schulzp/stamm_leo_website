@@ -1,0 +1,17 @@
+<h2>Kalender</h2>
+<pre class="html">{fragment(name=calendar)}</pre>
+
+<h2>Aktuelle Anmeldeformulare</h2>Zur Zeit keine vorhanden<br /><br />
+
+<h2>Spiele und Materialien</h2>
+
+<ul>
+<li><a href="http://www.praxis-jugendarbeit.de/">Datenbank für Gruppenspiele des CVJM</a></li>
+<li><a href="http://www.kunterbuntewelt.de/">Kunterbunte Welt</a></li>
+<li><a href="http://www.labbe.de/">Labbé (tolle Tipps für Gruppenstunden!)</a></li>
+<li><a href="http://www.spielboerse.ch/">Spielbörse</a></li>
+<li><a href="http://www.spielefuerviele.de/">Spiele für viele</a></li>
+<li><a href="http://www.spieledatenbank.de/">Spieledatenbank</a></li>
+<li><a href="http://www.spielekiste.de/">Spielekiste</a></li>
+</ul>
+

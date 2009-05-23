@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<obj type="block">
+<item id="3"
+      objtype="block"
+      story_content="Unseren neuen Kalender mit allen Stammesterminen k&amp;Atilde;&amp;para;nnt ihr zu eurem Google Kalender oder einem anderen Kalenderprogramm wie Sunbird hinzuf&amp;Atilde;&amp;frac14;gen. Damit bleibt ihr immer auf dem Laufenden!"
+      story="block.block.3.txt"
+      title="Kalender Abonnieren"
+      name="Kalender Abonnieren"
+      menu="3"
+      blocktype=""
+      published="1"
+      pages=""
+      modified="2009-03-17T00:23:53+00:00"
+      blockclass="">
+</item>
+
+	</obj>
+</root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<obj type="configuration">
+<item id="1"
+      site_name="Stamm LEO Leipzig"
+      contact_name="Stammesführung"
+      contact_title=""
+      contact_address="Klingenthaler Str. 14"
+      contact_city="04349 Leipzig"
+      contact_state=""
+      contact_zip=""
+      contact_email="stamm_leo@gmx.de"
+      contact_phone=""
+      contact_fax=""
+      contact_address_2=""
+      site_slogan="Gut Pfad!"
+      site_url="http://stammleo.dpf.de/"
+      site_editor="wymeditor"
+      use_cache="0">
+</item>
+
+	</obj>
+</root>
