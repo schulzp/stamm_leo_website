@@ -1977,6 +1977,19 @@ WYMeditor.XhtmlValidator = {
         "6":"frameborder"
       }
     },
+    "embed":
+    {
+      "attributes":
+      {
+        "0":"src",
+        "1":"type",
+        "2":"width",
+        "3":"height",
+        "4":"flashvars",
+        "5":"pluginspage"
+      }
+    },
+
     "a":
     {
       "attributes":
@@ -3477,7 +3490,7 @@ WYMeditor.XhtmlSaxListener = function()
     "object", "ol", "optgroup", "option", "p", "param", "pre", "q",
     "samp", "script", "select", "small", "span", "strong", "style",
     "sub", "sup", "table", "tbody", "td", "textarea", "tfoot", "th",
-    "thead", "title", "tr", "tt", "ul", "var", "extends", "iframe"];
+    "thead", "title", "tr", "tt", "ul", "var", "extends", "iframe", "embed"];
 
 
     this.inline_tags = ["br", "hr", "img", "input"];
