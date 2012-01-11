@@ -1965,6 +1965,18 @@ WYMeditor.XhtmlValidator = {
   },
   "_tags":
   {
+    "iframe":
+    {
+      "attributes":
+      {
+        "0":"allowfullscreen",
+        "1":"width",
+        "3":"height",
+        "4":"src",
+        "5":"title",
+        "6":"frameborder"
+      }
+    },
     "a":
     {
       "attributes":
@@ -3465,7 +3477,7 @@ WYMeditor.XhtmlSaxListener = function()
     "object", "ol", "optgroup", "option", "p", "param", "pre", "q",
     "samp", "script", "select", "small", "span", "strong", "style",
     "sub", "sup", "table", "tbody", "td", "textarea", "tfoot", "th",
-    "thead", "title", "tr", "tt", "ul", "var", "extends"];
+    "thead", "title", "tr", "tt", "ul", "var", "extends", "iframe"];
 
 
     this.inline_tags = ["br", "hr", "img", "input"];
